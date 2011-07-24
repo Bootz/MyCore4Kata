@@ -1579,7 +1579,7 @@ class Unit : public WorldObject
         Player* GetCharmerOrOwnerPlayerOrPlayerItself() const;
 
         void SetMinion(Minion *minion, bool apply, PetSlot slot);
-        void GetAllMinionsByEntry(std::list<Unit*>& Minions, uint32 entry);
+        void GetAllMinionsByEntry(std::list<Creature*>& Minions, uint32 entry);
         void RemoveAllMinionsByEntry(uint32 entry);
         void SetCharm(Unit* target, bool apply);
         Unit* GetNextRandomRaidMemberOrPet(float radius);
@@ -2085,6 +2085,37 @@ class Unit : public WorldObject
         TempSummon* ToTempSummon() { if (isSummon()) return reinterpret_cast<TempSummon*>(this); else return NULL; }
         const TempSummon* ToTempSummon() const { if (isSummon()) return reinterpret_cast<const TempSummon*>(this); else return NULL; }
 
+		void SetTarget(uint64 guid)
+		{
+			if (!_targetLocked)
+				SetUInt64Value(UNIT_FIELD_TARGET, guid);
+		}
+
+		void FocusTarget(Spell const* focusSpell, uint64 target)
+		{
+			// already focused
+			if (_focusSpell)
+				return;
+
+			_focusSpell = focusSpell;
+			_targetLocked = true;
+			SetUInt64Value(UNIT_FIELD_TARGET, target);
+		}
+
+		void ReleaseFocus(Spell const* focusSpell)
+		{
+			// focused to something else
+			if (focusSpell != _focusSpell)
+				return;
+
+			_focusSpell = NULL;
+			_targetLocked = false;
+			if (Unit* victim = getVictim())
+				SetUInt64Value(UNIT_FIELD_TARGET, victim->GetGUID());
+			else
+				SetUInt64Value(UNIT_FIELD_TARGET, 0);
+		}
+
         int32 eclipse;
         int32 GetEclipsePower() {return eclipse;};
         void SetEclipsePower(int32 power);
@@ -2222,7 +2253,10 @@ class Unit : public WorldObject
         uint64 m_misdirectionTargetGUID;
 
         bool m_cleanupDone; // lock made to not add stuff after cleanup before delete
-        bool m_duringRemoveFromWorld; // lock made to not add stuff after begining removing from world
+        bool m_duringRemoveFromWorld; // lock made to not add stuff after beginning removing from world
+
+		Spell const* _focusSpell;
+		bool _targetLocked; // locks the target during spell cast for proper facing
 };
 
 namespace Trinity

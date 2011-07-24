@@ -9951,29 +9951,29 @@ void Unit::SetMinion(Minion *minion, bool apply, PetSlot slot)
     }
 }
 
-void Unit::GetAllMinionsByEntry(std::list<Unit*>& Minions, uint32 entry)
+void Unit::GetAllMinionsByEntry(std::list<Creature*>& Minions, uint32 entry)
 {
-    for (Unit::ControlList::iterator itr = m_Controlled.begin(); itr != m_Controlled.end();)
-    {
-        Unit *unit = *itr;
-        ++itr;
-        if (unit->GetEntry() == entry && unit->GetTypeId() == TYPEID_UNIT
-            && unit->ToCreature()->isSummon()) // minion, actually
-            Minions.push_back(unit);
-    }
+	for (Unit::ControlList::iterator itr = m_Controlled.begin(); itr != m_Controlled.end();)
+	{
+		Unit* unit = *itr;
+		++itr;
+		if (unit->GetEntry() == entry && unit->GetTypeId() == TYPEID_UNIT
+			&& unit->ToCreature()->isSummon()) // minion, actually
+			Minions.push_back(unit->ToCreature());
+	}
 }
 
 void Unit::RemoveAllMinionsByEntry(uint32 entry)
 {
-    for (Unit::ControlList::iterator itr = m_Controlled.begin(); itr != m_Controlled.end();)
-    {
-        Unit *unit = *itr;
-        ++itr;
-        if (unit->GetEntry() == entry && unit->GetTypeId() == TYPEID_UNIT
-            && unit->ToCreature()->isSummon()) // minion, actually
-            unit->ToTempSummon()->UnSummon();
-        // i think this is safe because i have never heard that a despawned minion will trigger a same minion
-    }
+	for (Unit::ControlList::iterator itr = m_Controlled.begin(); itr != m_Controlled.end();)
+	{
+		Unit* unit = *itr;
+		++itr;
+		if (unit->GetEntry() == entry && unit->GetTypeId() == TYPEID_UNIT
+			&& unit->ToCreature()->isSummon()) // minion, actually
+			unit->ToTempSummon()->UnSummon();
+		// i think this is safe because i have never heard that a despawned minion will trigger a same minion
+	}
 }
 
 void Unit::SetCharm(Unit* charm, bool apply)
