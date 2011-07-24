@@ -130,9 +130,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 /*######
 ## npc_ancestral_wolf
@@ -205,9 +203,7 @@ public:
             }
         }
     };
-
 };
-
 
 /*######
 ## go_haaleshi_altar
@@ -223,7 +219,6 @@ public:
         pGo->SummonCreature(C_AERANAS,-1321.79f, 4043.80f, 116.24f, 1.25f, TEMPSUMMON_TIMED_DESPAWN, 180000);
         return false;
     }
-
 };
 
 /*######
@@ -260,9 +255,7 @@ public:
         pPlayer->SEND_GOSSIP_MENU(pPlayer->GetGossipTextId(pCreature), pCreature->GetGUID());
         return true;
     }
-
 };
-
 
 /*######
 ## npc_tracy_proudwell
@@ -317,9 +310,7 @@ public:
         pPlayer->SEND_GOSSIP_MENU(pPlayer->GetGossipTextId(pCreature), pCreature->GetGUID());
         return true;
     }
-
 };
-
 
 /*######
 ## npc_trollbane
@@ -371,9 +362,7 @@ public:
         pPlayer->SEND_GOSSIP_MENU(pPlayer->GetGossipTextId(pCreature), pCreature->GetGUID());
         return true;
     }
-
 };
-
 
 /*######
 ## npc_wounded_blood_elf
@@ -467,10 +456,7 @@ public:
             summoned->AI()->AttackStart(me);
         }
     };
-
 };
-
-
 
 /*######
 ## npc_fel_guard_hound
@@ -542,9 +528,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 void AddSC_hellfire_peninsula()
 {

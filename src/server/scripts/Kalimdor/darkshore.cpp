@@ -180,10 +180,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
-
 
 /*####
 # npc_prospector_remtravel
@@ -316,10 +313,7 @@ public:
             //pSummoned->AI()->AttackStart(me);
         }
     };
-
 };
-
-
 
 /*####
 # npc_threshwackonator
@@ -357,7 +351,6 @@ public:
 
         return true;
     }
-
 
     bool OnGossipHello(Player* pPlayer, Creature* pCreature)
     {
@@ -403,11 +396,7 @@ public:
             SetFollowComplete();
         }
     };
-
 };
-
-
-
 
 void AddSC_darkshore()
 {

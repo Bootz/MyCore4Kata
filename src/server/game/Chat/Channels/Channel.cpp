@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -55,7 +55,7 @@ Channel::Channel(const std::string& name, uint32 channel_id, uint32 Team)
     {
         channel_id = 0;
         m_flags |= CHANNEL_FLAG_CUSTOM;
-        
+
         // If storing custom channels in the db is enabled either load or save the channel
         if (sWorld->getBoolConfig(CONFIG_PRESERVE_CUSTOM_CHANNELS))
         {
@@ -123,7 +123,6 @@ void Channel::UpdateChannelInDB() const
 
         sLog->outDebug(LOG_FILTER_CHATSYS,"Channel(%s) updated in database", m_name.c_str());
     }
-
 }
 
 void Channel::UpdateChannelUseageInDB() const
@@ -787,12 +786,10 @@ void Channel::SendToOne(WorldPacket *data, uint64 who)
 
 void Channel::Voice(uint64 /*guid1*/, uint64 /*guid2*/)
 {
-
 }
 
 void Channel::DeVoice(uint64 /*guid1*/, uint64 /*guid2*/)
 {
-
 }
 
 // done

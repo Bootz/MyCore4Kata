@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -83,7 +83,6 @@ GameObject::~GameObject()
 
 bool GameObject::AIM_Initialize()
 {
-
     m_AI = FactorySelector::SelectGameObjectAI(this);
     if (!m_AI) return false;
     m_AI->InitializeAI();
@@ -117,7 +116,7 @@ void GameObject::CleanupsBeforeDelete(bool /*finalCleanup*/)
                 else if (IS_PET_GUID(owner_guid))
                     ownerType = "pet";
 
-                sLog->outError("Delete GameObject (GUID: %u Entry: %u SpellId %u LinkedGO %u) that lost references to owner (GUID %u Type '%s') GO list. Crash possible later.", 
+                sLog->outError("Delete GameObject (GUID: %u Entry: %u SpellId %u LinkedGO %u) that lost references to owner (GUID %u Type '%s') GO list. Crash possible later.",
                     GetGUIDLow(), GetGOInfo()->id, m_spellId, GetGOInfo()->GetLinkedGameObjectEntry(), GUID_LOPART(owner_guid), ownerType);
             }
         }
@@ -835,7 +834,6 @@ bool GameObject::IsDynTransport() const
     return gInfo->type == GAMEOBJECT_TYPE_MO_TRANSPORT || (gInfo->type == GAMEOBJECT_TYPE_TRANSPORT && !gInfo->transport.pause);
 }
 
-
 Unit* GameObject::GetOwner() const
 {
     return ObjectAccessor::GetUnit(*this, GetOwnerGUID());
@@ -854,7 +852,7 @@ bool GameObject::isAlwaysVisibleFor(WorldObject const* seer) const
 
     if (IsTransport())
         return true;
-    
+
     return false;
 }
 

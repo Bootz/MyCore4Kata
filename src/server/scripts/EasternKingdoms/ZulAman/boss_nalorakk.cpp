@@ -343,7 +343,6 @@ class boss_nalorakk : public CreatureScript
                             inMove = false;
                             return;
                     }
-
                 }
             }
 
@@ -451,7 +450,6 @@ class boss_nalorakk : public CreatureScript
             }
         };
 
-
         CreatureAI* GetAI(Creature* creature) const
         {
             return new boss_nalorakkAI(creature);
@@ -462,4 +460,3 @@ void AddSC_boss_nalorakk()
 {
     new boss_nalorakk();
 }
-

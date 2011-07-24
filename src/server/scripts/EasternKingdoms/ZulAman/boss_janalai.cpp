@@ -445,7 +445,6 @@ class boss_janalai : public CreatureScript
             }
         };
 
-
         CreatureAI* GetAI(Creature* creature) const
         {
             return new boss_janalaiAI(creature);
@@ -609,7 +608,6 @@ class mob_janalai_hatcher : public CreatureScript
                         }
                         else
                             me->DisappearAndDie();
-
                     } else WaitTimer -= diff;
                 }
             }
@@ -712,7 +710,6 @@ public:
             }
         }
     };
-
 };
 
 void AddSC_boss_janalai()
@@ -723,4 +720,3 @@ void AddSC_boss_janalai()
     new mob_janalai_hatchling();
     new mob_janalai_egg();
 }
-

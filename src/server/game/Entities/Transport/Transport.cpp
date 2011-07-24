@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -147,11 +147,10 @@ void MapManager::LoadTransportNPCs()
         return;
     }
 
-    uint32 count = 0;    
+    uint32 count = 0;
 
     do
     {
-        
         Field *fields = result->Fetch();
         uint32 guid = fields[0].GetUInt32();
         uint32 entry = fields[1].GetUInt32();
@@ -206,7 +205,7 @@ bool Transport::Create(uint32 guidlow, uint32 entry, uint32 mapid, float x, floa
 
     if (!IsPositionValid())
     {
-        sLog->outError("Transport (GUID: %u) not created. Suggested coordinates isn't valid (X: %f Y: %f)", 
+        sLog->outError("Transport (GUID: %u) not created. Suggested coordinates isn't valid (X: %f Y: %f)",
             guidlow, x, y);
         return false;
     }
@@ -249,7 +248,7 @@ bool Transport::Create(uint32 guidlow, uint32 entry, uint32 mapid, float x, floa
 
 struct keyFrame
 {
-    explicit keyFrame(TaxiPathNodeEntry const& _node) : node(&_node), 
+    explicit keyFrame(TaxiPathNodeEntry const& _node) : node(&_node),
         distSinceStop(-1.0f), distUntilStop(-1.0f), distFromPrev(-1.0f), tFrom(0.0f), tTo(0.0f)
         {
         }
@@ -374,7 +373,7 @@ bool Transport::GenerateWaypoints(uint32 pathid, std::set<uint32> &mapids)
     if (keyFrames[keyFrames.size() - 1].node->mapid != keyFrames[0].node->mapid)
         teleport = true;
 
-    WayPoint pos(keyFrames[0].node->mapid, keyFrames[0].node->x, keyFrames[0].node->y, keyFrames[0].node->z, teleport, 0, 
+    WayPoint pos(keyFrames[0].node->mapid, keyFrames[0].node->x, keyFrames[0].node->y, keyFrames[0].node->z, teleport, 0,
         keyFrames[0].node->arrivalEventID, keyFrames[0].node->departureEventID);
     m_WayPoints[0] = pos;
     t += keyFrames[0].node->delay * 1000;
@@ -455,7 +454,7 @@ bool Transport::GenerateWaypoints(uint32 pathid, std::set<uint32> &mapids)
             cM = keyFrames[i + 1].node->mapid;
         }
 
-        WayPoint pos(keyFrames[i + 1].node->mapid, keyFrames[i + 1].node->x, keyFrames[i + 1].node->y, keyFrames[i + 1].node->z, teleport, 
+        WayPoint pos(keyFrames[i + 1].node->mapid, keyFrames[i + 1].node->x, keyFrames[i + 1].node->y, keyFrames[i + 1].node->z, teleport,
             0, keyFrames[i + 1].node->arrivalEventID, keyFrames[i + 1].node->departureEventID);
         //        sLog->outString("T: %d, x: %f, y: %f, z: %f, t:%d", t, pos.x, pos.y, pos.z, teleport);
 /*
@@ -653,11 +652,11 @@ void Transport::BuildStopMovePacket(Map const* targetMap)
 uint32 Transport::AddNPCPassenger(uint32 tguid, uint32 entry, float x, float y, float z, float o, uint32 anim)
 {
     Map* map = GetMap();
-    
+
     CreatureInfo const *ci = ObjectMgr::GetCreatureTemplate(entry);
     if (!ci)
         return 0;
-    
+
     Creature* pCreature = NULL;
     if (ci->ScriptID)
         pCreature = sScriptMgr->GetCreatureScriptedClass(ci->ScriptID);
@@ -679,9 +678,9 @@ uint32 Transport::AddNPCPassenger(uint32 tguid, uint32 entry, float x, float y, 
         pCreature->SetUInt32Value(UNIT_NPC_EMOTESTATE, anim);
 
     pCreature->Relocate(
-        GetPositionX() + (x * cos(GetOrientation()) + y * sin(GetOrientation() + float(M_PI))), 
-        GetPositionY() + (y * cos(GetOrientation()) + x * sin(GetOrientation())), 
-        z + GetPositionZ() , 
+        GetPositionX() + (x * cos(GetOrientation()) + y * sin(GetOrientation() + float(M_PI))),
+        GetPositionY() + (y * cos(GetOrientation()) + x * sin(GetOrientation())),
+        z + GetPositionZ() ,
         o + GetOrientation());
 
     pCreature->SetHomePosition(pCreature->GetPositionX(), pCreature->GetPositionY(), pCreature->GetPositionZ(), pCreature->GetOrientation());

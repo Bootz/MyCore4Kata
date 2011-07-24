@@ -124,10 +124,7 @@ public:
 
         return ai;
     }
-
 };
-
-
 
 class npc_thrall : public CreatureScript
 {
@@ -204,10 +201,7 @@ public:
 
         return ai;
     }
-
 };
-
-
 
 class npc_tyrande_whisperwind : public CreatureScript
 {
@@ -252,10 +246,7 @@ public:
         pPlayer->SEND_GOSSIP_MENU(907, pCreature->GetGUID());
         return true;
     }
-
 };
-
-
 
 void AddSC_hyjal()
 {

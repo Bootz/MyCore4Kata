@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -39,9 +39,9 @@
 #include "Util.h"
 #include "LFGMgr.h"
 
-Roll::Roll(uint64 _guid, LootItem const& li) : itemGUID(_guid), itemid(li.itemid), 
-itemRandomPropId(li.randomPropertyId), itemRandomSuffix(li.randomSuffix), itemCount(li.count), 
-totalPlayersRolling(0), totalNeed(0), totalGreed(0), totalPass(0), itemSlot(0), 
+Roll::Roll(uint64 _guid, LootItem const& li) : itemGUID(_guid), itemid(li.itemid),
+itemRandomPropId(li.randomPropertyId), itemRandomSuffix(li.randomSuffix), itemCount(li.count),
+totalPlayersRolling(0), totalNeed(0), totalGreed(0), totalPass(0), itemSlot(0),
 rollVoteMask(ROLL_ALL_TYPE_NO_DISENCHANT)
 {
 }
@@ -60,8 +60,8 @@ Loot* Roll::getLoot()
     return getTarget();
 }
 
-Group::Group() : m_leaderGuid(0), m_groupType(GROUPTYPE_NORMAL), m_bgGroup(NULL), 
-m_lootMethod(FREE_FOR_ALL), m_looterGuid(0), m_lootThreshold(ITEM_QUALITY_UNCOMMON), 
+Group::Group() : m_leaderGuid(0), m_groupType(GROUPTYPE_NORMAL), m_bgGroup(NULL),
+m_lootMethod(FREE_FOR_ALL), m_looterGuid(0), m_lootThreshold(ITEM_QUALITY_UNCOMMON),
 m_subGroupsCounts(NULL), m_guid(0), m_counter(0), m_maxEnchantingLevel(0)
 {
     for (uint8 i = 0; i < TARGETICONCOUNT; ++i)
@@ -135,8 +135,8 @@ bool Group::Create(const uint64 &guid, const char * name)
         trans->PAppend("DELETE FROM group_member WHERE guid = %u OR memberGuid = %u", lowguid, GUID_LOPART(guid));
         trans->PAppend("INSERT INTO group_member (guid, memberGuid, subgroup) VALUES (%u, %u, 0)", lowguid, GUID_LOPART(guid));
         trans->PAppend("INSERT INTO groups (guid, leaderGuid, lootMethod, looterGuid, lootThreshold, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, groupType, difficulty, raiddifficulty) "
-            "VALUES ('%u', '%u', '%u', '%u', '%u', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '%u', '%u', '%u')", 
-            lowguid, GUID_LOPART(m_leaderGuid), uint32(m_lootMethod), 
+            "VALUES ('%u', '%u', '%u', '%u', '%u', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '" UI64FMTD "', '%u', '%u', '%u')",
+            lowguid, GUID_LOPART(m_leaderGuid), uint32(m_lootMethod),
             GUID_LOPART(m_looterGuid), uint32(m_lootThreshold), m_targetIcons[0], m_targetIcons[1], m_targetIcons[2], m_targetIcons[3], m_targetIcons[4], m_targetIcons[5], m_targetIcons[6], m_targetIcons[7], uint8(m_groupType), uint32(m_dungeonDifficulty), m_raidDifficulty);
 
         CharacterDatabase.CommitTransaction(trans);
@@ -255,19 +255,19 @@ void Group::ConvertToGroup()
 {
     if (m_memberSlots.size() > 5)
         return;
-    
+
     m_groupType = GroupType(GROUPTYPE_NORMAL);
-    
+
     if (m_subGroupsCounts)
     {
         delete[] m_subGroupsCounts;
         m_subGroupsCounts = NULL;;
     }
-        
+
     if (!isBGGroup())
         CharacterDatabase.PExecute("UPDATE groups SET groupType='%u' WHERE guid='%u'", uint8(m_groupType), GUID_LOPART(m_guid));
     SendUpdate();
-    
+
     // update quest related GO states (quest activity dependent from raid membership)
     for (member_citerator citr = m_memberSlots.begin(); citr != m_memberSlots.end(); ++citr)
         if (Player* player = sObjectMgr->GetPlayer(citr->guid))
@@ -684,7 +684,6 @@ void Group::GroupLoot(Loot *loot, WorldObject* pLootedObject)
                 {
                     if (member->IsWithinDistInMap(pLootedObject, sWorld->getFloatConfig(CONFIG_GROUP_XP_DISTANCE), false))
                     {
-
                         r->totalPlayersRolling++;
 
                         if (member->GetPassOnGroupLoot())
@@ -1551,7 +1550,7 @@ void Group::ChangeMembersGroup(Player *player, const uint8 &group)
 // If the RR player is not yet set for the group, the first group member becomes the round-robin player.
 // If the RR player is set, the next player in group becomes the round-robin player.
 //
-// If ifneed is true, 
+// If ifneed is true,
 //      the current RR player is checked to be near the looted object.
 //      if yes, no update done.
 //      if not, he looses his turn.
@@ -1868,7 +1867,6 @@ InstanceGroupBind* Group::GetBoundInstance(MapEntry const* mapEntry)
     return NULL;
 }
 
-
 InstanceGroupBind* Group::BindToInstance(InstanceSave *save, bool permanent, bool load)
 {
     if (!save || isBGGroup())
@@ -1916,7 +1914,6 @@ void Group::BroadcastGroupUpdate(void)
     // -- not very efficient but safe
     for (member_citerator citr = m_memberSlots.begin(); citr != m_memberSlots.end(); ++citr)
     {
-
         Player *pp = sObjectMgr->GetPlayer(citr->guid);
         if (pp && pp->IsInWorld())
         {
@@ -1971,7 +1968,7 @@ void Group::SetRoles(uint64 guid, const uint8 roles)
 
     slot->roles = roles;
     SendUpdate();
-}  
+}
 uint8 Group::GetRoles(uint64 guid)
 {
     member_witerator slot = _getMemberWSlot(guid);

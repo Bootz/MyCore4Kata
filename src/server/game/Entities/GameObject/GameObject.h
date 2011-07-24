@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -588,9 +588,9 @@ struct GameObjectData
 // For door(open):  [GO_NOT_READY]->GO_READY (open) ->GO_ACTIVATED (close)->GO_JUST_DEACTIVATED->GO_READY(open)  -> ...
 enum LootState
 {
-    GO_NOT_READY = 0, 
+    GO_NOT_READY = 0,
     GO_READY,                                               // can be ready but despawned, and then not possible activate until spawn
-    GO_ACTIVATED, 
+    GO_ACTIVATED,
     GO_JUST_DEACTIVATED
 };
 
@@ -767,7 +767,7 @@ class GameObject : public WorldObject, public GridObject<GameObject>
     protected:
         bool AIM_Initialize();
         uint32      m_spellId;
-        time_t      m_respawnTime;                          // (secs) time of next respawn (or despawn if GO have owner()), 
+        time_t      m_respawnTime;                          // (secs) time of next respawn (or despawn if GO have owner()),
         uint32      m_respawnDelayTime;                     // (secs) if 0 then current GO state no dependent from timer
         LootState   m_lootState;
         bool        m_spawnedByDefault;

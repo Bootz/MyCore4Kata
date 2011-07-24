@@ -139,7 +139,6 @@ public:
                 pInstance->SetData(DATA_ECK_THE_FEROCIOUS_EVENT, DONE);
         }
     };
-
 };
 
 class npc_ruins_dweller : public CreatureScript
@@ -171,7 +170,6 @@ public:
             }
         }
     };
-
 };
 
 void AddSC_boss_eck()

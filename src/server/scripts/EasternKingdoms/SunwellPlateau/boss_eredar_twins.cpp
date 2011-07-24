@@ -347,9 +347,7 @@ public:
             }
         }
     };
-
 };
-
 
 class boss_alythess : public CreatureScript
 {
@@ -447,7 +445,6 @@ public:
 
             if (who->isTargetableForAttack() && who->isInAccessiblePlaceFor(me) && me->IsHostileTo(who))
             {
-
                 float attackRadius = me->GetAttackDistance(who);
                 if (me->IsWithinDistInMap(who, attackRadius) && me->GetDistanceZ(who) <= CREATURE_Z_ATTACK_RANGE && me->IsWithinLOSInMap(who))
                 {
@@ -488,7 +485,6 @@ public:
         {
             switch(spell->Id)
             {
-
             case SPELL_BLAZE:
                 pTarget->CastSpell(pTarget, SPELL_BLAZE_SUMMON, true);
             case SPELL_CONFLAGRATION:
@@ -678,9 +674,7 @@ public:
             } else EnrageTimer -= diff;
         }
     };
-
 };
-
 
 class mob_shadow_image : public CreatureScript
 {
@@ -714,7 +708,6 @@ public:
         {
             switch(spell->Id)
             {
-
             case SPELL_SHADOW_FURY:
             case SPELL_DARK_STRIKE:
                 if (!pTarget->HasAura(SPELL_DARK_FLAME))
@@ -761,9 +754,7 @@ public:
             } else DarkstrikeTimer -= diff;
         }
     };
-
 };
-
 
 void AddSC_boss_eredar_twins()
 {

@@ -96,9 +96,7 @@ public:
         }
         return true;
     }
-
 };
-
 
 /*######
 ## npc_great_bear_spirit
@@ -155,9 +153,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_silva_filnaveth
@@ -213,9 +209,7 @@ public:
         }
         return true;
     }
-
 };
-
 
 /*######
 ## npc_clintar_spirit
@@ -397,7 +391,6 @@ public:
 
             if (Event_onWait && Event_Timer <= diff)
             {
-
                 Player* pPlayer = Unit::GetPlayer(*me, PlayerGUID);
                 if (!pPlayer || (pPlayer && pPlayer->GetQuestStatus(10965) == QUEST_STATUS_NONE))
                 {
@@ -536,7 +529,6 @@ public:
                         Event_onWait = false;
                         break;
                 }
-
             } else if (Event_onWait) Event_Timer -= diff;
         }
 
@@ -548,9 +540,7 @@ public:
             Event_onWait = true;
         }
     };
-
 };
-
 
 /*####
 # npc_clintar_dreamwalker
@@ -573,7 +563,6 @@ public:
         }
         return true;
     }
-
 };
 
 /*####

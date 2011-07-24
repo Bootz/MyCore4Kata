@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -111,7 +111,7 @@ Tokens::Tokens(const std::string &src, const char sep, uint32 vectorReserve)
         }
         else if (*posnew == 0x00)
         {
-            // Hack like, but the old code accepted these kind of broken strings, 
+            // Hack like, but the old code accepted these kind of broken strings,
             // so changing it would break other things
             if (posold != posnew)
                 push_back(posold);
@@ -154,7 +154,6 @@ void stripLineInvisibleChars(std::string &str)
         str.erase(wpos, str.size());
     if (str.find("|TInterface")!=std::string::npos)
         str.clear();
-
 }
 
 std::string secsToTimeString(uint64 timeInSecs, bool shortText, bool hoursOnly)
@@ -522,4 +521,3 @@ void hexEncodeByteArray(uint8* bytes, uint32 arrayLen, std::string& result)
     }
     result = ss.str();
 }
-

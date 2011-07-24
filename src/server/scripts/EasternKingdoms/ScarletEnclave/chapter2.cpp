@@ -145,9 +145,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 /*######
 ## npc_koltira_deathweaver
@@ -346,10 +344,7 @@ public:
             }
         }
     };
-
 };
-
-
 
 //Scarlet courier
 enum ScarletCourierEnum
@@ -436,9 +431,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 //Koltira & Valroth- Breakout
 
@@ -525,9 +518,7 @@ public:
             killer->CastSpell(me, SPELL_SUMMON_VALROTH_REMAINS, true);
         }
     };
-
 };
-
 
 /*######
 ## npc_a_special_surprise
@@ -1002,7 +993,7 @@ public:
                                 case 2: DoScriptText(SAY_EXEC_PROG_1, me, pPlayer); break;
                                 case 3: DoScriptText(SAY_EXEC_NAME_1, me, pPlayer); break;
                                 case 4: DoScriptText(SAY_EXEC_RECOG_1, me, pPlayer); break;
-                                case 5: DoScriptText(SAY_EXEC_NOREM_11, me, pPlayer); break;		// SQL Part Implemented in Cataclysm 
+                                case 5: DoScriptText(SAY_EXEC_NOREM_11, me, pPlayer); break;		// SQL Part Implemented in Cataclysm
                                 case 6: DoScriptText(SAY_EXEC_THINK_12, me, pPlayer); break;		// SQL Part Implemented in Cataclysm
                                 case 7: DoScriptText(SAY_EXEC_LISTEN_1, me, pPlayer); break;
                                 case 8:
@@ -1030,7 +1021,7 @@ public:
                                 case 2: DoScriptText(SAY_EXEC_PROG_8, me, pPlayer); break;			// SQL Part Implemented in Cataclysm
                                 case 3: DoScriptText(SAY_EXEC_NAME_1, me, pPlayer); break;			// SQL Part Implemented in Cataclysm
                                 case 4: DoScriptText(SAY_EXEC_RECOG_1, me, pPlayer); break;
-                                case 5: DoScriptText(SAY_EXEC_NOREM_11, me, pPlayer); break;		// SQL Part Implemented in Cataclysm 
+                                case 5: DoScriptText(SAY_EXEC_NOREM_11, me, pPlayer); break;		// SQL Part Implemented in Cataclysm
                                 case 6: DoScriptText(SAY_EXEC_THINK_11, me, pPlayer); break;		// SQL Part Implemented in Cataclysm
                                 case 7: DoScriptText(SAY_EXEC_LISTEN_5, me, pPlayer); break;		// SQL Part Implemented in Cataclysm
                                 case 8:
@@ -1064,9 +1055,7 @@ public:
             }
         }
     };
-
 };
-
 
 void AddSC_the_scarlet_enclave_c2()
 {

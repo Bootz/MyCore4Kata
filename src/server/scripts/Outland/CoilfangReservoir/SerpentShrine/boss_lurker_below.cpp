@@ -322,7 +322,6 @@ public:
                     return;
 
                 DoMeleeAttackIfReady();
-
             }else//submerged
             {
                 if (PhaseTimer <= diff)
@@ -391,7 +390,6 @@ public:
 
         return ai;
     }
-
 };
 
 class mob_coilfang_ambusher : public CreatureScript
@@ -420,12 +418,10 @@ public:
         {
             MultiShotTimer = 10000;
             ShootBowTimer = 4000;
-
         }
 
         void EnterCombat(Unit * /*who*/)
         {
-
         }
 
         void MoveInLineOfSight(Unit *who)
@@ -461,7 +457,6 @@ public:
             } else ShootBowTimer -= diff;
         }
     };
-
 };
 
 void AddSC_boss_the_lurker_below()

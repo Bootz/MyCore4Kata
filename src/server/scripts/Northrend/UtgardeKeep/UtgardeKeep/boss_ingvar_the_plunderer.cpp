@@ -278,9 +278,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 enum eSpells
 {
@@ -401,7 +399,6 @@ public:
     };
 };
 
-
 enum eShadowAxe
 {
     SPELL_SHADOW_AXE_DAMAGE                     = 42750,
@@ -451,9 +448,7 @@ public:
             } else uiDespawnTimer -= diff;
         }
     };
-
 };
-
 
 void AddSC_boss_ingvar_the_plunderer()
 {

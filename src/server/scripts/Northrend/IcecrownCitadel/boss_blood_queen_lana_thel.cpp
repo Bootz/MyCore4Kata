@@ -290,7 +290,6 @@ class boss_blood_queen_lana_thel : public CreatureScript
                                         if (Item* shadowsEdge = offtank->GetWeaponForAttack(BASE_ATTACK, true))
                                             if (!offtank->HasAura(SPELL_THIRST_QUENCHED) && shadowsEdge->GetEntry() == ITEM_SHADOW_S_EDGE && !offtank->HasAura(SPELL_GUSHING_WOUND))
                                                 offtank->CastSpell(offtank, SPELL_GUSHING_WOUND, true);
-
                                     }
                                 }
                             }

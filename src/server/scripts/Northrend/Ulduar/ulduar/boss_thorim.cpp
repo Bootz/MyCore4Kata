@@ -103,9 +103,7 @@ public:
             EnterEvadeIfOutOfCombatArea(diff);
         }
     };
-
 };
-
 
 void AddSC_boss_thorim()
 {

@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -37,8 +37,8 @@
 #include "Group.h"
 #include "Player.h"
 
-LFGMgr::LFGMgr(): m_update(true), m_QueueTimer(0), m_lfgProposalId(1), 
-m_WaitTimeAvg(-1), m_WaitTimeTank(-1), m_WaitTimeHealer(-1), m_WaitTimeDps(-1), 
+LFGMgr::LFGMgr(): m_update(true), m_QueueTimer(0), m_lfgProposalId(1),
+m_WaitTimeAvg(-1), m_WaitTimeTank(-1), m_WaitTimeHealer(-1), m_WaitTimeDps(-1),
 m_NumWaitTimeAvg(0), m_NumWaitTimeTank(0), m_NumWaitTimeHealer(0), m_NumWaitTimeDps(0)
 {
     m_update = sWorld->getBoolConfig(CONFIG_DUNGEON_FINDER_ENABLE);
@@ -97,7 +97,7 @@ void LFGMgr::LoadRewards()
         return;
     }
 
-    uint32 count = 0;    
+    uint32 count = 0;
 
     Field* fields = NULL;
     do
@@ -169,7 +169,7 @@ void LFGMgr::Update(uint32 diff)
             if (Player* plr = sObjectMgr->GetPlayer(guid))
             {
                 plr->GetSession()->SendLfgRoleCheckUpdate(roleCheck);
-                
+
                 if (itRoles->first == roleCheck->leader)
                     plr->GetSession()->SendLfgJoinResult(LfgJoinResultData(LFG_JOIN_FAILED, LFG_ROLECHECK_MISSING_ROLE));
             }
@@ -359,7 +359,6 @@ bool LFGMgr::RemoveFromQueue(const uint64& guid)
         sLog->outDebug(LOG_FILTER_LFG, "LFGMgr::RemoveFromQueue: [" UI64FMTD "] not in queue", guid);
         return false;
     }
-
 }
 
 /**
@@ -1683,7 +1682,6 @@ void LFGMgr::TeleportPlayer(Player* plr, bool out, bool fromOpcode /*= false*/)
 
             if (!fromOpcode)
             {
-
                 // Select a player inside to be teleported to
                 for (GroupReference* itr = grp->GetFirstMember(); itr != NULL && !mapid; itr = itr->next())
                 {
@@ -1747,7 +1745,7 @@ void LFGMgr::TeleportPlayer(Player* plr, bool out, bool fromOpcode /*= false*/)
 /**
    Give completion reward to player
 
-   @param[in]     dungeonId Id of the dungeon finished 
+   @param[in]     dungeonId Id of the dungeon finished
    @param[in]     plr Player to reward
 */
 void LFGMgr::RewardDungeonDoneFor(const uint32 dungeonId, Player* player)
@@ -1761,11 +1759,11 @@ void LFGMgr::RewardDungeonDoneFor(const uint32 dungeonId, Player* player)
 
     uint64 guid = player->GetGUID();
     uint64 gguid = player->GetGroup()->GetGUID();
-    uint32 gDungeonId = GetDungeon(gguid);     
+    uint32 gDungeonId = GetDungeon(gguid);
     if (gDungeonId != dungeonId)
     {
-        sLog->outDebug(LOG_FILTER_LFG, "LFGMgr::RewardDungeonDoneFor: [" UI64FMTD "] Finished dungeon %u but group queued for %u. Ignoring", guid, dungeonId, gDungeonId);    
-        return;    
+        sLog->outDebug(LOG_FILTER_LFG, "LFGMgr::RewardDungeonDoneFor: [" UI64FMTD "] Finished dungeon %u but group queued for %u. Ignoring", guid, dungeonId, gDungeonId);
+        return;
     }
 
     if (GetState(guid) == LFG_STATE_FINISHED_DUNGEON)
@@ -1893,7 +1891,6 @@ std::string LFGMgr::ConcatenateGuids(LfgGuidList check)
         o << "|" << (*it);
     return o.str();
 }
-
 
 LfgState LFGMgr::GetState(const uint64& guid)
 {

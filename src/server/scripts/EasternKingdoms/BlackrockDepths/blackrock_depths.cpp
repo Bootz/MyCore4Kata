@@ -72,7 +72,6 @@ public:
         }
         return false;
     }
-
 };
 
 /*######
@@ -127,7 +126,6 @@ public:
         }
         return false;
     }
-
 };
 
 /*######
@@ -371,9 +369,7 @@ public:
                 npc_escortAI::UpdateAI(diff);
            }
     };
-
 };
-
 
 /*######
 ## mob_phalanx
@@ -444,7 +440,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 /*######
@@ -541,9 +536,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_lokhtos_darkbargainer
@@ -609,9 +602,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_dughal_stormwing
@@ -716,7 +707,6 @@ public:
             npc_escortAI::UpdateAI(diff);
         }
     };
-
 };
 
  */
@@ -780,7 +770,6 @@ public:
                     pInstance->SetData(DATA_QUEST_JAIL_BREAK,ENCOUNTER_STATE_IN_PROGRESS);
                     pCreature->setFaction(11);
             }
-
             }
         return false;
     }
@@ -884,7 +873,6 @@ public:
             npc_escortAI::UpdateAI(diff);
         }
     };
-
 };
 
   */
@@ -1105,7 +1093,6 @@ public:
             npc_escortAI::UpdateAI(diff);
         }
     };
-
 };
 */
 /*######
@@ -1207,10 +1194,7 @@ public:
             npc_escortAI::UpdateAI(diff);
         }
     };
-
 };
-
-
 
 */
 
@@ -1363,7 +1347,6 @@ public:
             npc_escortAI::UpdateAI(diff);
         }
     };
-
 };
 
 /*######

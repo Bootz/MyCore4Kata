@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -27,52 +27,52 @@ class Battleground;
 
 enum BattlegroundRVObjectTypes
 {
-    BG_RV_OBJECT_BUFF_1, 
-    BG_RV_OBJECT_BUFF_2, 
-    BG_RV_OBJECT_FIRE_1, 
-    BG_RV_OBJECT_FIRE_2, 
-    BG_RV_OBJECT_FIREDOOR_1, 
-    BG_RV_OBJECT_FIREDOOR_2, 
+    BG_RV_OBJECT_BUFF_1,
+    BG_RV_OBJECT_BUFF_2,
+    BG_RV_OBJECT_FIRE_1,
+    BG_RV_OBJECT_FIRE_2,
+    BG_RV_OBJECT_FIREDOOR_1,
+    BG_RV_OBJECT_FIREDOOR_2,
 
-    BG_RV_OBJECT_PILAR_1, 
-    BG_RV_OBJECT_PILAR_3, 
-    BG_RV_OBJECT_GEAR_1, 
-    BG_RV_OBJECT_GEAR_2, 
+    BG_RV_OBJECT_PILAR_1,
+    BG_RV_OBJECT_PILAR_3,
+    BG_RV_OBJECT_GEAR_1,
+    BG_RV_OBJECT_GEAR_2,
 
-    BG_RV_OBJECT_PILAR_2, 
-    BG_RV_OBJECT_PILAR_4, 
-    BG_RV_OBJECT_PULLEY_1, 
-    BG_RV_OBJECT_PULLEY_2, 
+    BG_RV_OBJECT_PILAR_2,
+    BG_RV_OBJECT_PILAR_4,
+    BG_RV_OBJECT_PULLEY_1,
+    BG_RV_OBJECT_PULLEY_2,
 /*
-    BG_RV_OBJECT_PILAR_COLLISION_1, 
-    BG_RV_OBJECT_PILAR_COLLISION_2, 
-    BG_RV_OBJECT_PILAR_COLLISION_3, 
-    BG_RV_OBJECT_PILAR_COLLISION_4, 
+    BG_RV_OBJECT_PILAR_COLLISION_1,
+    BG_RV_OBJECT_PILAR_COLLISION_2,
+    BG_RV_OBJECT_PILAR_COLLISION_3,
+    BG_RV_OBJECT_PILAR_COLLISION_4,
 */
-    BG_RV_OBJECT_ELEVATOR_1, 
-    BG_RV_OBJECT_ELEVATOR_2, 
-    BG_RV_OBJECT_FENCE_1, 
-    BG_RV_OBJECT_FENCE_2, 
-    BG_RV_OBJECT_MAX, 
+    BG_RV_OBJECT_ELEVATOR_1,
+    BG_RV_OBJECT_ELEVATOR_2,
+    BG_RV_OBJECT_FENCE_1,
+    BG_RV_OBJECT_FENCE_2,
+    BG_RV_OBJECT_MAX,
 };
 
 enum BattlegroundRVObjects
 {
-    BG_RV_OBJECT_TYPE_BUFF_1                     = 184663, 
-    BG_RV_OBJECT_TYPE_BUFF_2                     = 184664, 
-    BG_RV_OBJECT_TYPE_FIRE_1                     = 192704, 
-    BG_RV_OBJECT_TYPE_FIRE_2                     = 192705, 
+    BG_RV_OBJECT_TYPE_BUFF_1                     = 184663,
+    BG_RV_OBJECT_TYPE_BUFF_2                     = 184664,
+    BG_RV_OBJECT_TYPE_FIRE_1                     = 192704,
+    BG_RV_OBJECT_TYPE_FIRE_2                     = 192705,
 
-    BG_RV_OBJECT_TYPE_FIREDOOR_2                 = 192387, 
-    BG_RV_OBJECT_TYPE_FIREDOOR_1                 = 192388, 
-    BG_RV_OBJECT_TYPE_PULLEY_1                   = 192389, 
-    BG_RV_OBJECT_TYPE_PULLEY_2                   = 192390, 
-    BG_RV_OBJECT_TYPE_FENCE_1                    = 192391, 
-    BG_RV_OBJECT_TYPE_FENCE_2                    = 192392, 
-    BG_RV_OBJECT_TYPE_GEAR_1                     = 192393, 
-    BG_RV_OBJECT_TYPE_GEAR_2                     = 192394, 
-    BG_RV_OBJECT_TYPE_ELEVATOR_1                 = 194582, 
-    BG_RV_OBJECT_TYPE_ELEVATOR_2                 = 194586, 
+    BG_RV_OBJECT_TYPE_FIREDOOR_2                 = 192387,
+    BG_RV_OBJECT_TYPE_FIREDOOR_1                 = 192388,
+    BG_RV_OBJECT_TYPE_PULLEY_1                   = 192389,
+    BG_RV_OBJECT_TYPE_PULLEY_2                   = 192390,
+    BG_RV_OBJECT_TYPE_FENCE_1                    = 192391,
+    BG_RV_OBJECT_TYPE_FENCE_2                    = 192392,
+    BG_RV_OBJECT_TYPE_GEAR_1                     = 192393,
+    BG_RV_OBJECT_TYPE_GEAR_2                     = 192394,
+    BG_RV_OBJECT_TYPE_ELEVATOR_1                 = 194582,
+    BG_RV_OBJECT_TYPE_ELEVATOR_2                 = 194586,
 /*
     BG_RV_OBJECT_TYPE_PILAR_COLLISION_1          = 194580, // axe
     BG_RV_OBJECT_TYPE_PILAR_COLLISION_2          = 194579, // arena
@@ -87,17 +87,17 @@ enum BattlegroundRVObjects
 
 enum BattlegroundRVData
 {
-    BG_RV_STATE_OPEN_FENCES, 
-    BG_RV_STATE_OPEN_PILARS, 
-    BG_RV_STATE_CLOSE_PILARS, 
-    BG_RV_STATE_OPEN_FIRE, 
-    BG_RV_STATE_CLOSE_FIRE, 
-    BG_RV_FIRE_TO_PILAR_TIMER                    = 20000, 
-    BG_RV_PILAR_TO_FIRE_TIMER                    =  5000, 
-    BG_RV_FIRST_TIMER                            = 20133, 
-    BG_RV_WORLD_STATE_A                          = 0xe10, 
-    BG_RV_WORLD_STATE_H                          = 0xe11, 
-    BG_RV_WORLD_STATE                            = 0xe1a, 
+    BG_RV_STATE_OPEN_FENCES,
+    BG_RV_STATE_OPEN_PILARS,
+    BG_RV_STATE_CLOSE_PILARS,
+    BG_RV_STATE_OPEN_FIRE,
+    BG_RV_STATE_CLOSE_FIRE,
+    BG_RV_FIRE_TO_PILAR_TIMER                    = 20000,
+    BG_RV_PILAR_TO_FIRE_TIMER                    =  5000,
+    BG_RV_FIRST_TIMER                            = 20133,
+    BG_RV_WORLD_STATE_A                          = 0xe10,
+    BG_RV_WORLD_STATE_H                          = 0xe11,
+    BG_RV_WORLD_STATE                            = 0xe1a,
 };
 
 class BattlegroundRVScore : public BattlegroundScore

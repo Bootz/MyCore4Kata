@@ -91,7 +91,6 @@ public:
             }
         }
     };
-
 };
 
 /*######
@@ -155,7 +154,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 void AddSC_isle_of_queldanas()

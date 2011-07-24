@@ -811,10 +811,8 @@ public:
                     break;
             }
     }
-
 };
 };
-
 
 void AddSC_instance_violet_hold()
 {

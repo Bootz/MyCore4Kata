@@ -150,7 +150,6 @@ public:
                 DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class spell_gluth_decimate : public SpellScriptLoader
@@ -178,7 +177,6 @@ class spell_gluth_decimate : public SpellScriptLoader
             return new spell_gluth_decimate_SpellScript();
         }
 };
-
 
 void AddSC_boss_gluth()
 {

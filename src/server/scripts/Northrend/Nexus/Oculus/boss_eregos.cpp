@@ -132,9 +132,7 @@ public:
                 pInstance->SetData(DATA_EREGOS_EVENT, DONE);
         }
     };
-
 };
-
 
 void AddSC_boss_eregos()
 {

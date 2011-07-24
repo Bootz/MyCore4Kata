@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -52,27 +52,27 @@
 
 enum TypeMask
 {
-    TYPEMASK_OBJECT         = 0x00000001, 
-    TYPEMASK_ITEM           = 0x00000002, 
+    TYPEMASK_OBJECT         = 0x00000001,
+    TYPEMASK_ITEM           = 0x00000002,
     TYPEMASK_CONTAINER      = 0x00000006,                       // TYPEMASK_ITEM | 0x0004
     TYPEMASK_UNIT           = 0x00000008,                       //creature or player
-    TYPEMASK_PLAYER         = 0x00000010, 
-    TYPEMASK_GAMEOBJECT     = 0x00000020, 
-    TYPEMASK_DYNAMICOBJECT  = 0x00000040, 
-    TYPEMASK_CORPSE         = 0x00000080, 
+    TYPEMASK_PLAYER         = 0x00000010,
+    TYPEMASK_GAMEOBJECT     = 0x00000020,
+    TYPEMASK_DYNAMICOBJECT  = 0x00000040,
+    TYPEMASK_CORPSE         = 0x00000080,
     TYPEMASK_IN_GUILD       = 0x00010000,                       //only player with guild
     TYPEMASK_SEER           = TYPEMASK_UNIT | TYPEMASK_DYNAMICOBJECT
 };
 
 enum TypeID
 {
-    TYPEID_OBJECT        = 0, 
-    TYPEID_ITEM          = 1, 
-    TYPEID_CONTAINER     = 2, 
-    TYPEID_UNIT          = 3, 
-    TYPEID_PLAYER        = 4, 
-    TYPEID_GAMEOBJECT    = 5, 
-    TYPEID_DYNAMICOBJECT = 6, 
+    TYPEID_OBJECT        = 0,
+    TYPEID_ITEM          = 1,
+    TYPEID_CONTAINER     = 2,
+    TYPEID_UNIT          = 3,
+    TYPEID_PLAYER        = 4,
+    TYPEID_GAMEOBJECT    = 5,
+    TYPEID_DYNAMICOBJECT = 6,
     TYPEID_CORPSE        = 7
 };
 
@@ -94,15 +94,15 @@ enum TempSummonType
 
 enum PhaseMasks
 {
-    PHASEMASK_NORMAL   = 0x00000001, 
+    PHASEMASK_NORMAL   = 0x00000001,
     PHASEMASK_ANYWHERE = 0xFFFFFFFF
 };
 
 enum NotifyFlags
 {
-    NOTIFY_NONE                     = 0x00, 
-    NOTIFY_AI_RELOCATION            = 0x01, 
-    NOTIFY_VISIBILITY_CHANGED       = 0x02, 
+    NOTIFY_NONE                     = 0x00,
+    NOTIFY_AI_RELOCATION            = 0x01,
+    NOTIFY_VISIBILITY_CHANGED       = 0x02,
     NOTIFY_ALL                      = 0xFF
 };
 

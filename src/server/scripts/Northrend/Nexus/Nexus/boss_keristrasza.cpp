@@ -228,9 +228,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 class containment_sphere : public GameObjectScript
 {
@@ -252,7 +250,6 @@ public:
         }
         return true;
     }
-
 };
 
 void AddSC_boss_keristrasza()

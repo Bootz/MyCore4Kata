@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -34,15 +34,15 @@ class Player;
 
 enum LFGenum
 {
-    LFG_TIME_ROLECHECK                           = 2*MINUTE, 
-    LFG_TIME_BOOT                                = 2*MINUTE, 
-    LFG_TIME_PROPOSAL                            = 2*MINUTE, 
-    LFG_TANKS_NEEDED                             = 1, 
-    LFG_HEALERS_NEEDED                           = 1, 
-    LFG_DPS_NEEDED                               = 3, 
-    LFG_QUEUEUPDATE_INTERVAL                     = 15*IN_MILLISECONDS, 
-    LFG_SPELL_DUNGEON_COOLDOWN                   = 71328, 
-    LFG_SPELL_DUNGEON_DESERTER                   = 71041, 
+    LFG_TIME_ROLECHECK                           = 2*MINUTE,
+    LFG_TIME_BOOT                                = 2*MINUTE,
+    LFG_TIME_PROPOSAL                            = 2*MINUTE,
+    LFG_TANKS_NEEDED                             = 1,
+    LFG_HEALERS_NEEDED                           = 1,
+    LFG_DPS_NEEDED                               = 3,
+    LFG_QUEUEUPDATE_INTERVAL                     = 15*IN_MILLISECONDS,
+    LFG_SPELL_DUNGEON_COOLDOWN                   = 71328,
+    LFG_SPELL_DUNGEON_DESERTER                   = 71041,
     LFG_SPELL_LUCK_OF_THE_DRAW                   = 72221
 };
 
@@ -50,19 +50,19 @@ enum LFGenum
 enum LfgType
 {
     LFG_TYPE_NONE                                = 0,      // Internal use only
-    LFG_TYPE_DUNGEON                             = 1, 
-    LFG_TYPE_RAID                                = 2, 
-    LFG_TYPE_QUEST                               = 3, 
-    LFG_TYPE_ZONE                                = 4, 
-    LFG_TYPE_HEROIC                              = 5, 
+    LFG_TYPE_DUNGEON                             = 1,
+    LFG_TYPE_RAID                                = 2,
+    LFG_TYPE_QUEST                               = 3,
+    LFG_TYPE_ZONE                                = 4,
+    LFG_TYPE_HEROIC                              = 5,
     LFG_TYPE_RANDOM                              = 6
 };
 
 /// Proposal states
 enum LfgProposalState
 {
-    LFG_PROPOSAL_INITIATING                      = 0, 
-    LFG_PROPOSAL_FAILED                          = 1, 
+    LFG_PROPOSAL_INITIATING                      = 0,
+    LFG_PROPOSAL_FAILED                          = 1,
     LFG_PROPOSAL_SUCCESS                         = 2
 };
 
@@ -71,9 +71,9 @@ enum LfgTeleportError
 {
     // 3, 7, 8 = "You can't do that right now" | 5 = No client reaction
     LFG_TELEPORTERROR_OK                         = 0,      // Internal use
-    LFG_TELEPORTERROR_PLAYER_DEAD                = 1, 
-    LFG_TELEPORTERROR_FALLING                    = 2, 
-    LFG_TELEPORTERROR_FATIGUE                    = 4, 
+    LFG_TELEPORTERROR_PLAYER_DEAD                = 1,
+    LFG_TELEPORTERROR_FALLING                    = 2,
+    LFG_TELEPORTERROR_FATIGUE                    = 4,
     LFG_TELEPORTERROR_INVALID_LOCATION           = 6
 };
 
@@ -115,11 +115,10 @@ enum LfgRoleCheckState
 /// Answer state (Also used to check compatibilites)
 enum LfgAnswer
 {
-    LFG_ANSWER_PENDING                           = -1, 
-    LFG_ANSWER_DENY                              = 0, 
+    LFG_ANSWER_PENDING                           = -1,
+    LFG_ANSWER_DENY                              = 0,
     LFG_ANSWER_AGREE                             = 1
 };
-
 
 // Forward declaration (just to have all typedef together)
 struct LfgReward;
@@ -215,7 +214,6 @@ struct LfgProposalPlayer
     uint32 groupLowGuid;                                   ///< Original group guid (Low guid) 0 if no original group
 };
 
-
 /// Stores group data related to proposal to join
 struct LfgProposal
 {
@@ -233,7 +231,6 @@ struct LfgProposal
     time_t cancelTime;                                     ///< Time when we will cancel this proposal
     LfgGuidList queues;                                    ///< Queue Ids to remove/readd
     LfgProposalPlayerMap players;                          ///< Players data
-
 };
 
 /// Stores all rolecheck info of a group that wants to join

@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -261,7 +261,6 @@ inline void LoadDBC(uint32& availableDbcLocales, StoreProblemList& errlist, DBCS
 
     if (storage.Load(dbc_filename.c_str(), sql))
     {
-        
     }
     else
     {
@@ -380,7 +379,7 @@ void LoadDBCStores(const std::string& dataPath)
     LoadDBC(availableDbcLocales, bad_dbc_files, sGtRegenMPPerSptStore,     dbcPath, "gtRegenMPPerSpt.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sGtSpellScalingStore,      dbcPath, "gtSpellScaling.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sHolidaysStore,            dbcPath, "Holidays.dbc");
-    
+
     //LoadDBC(availableDbcLocales, bad_dbc_files, sItemStore,                dbcPath, "Item.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sItemBagFamilyStore,       dbcPath, "ItemBagFamily.dbc");
     //LoadDBC(availableDbcLocales, bad_dbc_files, sItemDisplayInfoStore,     dbcPath, "ItemDisplayInfo.dbc");     -- not used currently
@@ -390,7 +389,7 @@ void LoadDBCStores(const std::string& dataPath)
     LoadDBC(availableDbcLocales, bad_dbc_files, sItemRandomPropertiesStore, dbcPath, "ItemRandomProperties.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sItemRandomSuffixStore,    dbcPath, "ItemRandomSuffix.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sItemSetStore,             dbcPath, "ItemSet.dbc");
-    
+
     LoadDBC(availableDbcLocales, bad_dbc_files, sItemArmorQualityStore,    dbcPath, "ItemArmorQuality.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sItemArmorShieldStore,     dbcPath, "ItemArmorShield.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sItemArmorTotalStore,      dbcPath, "ItemArmorTotal.dbc");
@@ -402,7 +401,7 @@ void LoadDBCStores(const std::string& dataPath)
     LoadDBC(availableDbcLocales, bad_dbc_files, sItemDamageTwoHandStore,   dbcPath, "ItemDamageTwoHand.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sItemDamageTwoHandCasterStore, dbcPath, "ItemDamageTwoHandCaster.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sItemDamageWandStore,      dbcPath, "ItemDamageWand.dbc");
-    
+
     LoadDBC(availableDbcLocales, bad_dbc_files, sLFGDungeonStore,          dbcPath, "LFGDungeons.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sLockStore,                dbcPath, "Lock.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sMailTemplateStore,        dbcPath, "MailTemplate.dbc");
@@ -451,13 +450,13 @@ void LoadDBCStores(const std::string& dataPath)
     LoadDBC(availableDbcLocales, bad_dbc_files, sSpellTargetRestrictionsStore, dbcPath, "SpellTargetRestrictions.dbc"/*, &CustomSpellTargetRestrictionsEntryfmt, &CustomSpellTargetRestrictionsEntryIndex*/);
     LoadDBC(availableDbcLocales, bad_dbc_files, sSpellTotemsStore,         dbcPath, "SpellTotems.dbc"/*, &CustomSpellTotemsEntryfmt, &CustomSpellTotemsEntryIndex*/);
     LoadDBC(availableDbcLocales, bad_dbc_files, sTrueSpellStore,           dbcPath, "Spell.dbc"/*, &CustomSpellEntryfmt, &CustomSpellEntryIndex*/);
-    
+
     for(uint32 i = 1; i < sSpellEffectStore.GetNumRows(); ++i)
     {
         if (SpellEffectEntry const *spellEffect = sSpellEffectStore.LookupEntry(i))
             sSpellEffectMap[spellEffect->EffectSpellId].effects[spellEffect->EffectIndex] = spellEffect;
     }
-    
+
     sSpellStore.Clear();
     sSpellStore.nCount = sTrueSpellStore.nCount;
     sSpellStore.fieldCount = strlen(sSpellStore.fmt);
@@ -469,7 +468,7 @@ void LoadDBCStores(const std::string& dataPath)
         {
             SpellEntry *newspell = new SpellEntry(spell);
             sSpellStore.SetEntry(i, newspell);
-        
+
             if (newspell->Category)
                 sSpellCategoryStore[newspell->Category].insert(i);
         }
@@ -478,7 +477,7 @@ void LoadDBCStores(const std::string& dataPath)
             sSpellStore.indexTable[i] = NULL;
         }
     }
-    
+
     for (uint32 j = 0; j < sSkillLineAbilityStore.GetNumRows(); ++j)
     {
         SkillLineAbilityEntry const *skillLine = sSkillLineAbilityStore.LookupEntry(j);
@@ -563,7 +562,7 @@ void LoadDBCStores(const std::string& dataPath)
 
     LoadDBC(availableDbcLocales, bad_dbc_files, sTalentTabStore,           dbcPath, "TalentTab.dbc");
     LoadDBC(availableDbcLocales, bad_dbc_files, sTalentTreePrimarySpellsStore, dbcPath, "TalentTreePrimarySpells.dbc");
-    
+
     // prepare fast data access to bit pos of talent ranks for use at inspecting
     {
         // now have all max ranks (and then bit amount used for store talent ranks in inspect)
@@ -622,7 +621,7 @@ void LoadDBCStores(const std::string& dataPath)
                 for (int j = 0; j < MAX_SPELL_EFFECTS; ++j)
                     if (sInfo->Effect[j] == SPELL_EFFECT_SEND_TAXI)
                         spellPaths.insert(sInfo->EffectMiscValue[j]);
-        
+
         ASSERT(((sTaxiNodesStore.GetNumRows()-1)/32) < TaxiMaskSize && "TaxiMaskSize needs to be increased");
         memset(sTaxiNodesMask, 0, sizeof(sTaxiNodesMask));
         memset(sOldContinentsNodesMask, 0, sizeof(sOldContinentsNodesMask));
@@ -757,7 +756,7 @@ SpellEffectEntry const* GetSpellEffectEntry(uint32 spellId, uint32 effect)
     SpellEffectMap::const_iterator itr = sSpellEffectMap.find(spellId);
     if (itr == sSpellEffectMap.end())
         return NULL;
-    
+
     return itr->second.effects[effect];
 }
 
@@ -973,7 +972,7 @@ float GetGtSpellScalingValue(int8 class_, uint8 level)
         class_ = MAX_CLASSES; // General distribution
     if (class_ == 0)
         return -1.0f; // shouldn't scale
-    
+
     //They really wants that players reach level 100... in the 5th expansion.
     const gtSpellScaling * spellscaling = sGtSpellScalingStore.LookupEntry( (class_-1)*100 + level - 1 );
     if (spellscaling)

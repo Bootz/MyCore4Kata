@@ -257,9 +257,7 @@ public:
             return 0;
         }
     };
-
 };
-
 
 enum GuardSpells
 {
@@ -340,9 +338,7 @@ public:
             } else uiGushingWoundTimer -= diff;
         }
     };
-
 };
-
 
 void AddSC_boss_erekem()
 {

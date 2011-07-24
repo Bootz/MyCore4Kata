@@ -178,9 +178,7 @@ public:
             DoScriptText(RAND(SAY_KILL_1,SAY_KILL_2,SAY_KILL_3), me);
         }
     };
-
 };
-
 
 class npc_unstable_sphere : public CreatureScript
 {
@@ -224,9 +222,7 @@ public:
             else uiDeathTimer -= uiDiff;
         }
     };
-
 };
-
 
 void AddSC_boss_drakos()
 {

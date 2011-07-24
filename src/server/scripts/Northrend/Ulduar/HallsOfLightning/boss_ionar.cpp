@@ -303,10 +303,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
-
 
 /*######
 ## mob_spark_of_ionar
@@ -391,9 +388,7 @@ public:
             // No melee attack at all!
         }
     };
-
 };
-
 
 void AddSC_boss_ionar()
 {

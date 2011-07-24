@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -34,23 +34,23 @@ EndScriptData */
 
 enum ePoints
 {
-    POINT_LAST_POINT    = 0xFFFFFF, 
+    POINT_LAST_POINT    = 0xFFFFFF,
     POINT_HOME          = 0xFFFFFE
 };
 
-npc_escortAI::npc_escortAI(Creature* pCreature) : ScriptedAI(pCreature), 
-    m_uiPlayerGUID(0), 
-    m_uiWPWaitTimer(2500), 
-    m_uiPlayerCheckTimer(1000), 
-    m_uiEscortState(STATE_ESCORT_NONE), 
-    MaxPlayerDistance(DEFAULT_MAX_PLAYER_DISTANCE), 
-    m_pQuestForEscort(NULL), 
-    m_bIsActiveAttacker(true), 
-    m_bIsRunning(false), 
-    m_bCanInstantRespawn(false), 
-    m_bCanReturnToStart(false), 
-    DespawnAtEnd(true), 
-    DespawnAtFar(true), 
+npc_escortAI::npc_escortAI(Creature* pCreature) : ScriptedAI(pCreature),
+    m_uiPlayerGUID(0),
+    m_uiWPWaitTimer(2500),
+    m_uiPlayerCheckTimer(1000),
+    m_uiEscortState(STATE_ESCORT_NONE),
+    MaxPlayerDistance(DEFAULT_MAX_PLAYER_DISTANCE),
+    m_pQuestForEscort(NULL),
+    m_bIsActiveAttacker(true),
+    m_bIsRunning(false),
+    m_bCanInstantRespawn(false),
+    m_bCanReturnToStart(false),
+    DespawnAtEnd(true),
+    DespawnAtFar(true),
     ScriptWP(false)
 {}
 
@@ -471,7 +471,7 @@ void npc_escortAI::Start(bool bIsActiveAttacker, bool bRun, uint64 uiPlayerGUID,
 
     if (WaypointList.empty())
     {
-        sLog->outErrorDb("TSCR: EscortAI (script: %s, creature entry: %u) starts with 0 waypoints (possible missing entry in script_waypoint. Quest: %u).", 
+        sLog->outErrorDb("TSCR: EscortAI (script: %s, creature entry: %u) starts with 0 waypoints (possible missing entry in script_waypoint. Quest: %u).",
             me->GetScriptName().c_str(), me->GetEntry(), pQuest ? pQuest->GetQuestId() : 0);
         return;
     }

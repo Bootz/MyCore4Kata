@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -33,7 +33,7 @@ enum EObjectFields
     OBJECT_FIELD_SCALE_X                      = 0x0004, // Size: 1, Type: FLOAT, Flags: PUBLIC
     OBJECT_FIELD_DATA                         = 0x0005, // Size: 2, Type: LONG, Flags: PUBLIC
     OBJECT_FIELD_PADDING                      = 0x0007, // Size: 1, Type: INT, Flags: NONE
-    OBJECT_END                                = 0x0008, 
+    OBJECT_END                                = 0x0008,
 };
 
 enum EItemFields
@@ -80,7 +80,7 @@ enum EItemFields
     ITEM_FIELD_MAXDURABILITY                  = OBJECT_END + 0x003D, // Size: 1, Type: INT, Flags: OWNER, UNUSED1
     ITEM_FIELD_CREATE_PLAYED_TIME             = OBJECT_END + 0x003E, // Size: 1, Type: INT, Flags: PUBLIC
     ITEM_FIELD_PAD                            = OBJECT_END + 0x003F, // Size: 1, Type: INT, Flags: NONE
-    ITEM_END                                  = OBJECT_END + 0x0040, 
+    ITEM_END                                  = OBJECT_END + 0x0040,
 };
 
 enum EContainerFields
@@ -88,7 +88,7 @@ enum EContainerFields
     CONTAINER_FIELD_NUM_SLOTS                 = ITEM_END + 0x0000, // Size: 1, Type: INT, Flags: PUBLIC
     CONTAINER_ALIGN_PAD                       = ITEM_END + 0x0001, // Size: 1, Type: BYTES, Flags: NONE
     CONTAINER_FIELD_SLOT_1                    = ITEM_END + 0x0002, // Size: 72, Type: LONG, Flags: PUBLIC
-    CONTAINER_END                             = ITEM_END + 0x004A, 
+    CONTAINER_END                             = ITEM_END + 0x004A,
 };
 
 enum EUnitFields
@@ -192,7 +192,7 @@ enum EUnitFields
     UNIT_FIELD_MAXHEALTHMODIFIER              = OBJECT_END + 0x009D, // Size: 1, Type: FLOAT, Flags: PRIVATE, OWNER
     UNIT_FIELD_HOVERHEIGHT                    = OBJECT_END + 0x009E, // Size: 1, Type: FLOAT, Flags: PUBLIC
     UNIT_FIELD_MAXITEMLEVEL                   = OBJECT_END + 0x009F, // Size: 1, Type: INT, Flags: PUBLIC
-    UNIT_END                                  = OBJECT_END + 0x00A0, 
+    UNIT_END                                  = OBJECT_END + 0x00A0,
 
     PLAYER_DUEL_ARBITER                       = UNIT_END + 0x0000, // Size: 2, Type: LONG, Flags: PUBLIC
     PLAYER_FLAGS                              = UNIT_END + 0x0002, // Size: 1, Type: INT, Flags: PUBLIC
@@ -515,7 +515,7 @@ enum EUnitFields
     PLAYER_FIELD_MOD_RANGED_HASTE             = UNIT_END + 0x0501, // Size: 1, Type: FLOAT, Flags: PRIVATE
     PLAYER_FIELD_MOD_PET_HASTE                = UNIT_END + 0x0502, // Size: 1, Type: FLOAT, Flags: PRIVATE
     PLAYER_FIELD_MOD_HASTE_REGEN              = UNIT_END + 0x0503, // Size: 1, Type: FLOAT, Flags: PRIVATE
-    PLAYER_END                                = UNIT_END + 0x0504, 
+    PLAYER_END                                = UNIT_END + 0x0504,
 };
 
 #define PLAYER_END_NOT_SELF PLAYER_FIELD_INV_SLOT_HEAD
@@ -529,7 +529,7 @@ enum EGameObjectFields
     GAMEOBJECT_FACTION                        = OBJECT_END + 0x0009, // Size: 1, Type: INT, Flags: PUBLIC
     GAMEOBJECT_LEVEL                          = OBJECT_END + 0x000A, // Size: 1, Type: INT, Flags: PUBLIC
     GAMEOBJECT_BYTES_1                        = OBJECT_END + 0x000B, // Size: 1, Type: BYTES, Flags: PUBLIC
-    GAMEOBJECT_END                            = OBJECT_END + 0x000C, 
+    GAMEOBJECT_END                            = OBJECT_END + 0x000C,
 };
 
 enum EDynamicObjectFields
@@ -539,7 +539,7 @@ enum EDynamicObjectFields
     DYNAMICOBJECT_SPELLID                     = OBJECT_END + 0x0003, // Size: 1, Type: INT, Flags: PUBLIC
     DYNAMICOBJECT_RADIUS                      = OBJECT_END + 0x0004, // Size: 1, Type: FLOAT, Flags: PUBLIC
     DYNAMICOBJECT_CASTTIME                    = OBJECT_END + 0x0005, // Size: 1, Type: INT, Flags: PUBLIC
-    DYNAMICOBJECT_END                         = OBJECT_END + 0x0006, 
+    DYNAMICOBJECT_END                         = OBJECT_END + 0x0006,
 };
 
 enum ECorpseFields
@@ -552,6 +552,6 @@ enum ECorpseFields
     CORPSE_FIELD_BYTES_2                      = OBJECT_END + 0x0019, // Size: 1, Type: BYTES, Flags: PUBLIC
     CORPSE_FIELD_FLAGS                        = OBJECT_END + 0x001A, // Size: 1, Type: INT, Flags: PUBLIC
     CORPSE_FIELD_DYNAMIC_FLAGS                = OBJECT_END + 0x001B, // Size: 1, Type: INT, Flags: UNUSED2
-    CORPSE_END                                = OBJECT_END + 0x001C, 
+    CORPSE_END                                = OBJECT_END + 0x001C,
 };
 #endif

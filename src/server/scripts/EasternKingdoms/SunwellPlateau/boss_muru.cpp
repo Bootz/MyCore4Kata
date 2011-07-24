@@ -205,9 +205,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 class boss_muru : public CreatureScript
 {
@@ -371,9 +369,7 @@ public:
             }
         }
     };
-
 };
-
 
 class npc_muru_portal : public CreatureScript
 {
@@ -456,9 +452,7 @@ public:
             } else SummonTimer -= diff;
         }
     };
-
 };
-
 
 class npc_dark_fiend : public CreatureScript
 {
@@ -509,7 +503,6 @@ public:
                 }
                 else
                 {
-
                     if (me->IsWithinDist(me->getVictim(), 5))
                     {
                         DoCastAOE(SPELL_DARKFIEND_AOE, false);
@@ -520,9 +513,7 @@ public:
             } else WaitTimer -= diff;
         }
     };
-
 };
-
 
 class npc_void_sentinel : public CreatureScript
 {
@@ -577,9 +568,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 class npc_blackhole : public CreatureScript
 {
@@ -657,9 +646,7 @@ public:
             else DespawnTimer -= diff;
         }
     };
-
 };
-
 
 void AddSC_boss_muru()
 {

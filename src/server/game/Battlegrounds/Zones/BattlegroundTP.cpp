@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -36,9 +36,9 @@
 // these variables aren't used outside of this file, so declare them only here
 enum BG_TP_Rewards
 {
-    BG_TP_WIN = 0, 
-    BG_TP_FLAG_CAP, 
-    BG_TP_MAP_COMPLETE, 
+    BG_TP_WIN = 0,
+    BG_TP_FLAG_CAP,
+    BG_TP_MAP_COMPLETE,
     BG_TP_REWARD_NUM
 };
 
@@ -766,7 +766,6 @@ void BattlegroundTP::HandleKillPlayer(Player *player, Player *killer)
 
 void BattlegroundTP::UpdatePlayerScore(Player *Source, uint32 type, uint32 value, bool doAddHonor)
 {
-
     BattlegroundScoreMap::iterator itr = m_PlayerScores.find(Source->GetGUID());
     if (itr == m_PlayerScores.end())                         // player not found
         return;
@@ -869,5 +868,4 @@ void BattlegroundTP::FillInitialWorldStates(WorldPacket& data)
         data << uint32(BG_TP_FLAG_STATE_HORDE) << uint32(2);
     else
         data << uint32(BG_TP_FLAG_STATE_HORDE) << uint32(1);
-
 }

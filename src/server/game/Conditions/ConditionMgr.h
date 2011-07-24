@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -67,12 +67,12 @@ enum ConditionType
 
 enum LevelConditionType
 {
-    LVL_COND_EQ = 0, 
-    LVL_COND_HIGH = 1, 
-    LVL_COND_LOW = 2, 
-    LVL_COND_HIGH_EQ = 3, 
-    LVL_COND_LOW_EQ = 4, 
-    LVL_COND_MAX = 5, 
+    LVL_COND_EQ = 0,
+    LVL_COND_HIGH = 1,
+    LVL_COND_LOW = 2,
+    LVL_COND_HIGH_EQ = 3,
+    LVL_COND_LOW_EQ = 4,
+    LVL_COND_MAX = 5,
 };
 
 enum ConditionSourceType

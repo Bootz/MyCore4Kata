@@ -614,7 +614,6 @@ public:
                     me->SetStandState(UNIT_STAND_STATE_STAND);
                     me->ForcedDespawn(DespawnTimer);
                 }
-
             }
         }
 
@@ -657,7 +656,7 @@ public:
     struct npc_lightning_sentryAI : public ScriptedAI
     {
         npc_lightning_sentryAI(Creature *pCreature) : ScriptedAI(pCreature) { }
-        
+
         uint32 uiChargedSentryTotem;
 
         void Reset()
@@ -715,7 +714,7 @@ class npc_venture_co_straggler : public CreatureScript
 {
 public:
     npc_venture_co_straggler() : CreatureScript("npc_venture_co_straggler") { }
-    
+
     CreatureAI *GetAI(Creature *pCreature) const
     {
         return new npc_venture_co_stragglerAI(pCreature);
@@ -748,7 +747,7 @@ public:
                     switch (uiTimer)
                     {
                         case 0:
-                            if (pPlayer->GetQuestStatus(QUEST_SMOKE_EM_OUT_A) == QUEST_STATUS_INCOMPLETE || 
+                            if (pPlayer->GetQuestStatus(QUEST_SMOKE_EM_OUT_A) == QUEST_STATUS_INCOMPLETE ||
                                 pPlayer->GetQuestStatus(QUEST_SMOKE_EM_OUT_H) == QUEST_STATUS_INCOMPLETE)
                                 pPlayer->KilledMonsterCredit(NPC_VENTURE_CO_STABLES_KC, 0);
                             me->GetMotionMaster()->MovePoint(0, me->GetPositionX()-7, me->GetPositionY()+7, me->GetPositionZ());

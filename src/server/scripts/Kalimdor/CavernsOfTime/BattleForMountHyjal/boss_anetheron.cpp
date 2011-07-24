@@ -243,9 +243,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 #define SPELL_IMMOLATION     31303
 #define SPELL_INFERNO_EFFECT 31302
@@ -329,9 +327,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 void AddSC_boss_anetheron()
 {

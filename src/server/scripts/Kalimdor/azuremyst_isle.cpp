@@ -175,7 +175,6 @@ public:
             } else SayHelpTimer -= diff;
         }
     };
-
 };
 
 /*######
@@ -289,11 +288,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
-
-
 
 /*######
 ## npc_injured_draenei
@@ -333,9 +328,7 @@ public:
         void UpdateAI(const uint32 /*diff*/)
         {
         }
-
     };
-
 };
 
 /*######
@@ -412,9 +405,7 @@ public:
 
         void Reset() { }
     };
-
 };
-
 
 /*######
 ## npc_geezle
@@ -579,7 +570,6 @@ public:
             } else SayTimer -= diff;
         }
     };
-
 };
 
 /*######
@@ -652,9 +642,7 @@ public:
     {
         return new npc_nestlewood_owlkinAI (pCreature);
     }
-
 };
-
 
 enum eRavegerCage
 {
@@ -734,7 +722,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 /*########
@@ -784,7 +771,6 @@ public:
     {
         return new npc_stillpine_capitiveAI(pCreature);
     }
-
 };
 
 class go_bristlelimb_cage : public GameObjectScript
@@ -808,7 +794,6 @@ public:
         }
         return true;
     }
-
 };
 
 void AddSC_azuremyst_isle()

@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -46,8 +46,8 @@ Bag::~Bag()
         {
             if (item->IsInWorld())
             {
-                sLog->outCrash("Item %u (slot %u, bag slot %u) in bag %u (slot %u, bag slot %u, m_bagslot %u) is to be deleted but is still in world.", 
-                    item->GetEntry(), (uint32)item->GetSlot(), (uint32)item->GetBagSlot(), 
+                sLog->outCrash("Item %u (slot %u, bag slot %u) in bag %u (slot %u, bag slot %u, m_bagslot %u) is to be deleted but is still in world.",
+                    item->GetEntry(), (uint32)item->GetSlot(), (uint32)item->GetBagSlot(),
                     GetEntry(), (uint32)GetSlot(), (uint32)GetBagSlot(), (uint32)i);
                 item->RemoveFromWorld();
             }
@@ -246,4 +246,3 @@ Item* Bag::GetItemByPos(uint8 slot) const
 
     return NULL;
 }
-

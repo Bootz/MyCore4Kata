@@ -518,7 +518,6 @@ public:
              return GO_STATE_ACTIVE;
          }
     };
-
 };
 
 class go_gundrak_altar : public GameObjectScript
@@ -551,7 +550,6 @@ public:
         }
         return false;
     }
-
 };
 
 void AddSC_instance_gundrak()

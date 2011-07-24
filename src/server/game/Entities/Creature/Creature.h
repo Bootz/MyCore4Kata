@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -294,22 +294,22 @@ struct CreatureModelInfo
 
 enum InhabitTypeValues
 {
-    INHABIT_GROUND = 1, 
-    INHABIT_WATER  = 2, 
-    INHABIT_AIR    = 4, 
+    INHABIT_GROUND = 1,
+    INHABIT_WATER  = 2,
+    INHABIT_AIR    = 4,
     INHABIT_ANYWHERE = INHABIT_GROUND | INHABIT_WATER | INHABIT_AIR
 };
 
 // Enums used by StringTextData::Type (CreatureEventAI)
 enum ChatType
 {
-    CHAT_TYPE_SAY               = 0, 
-    CHAT_TYPE_YELL              = 1, 
-    CHAT_TYPE_TEXT_EMOTE        = 2, 
-    CHAT_TYPE_BOSS_EMOTE        = 3, 
-    CHAT_TYPE_WHISPER           = 4, 
-    CHAT_TYPE_BOSS_WHISPER      = 5, 
-    CHAT_TYPE_ZONE_YELL         = 6, 
+    CHAT_TYPE_SAY               = 0,
+    CHAT_TYPE_YELL              = 1,
+    CHAT_TYPE_TEXT_EMOTE        = 2,
+    CHAT_TYPE_BOSS_EMOTE        = 3,
+    CHAT_TYPE_WHISPER           = 4,
+    CHAT_TYPE_BOSS_WHISPER      = 5,
+    CHAT_TYPE_ZONE_YELL         = 6,
     CHAT_TYPE_END               = 255
 };
 

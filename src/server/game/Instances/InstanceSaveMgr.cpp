@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -151,7 +151,7 @@ void InstanceSaveManager::RemoveInstanceSave(uint32 InstanceId)
 }
 
 InstanceSave::InstanceSave(uint16 MapId, uint32 InstanceId, Difficulty difficulty, time_t resetTime, bool canReset)
-: m_resetTime(resetTime), m_instanceid(InstanceId), m_mapid(MapId), 
+: m_resetTime(resetTime), m_instanceid(InstanceId), m_mapid(MapId),
   m_difficulty(difficulty), m_canReset(canReset)
 {
 }
@@ -294,7 +294,7 @@ void InstanceSaveManager::LoadResetTimes()
 
             uint32 instanceId = fields[0].GetUInt32();
 
-            // Instances are pulled in ascending order from db and nextInstanceId is initialized with 1, 
+            // Instances are pulled in ascending order from db and nextInstanceId is initialized with 1,
             // so if the instance id is used, increment until we find the first unused one for a potential new instance
             if (sMapMgr->GetNextInstanceId() == instanceId)
                 sMapMgr->SetNextInstanceId(instanceId + 1);

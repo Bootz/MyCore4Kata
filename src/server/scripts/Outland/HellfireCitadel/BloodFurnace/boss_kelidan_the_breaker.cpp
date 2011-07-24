@@ -271,7 +271,6 @@ class boss_kelidan_the_breaker : public CreatureScript
 
                 DoMeleeAttackIfReady();
             }
-
         };
 
         CreatureAI* GetAI(Creature* Creature) const
@@ -388,4 +387,3 @@ void AddSC_boss_kelidan_the_breaker()
     new boss_kelidan_the_breaker();
     new mob_shadowmoon_channeler();
 }
-

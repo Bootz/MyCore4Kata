@@ -273,7 +273,6 @@ struct advisorbase_ai : public ScriptedAI
     }
 };
 
-
 class boss_kaelthas : public CreatureScript
 {
     public:
@@ -385,7 +384,6 @@ class boss_kaelthas : public CreatureScript
 
                     if (Unit *pTarget = SelectUnit(SELECT_TARGET_RANDOM, 0))
                         AttackStart(pTarget);
-
                 }
                 else
                 {
@@ -883,7 +881,6 @@ class boss_kaelthas : public CreatureScript
                         //Phase 5
                         if (Phase == 6)
                         {
-
                             //GravityLapse_Timer
                             if (GravityLapse_Timer <= diff)
                             {
@@ -1523,7 +1520,6 @@ class mob_phoenix_tk : public CreatureScript
         }
 };
 
-
 //Phoenix Egg AI
 class mob_phoenix_egg_tk : public CreatureScript
 {
@@ -1584,7 +1580,6 @@ class mob_phoenix_egg_tk : public CreatureScript
             return new mob_phoenix_egg_tkAI(pCreature);
         }
 };
-
 
 void AddSC_boss_kaelthas()
 {

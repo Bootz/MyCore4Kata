@@ -254,7 +254,6 @@ public:
         }
     };
 
-
     CreatureAI *GetAI(Creature *creature) const
     {
         return new npc_air_force_botsAI(creature);
@@ -478,7 +477,6 @@ public:
         return new npc_dancing_flamesAI(creature);
     }
 };
-
 
 /*######
 ## Triage quest
@@ -1524,7 +1522,6 @@ public:
             else
                 me->SetReactState(REACT_AGGRESSIVE);
         }
-
     };
 
     CreatureAI *GetAI(Creature *creature) const
@@ -1884,7 +1881,6 @@ public:
             }
         }
 
-
         void UpdateAI(const uint32 diff)
         {
             if (!UpdateVictim())
@@ -2095,7 +2091,7 @@ public:
                 me->SetControlled(true,UNIT_STAT_STUNNED);//disable rotate
 
             if (uiEntry != NPC_CATACLYSM_TARGET_DUMMY)
-            {            
+            {
                 if (uiEntry != NPC_ADVANCED_TARGET_DUMMY && uiEntry != NPC_TARGET_DUMMY)
                 {
                     if (uiResetTimer <= uiDiff)
@@ -2698,7 +2694,7 @@ public:
                         }
                     }
                 }
-  
+
                 DoCast(me, SPELL_SPRING_RABBIT_JUMP);
 
                 uiCheckTimer = urand(5000, 8000);
@@ -2812,10 +2808,10 @@ public:
     struct npc_power_word_barrierAI : public ScriptedAI
     {
         npc_power_word_barrierAI(Creature *pCreature) : ScriptedAI(pCreature) {}
-        
+
         bool checker;
         uint32 cron; // Duration
-        
+
         void Reset()
         {
             checker = false;
@@ -2834,7 +2830,7 @@ public:
             me->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE);
             me->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE);
         }
-                
+
         void BarrierChecker(Unit *who)
         {
 			if (who->isAlive() && !who->HasAura(81782))
@@ -2843,7 +2839,6 @@ public:
 			}
 			if (who->isAlive() && who->HasAura(81782))
 			{
-			
 			    if (AuraEffect const* aur = who->GetAuraEffect(81782,0))
                     aur->GetBase()->SetDuration(GetSpellMaxDuration(aur->GetSpellProto()), true);
             }
@@ -2868,7 +2863,7 @@ public:
            std::list<Unit*> targets;
             Trinity::AnyFriendlyUnitInObjectRangeCheck u_check(me, me, 7.0f);
             Trinity::UnitListSearcher<Trinity::AnyFriendlyUnitInObjectRangeCheck> searcher(me, targets, u_check);
-            
+
             me->VisitNearbyObject(7.0f, searcher);
             for (std::list<Unit*>::const_iterator iter = targets.begin(); iter != targets.end(); ++iter)
                 BarrierChecker(*iter);
@@ -2898,7 +2893,7 @@ public:
 
     struct npc_flame_orbAI : public ScriptedAI
     {
-        npc_flame_orbAI(Creature *c) : ScriptedAI(c) 
+        npc_flame_orbAI(Creature *c) : ScriptedAI(c)
         {
             x = me->GetPositionX();
             y = me->GetPositionY();
@@ -2910,7 +2905,7 @@ public:
             newy = me->GetPositionY() + FLAME_ORB_DISTANCE/2 * sin(angle);
             CombatCheck = false;
         }
-        
+
         float x,y,z,o,newx,newy,angle;
         bool CombatCheck;
         uint32 uiDespawnTimer;
@@ -2923,7 +2918,7 @@ public:
             uiDespawnTimer = 15*IN_MILLISECONDS;
             CombatCheck = true;
         }
-        
+
         void Reset()
         {
             me->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE|UNIT_FLAG_NON_ATTACKABLE);
@@ -3004,6 +2999,4 @@ void AddSC_npcs_special()
     new npc_ring_of_frost;
     new npc_flame_orb;
     new npc_power_word_barrier;
-
 }
-

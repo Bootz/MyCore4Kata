@@ -152,10 +152,7 @@ public:
             pSummoned->GetMotionMaster()->MovePoint(0, me->GetPositionX(), me->GetPositionY(), me->GetPositionZ());
         }
     };
-
 };
-
-
 
 /*######
 ## npc_rinji
@@ -353,10 +350,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
-
 
 void AddSC_hinterlands()
 {

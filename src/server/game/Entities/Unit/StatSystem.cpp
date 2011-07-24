@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -82,8 +82,8 @@ bool Player::UpdateStats(Stats stat)
             UpdateAllCritPercentages();
             UpdateDodgePercentage();
             break;
-        case STAT_STAMINA:   
-            UpdateMaxHealth(); 
+        case STAT_STAMINA:
+            UpdateMaxHealth();
             break;
         case STAT_INTELLECT:
             UpdateMaxPower(POWER_MANA);
@@ -144,7 +144,7 @@ void Player::ApplySpellPowerBonus(int32 amount, bool apply)
     ApplyModUInt32Value(PLAYER_FIELD_MOD_HEALING_DONE_POS, amount, apply);
     for (int i = SPELL_SCHOOL_HOLY; i < MAX_SPELL_SCHOOL; ++i)
         ApplyModUInt32Value(PLAYER_FIELD_MOD_DAMAGE_DONE_POS + i, amount, apply);
-    
+
     UpdateSpellPower();
 }
 
@@ -239,12 +239,12 @@ void Player::UpdateArmor()
 void Player::UpdateSpellPower()
 {
     uint32 spellPowerFromIntellect = GetStat(STAT_INTELLECT) - 10;
-    
+
     //apply only the diff between the last and the new value.
     ApplyModUInt32Value(PLAYER_FIELD_MOD_HEALING_DONE_POS, spellPowerFromIntellect - m_spellPowerFromIntellect, true);
     for (int i = SPELL_SCHOOL_HOLY; i < MAX_SPELL_SCHOOL; ++i)
         ApplyModUInt32Value(PLAYER_FIELD_MOD_DAMAGE_DONE_POS + i, spellPowerFromIntellect - m_spellPowerFromIntellect, true);
-    
+
     m_spellPowerFromIntellect = spellPowerFromIntellect;
 }
 
@@ -459,7 +459,6 @@ void Player::UpdateAttackPowerAndDamage(bool ranged)
                     attPowerMod_pos += temp;
                 else
                     attPowerMod_neg -= temp;
-
             }
         }
     }
@@ -828,10 +827,10 @@ void Player::UpdateManaRegen()
         modManaRegenInterrupt = 100;
 
     // The base regen value is 5% of your base mana pool per 5 seconds (wowpedia)
-    float baseCombatRegen = GetCreateMana() * 0.01f + 
+    float baseCombatRegen = GetCreateMana() * 0.01f +
         GetTotalAuraModifierByMiscValue(SPELL_AURA_MOD_POWER_REGEN, POWER_MANA) / 5.0f;
 
-    SetStatFloatValue(UNIT_FIELD_POWER_REGEN_INTERRUPTED_FLAT_MODIFIER, 
+    SetStatFloatValue(UNIT_FIELD_POWER_REGEN_INTERRUPTED_FLAT_MODIFIER,
         baseCombatRegen + power_regen * modManaRegenInterrupt / 100.0f);
     SetStatFloatValue(UNIT_FIELD_POWER_REGEN_FLAT_MODIFIER,  baseCombatRegen + power_regen);
 }
@@ -1102,7 +1101,7 @@ bool Guardian::UpdateStats(Stats stat)
                         mod = 0.725f;
                         break;
                 }
-                
+
                 PetSpellMap::const_iterator itr = (ToPet()->m_spells.find(62758)); // Wild Hunt rank 1
                 if (itr == ToPet()->m_spells.end())
                     itr = ToPet()->m_spells.find(62762);                            // Wild Hunt rank 2
@@ -1344,7 +1343,7 @@ void Guardian::UpdateAttackPowerAndDamage(bool ranged)
     {
         SetModifierValue(UNIT_MOD_ATTACK_POWER_POS, BASE_VALUE, val + bonusAP);
     }
-    else 
+    else
     {
         SetModifierValue(UNIT_MOD_ATTACK_POWER_POS, BASE_VALUE, val);
         SetModifierValue(UNIT_MOD_ATTACK_POWER_NEG, BASE_VALUE, -bonusAP);

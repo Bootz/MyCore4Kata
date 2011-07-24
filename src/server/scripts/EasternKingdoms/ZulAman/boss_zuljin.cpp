@@ -593,7 +593,6 @@ class boss_zuljin : public CreatureScript
             }
         };
 
-
         CreatureAI* GetAI(Creature* creature) const
         {
             return new boss_zuljinAI(creature);
@@ -637,10 +636,8 @@ class mob_zuljin_vortex : public CreatureScript
         }
 };
 
-
 void AddSC_boss_zuljin()
 {
     new boss_zuljin();
     new mob_zuljin_vortex();
 }
-

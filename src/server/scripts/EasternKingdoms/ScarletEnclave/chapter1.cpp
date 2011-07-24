@@ -288,7 +288,6 @@ public:
     };
 };
 
-
 class npc_unworthy_initiate_anchor : public CreatureScript
 {
 public:
@@ -313,11 +312,7 @@ public:
 
         uint64 GetGUID(int32 /*id*/) { return prisonerGUID; }
     };
-
 };
-
-
-
 
 class go_acherus_soul_prison : public GameObjectScript
 {
@@ -333,7 +328,6 @@ public:
 
         return false;
     }
-
 };
 
 /*######
@@ -520,11 +514,7 @@ public:
             CombatAI::UpdateAI(uiDiff);
         }
     };
-
 };
-
-
-
 
 /*######
 ## npc_dark_rider_of_acherus
@@ -592,7 +582,6 @@ public:
                         break;
                 }
             } else PhaseTimer -= diff;
-
         }
 
         void InitDespawnHorse(Unit *who)
@@ -607,11 +596,8 @@ public:
             me->SetUInt64Value(UNIT_FIELD_TARGET, TargetGUID);
             Intro = true;
         }
-
     };
-
 };
-
 
 /*######
 ## npc_salanar_the_horseman
@@ -685,9 +671,7 @@ public:
             }
         }
     };
-
 };
-
 
 /*######
 ## npc_ros_dark_rider
@@ -735,9 +719,7 @@ public:
             }
         }
     };
-
 };
-
 
 // correct way: 52312 52314 52555 ...
 enum SG
@@ -784,9 +766,7 @@ public:
             }
         }
     };
-
 };
-
 
 class npc_scarlet_ghoul : public CreatureScript
 {
@@ -868,9 +848,7 @@ public:
             }
         }
     };
-
 };
-
 
 /*####
 ## npc_scarlet_miner_cart
@@ -925,9 +903,7 @@ public:
                     miner->DisappearAndDie();
         }
     };
-
 };
-
 
 /*####
 ## npc_scarlet_miner
@@ -1060,9 +1036,7 @@ public:
             npc_escortAI::UpdateAI(diff);
         }
     };
-
 };
-
 
 /*######
 ## go_inconspicuous_mine_car
@@ -1095,7 +1069,6 @@ public:
         }
         return true;
     }
-
 };
 
 // npc 28912 quest 17217 boss 29001 mob 29007 go 191092

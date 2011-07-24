@@ -236,9 +236,7 @@ public:
             }
         }
     };
-
 };
-
 
 struct boss_faction_championsAI : public ScriptedAI
 {
@@ -533,7 +531,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum eShamanSpells
@@ -628,7 +625,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum ePaladinSpells
@@ -737,7 +733,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum ePriestSpells
@@ -813,7 +808,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 /********************************************************************
@@ -927,7 +921,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum eWarlockSpells
@@ -1035,7 +1028,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum eMageSpells
@@ -1137,7 +1129,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum eHunterSpells
@@ -1255,7 +1246,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum eBoomkinSpells
@@ -1355,7 +1345,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 /********************************************************************
@@ -1474,7 +1463,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum eDeathKnightSpells
@@ -1576,7 +1564,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum eRogueSpells
@@ -1679,7 +1666,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum eEnhShamanSpells
@@ -1807,7 +1793,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum eRetroPaladinSpells
@@ -1907,7 +1892,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum eWarlockPetSpells
@@ -1959,7 +1943,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 enum eHunterPetSpells
@@ -2002,7 +1985,6 @@ public:
             boss_faction_championsAI::UpdateAI(uiDiff);
         }
     };
-
 };
 
 /*========================================================*/

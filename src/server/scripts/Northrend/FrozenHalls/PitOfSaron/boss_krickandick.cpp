@@ -280,7 +280,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class boss_krick : public CreatureScript
@@ -488,10 +487,7 @@ public:
             }
         }
     };
-
 };
-
-
 
 void AddSC_boss_ick()
 {

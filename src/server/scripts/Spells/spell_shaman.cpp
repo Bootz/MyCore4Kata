@@ -36,7 +36,7 @@ enum ShamanSpells
     SHAMAN_SPELL_LIGHTNING_SHIELD_PROC  = 26364,
 
     SHAMAN_SPELL_UNLEASH_ELEMENTS       = 73680,
-    
+
     //For Earthen Power
     SHAMAN_TOTEM_SPELL_EARTHBIND_TOTEM  = 6474, //Spell casted by totem
     SHAMAN_TOTEM_SPELL_EARTHEN_POWER    = 59566,//Spell witch remove snare effect
@@ -45,7 +45,6 @@ enum ShamanSpells
 
     SHAMAN_TOTEM_SPELL_TOTEMIC_WRATH    = 77746,
     SHAMAN_TOTEM_SPELL_TOTEMIC_WRATH_AURA = 77747,
-
 };
 
 // 51474 - Astral shift
@@ -137,7 +136,7 @@ public:
     }
 };
 
-// 6474 - Earthbind Totem - Fix Talent:Earthen Power 
+// 6474 - Earthbind Totem - Fix Talent:Earthen Power
 class spell_sha_earthbind_totem : public SpellScriptLoader
 {
 public:
@@ -145,11 +144,11 @@ public:
 
     class spell_sha_earthbind_totem_AuraScript : public AuraScript
     {
-        PrepareAuraScript(spell_sha_earthbind_totem_AuraScript); 
-        
+        PrepareAuraScript(spell_sha_earthbind_totem_AuraScript);
+
         bool Validate(SpellEntry const * /*spellEntry*/)
         {
-            if (!sSpellStore.LookupEntry(SHAMAN_TOTEM_SPELL_EARTHBIND_TOTEM)) 
+            if (!sSpellStore.LookupEntry(SHAMAN_TOTEM_SPELL_EARTHBIND_TOTEM))
                 return false;
             if (!sSpellStore.LookupEntry(SHAMAN_TOTEM_SPELL_EARTHEN_POWER))
                 return false;
@@ -232,7 +231,7 @@ public:
                 Unit *target = GetTargetUnit();
                 bool hostileTarget = plr->IsHostileTo(target);
                 bool hostileSpell = true;
-                
+
                 switch (weapons[i]->GetEnchantmentId(TEMP_ENCHANTMENT_SLOT))
                 {
                     case 3345: // Earthliving Weapon
@@ -284,11 +283,11 @@ public:
 
     class spell_sha_totemic_wrath_AuraScript : public AuraScript
     {
-        PrepareAuraScript(spell_sha_totemic_wrath_AuraScript); 
+        PrepareAuraScript(spell_sha_totemic_wrath_AuraScript);
 
         bool Validate(SpellEntry const * /*spellEntry*/)
         {
-            if (!sSpellStore.LookupEntry(SHAMAN_TOTEM_SPELL_TOTEMIC_WRATH)) 
+            if (!sSpellStore.LookupEntry(SHAMAN_TOTEM_SPELL_TOTEMIC_WRATH))
                 return false;
             if (!sSpellStore.LookupEntry(SHAMAN_TOTEM_SPELL_TOTEMIC_WRATH_AURA))
                 return false;
@@ -347,7 +346,7 @@ public:
             Unit *caster = GetCaster();
             if(!target || !caster)
                 return;
-            
+
             AuraEffect *fulminationAura = caster->GetDummyAuraEffect(SPELLFAMILY_SHAMAN, 2010, 0);
             if (!fulminationAura)
                 return;

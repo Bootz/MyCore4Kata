@@ -418,7 +418,6 @@ public:
             }
         }
     };
-
 };
 
 /*====================================================================================
@@ -567,9 +566,7 @@ public:
             else uiTimer -= uiDiff;
         }
     };
-
 };
-
 
 class npc_mole_machine_trigger : public CreatureScript
 {
@@ -632,9 +629,7 @@ public:
             summon->AI()->DoZoneInCombat();
         }
     };
-
 };
-
 
 class npc_devouring_flame : public CreatureScript
 {
@@ -659,9 +654,7 @@ public:
             DoCast(me, SPELL_FLAME_GROUND);
         }
     };
-
 };
-
 
 class npc_darkrune_watcher : public CreatureScript
 {
@@ -713,9 +706,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 class npc_darkrune_guardian : public CreatureScript
 {
@@ -758,9 +749,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 class npc_darkrune_sentinel : public CreatureScript
 {
@@ -821,9 +810,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 void AddSC_boss_razorscale()
 {

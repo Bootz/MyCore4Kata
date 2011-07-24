@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -59,9 +59,9 @@ struct GroupQueueInfo                                       // stores informatio
 
 enum BattlegroundQueueGroupTypes
 {
-    BG_QUEUE_PREMADE_ALLIANCE   = 0, 
-    BG_QUEUE_PREMADE_HORDE      = 1, 
-    BG_QUEUE_NORMAL_ALLIANCE    = 2, 
+    BG_QUEUE_PREMADE_ALLIANCE   = 0,
+    BG_QUEUE_PREMADE_HORDE      = 1,
+    BG_QUEUE_NORMAL_ALLIANCE    = 2,
     BG_QUEUE_NORMAL_HORDE       = 3
 };
 #define BG_QUEUE_GROUP_TYPES_COUNT 4

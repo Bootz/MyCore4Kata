@@ -269,7 +269,6 @@ public:
             }
         }
     };
-
 };
 
 class npc_brann_hos : public CreatureScript
@@ -742,12 +741,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
-
-
-
 
 void AddSC_halls_of_stone()
 {

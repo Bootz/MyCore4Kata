@@ -164,10 +164,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
-
 
 void AddSC_redridge_mountains()
 {

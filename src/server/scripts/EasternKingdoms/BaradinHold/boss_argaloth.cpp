@@ -115,7 +115,7 @@ public:
                             DoCast(me->getVictim(), SPELL_FEL_FIRESTORM);
                             fs_flag = true;
                         }
-                                               
+
                         if (curr_health < 33.0 && (fs_flag == false))
                         {
                             DoCast(me->getVictim(), SPELL_FEL_FIRESTORM);
@@ -135,7 +135,6 @@ public:
                 }
             }
             DoMeleeAttackIfReady();
-            
         }
      };
 };

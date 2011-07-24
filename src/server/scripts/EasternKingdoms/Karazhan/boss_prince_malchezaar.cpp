@@ -174,7 +174,6 @@ public:
 
         void Cleanup();
     };
-
 };
 
 class boss_malchezaar : public CreatureScript
@@ -484,14 +483,12 @@ public:
                 {
                     DoCast(me->getVictim(), SPELL_SUNDER_ARMOR);
                     SunderArmorTimer = urand(10000,18000);
-
                 } else SunderArmorTimer -= diff;
 
                 if (Cleave_Timer <= diff)
                 {
                     DoCast(me->getVictim(), SPELL_CLEAVE);
                     Cleave_Timer = urand(6000,12000);
-
                 } else Cleave_Timer -= diff;
             }
             else
@@ -603,7 +600,6 @@ public:
             positions.push_back(point);
         }
     };
-
 };
 
 void netherspite_infernal::netherspite_infernalAI::Cleanup()

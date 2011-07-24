@@ -305,7 +305,6 @@ void SmartAI::UpdatePath(const uint32 diff)
             mWPPauseTimer = 0;
         } else {
             mWPPauseTimer -= diff;
-
         }
     }
     if (HasEscortState(SMART_ESCORT_RETURNING))
@@ -335,7 +334,6 @@ void SmartAI::UpdatePath(const uint32 diff)
                 me->GetMotionMaster()->MovePoint(wp->id, wp->x, wp->y, wp->z);
             }
         }
-
     }
 }
 

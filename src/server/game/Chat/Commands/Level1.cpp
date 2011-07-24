@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -60,7 +60,7 @@ void SendTestPacket(uint32 opcodeID, Player* plr)
 bool ChatHandler::HandleOpcodeTestCommand(const char* args)
 {
     std::istringstream arg(args);
-        
+
     std::string command;
     arg >> command;
 
@@ -118,17 +118,17 @@ bool ChatHandler::HandleOpcodeTestCommand(const char* args)
         PSendSysMessage("Sent");
         return true;
     }
-    
+
     if (command == "reset")
     {
         uint32 opcode = 0;
         if (!arg.eof())
             arg >> std::hex >> opcode;
-        
+
         testopcode = opcode;
         return true;
     }
-        
+
     if (command == "jump")
     {
         uint32 jump = 0;
@@ -136,7 +136,7 @@ bool ChatHandler::HandleOpcodeTestCommand(const char* args)
             arg >> std::hex >> jump;
         if (jump == 0)
             jump = 0xFF;
-        
+
         sLog->outString("Performing opcode jump!");
         for (uint32 i = 0; i < jump; i++)
         {
@@ -147,11 +147,11 @@ bool ChatHandler::HandleOpcodeTestCommand(const char* args)
             }
             testopcode++;
         }
-        
+
         PSendSysMessage("Opcodes: 0x%.4X - 0x%.4X", testopcode-jump, testopcode);
         return true;
     }
-        
+
     if (command == "jumpback")
     {
         uint32 jump = 0;
@@ -159,37 +159,37 @@ bool ChatHandler::HandleOpcodeTestCommand(const char* args)
             arg >> std::hex >> jump;
         if (jump == 0)
             jump = 0xFF;
-            
+
         PSendSysMessage("Performing opcode jumpback!(0x%.4X)", jump);
         testopcode = testopcode - jump;
         return true;
     }
-    
+
     if (command == "repeat")
     {
         PSendSysMessage("Opcode: 0x%.4X", testopcode);
         SendTestPacket(testopcode, m_session->GetPlayer());
         return true;
     }
-    
+
     if (command == "back")
     {
         PSendSysMessage("Opcode: 0x%.4X", --testopcode);
         return true;
     }
-    
+
     if ( command == "send")
     {
         if (arg.eof())
             return false;
         uint32 opcode;
         arg >> std::hex >> opcode;
-    
+
         PSendSysMessage("Opcode: 0x%.4X - %s", opcode, LookupOpcodeName(opcode));
         SendTestPacket(opcode, m_session->GetPlayer());
         return true;
     }
-        
+
     PSendSysMessage("Opcode: 0x%.4X - %s", testopcode, LookupOpcodeName(testopcode));
     SendTestPacket(testopcode++, m_session->GetPlayer());
 
@@ -464,13 +464,13 @@ bool ChatHandler::HandleGPSCommand(const char* args)
     }
     else PSendSysMessage("no VMAP available for area info");
 
-    PSendSysMessage(LANG_MAP_POSITION, 
-        obj->GetMapId(), (mapEntry ? mapEntry->name : "<unknown>"), 
-        zone_id, (zoneEntry ? zoneEntry->area_name : "<unknown>"), 
-        area_id, (areaEntry ? areaEntry->area_name : "<unknown>"), 
-        obj->GetPhaseMask(), 
-        obj->GetPositionX(), obj->GetPositionY(), obj->GetPositionZ(), obj->GetOrientation(), 
-        cell.GridX(), cell.GridY(), cell.CellX(), cell.CellY(), obj->GetInstanceId(), 
+    PSendSysMessage(LANG_MAP_POSITION,
+        obj->GetMapId(), (mapEntry ? mapEntry->name : "<unknown>"),
+        zone_id, (zoneEntry ? zoneEntry->area_name : "<unknown>"),
+        area_id, (areaEntry ? areaEntry->area_name : "<unknown>"),
+        obj->GetPhaseMask(),
+        obj->GetPositionX(), obj->GetPositionY(), obj->GetPositionZ(), obj->GetOrientation(),
+        cell.GridX(), cell.GridY(), cell.CellX(), cell.CellY(), obj->GetInstanceId(),
         zone_x, zone_y, ground_z, floor_z, have_map, have_vmap);
 
     LiquidData liquid_status;
@@ -585,12 +585,12 @@ bool ChatHandler::HandleSummonCommand(const char* args)
         PSendSysMessage(LANG_SUMMONING, nameLink.c_str(), GetSkyFireString(LANG_OFFLINE));
 
         // in point where GM stay
-        Player::SavePositionInDB(m_session->GetPlayer()->GetMapId(), 
-            m_session->GetPlayer()->GetPositionX(), 
-            m_session->GetPlayer()->GetPositionY(), 
-            m_session->GetPlayer()->GetPositionZ(), 
-            m_session->GetPlayer()->GetOrientation(), 
-            m_session->GetPlayer()->GetZoneId(), 
+        Player::SavePositionInDB(m_session->GetPlayer()->GetMapId(),
+            m_session->GetPlayer()->GetPositionX(),
+            m_session->GetPlayer()->GetPositionY(),
+            m_session->GetPlayer()->GetPositionZ(),
+            m_session->GetPlayer()->GetOrientation(),
+            m_session->GetPlayer()->GetZoneId(),
             target_guid);
     }
 
@@ -1855,7 +1855,7 @@ bool ChatHandler::HandleModifyCurrencyCommand (const char* args)
             PSendSysMessage("Currency %u does not exist.", currencyid);
             SetSentErrorMessage(true);
             return false;
-        }  
+        }
 
         target->ModifyCurrency(uint32(currencyid), amount);
 
@@ -2190,7 +2190,7 @@ bool ChatHandler::HandleTeleNameCommand(const char * args)
         std::string nameLink = playerLink(target_name);
 
         PSendSysMessage(LANG_TELEPORTING_TO, nameLink.c_str(), GetSkyFireString(LANG_OFFLINE), tele->name.c_str());
-        Player::SavePositionInDB(tele->mapId, tele->position_x, tele->position_y, tele->position_z, tele->orientation, 
+        Player::SavePositionInDB(tele->mapId, tele->position_x, tele->position_y, tele->position_z, tele->orientation,
             sMapMgr->GetZoneId(tele->mapId, tele->position_x, tele->position_y, tele->position_z), target_guid);
     }
 
@@ -2647,4 +2647,3 @@ bool ChatHandler::HandleModifyDrunkCommand(const char* args)
 
     return true;
 }
-

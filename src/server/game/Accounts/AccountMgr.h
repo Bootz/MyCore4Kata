@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -29,11 +29,11 @@
 
 enum AccountOpResult
 {
-    AOR_OK, 
-    AOR_NAME_TOO_LONG, 
-    AOR_PASS_TOO_LONG, 
-    AOR_NAME_ALREDY_EXIST, 
-    AOR_NAME_NOT_EXIST, 
+    AOR_OK,
+    AOR_NAME_TOO_LONG,
+    AOR_PASS_TOO_LONG,
+    AOR_NAME_ALREDY_EXIST,
+    AOR_NAME_NOT_EXIST,
     AOR_DB_INTERNAL_ERROR
 };
 
@@ -63,4 +63,3 @@ class AccountMgr
 
 #define sAccountMgr ACE_Singleton<AccountMgr, ACE_Null_Mutex>::instance()
 #endif
-

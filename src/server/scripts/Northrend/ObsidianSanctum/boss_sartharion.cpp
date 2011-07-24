@@ -717,7 +717,6 @@ public:
             EnterEvadeIfOutOfCombatArea(uiDiff);
         }
     };
-
 };
 
 enum TeneText
@@ -1098,7 +1097,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 /*######
@@ -1205,7 +1203,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 /*######
@@ -1301,7 +1298,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 /*######
@@ -1411,7 +1407,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 /*######
@@ -1506,7 +1501,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 /*######
@@ -1578,7 +1572,6 @@ public:
         void AttackStart(Unit* /*pWho*/) {}
         void MoveInLineOfSight(Unit* /*pWho*/) {}
     };
-
 };
 
 /*######
@@ -1632,7 +1625,6 @@ public:
             }else TsunamiBuff_timer -= diff;
         }
     };
-
 };
 
 // Twilight Fissure
@@ -1678,7 +1670,6 @@ public:
             } else VoidBlast_Timer -= diff;
         }
     };
-
 };
 
 /*######
@@ -1729,7 +1720,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class PyrobuffetTargetSelector

@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -153,7 +153,6 @@ void CreatureEventAIMgr::LoadCreatureEventAI_Summons()
 
     sLog->outString(">> Loaded %u CreatureEventAI summon definitions in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
     sLog->outString();
-
 }
 
 void CreatureEventAIMgr::LoadCreatureEventAI_Scripts()

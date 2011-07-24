@@ -53,7 +53,6 @@ public:
         {
             pPlayer->CLOSE_GOSSIP_MENU();
             pCreature->CastSpell(pPlayer,6766,false);
-
         }
         if (uiAction == GOSSIP_ACTION_INFO_DEF+2)
         {
@@ -83,9 +82,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_kaya_flathoof
@@ -164,9 +161,7 @@ public:
     {
         return new npc_kaya_flathoofAI(pCreature);
     }
-
 };
-
 
 /*######
 ## AddSC

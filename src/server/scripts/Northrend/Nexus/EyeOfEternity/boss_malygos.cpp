@@ -191,9 +191,7 @@ public:
                 DoScriptText(RAND(SAY_PHASE3_SLAY_1,SAY_PHASE3_SLAY_2,SAY_PHASE3_SLAY_3), me);
         }
     };
-
 };
-
 
 void AddSC_boss_malygos()
 {

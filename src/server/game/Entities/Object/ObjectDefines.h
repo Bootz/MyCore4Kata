@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -48,8 +48,8 @@ enum HighGuid
     HIGHGUID_DYNAMICOBJECT  = 0xF100,                       // blizz F100
     HIGHGUID_CORPSE         = 0xF101,                       // blizz F100
     HIGHGUID_MO_TRANSPORT   = 0x1FC0,                       // blizz 1FC0 (for GAMEOBJECT_TYPE_MO_TRANSPORT)
-    HIGHGUID_GROUP          = 0x1F50, 
-    HIGHGUID_GUILD          = 0x1FF6, 
+    HIGHGUID_GROUP          = 0x1F50,
+    HIGHGUID_GUILD          = 0x1FF6,
 };
 
 #define IS_EMPTY_GUID(Guid)          (Guid == 0)
@@ -129,4 +129,3 @@ inline char const* GetLogNameForGuid(uint64 guid)
     }
 }
 #endif
-

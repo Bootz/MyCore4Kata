@@ -185,10 +185,7 @@ public:
             } else uiShootTimer -= diff;
         }
     };
-
 };
-
-
 
 /*######
 ## npc_defias_traitor
@@ -260,10 +257,7 @@ public:
 
         void Reset() {}
     };
-
 };
-
-
 
 void AddSC_westfall()
 {

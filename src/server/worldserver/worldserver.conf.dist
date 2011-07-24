@@ -1108,9 +1108,9 @@ StartArenaPoints = 0
 #
 #    MaxConquestPoints
 #        Max conquest points that player can have, multiplied by 100.
-#        Default: 400000
+#        Default: 4000
 
-MaxConquestPoints = 400000
+MaxConquestPoints = 4000
 
 #
 #    StartConquestPoints
@@ -1122,10 +1122,11 @@ StartConquestPoints = 0
 #
 #    MaxJusticePoints
 #        Max justice points that player can have, multiplied by 100.
-#        Default: 400000
+#        Default: 4000
 
-MaxJusticePoints = 400000
+MaxJusticePoints = 4000
 
+#
 #    StartJusticePoints
 #        Amount of justice points that new players will start with
 #        Default: 0
@@ -2154,6 +2155,13 @@ Rate.Auction.Cut     = 1
 Rate.Honor = 1
 
 #
+#    Rate.ConquestPointsWeekLimit
+#        Description: Conquest points gain rate to weekly limit        
+#          Default:     1
+
+Rate.ConquestPointsWeekLimit = 1
+
+#
 #    Rate.Mining.Amount
 #        Description: Rate for minimum/maximum times a deposit can be used.
 #        Default:     1
@@ -2530,6 +2538,12 @@ Arena.ArenaStartPersonalRating = 0
 #        Default:     1500
 
 Arena.ArenaStartMatchmakerRating = 1500
+
+#    
+#    Arena.ConquestPointsReward
+#        Defualt: 180 (leave this setting at default)
+
+Arena.ConquestPointsReward = 180
 
 #
 ###################################################################################################

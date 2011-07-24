@@ -29,7 +29,6 @@ SDComment: Need some cosmetics updates when archeadas door are closing (Guardian
 SDCategory: Uldaman
 EndScriptData */
 
-
 #include "ScriptPCH.h"
 #include "uldaman.h"
 
@@ -136,7 +135,7 @@ class instance_uldaman : public InstanceMapScript
                     case GO_IRONAYA_SEAL_DOOR:
                         uiIronayaSealDoor = pGO->GetGUID();
 
-                        if (m_auiEncounter[2] == DONE) 
+                        if (m_auiEncounter[2] == DONE)
                             HandleGameObject(NULL, true, pGO);
                         break;
 
@@ -359,7 +358,7 @@ class instance_uldaman : public InstanceMapScript
                         switch(data)
                         {
                             case NOT_STARTED:
-                                if (m_auiEncounter[0] == DONE) //if players opened the doors 
+                                if (m_auiEncounter[0] == DONE) //if players opened the doors
                                     SetDoor(uiArchaedasTempleDoor, true);
 
                                 RespawnMinions();
@@ -465,7 +464,6 @@ class instance_uldaman : public InstanceMapScript
                     case 2748:    // Archaedas
                         uiArchaedasGUID = pCreature->GetGUID();
                         break;
-
                 } // end switch
             } // end OnCreatureCreate
 

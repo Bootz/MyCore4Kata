@@ -181,7 +181,6 @@ public:
                     uiAlgalonGUID = creature->GetGUID();
                     break;
             }
-
          }
 
         void OnGameObjectCreate(GameObject* go)
@@ -416,9 +415,7 @@ public:
             OUT_LOAD_INST_DATA_COMPLETE;
         }
     };
-
 };
-
 
 void AddSC_instance_ulduar()
 {

@@ -439,7 +439,6 @@ public:
             }
         }
     };
-
 };
 
 class boss_kalec : public CreatureScript
@@ -541,7 +540,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class kalecgos_teleporter : public GameObjectScript
@@ -569,7 +567,6 @@ public:
             pPlayer->CastSpell(pPlayer, SPELL_TELEPORT_SPECTRAL, true);
         return true;
     }
-
 };
 
 class boss_sathrovarr : public CreatureScript
@@ -805,9 +802,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 void AddSC_boss_kalecgos()
 {

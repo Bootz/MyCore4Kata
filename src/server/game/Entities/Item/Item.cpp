@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -247,7 +247,7 @@ uint32 ItemPrototype::GetArmor() const
 {
     if (Quality >= ITEM_QUALITY_HEIRLOOM)                    // heirlooms have it's own dbc...
         return 0;
-    
+
     if (Class == ITEM_CLASS_ARMOR && SubClass == ITEM_SUBCLASS_ARMOR_SHIELD)
     {
         if (ItemArmorShieldEntry const* ias = sItemArmorShieldStore.LookupEntry(ItemLevel))
@@ -256,31 +256,31 @@ uint32 ItemPrototype::GetArmor() const
         }
         return 0;
     }
-    
+
     ItemArmorQualityEntry const* iaq = sItemArmorQualityStore.LookupEntry(ItemLevel);
     ItemArmorTotalEntry const* iat = sItemArmorTotalStore.LookupEntry(ItemLevel);
-    
+
     if (!iaq || !iat)
         return 0;
-    
+
     if (InventoryType != INVTYPE_HEAD && InventoryType != INVTYPE_CHEST && InventoryType != INVTYPE_SHOULDERS
        && InventoryType != INVTYPE_LEGS && InventoryType != INVTYPE_FEET && InventoryType != INVTYPE_WRISTS
        && InventoryType != INVTYPE_HANDS && InventoryType != INVTYPE_WAIST && InventoryType != INVTYPE_CLOAK
        && InventoryType != INVTYPE_ROBE)
         return 0;
-    
+
     ArmorLocationEntry const* al = NULL;
-    
+
     if (InventoryType == INVTYPE_ROBE)
         al = sArmorLocationStore.LookupEntry(INVTYPE_CHEST);
     else
         al = sArmorLocationStore.LookupEntry(InventoryType);
-    
+
     if (!al)
         return 0;
-    
+
     float iatMult, alMult;
-    
+
     switch(SubClass)
     {
         case ITEM_SUBCLASS_ARMOR_CLOTH:
@@ -302,7 +302,7 @@ uint32 ItemPrototype::GetArmor() const
         default:
             return 0;
     }
-    
+
     return uint32(floor(iaq->Value[Quality] * iatMult * alMult + 0.5f));
 }
 
@@ -312,9 +312,9 @@ ItemDamageEntry const * ItemPrototype::getItemDamageEntry() const
     {
         if (Quality >= ITEM_QUALITY_HEIRLOOM)                // heirlooms have it's own dbc...
             return NULL;
-        
+
         ItemDamageEntry const* id = NULL;
-        
+
         switch(InventoryType)
         {
             case INVTYPE_WEAPON:
@@ -357,7 +357,7 @@ ItemDamageEntry const * ItemPrototype::getItemDamageEntry() const
             default:
                 break;
         }
-        
+
         if (id)
             return id;
     }
@@ -556,7 +556,7 @@ bool Item::LoadFromDB(uint32 guid, uint64 owner_guid, Field* fields, uint32 entr
         need_save = true;
     }
 
-    std::string enchants = fields[6].GetString();    
+    std::string enchants = fields[6].GetString();
     _LoadIntoDataField(enchants.c_str(), ITEM_FIELD_ENCHANTMENT_1_1, MAX_ENCHANTMENT_SLOT * MAX_ENCHANTMENT_OFFSET);
     SetInt32Value(ITEM_FIELD_RANDOM_PROPERTIES_ID, fields[7].GetInt16());
     // recalculate suffix factor
@@ -617,10 +617,10 @@ uint32 Item::GetSkill()
 {
     const static uint32 item_weapon_skills[MAX_ITEM_SUBCLASS_WEAPON] =
     {
-        SKILL_AXES,     SKILL_2H_AXES,  SKILL_BOWS,          SKILL_GUNS,      SKILL_MACES, 
-        SKILL_2H_MACES, SKILL_POLEARMS, SKILL_SWORDS,        SKILL_2H_SWORDS, 0, 
-        SKILL_STAVES,   0,              0,                   SKILL_FIST_WEAPONS,   0, 
-        SKILL_DAGGERS,  SKILL_THROWN,   SKILL_ASSASSINATION, SKILL_CROSSBOWS, SKILL_WANDS, 
+        SKILL_AXES,     SKILL_2H_AXES,  SKILL_BOWS,          SKILL_GUNS,      SKILL_MACES,
+        SKILL_2H_MACES, SKILL_POLEARMS, SKILL_SWORDS,        SKILL_2H_SWORDS, 0,
+        SKILL_STAVES,   0,              0,                   SKILL_FIST_WEAPONS,   0,
+        SKILL_DAGGERS,  SKILL_THROWN,   SKILL_ASSASSINATION, SKILL_CROSSBOWS, SKILL_WANDS,
         SKILL_FISHING
     };
 
@@ -884,10 +884,8 @@ bool Item::CanBeTraded(bool mail, bool trade) const
     return true;
 }
 
-
 bool Item::HasEnchantRequiredSkill(const Player *pPlayer) const
 {
-
   // Check all enchants for required skill
   for (uint32 enchant_slot = PERM_ENCHANTMENT_SLOT; enchant_slot < MAX_ENCHANTMENT_SLOT; ++enchant_slot)
     if (uint32 enchant_id = GetEnchantmentId(EnchantmentSlot(enchant_slot)))
@@ -898,10 +896,8 @@ bool Item::HasEnchantRequiredSkill(const Player *pPlayer) const
   return true;
 }
 
-
 uint32 Item::GetEnchantRequiredLevel() const
 {
-
   uint32 level = 0;
 
   // Check all enchants for required level
@@ -945,7 +941,7 @@ uint8 Item::CanBeMergedPartlyWith(ItemPrototype const* proto) const
 bool Item::IsFitToSpellRequirements(SpellEntry const* spellInfo) const
 {
     ItemPrototype const* proto = GetProto();
-    
+
     if (spellInfo->EquippedItemClass != -1)                 // -1 == any item class
     {
         // Special case - accept vellum for armor/weapon requirements
@@ -953,17 +949,17 @@ bool Item::IsFitToSpellRequirements(SpellEntry const* spellInfo) const
             ||(spellInfo->EquippedItemClass == ITEM_CLASS_WEAPON && proto->IsWeaponVellum()))
             if (sSpellMgr->IsSkillTypeSpell(spellInfo->Id, SKILL_ENCHANTING)) // only for enchanting spells
                 return true;
-        
+
         if (spellInfo->EquippedItemClass != int32(proto->Class))
             return false;                                   //  wrong item class
-        
+
         if (spellInfo->EquippedItemSubClassMask != 0)        // 0 == any subclass
         {
             if ((spellInfo->EquippedItemSubClassMask & (1 << proto->SubClass)) == 0)
                 return false;                               // subclass not present in mask
         }
     }
-    
+
     if (spellInfo->EquippedItemInventoryTypeMask != 0)       // 0 == any inventory type
     {
         // Special case - accept weapon type for main and offhand requirements
@@ -974,7 +970,7 @@ bool Item::IsFitToSpellRequirements(SpellEntry const* spellInfo) const
         else if ((spellInfo->EquippedItemInventoryTypeMask & (1 << proto->InventoryType)) == 0)
             return false;                                   // inventory type not present in mask
     }
-    
+
     return true;
 }
 
@@ -1125,7 +1121,7 @@ bool Item::IsLimitedToAnotherMapOrZone(uint32 cur_mapId, uint32 cur_zoneId) cons
     return proto && ((proto->Map && proto->Map != cur_mapId) || (proto->Area && proto->Area != cur_zoneId));
 }
 
-// Though the client has the information in the item's data field, 
+// Though the client has the information in the item's data field,
 // we have to send SMSG_ITEM_TIME_UPDATE to display the remaining
 // time.
 void Item::SendTimeUpdate(Player* owner)
@@ -1265,7 +1261,7 @@ void Item::SetNotRefundable(Player *owner, bool changestate)
 void Item::UpdatePlayedTime(Player *owner)
 {
     /*  Here we update our played time
-        We simply add a number to the current played time, 
+        We simply add a number to the current played time,
         based on the time elapsed since the last update hereof.
     */
     // Get current played time

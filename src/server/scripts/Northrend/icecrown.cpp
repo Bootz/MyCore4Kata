@@ -419,7 +419,6 @@ public:
                 pWho->CastSpell(pWho, SPELL_TRESPASSER_H, true);
             else
                 pWho->CastSpell(pWho, SPELL_TRESPASSER_A, true);
-
         }
     };
 

@@ -58,7 +58,6 @@ public:
         }
         return false;
     };
-
 };
 
 /*######
@@ -130,7 +129,6 @@ public:
             DoMeleeAttackIfReady();
         };
     };
-
 };
 
 void AddSC_duskwood()

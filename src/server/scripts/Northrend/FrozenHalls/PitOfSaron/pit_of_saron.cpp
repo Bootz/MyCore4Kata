@@ -204,7 +204,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_ymirjar_skycaller : public CreatureScript
@@ -265,7 +264,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_ymirjar_flamebearer : public CreatureScript
@@ -334,7 +332,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_ymirjar_deathbringer : public CreatureScript
@@ -391,7 +388,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_wrathbone_laborer : public CreatureScript
@@ -459,7 +455,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_wrathbone_coldwraith : public CreatureScript
@@ -522,7 +517,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_stonespine_gargoyle : public CreatureScript
@@ -583,7 +577,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_plagueborn_horror : public CreatureScript
@@ -650,7 +643,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_iceborn_protodrake : public CreatureScript
@@ -706,7 +698,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_hungering_ghoul : public CreatureScript
@@ -762,7 +753,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_fallen_warrior : public CreatureScript
@@ -828,7 +818,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_deathwhisper_torturer : public CreatureScript
@@ -891,7 +880,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_deathwhisper_shadowcaster : public CreatureScript
@@ -948,7 +936,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_deathwhisper_necrolyte : public CreatureScript
@@ -1011,7 +998,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_wrathbone_sorcerer : public CreatureScript
@@ -1068,7 +1054,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_geist_ambusher : public CreatureScript
@@ -1127,7 +1112,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 void AddSC_pit_of_saron()

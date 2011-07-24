@@ -149,7 +149,6 @@ public:
             summon->CastSpell(summon, SPELL_SUMMON_CORPSE_SCARABS_MOB, true, NULL, NULL, me->GetGUID());
         }
 
-
         void UpdateAI(const uint32 diff)
         {
             if (!UpdateVictim() || !CheckInRoom())
@@ -189,9 +188,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 void AddSC_boss_anubrekhan()
 {

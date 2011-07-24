@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -35,15 +35,15 @@ class WorldObject;
 
 enum District
 {
-    UPPER_DISTRICT = 1, 
-    LOWER_DISTRICT = 1 << 1, 
-    LEFT_DISTRICT  = 1 << 2, 
-    RIGHT_DISTRICT = 1 << 3, 
-    CENTER_DISTRICT = 1 << 4, 
-    UPPER_LEFT_DISTRICT = (UPPER_DISTRICT | LEFT_DISTRICT), 
-    UPPER_RIGHT_DISTRICT = (UPPER_DISTRICT | RIGHT_DISTRICT), 
-    LOWER_LEFT_DISTRICT = (LOWER_DISTRICT | LEFT_DISTRICT), 
-    LOWER_RIGHT_DISTRICT = (LOWER_DISTRICT | RIGHT_DISTRICT), 
+    UPPER_DISTRICT = 1,
+    LOWER_DISTRICT = 1 << 1,
+    LEFT_DISTRICT  = 1 << 2,
+    RIGHT_DISTRICT = 1 << 3,
+    CENTER_DISTRICT = 1 << 4,
+    UPPER_LEFT_DISTRICT = (UPPER_DISTRICT | LEFT_DISTRICT),
+    UPPER_RIGHT_DISTRICT = (UPPER_DISTRICT | RIGHT_DISTRICT),
+    LOWER_LEFT_DISTRICT = (LOWER_DISTRICT | LEFT_DISTRICT),
+    LOWER_RIGHT_DISTRICT = (LOWER_DISTRICT | RIGHT_DISTRICT),
     ALL_DISTRICT = (UPPER_DISTRICT | LOWER_DISTRICT | LEFT_DISTRICT | RIGHT_DISTRICT | CENTER_DISTRICT)
 };
 
@@ -138,7 +138,7 @@ struct Cell
     CellPair cellPair() const
     {
         return CellPair(
-            data.Part.grid_x*MAX_NUMBER_OF_CELLS+data.Part.cell_x, 
+            data.Part.grid_x*MAX_NUMBER_OF_CELLS+data.Part.cell_x,
             data.Part.grid_y*MAX_NUMBER_OF_CELLS+data.Part.cell_y);
     }
 
@@ -176,4 +176,3 @@ private:
 };
 
 #endif
-

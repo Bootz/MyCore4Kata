@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -40,7 +40,7 @@
 
 enum eAuctionHouse
 {
-    AH_MINIMUM_DEPOSIT = 100, 
+    AH_MINIMUM_DEPOSIT = 100,
 };
 
 AuctionHouseMgr::AuctionHouseMgr()
@@ -132,7 +132,7 @@ void AuctionHouseMgr::SendAuctionWonMail(AuctionEntry *auction, SQLTransaction& 
 
             uint32 owner_accid = sObjectMgr->GetPlayerAccountIdByGUID(auction->owner);
 
-            sLog->outCommand(bidder_accId, "GM %s (Account: %u) won item in auction: %s (Entry: %u Count: %u) and pay money: %u. Original owner %s (Account: %u)", 
+            sLog->outCommand(bidder_accId, "GM %s (Account: %u) won item in auction: %s (Entry: %u Count: %u) and pay money: %u. Original owner %s (Account: %u)",
                 bidder_name.c_str(), bidder_accId, pItem->GetProto()->Name1, pItem->GetEntry(), pItem->GetCount(), auction->bid, owner_name.c_str(), owner_accid);
         }
     }
@@ -328,7 +328,6 @@ void AuctionHouseMgr::LoadAuctionItems()
 
     do
     {
-
         Field* fields = result->Fetch();
 
         uint32 item_guid        = fields[11].GetUInt32();
@@ -440,7 +439,7 @@ AuctionHouseEntry const* AuctionHouseMgr::GetAuctionHouseEntry(uint32 factionTem
         case  120: houseid = 7; break; // booty bay, neutral
         case  474: houseid = 7; break; // gadgetzan, neutral
         case  855: houseid = 7; break; // everlook, neutral
-        case 1604: houseid = 6; break; // b-elfs, 
+        case 1604: houseid = 6; break; // b-elfs,
         default:                       // for unknown case
             {
                 FactionTemplateEntry const* u_entry = sFactionTemplateStore.LookupEntry(factionTemplateId);
@@ -562,9 +561,9 @@ void AuctionHouseObject::BuildListOwnerItems(WorldPacket& data, Player* player, 
     }
 }
 
-void AuctionHouseObject::BuildListAuctionItems(WorldPacket& data, Player* player, 
-                                               std::wstring const& wsearchedname, uint32 listfrom, uint8 levelmin, uint8 levelmax, uint8 usable, 
-                                               uint32 inventoryType, uint32 itemClass, uint32 itemSubClass, uint32 quality, 
+void AuctionHouseObject::BuildListAuctionItems(WorldPacket& data, Player* player,
+                                               std::wstring const& wsearchedname, uint32 listfrom, uint8 levelmin, uint8 levelmax, uint8 usable,
+                                               uint32 inventoryType, uint32 itemClass, uint32 itemSubClass, uint32 quality,
                                                uint32& count, uint32& totalcount)
 {
     int loc_idx = player->GetSession()->GetSessionDbLocaleIndex();
@@ -777,4 +776,3 @@ bool AuctionEntry::LoadFromDB(Field* fields)
     }
     return true;
 }
- 

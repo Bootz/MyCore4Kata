@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -452,14 +452,14 @@ void PlayerMenu::SendQuestGiverQuestDetails(Quest const *pQuest, uint64 npcGUID,
     data << Objectives;
     data << QuestTargetTextWindow;
     data << QuestTargetName;
-    data << uint16(0);                                      // Unknown Value maybe string                             
+    data << uint16(0);                                      // Unknown Value maybe string
     data << uint32(pQuest->GetQuestGiverPortrait());
     data << uint32(0);
-    data << uint8(ActivateAccept ? 1 : 0);  
+    data << uint8(ActivateAccept ? 1 : 0);
     data << uint32(pQuest->GetQuestFlags());
     data << uint32(pQuest->GetSuggestedPlayers());
     data << uint8(0);              //Empty?
-    data << uint8(pQuest->GetQuestStartType());   
+    data << uint8(pQuest->GetQuestStartType());
     data << uint32(pQuest->GetRequiredSpell());
 
     ItemPrototype const* IProto;
@@ -697,7 +697,7 @@ void PlayerMenu::SendQuestQueryResponse(Quest const *pQuest)
 
     data << uint32(pQuest->GetSoundAccept());
     data << uint32(pQuest->GetSoundTurnIn());
-    
+
     pSession->SendPacket(&data);
     sLog->outDebug(LOG_FILTER_NETWORKIO, "WORLD: Sent SMSG_QUEST_QUERY_RESPONSE questid=%u", pQuest->GetQuestId());
 }
@@ -813,7 +813,6 @@ void PlayerMenu::SendQuestGiverOfferReward(Quest const* pQuest, uint64 npcGUID, 
 
     data << uint32(0);
     data << uint32(0);
-
 
     pSession->SendPacket(&data);
     sLog->outDebug(LOG_FILTER_NETWORKIO, "WORLD: Sent SMSG_QUESTGIVER_OFFER_REWARD NPCGuid=%u, questid=%u", GUID_LOPART(npcGUID), pQuest->GetQuestId());

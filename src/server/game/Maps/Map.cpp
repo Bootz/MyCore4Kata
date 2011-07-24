@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -195,9 +195,9 @@ void Map::DeleteStateMachine()
 }
 
 Map::Map(uint32 id, time_t expiry, uint32 InstanceId, uint8 SpawnMode, Map* _parent):
-i_mapEntry (sMapStore.LookupEntry(id)), i_spawnMode(SpawnMode), i_InstanceId(InstanceId), 
-m_unloadTimer(0), m_VisibleDistance(DEFAULT_VISIBILITY_DISTANCE), 
-m_VisibilityNotifyPeriod(DEFAULT_VISIBILITY_NOTIFY_PERIOD), 
+i_mapEntry (sMapStore.LookupEntry(id)), i_spawnMode(SpawnMode), i_InstanceId(InstanceId),
+m_unloadTimer(0), m_VisibleDistance(DEFAULT_VISIBILITY_DISTANCE),
+m_VisibilityNotifyPeriod(DEFAULT_VISIBILITY_NOTIFY_PERIOD),
 m_activeNonPlayersIter(m_activeNonPlayers.end()), i_gridExpiry(expiry), i_scriptLock(false)
 {
     m_parentMap = (_parent ? _parent : this);
@@ -324,7 +324,7 @@ Map::EnsureGridCreated(const GridPair &p)
         {
             sLog->outDebug(LOG_FILTER_MAPS, "Creating grid[%u, %u] for map %u instance %u", p.x_coord, p.y_coord, GetId(), i_InstanceId);
 
-            setNGrid(new NGridType(p.x_coord*MAX_NUMBER_OF_GRIDS + p.y_coord, p.x_coord, p.y_coord, i_gridExpiry, sWorld->getBoolConfig(CONFIG_GRID_UNLOAD)), 
+            setNGrid(new NGridType(p.x_coord*MAX_NUMBER_OF_GRIDS + p.y_coord, p.x_coord, p.y_coord, i_gridExpiry, sWorld->getBoolConfig(CONFIG_GRID_UNLOAD)),
                 p.x_coord, p.y_coord);
 
             // build a linkage between this map and NGridType
@@ -1590,7 +1590,6 @@ float Map::GetHeight(float x, float y, float z, bool pUseVmaps, float maxSearchD
                 return vmapHeight;
             else
                 return mapHeight;                           // better use .map surface height
-
         }
         else
             return vmapHeight;                              // we have only vmapHeight (if have)
@@ -1831,10 +1830,10 @@ bool Map::CheckGridIntegrity(Creature* c, bool moved) const
     Cell xy_cell(xy_val);
     if (xy_cell != cur_cell)
     {
-        sLog->outDebug(LOG_FILTER_MAPS, "Creature (GUID: %u) X: %f Y: %f (%s) is in grid[%u, %u]cell[%u, %u] instead of grid[%u, %u]cell[%u, %u]", 
-            c->GetGUIDLow(), 
-            c->GetPositionX(), c->GetPositionY(), (moved ? "final" : "original"), 
-            cur_cell.GridX(), cur_cell.GridY(), cur_cell.CellX(), cur_cell.CellY(), 
+        sLog->outDebug(LOG_FILTER_MAPS, "Creature (GUID: %u) X: %f Y: %f (%s) is in grid[%u, %u]cell[%u, %u] instead of grid[%u, %u]cell[%u, %u]",
+            c->GetGUIDLow(),
+            c->GetPositionX(), c->GetPositionY(), (moved ? "final" : "original"),
+            cur_cell.GridX(), cur_cell.GridY(), cur_cell.CellX(), cur_cell.CellY(),
             xy_cell.GridX(),  xy_cell.GridY(),  xy_cell.CellX(),  xy_cell.CellY());
         return true;                                        // not crash at error, just output error in debug mode
     }
@@ -2135,7 +2134,7 @@ void Map::AddToActive(Creature* c)
         else
         {
             GridPair p2 = Trinity::ComputeGridPair(c->GetPositionX(), c->GetPositionY());
-            sLog->outError("Active creature (GUID: %u Entry: %u) added to grid[%u, %u] but spawn grid[%u, %u] was not loaded.", 
+            sLog->outError("Active creature (GUID: %u Entry: %u) added to grid[%u, %u] but spawn grid[%u, %u] was not loaded.",
                 c->GetGUIDLow(), c->GetEntry(), p.x_coord, p.y_coord, p2.x_coord, p2.y_coord);
         }
     }
@@ -2156,7 +2155,7 @@ void Map::RemoveFromActive(Creature* c)
         else
         {
             GridPair p2 = Trinity::ComputeGridPair(c->GetPositionX(), c->GetPositionY());
-            sLog->outError("Active creature (GUID: %u Entry: %u) removed from grid[%u, %u] but spawn grid[%u, %u] was not loaded.", 
+            sLog->outError("Active creature (GUID: %u Entry: %u) removed from grid[%u, %u] but spawn grid[%u, %u] was not loaded.",
                 c->GetGUIDLow(), c->GetEntry(), p.x_coord, p.y_coord, p2.x_coord, p2.y_coord);
         }
     }
@@ -2175,8 +2174,8 @@ template void Map::Remove(DynamicObject *, bool);
 /* ******* Dungeon Instance Maps ******* */
 
 InstanceMap::InstanceMap(uint32 id, time_t expiry, uint32 InstanceId, uint8 SpawnMode, Map* _parent)
-  : Map(id, expiry, InstanceId, SpawnMode, _parent), 
-    m_resetAfterUnload(false), m_unloadWhenEmpty(false), 
+  : Map(id, expiry, InstanceId, SpawnMode, _parent),
+    m_resetAfterUnload(false), m_unloadWhenEmpty(false),
     i_data(NULL), i_script_id(0)
 {
     //lets initialize visibility distance for dungeons
@@ -2536,7 +2535,7 @@ void InstanceMap::SetResetSchedule(bool on, Player* player)
         if (InstanceSave *save = sInstanceSaveMgr->GetInstanceSave(GetInstanceId()))
             sInstanceSaveMgr->ScheduleReset(on, save->GetResetTime(), InstanceSaveManager::InstResetEvent(0, GetId(), Difficulty(GetSpawnMode()), GetInstanceId()));
         else
-            sLog->outError("InstanceMap::SetResetSchedule: cannot turn schedule %s, there is no save information for instance (map [id: %u, name: %s], instance id: %u)", 
+            sLog->outError("InstanceMap::SetResetSchedule: cannot turn schedule %s, there is no save information for instance (map [id: %u, name: %s], instance id: %u)",
                 on ? "on" : "off", GetId(), GetMapName(), GetInstanceId());
     }
 }
@@ -2636,7 +2635,6 @@ void BattlegroundMap::RemoveAllPlayers()
             if (Player* plr = itr->getSource())
                 if (!plr->IsBeingTeleportedFar())
                     plr->TeleportTo(plr->GetBattlegroundEntryPoint());
-
 }
 
 Creature*

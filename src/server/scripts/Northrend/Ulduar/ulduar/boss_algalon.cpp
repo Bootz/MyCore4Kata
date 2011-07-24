@@ -330,7 +330,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 //Collapsing Star
@@ -372,7 +371,6 @@ public:
             } else BlackHoleExplosion_Timer -= diff;
         }
     };
-
 };
 
 void AddSC_boss_Algalon()

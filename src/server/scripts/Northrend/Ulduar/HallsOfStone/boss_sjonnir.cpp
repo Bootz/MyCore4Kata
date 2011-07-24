@@ -246,9 +246,7 @@ public:
             ++uiKilledIronSludges;
         }
     };
-
 };
-
 
 class mob_malformed_ooze : public CreatureScript
 {
@@ -290,9 +288,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 class mob_iron_sludge : public CreatureScript
 {
@@ -320,9 +316,7 @@ public:
                     CAST_AI(boss_sjonnir::boss_sjonnirAI, pSjonnir->AI())->KilledIronSludge();
         }
     };
-
 };
-
 
 void AddSC_boss_sjonnir()
 {

@@ -85,7 +85,7 @@ class boss_drakkari_colossus : public CreatureScript
 
         struct boss_drakkari_colossusAI : public BossAI
         {
-            boss_drakkari_colossusAI(Creature* creature) : BossAI(creature, DATA_DRAKKARI_COLOSSUS_EVENT) 
+            boss_drakkari_colossusAI(Creature* creature) : BossAI(creature, DATA_DRAKKARI_COLOSSUS_EVENT)
             {
                 me->SetReactState(REACT_PASSIVE);
                 introDone = false;
@@ -177,7 +177,6 @@ class boss_drakkari_colossus : public CreatureScript
                         phase = (phase == COLOSSUS_PHASE_NORMAL ? COLOSSUS_PHASE_FIRST_ELEMENTAL_SUMMON : COLOSSUS_PHASE_SECOND_ELEMENTAL_SUMMON);
                         DoAction(ACTION_FREEZE_COLOSSUS);
                         DoAction(ACTION_SUMMON_ELEMENTAL);
-                        
                     }
                 }
             }
@@ -280,7 +279,7 @@ class boss_drakkari_elemental : public CreatureScript
             {
                 if (!UpdateVictim())
                     return;
-                
+
                 events.Update(diff);
 
                 if (me->HasUnitState(UNIT_STAT_CASTING))
@@ -416,7 +415,6 @@ public:
             }
         }
 
-
         void AttackStart(Unit* attacker)
         {
             if (me->GetMotionMaster()->GetCurrentMovementGeneratorType() == POINT_MOTION_TYPE)
@@ -432,7 +430,7 @@ public:
                 colossus->GetHomePosition().GetPosition(&colossusHomePosition);
 
                 float distance = homePosition.GetExactDist(colossusHomePosition.GetPositionX(),colossusHomePosition.GetPositionY(),colossusHomePosition.GetPositionZ());
-                
+
                 if (distance < 12.0f)
                 {
                     MoveMojos(colossus);

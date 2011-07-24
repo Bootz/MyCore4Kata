@@ -119,7 +119,7 @@ class instance_deadmines : public InstanceMapScript
                     if (ServerAllowsTwoSideGroups())
                         pCreature->setFaction(FACTION_HOSTILE_FOR_ALL);
                     if (TeamInInstance == ALLIANCE)
-                        pCreature->UpdateEntry(491, ALLIANCE); // Quartermaster Lewis <Quartermaster> 
+                        pCreature->UpdateEntry(491, ALLIANCE); // Quartermaster Lewis <Quartermaster>
                     break;
                 }
                 case 46890: // Shattered Hand Assassin
@@ -129,7 +129,7 @@ class instance_deadmines : public InstanceMapScript
                     if (TeamInInstance == ALLIANCE)
                         pCreature->UpdateEntry(1, ALLIANCE); // GM WAYPOINT
                     break;
-                }                
+                }
                 case 46903: // Mayhem Reaper Prototype
                 {
                     if (ServerAllowsTwoSideGroups())
@@ -180,8 +180,7 @@ class instance_deadmines : public InstanceMapScript
                    break;
                }
             }
-        
-            }                                                
+            }
             virtual void Update(uint32 diff)
             {
                 if (!IronCladDoorGUID || !DefiasCannonGUID || !DoorLeverGUID)

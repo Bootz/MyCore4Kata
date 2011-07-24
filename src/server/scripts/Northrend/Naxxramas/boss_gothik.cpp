@@ -464,7 +464,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_gothik_minion : public CreatureScript
@@ -555,10 +554,7 @@ public:
             CombatAI::UpdateAI(diff);
         }
     };
-
 };
-
-
 
 void AddSC_boss_gothik()
 {

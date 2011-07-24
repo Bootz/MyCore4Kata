@@ -335,10 +335,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
-
 
 /*######
 ## npc_volkhan_anvil
@@ -380,7 +377,6 @@ public:
 
         return false;
     }
-
 };
 
 /*######
@@ -484,9 +480,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 void AddSC_boss_volkhan()
 {

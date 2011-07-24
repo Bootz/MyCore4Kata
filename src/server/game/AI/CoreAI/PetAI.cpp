@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -370,7 +370,6 @@ void PetAI::HandleReturnMovement()
             }
         }
     }
-
 }
 
 void PetAI::DoAttack(Unit *target, bool chase)
@@ -427,7 +426,7 @@ void PetAI::MovementInform(uint32 moveType, uint32 data)
 
         case TARGETED_MOTION_TYPE:
         {
-            // If data is owner's GUIDLow then we've reached follow point, 
+            // If data is owner's GUIDLow then we've reached follow point,
             // otherwise we're probably chasing a creature
             if (me->GetCharmerOrOwner() && me->GetCharmInfo() && data == me->GetCharmerOrOwner()->GetGUIDLow() && me->GetCharmInfo()->IsReturning())
             {

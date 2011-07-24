@@ -247,7 +247,6 @@ public:
                     WasBanished = true;
                     DoCast(me, SPELL_RAGSUBMERGE);
                     Attack_Timer = 90000;
-
                 }
                 else
                 {
@@ -299,7 +298,6 @@ public:
             }
         }
     };
-
 };
 
 void AddSC_boss_ragnaros()

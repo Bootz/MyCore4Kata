@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -27,7 +27,7 @@
 
 enum eFollowState
 {
-    STATE_FOLLOW_NONE       = 0x000, 
+    STATE_FOLLOW_NONE       = 0x000,
     STATE_FOLLOW_INPROGRESS = 0x001,                        //must always have this state for any follow
     STATE_FOLLOW_RETURNING  = 0x002,                        //when returning to combat start after being in combat
     STATE_FOLLOW_PAUSED     = 0x004,                        //disables following

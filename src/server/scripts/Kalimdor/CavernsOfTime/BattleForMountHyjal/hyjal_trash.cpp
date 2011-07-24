@@ -134,7 +134,6 @@ float AllianceOverrunWP[55][3]=//waypoints in the alliance base used in the end 
     {5180.41f, -2121.87f, 1292.62f},//52 garg target3
     {5088.68f, -2432.04f, 1441.73f},//53 garg target4
     {5111.26f, -2454.73f, 1449.63f}//54 garg target5
-
 };
 
 float HordeOverrunWP[21][3]=//waypoints in the horde base used in the end in the cleaning wave
@@ -630,9 +629,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 #define SPELL_FRENZY 31540
 
@@ -692,7 +689,6 @@ public:
                     me->setDeathState(DEAD);
                     me->RemoveCorpse();
                 }
-
             }
         }
 
@@ -737,9 +733,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 #define SPELL_RAISE_DEAD_1 31617
 #define SPELL_RAISE_DEAD_2 31624
@@ -860,9 +854,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 #define SPELL_BANSHEE_CURSE 31651
 #define SPELL_BANSHEE_WAIL 38183
@@ -968,9 +960,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 #define SPELL_WEB 28991
 
@@ -1047,7 +1037,6 @@ public:
                             Start(false, true);
                             SetDespawnAtEnd(false);
                         }
-
                     }
                 }
             }
@@ -1061,9 +1050,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 #define SPELL_MANA_BURN 31729
 
@@ -1140,7 +1127,6 @@ public:
                             Start(false, true);
                             SetDespawnAtEnd(false);
                         }
-
                     }
                 }
             }
@@ -1154,9 +1140,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 #define SPELL_FROST_BREATH 31688
 
@@ -1272,9 +1256,7 @@ public:
             } else FrostBreathTimer -= diff;
         }
     };
-
 };
-
 
 #define SPELL_GARGOYLE_STRIKE 31664
 
@@ -1413,9 +1395,7 @@ public:
             } else StrikeTimer -= diff;
         }
     };
-
 };
-
 
 #define SPELL_EXPLODING_SHOT 7896
 
@@ -1483,7 +1463,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 void AddSC_hyjal_trash()

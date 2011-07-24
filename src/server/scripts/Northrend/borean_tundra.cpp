@@ -154,9 +154,7 @@ public:
                         break;
                 }
             } else uiPhaseTimer -= diff;
-
         }
-
     };
 
     CreatureAI *GetAI(Creature *creature) const
@@ -288,7 +286,6 @@ public:
 
             pPlayer->CastSpell(pPlayer, SPELL_SUMMON_WYRMREST_SKYTALON, true);
             pPlayer->CastSpell(pPlayer, SPELL_WYRMREST_SKYTALON_RIDE_PERIODIC, true);
-
         }
 
         return true;
@@ -315,7 +312,6 @@ public:
 
     bool OnGossipHello(Player* pPlayer, Creature* pCreature)
     {
-
         if (pPlayer->GetQuestStatus(QUEST_SPIRITS_WATCH_OVER_US) == QUEST_STATUS_INCOMPLETE)
             pPlayer->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, GOSSIP_ITEM_I, GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
 
@@ -332,7 +328,6 @@ public:
                 pPlayer->CastSpell(pPlayer, SPELL_CREATURE_TOTEM_OF_ISSLIRUK, true);
                 pPlayer->CLOSE_GOSSIP_MENU();
                 break;
-
         }
         return true;
     }
@@ -413,7 +408,6 @@ public:
                 if (pGO->GetGoState() == GO_STATE_ACTIVE)
                     pGO->SetGoState(GO_STATE_READY);
         }
-
     };
 
     CreatureAI *GetAI(Creature *creature) const
@@ -2084,7 +2078,6 @@ public:
 
         void MovementInform(uint32 uiType, uint32 /*uiId*/)
         {
-
             if (uiType != POINT_MOTION_TYPE)
                 return;
             me->DisappearAndDie();
@@ -2242,7 +2235,6 @@ public:
             if (!UpdateVictim())
                 return;
         }
-
     };
 
     CreatureAI *GetAI(Creature *creature) const
@@ -2503,7 +2495,7 @@ public:
                             uiEventPhase = 0;
                         }
                         break;
-                }                       
+                }
             }else uiEventTimer -= uiDiff;
 
             if (!UpdateVictim())
@@ -2565,12 +2557,11 @@ public:
 
         if (uiAction == GOSSIP_ACTION_TRADE)
             pPlayer->SEND_VENDORLIST(pCreature->GetGUID());
-    
+
         return true;
     }
-
 };
-    
+
 void AddSC_borean_tundra()
 {
     new npc_sinkhole_kill_credit;

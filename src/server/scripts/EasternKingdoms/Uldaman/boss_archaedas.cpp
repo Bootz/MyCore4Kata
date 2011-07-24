@@ -157,7 +157,7 @@ class boss_archaedas : public CreatureScript
                     return;
 
                 // wake a wall minion
-                if (uiWallMinionTimer <= uiDiff) 
+                if (uiWallMinionTimer <= uiDiff)
                 {
                     pInstance->SetData (DATA_MINIONS, IN_PROGRESS);
 
@@ -165,7 +165,7 @@ class boss_archaedas : public CreatureScript
                 } else uiWallMinionTimer -= uiDiff;
 
                 //If we are <66 summon the guardians
-                if (!bGuardiansAwake && !HealthAbovePct(66)) 
+                if (!bGuardiansAwake && !HealthAbovePct(66))
                 {
                     ActivateMinion(pInstance->GetData64(5),true);   // EarthenGuardian1
                     ActivateMinion(pInstance->GetData64(6),true);   // EarthenGuardian2
@@ -202,7 +202,7 @@ class boss_archaedas : public CreatureScript
                 DoMeleeAttackIfReady();
             }
 
-            void JustDied (Unit * /*pKiller*/) 
+            void JustDied (Unit * /*pKiller*/)
             {
                 if (pInstance)
                 {
@@ -454,4 +454,3 @@ void AddSC_boss_archaedas()
     new go_altar_of_archaedas();
     new go_altar_of_the_keepers();
 }
-

@@ -108,7 +108,6 @@ enum Actions
     ACTION_PACT
 };
 
-
 /*######
 ## boss_twin_base
 ######*/
@@ -483,9 +482,7 @@ public:
             }
         }
     };
-
 };
-
 
 /*######
 ## boss_eydis
@@ -531,9 +528,7 @@ public:
             EssenceLocation[1] = TwinValkyrsLoc[1];
         }
     };
-
 };
-
 
 class mob_essence_of_twin : public CreatureScript
 {
@@ -559,7 +554,6 @@ public:
         return true;
     }
 };
-
 
 struct mob_unleashed_ballAI : public ScriptedAI
 {
@@ -640,9 +634,7 @@ public:
             else m_uiRangeCheckTimer -= uiDiff;
         }
     };
-
 };
-
 
 class mob_unleashed_light : public CreatureScript
 {
@@ -674,9 +666,7 @@ public:
             else m_uiRangeCheckTimer -= uiDiff;
         }
     };
-
 };
-
 
 void AddSC_boss_twin_valkyr()
 {

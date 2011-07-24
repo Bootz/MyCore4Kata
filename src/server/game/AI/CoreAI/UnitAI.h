@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -34,11 +34,11 @@ struct AISpellInfoType;
 // Default script texts
 enum GeneralScriptTexts
 {
-    DEFAULT_TEXT                = -1000000, 
-    EMOTE_GENERIC_FRENZY_KILL   = -1000001, 
-    EMOTE_GENERIC_FRENZY        = -1000002, 
-    EMOTE_GENERIC_ENRAGED       = -1000003, 
-    EMOTE_GENERIC_BERSERK       = -1000004, 
+    DEFAULT_TEXT                = -1000000,
+    EMOTE_GENERIC_FRENZY_KILL   = -1000001,
+    EMOTE_GENERIC_FRENZY        = -1000002,
+    EMOTE_GENERIC_ENRAGED       = -1000003,
+    EMOTE_GENERIC_BERSERK       = -1000004,
     EMOTE_GENERIC_BERSERK_RAID  = -1000005, // RaidBossEmote version of the previous one
 };
 
@@ -48,8 +48,8 @@ enum SelectAggroTarget
     SELECT_TARGET_RANDOM = 0,                               //Just selects a random target
     SELECT_TARGET_TOPAGGRO,                                 //Selects targes from top aggro to bottom
     SELECT_TARGET_BOTTOMAGGRO,                              //Selects targets from bottom aggro to top
-    SELECT_TARGET_NEAREST, 
-    SELECT_TARGET_FARTHEST, 
+    SELECT_TARGET_NEAREST,
+    SELECT_TARGET_FARTHEST,
 };
 
 // default predicate function to select target based on distance, player and/or aura criteria

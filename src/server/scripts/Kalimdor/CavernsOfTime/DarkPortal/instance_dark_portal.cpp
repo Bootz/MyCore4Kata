@@ -346,9 +346,7 @@ public:
             }
         }
     };
-
 };
-
 
 void AddSC_instance_dark_portal()
 {

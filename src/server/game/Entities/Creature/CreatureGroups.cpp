@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -24,7 +24,6 @@
 #include "Creature.h"
 #include "CreatureGroups.h"
 #include "ObjectMgr.h"
-
 
 #include "CreatureAI.h"
 
@@ -77,7 +76,7 @@ void CreatureGroupManager::LoadCreatureFormations()
 {
     uint32 oldMSTime = getMSTime();
 
-    for (CreatureGroupInfoType::iterator itr = CreatureGroupMap.begin(); itr != CreatureGroupMap.end(); ++itr) // for reload case 
+    for (CreatureGroupInfoType::iterator itr = CreatureGroupMap.begin(); itr != CreatureGroupMap.end(); ++itr) // for reload case
         delete itr->second;
     CreatureGroupMap.clear();
 
@@ -96,13 +95,12 @@ void CreatureGroupManager::LoadCreatureFormations()
     QueryResult guidResult = WorldDatabase.PQuery("SELECT guid FROM creature");
     if (guidResult)
     {
-        do 
+        do
         {
             Field *fields = guidResult->Fetch();
             uint32 guid = fields[0].GetUInt32();
 
             guidSet.insert(guid);
-
         }
         while (guidResult->NextRow());
     }
@@ -117,7 +115,6 @@ void CreatureGroupManager::LoadCreatureFormations()
     {
         fields = result->Fetch();
 
-        
         //Load group member data
         group_member                        = new FormationInfo;
         group_member->leaderGUID            = fields[0].GetUInt32();

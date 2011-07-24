@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -28,7 +28,7 @@
 #include "TemporarySummon.h"
 
 TempSummon::TempSummon(SummonPropertiesEntry const *properties, Unit *owner) :
-Creature(), m_Properties(properties), m_type(TEMPSUMMON_MANUAL_DESPAWN), 
+Creature(), m_Properties(properties), m_type(TEMPSUMMON_MANUAL_DESPAWN),
 m_timer(0), m_lifetime(0)
 {
     m_summonerGUID = owner ? owner->GetGUID() : 0;

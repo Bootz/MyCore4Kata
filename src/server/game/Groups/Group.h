@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -49,19 +49,19 @@ struct MapEntry;
 
 enum RollVote
 {
-    PASS              = 0, 
-    NEED              = 1, 
-    GREED             = 2, 
-    DISENCHANT        = 3, 
-    NOT_EMITED_YET    = 4, 
+    PASS              = 0,
+    NEED              = 1,
+    GREED             = 2,
+    DISENCHANT        = 3,
+    NOT_EMITED_YET    = 4,
     NOT_VALID         = 5
 };
 
 enum GroupMemberOnlineStatus
 {
-    MEMBER_STATUS_OFFLINE   = 0x0000, 
-    MEMBER_STATUS_ONLINE    = 0x0001, 
-    MEMBER_STATUS_PVP       = 0x0002, 
+    MEMBER_STATUS_OFFLINE   = 0x0000,
+    MEMBER_STATUS_ONLINE    = 0x0001,
+    MEMBER_STATUS_PVP       = 0x0002,
     MEMBER_STATUS_UNK0      = 0x0004,                       // dead? (health=0)
     MEMBER_STATUS_UNK1      = 0x0008,                       // ghost? (health=1)
     MEMBER_STATUS_UNK2      = 0x0010,                       // never seen
@@ -72,19 +72,19 @@ enum GroupMemberOnlineStatus
 
 enum GroupMemberFlags
 {
-    MEMBER_FLAG_ASSISTANT   = 0x01, 
-    MEMBER_FLAG_MAINTANK    = 0x02, 
-    MEMBER_FLAG_MAINASSIST  = 0x04, 
+    MEMBER_FLAG_ASSISTANT   = 0x01,
+    MEMBER_FLAG_MAINTANK    = 0x02,
+    MEMBER_FLAG_MAINASSIST  = 0x04,
 };
 
 enum GroupType
 {
-    GROUPTYPE_NORMAL = 0x00, 
-    GROUPTYPE_BG     = 0x01, 
-    GROUPTYPE_RAID   = 0x02, 
+    GROUPTYPE_NORMAL = 0x00,
+    GROUPTYPE_BG     = 0x01,
+    GROUPTYPE_RAID   = 0x02,
     GROUPTYPE_BGRAID = GROUPTYPE_BG | GROUPTYPE_RAID,       // mask
-    GROUPTYPE_UNK1   = 0x04, 
-    GROUPTYPE_LFG    = 0x08, 
+    GROUPTYPE_UNK1   = 0x04,
+    GROUPTYPE_LFG    = 0x08,
     // 0x10, leave/change group?, I saw this flag when leaving group and after leaving BG while in group
 };
 
@@ -238,7 +238,7 @@ class Group
         void ConvertToLFG();
         void ConvertToRaid();
         void ConvertToGroup();
-        
+
         // some additional raid methods
         void SetBattlegroundGroup(Battleground *bg);
         GroupJoinBattlegroundResult CanJoinBattlegroundQueue(Battleground const* bgOrTemplate, BattlegroundQueueTypeId bgQueueTypeId, uint32 MinPlayerCount, uint32 MaxPlayerCount, bool isRated, uint32 arenaSlot);

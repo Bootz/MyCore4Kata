@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -37,10 +37,10 @@ class GridInfo
 {
 public:
     GridInfo()
-        : i_timer(0), vis_Update(0, irand(0, DEFAULT_VISIBILITY_NOTIFY_PERIOD)), 
+        : i_timer(0), vis_Update(0, irand(0, DEFAULT_VISIBILITY_NOTIFY_PERIOD)),
           i_unloadActiveLockCount(0), i_unloadExplicitLock(false), i_unloadReferenceLock(false) {}
     GridInfo(time_t expiry, bool unload = true )
-        : i_timer(expiry), vis_Update(0, irand(0, DEFAULT_VISIBILITY_NOTIFY_PERIOD)), 
+        : i_timer(expiry), vis_Update(0, irand(0, DEFAULT_VISIBILITY_NOTIFY_PERIOD)),
           i_unloadActiveLockCount(0), i_unloadExplicitLock(!unload), i_unloadReferenceLock(false) {}
     const TimeTracker& getTimeTracker() const { return i_timer; }
     bool getUnloadLock() const { return i_unloadActiveLockCount || i_unloadExplicitLock || i_unloadReferenceLock; }
@@ -64,18 +64,18 @@ private:
 
 typedef enum
 {
-    GRID_STATE_INVALID = 0, 
-    GRID_STATE_ACTIVE = 1, 
-    GRID_STATE_IDLE = 2, 
-    GRID_STATE_REMOVAL= 3, 
+    GRID_STATE_INVALID = 0,
+    GRID_STATE_ACTIVE = 1,
+    GRID_STATE_IDLE = 2,
+    GRID_STATE_REMOVAL= 3,
     MAX_GRID_STATE = 4
 } grid_state_t;
 
 template
 <
-unsigned int N, 
-class ACTIVE_OBJECT, 
-class WORLD_OBJECT_TYPES, 
+unsigned int N,
+class ACTIVE_OBJECT,
+class WORLD_OBJECT_TYPES,
 class GRID_OBJECT_TYPES
 >
 class NGrid
@@ -187,4 +187,3 @@ class NGrid
         bool i_GridObjectDataLoaded;
 };
 #endif
-

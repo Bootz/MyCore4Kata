@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -53,7 +53,6 @@
 #include "SpellAuraEffects.h"
 #include "Group.h"
 // apply implementation of the singletons
-
 
 TrainerSpell const* TrainerSpellData::Find(uint32 spell_id) const
 {
@@ -142,13 +141,13 @@ bool ForcedDespawnDelayEvent::Execute(uint64 /*e_time*/, uint32 /*p_time*/)
     return true;
 }
 
-Creature::Creature(): Unit(), 
-lootForPickPocketed(false), lootForBody(false), m_groupLootTimer(0), lootingGroupLowGUID(0), 
-m_PlayerDamageReq(0), m_lootMoney(0), m_lootRecipient(0), m_lootRecipientGroup(0), m_corpseRemoveTime(0), m_respawnTime(0), 
-m_respawnDelay(300), m_corpseDelay(60), m_respawnradius(0.0f), m_reactState(REACT_AGGRESSIVE), 
-m_defaultMovementType(IDLE_MOTION_TYPE), m_DBTableGuid(0), m_equipmentId(0), m_AlreadyCallAssistance(false), 
-m_AlreadySearchedAssistance(false), m_regenHealth(true), m_AI_locked(false), m_isDeadByDefault(false), 
-m_meleeDamageSchoolMask(SPELL_SCHOOL_MASK_NORMAL), m_creatureInfo(NULL), m_creatureData(NULL), 
+Creature::Creature(): Unit(),
+lootForPickPocketed(false), lootForBody(false), m_groupLootTimer(0), lootingGroupLowGUID(0),
+m_PlayerDamageReq(0), m_lootMoney(0), m_lootRecipient(0), m_lootRecipientGroup(0), m_corpseRemoveTime(0), m_respawnTime(0),
+m_respawnDelay(300), m_corpseDelay(60), m_respawnradius(0.0f), m_reactState(REACT_AGGRESSIVE),
+m_defaultMovementType(IDLE_MOTION_TYPE), m_DBTableGuid(0), m_equipmentId(0), m_AlreadyCallAssistance(false),
+m_AlreadySearchedAssistance(false), m_regenHealth(true), m_AI_locked(false), m_isDeadByDefault(false),
+m_meleeDamageSchoolMask(SPELL_SCHOOL_MASK_NORMAL), m_creatureInfo(NULL), m_creatureData(NULL),
 m_formation(NULL)
 {
     m_regenTimer = CREATURE_REGEN_INTERVAL;
@@ -830,7 +829,7 @@ bool Creature::isCanTrainingOf(Player* pPlayer, bool msg) const
 
     if ((!trainer_spells || trainer_spells->spellList.empty()) && GetCreatureInfo()->trainer_type != TRAINER_TYPE_PETS)
     {
-        sLog->outErrorDb("Creature %u (Entry: %u) have UNIT_NPC_FLAG_TRAINER but have empty trainer spell list.", 
+        sLog->outErrorDb("Creature %u (Entry: %u) have UNIT_NPC_FLAG_TRAINER but have empty trainer spell list.",
             GetGUIDLow(), GetEntry());
         return false;
     }
@@ -2391,7 +2390,7 @@ void Creature::FarTeleportTo(Map* map, float X, float Y, float Z, float O)
     ResetMap();
     SetMap(map);
     AddToWorld();
-    
+
     SetPosition(X, Y, Z, O, true);
 }
 

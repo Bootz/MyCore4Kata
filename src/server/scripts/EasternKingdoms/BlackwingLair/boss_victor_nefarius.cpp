@@ -384,11 +384,7 @@ public:
             }
         }
     };
-
 };
-
-
-
 
 void AddSC_boss_victor_nefarius()
 {

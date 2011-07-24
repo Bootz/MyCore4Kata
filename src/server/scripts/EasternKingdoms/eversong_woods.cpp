@@ -122,11 +122,7 @@ public:
             me->RestoreFaction();
         }
     };
-
 };
-
-
-
 
 /*######
 ## Quest 9686 Second Trial
@@ -218,7 +214,6 @@ public:
 
         void Reset()
         {
-
           timer = 2000;
           questPhase = 0;
           summonerGuid = 0;
@@ -460,10 +455,8 @@ public:
 
         void StartEvent()
         {
-
             if (questPhase == 1)
             { // no player check, quest can be finished as group, so no complex PlayerGUID/group search code
-
                 for (uint8 i = 0; i < 4; ++i)
                 if (Creature *pSummoned = DoSpawnCreature(PaladinEntry[i], SpawnPosition[i].x, SpawnPosition[i].y, SpawnPosition[i].z, SpawnPosition[i].o, TEMPSUMMON_TIMED_OR_DEAD_DESPAWN, 180000))
                     paladinGuid[i] = pSummoned->GetGUID();
@@ -506,7 +499,6 @@ void npc_second_trial_paladin::npc_secondTrialAI::JustDied(Unit* Killer)
     }
 }
 
-
 /*######
 ## go_second_trial
 ######*/
@@ -523,9 +515,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_apprentice_mirveda
@@ -608,9 +598,7 @@ public:
             }
         }
     };
-
 };
-
 
 /*######
 ## npc_infused_crystal
@@ -718,7 +706,6 @@ public:
             } else WaveTimer -= diff;
         }
     };
-
 };
 
 void AddSC_eversong_woods()

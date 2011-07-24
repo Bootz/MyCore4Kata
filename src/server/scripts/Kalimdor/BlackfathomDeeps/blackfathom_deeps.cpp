@@ -50,7 +50,6 @@ public:
             pPlayer->AddAura(SPELL_BLESSING_OF_BLACKFATHOM,pPlayer);
         return true;
     }
-
 };
 
 class go_blackfathom_fire : public GameObjectScript
@@ -71,7 +70,6 @@ public:
         }
         return false;
     }
-
 };
 
 class npc_blackfathom_deeps_event : public CreatureScript
@@ -194,9 +192,7 @@ public:
                     pInstance->SetData(DATA_EVENT, pInstance->GetData(DATA_EVENT) + 1);
         }
     };
-
 };
-
 
 enum eMorridune
 {
@@ -258,11 +254,7 @@ public:
             }
         }
     };
-
 };
-
-
-
 
 void AddSC_blackfathom_deeps()
 {

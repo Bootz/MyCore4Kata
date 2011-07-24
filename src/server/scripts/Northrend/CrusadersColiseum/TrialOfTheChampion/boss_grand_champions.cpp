@@ -291,7 +291,6 @@ public:
     };
 };
 
-
 // Marshal Jacob Alerius && Mokra the Skullcrusher || Warrior
 class boss_warrior_toc5 : public CreatureScript
 {
@@ -302,10 +301,9 @@ public:
     {
         return new boss_warrior_toc5AI(pCreature);
     }
-    
+
     struct boss_warrior_toc5AI : public ScriptedAI
     {
-
         boss_warrior_toc5AI(Creature* pCreature) : ScriptedAI(pCreature)
         {
             pInstance = pCreature->GetInstanceScript();
@@ -427,11 +425,9 @@ public:
                  DoScriptText(SAY_START_1, me);
             if (pInstance)
                 pInstance->SetData(BOSS_GRAND_CHAMPIONS, DONE);
-
         }
     };
 };
-
 
 // Ambrose Boltspark && Eressea Dawnsinger || Mage
 class boss_mage_toc5 : public CreatureScript
@@ -443,10 +439,9 @@ public:
     {
         return new boss_mage_toc5AI(pCreature);
     }
-    
+
     struct boss_mage_toc5AI : public ScriptedAI
     {
-
         boss_mage_toc5AI(Creature* pCreature) : ScriptedAI(pCreature)
         {
             pInstance = pCreature->GetInstanceScript();
@@ -564,11 +559,9 @@ public:
                  DoScriptText(SAY_START_1, me);
             if (pInstance)
                 pInstance->SetData(BOSS_GRAND_CHAMPIONS, DONE);
-
         }
     };
 };
-
 
 // Colosos && Runok Wildmane || Shaman
 class boss_shaman_toc5 : public CreatureScript
@@ -715,11 +708,9 @@ public:
                  DoScriptText(SAY_START_1, me);
             if (pInstance)
                 pInstance->SetData(BOSS_GRAND_CHAMPIONS, DONE);
-
         }
     };
 };
-
 
 // Jaelyne Evensong && Zul'tore || Hunter
 class boss_hunter_toc5 : public CreatureScript
@@ -839,7 +830,6 @@ public:
                     DoCast(pTarget,SPELL_LIGHTNING_ARROWS);
 
                 uiLightningArrowsTimer = 15000;
-
             } else uiLightningArrowsTimer -= uiDiff;
 
             if (uiShootTimer <= uiDiff)
@@ -889,12 +879,9 @@ public:
              DoScriptText(SAY_START_1, me);
             if (pInstance)
                 pInstance->SetData(BOSS_GRAND_CHAMPIONS, DONE);
-
         }
-
     };
 };
-
 
 // Lana Stouthammer Evensong && Deathstalker Visceri || Rouge
 class boss_rouge_toc5 : public CreatureScript
@@ -1016,11 +1003,9 @@ public:
              DoScriptText(SAY_START_1, me);
             if (pInstance)
                 pInstance->SetData(BOSS_GRAND_CHAMPIONS, DONE);
-
         }
     };
 };
-
 
 void AddSC_boss_grand_champions()
 {

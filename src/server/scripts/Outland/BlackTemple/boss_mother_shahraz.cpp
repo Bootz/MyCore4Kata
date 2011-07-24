@@ -222,7 +222,6 @@ public:
                 if (BeamCount > 3)
                     while (CurrentBeam == Beam)
                         CurrentBeam = rand()%3;
-
             } else BeamTimer -= diff;
 
             // Random Prismatic Shield every 15 seconds.
@@ -305,9 +304,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 void AddSC_boss_mother_shahraz()
 {

@@ -379,7 +379,6 @@ public:
             m_uiCreatureGUID = 0;
         }
     };
-
 };
 
 void AddSC_boss_ymiron()

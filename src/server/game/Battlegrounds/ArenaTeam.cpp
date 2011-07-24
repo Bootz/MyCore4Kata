@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -60,7 +60,6 @@ bool ArenaTeam::Create(uint32 captainGuid, uint8 type, std::string teamName, uin
     if (sObjectMgr->GetArenaTeamByName(TeamName))
         return false;
 
-
     // Generate new arena team id
     TeamId = sObjectMgr->GenerateArenaTeamId();
 
@@ -73,8 +72,6 @@ bool ArenaTeam::Create(uint32 captainGuid, uint8 type, std::string teamName, uin
     EmblemColor = emblemColor;
     BorderStyle = borderStyle;
     BorderColor = borderColor;
-
-
 
     // Save arena team to db
     PreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_ADD_ARENA_TEAM);
@@ -301,7 +298,7 @@ void ArenaTeam::SetCaptain(const uint64& guid)
     if (newCaptain)
     {
         newCaptain->SetArenaTeamInfoField(GetSlot(), ARENA_TEAM_MEMBER, 0);
-        sLog->outArena("Player: %s [GUID: %u] promoted player: %s [GUID: %u] to leader of arena team [Id: %u] [Type: %u].", 
+        sLog->outArena("Player: %s [GUID: %u] promoted player: %s [GUID: %u] to leader of arena team [Id: %u] [Type: %u].",
                         oldCaptain->GetName(), oldCaptain->GetGUIDLow(), newCaptain->GetName(), newCaptain->GetGUIDLow(), GetId(), GetType());
     }
 }

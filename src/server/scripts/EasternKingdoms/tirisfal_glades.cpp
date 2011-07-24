@@ -150,9 +150,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 /*######
 ## go_mausoleum_door
@@ -186,7 +184,6 @@ public:
 
         return false;
     }
-
 };
 
 class go_mausoleum_trigger : public GameObjectScript
@@ -208,7 +205,6 @@ public:
 
         return false;
     }
-
 };
 
 void AddSC_tirisfal_glades()

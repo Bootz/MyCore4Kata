@@ -110,7 +110,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 void AddSC_boss_maleki_the_pallid()

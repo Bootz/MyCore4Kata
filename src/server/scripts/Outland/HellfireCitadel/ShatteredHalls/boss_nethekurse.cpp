@@ -313,7 +313,6 @@ class boss_grand_warlock_nethekurse : public CreatureScript
         }
 };
 
-
 class mob_fel_orc_convert : public CreatureScript
 {
     public:
@@ -428,4 +427,3 @@ void AddSC_boss_grand_warlock_nethekurse()
     new mob_fel_orc_convert();
     new mob_lesser_shadow_fissure();
 }
-

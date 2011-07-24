@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -277,10 +277,9 @@ bool ConditionMgr::IsPlayerMeetToConditionList(Player* player, const ConditionLi
                 }
                 else
                 {
-                    sLog->outDebug(LOG_FILTER_CONDITIONSYS, "IsPlayerMeetToConditionList: Reference template -%u not found", 
+                    sLog->outDebug(LOG_FILTER_CONDITIONSYS, "IsPlayerMeetToConditionList: Reference template -%u not found",
                         (*i)->mReferenceId);//checked at loading, should never happen
                 }
-
             }
             else //handle normal condition
             {
@@ -1409,7 +1408,6 @@ void ConditionMgr::Clean()
 
     m_ConditionMap.clear();
 
-    
     for (VehicleSpellConditionMap::iterator itr = m_VehicleSpellConditions.begin(); itr != m_VehicleSpellConditions.end(); ++itr)
     {
         for (ConditionTypeMap::iterator it = itr->second.begin(); it != itr->second.end(); ++it)

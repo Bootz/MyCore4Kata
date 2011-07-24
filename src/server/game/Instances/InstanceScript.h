@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -46,18 +46,18 @@ typedef std::set<Creature*> MinionSet;
 
 enum EncounterFrameType
 {
-    ENCOUNTER_FRAME_ADD     = 0, 
-    ENCOUNTER_FRAME_REMOVE  = 1, 
+    ENCOUNTER_FRAME_ADD     = 0,
+    ENCOUNTER_FRAME_REMOVE  = 1,
 };
 
 enum EncounterState
 {
-    NOT_STARTED   = 0, 
-    IN_PROGRESS   = 1, 
-    FAIL          = 2, 
-    DONE          = 3, 
-    SPECIAL       = 4, 
-    TO_BE_DECIDED = 5, 
+    NOT_STARTED   = 0,
+    IN_PROGRESS   = 1,
+    FAIL          = 2,
+    DONE          = 3,
+    SPECIAL       = 4,
+    TO_BE_DECIDED = 5,
 };
 
 enum DoorType
@@ -65,24 +65,24 @@ enum DoorType
     DOOR_TYPE_ROOM          = 0,    // Door can open if encounter is not in progress
     DOOR_TYPE_PASSAGE       = 1,    // Door can open if encounter is done
     DOOR_TYPE_SPAWN_HOLE    = 2,    // Door can open if encounter is in progress, typically used for spawning places
-    MAX_DOOR_TYPES, 
+    MAX_DOOR_TYPES,
 };
 
 enum BoundaryType
 {
-    BOUNDARY_NONE = 0, 
-    BOUNDARY_N, 
-    BOUNDARY_S, 
-    BOUNDARY_E, 
-    BOUNDARY_W, 
-    BOUNDARY_NE, 
-    BOUNDARY_NW, 
-    BOUNDARY_SE, 
-    BOUNDARY_SW, 
-    BOUNDARY_MAX_X = BOUNDARY_N, 
-    BOUNDARY_MIN_X = BOUNDARY_S, 
-    BOUNDARY_MAX_Y = BOUNDARY_W, 
-    BOUNDARY_MIN_Y = BOUNDARY_E, 
+    BOUNDARY_NONE = 0,
+    BOUNDARY_N,
+    BOUNDARY_S,
+    BOUNDARY_E,
+    BOUNDARY_W,
+    BOUNDARY_NE,
+    BOUNDARY_NW,
+    BOUNDARY_SE,
+    BOUNDARY_SW,
+    BOUNDARY_MAX_X = BOUNDARY_N,
+    BOUNDARY_MIN_X = BOUNDARY_S,
+    BOUNDARY_MAX_Y = BOUNDARY_W,
+    BOUNDARY_MIN_Y = BOUNDARY_E,
 };
 
 typedef std::map<BoundaryType, float> BossBoundaryMap;

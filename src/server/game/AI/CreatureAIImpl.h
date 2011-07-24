@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -131,7 +131,7 @@ const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, c
 
 template<class T>
 inline
-const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8, 
+const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8,
               const T& v9)
 {
     switch (urand(0, 8))
@@ -151,7 +151,7 @@ const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, c
 
 template<class T>
 inline
-const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8, 
+const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8,
               const T& v9, const T& v10)
 {
     switch (urand(0, 9))
@@ -172,7 +172,7 @@ const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, c
 
 template<class T>
 inline
-const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8, 
+const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8,
               const T& v9, const T& v10, const T& v11)
 {
     switch (urand(0, 10))
@@ -194,7 +194,7 @@ const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, c
 
 template<class T>
 inline
-const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8, 
+const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8,
               const T& v9, const T& v10, const T& v11, const T& v12)
 {
     switch (urand(0, 11))
@@ -217,7 +217,7 @@ const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, c
 
 template<class T>
 inline
-const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8, 
+const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8,
               const T& v9, const T& v10, const T& v11, const T& v12, const T& v13)
 {
     switch (urand(0, 12))
@@ -241,7 +241,7 @@ const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, c
 
 template<class T>
 inline
-const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8, 
+const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8,
               const T& v9, const T& v10, const T& v11, const T& v12, const T& v13, const T& v14)
 {
     switch (urand(0, 13))
@@ -266,7 +266,7 @@ const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, c
 
 template<class T>
 inline
-const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8, 
+const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8,
               const T& v9, const T& v10, const T& v11, const T& v12, const T& v13, const T& v14, const T& v15)
 {
     switch (urand(0, 14))
@@ -292,7 +292,7 @@ const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, c
 
 template<class T>
 inline
-const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8, 
+const T& RAND(const T& v1, const T& v2, const T& v3, const T& v4, const T& v5, const T& v6, const T& v7, const T& v8,
               const T& v9, const T& v10, const T& v11, const T& v12, const T& v13, const T& v14, const T& v15, const T& v16)
 {
     switch (urand(0, 15))
@@ -473,19 +473,19 @@ class EventMap : private std::map<uint32, uint32>
 
 enum AITarget
 {
-    AITARGET_SELF, 
-    AITARGET_VICTIM, 
-    AITARGET_ENEMY, 
-    AITARGET_ALLY, 
-    AITARGET_BUFF, 
-    AITARGET_DEBUFF, 
+    AITARGET_SELF,
+    AITARGET_VICTIM,
+    AITARGET_ENEMY,
+    AITARGET_ALLY,
+    AITARGET_BUFF,
+    AITARGET_DEBUFF,
 };
 
 enum AICondition
 {
-    AICOND_AGGRO, 
-    AICOND_COMBAT, 
-    AICOND_DIE, 
+    AICOND_AGGRO,
+    AICOND_COMBAT,
+    AICOND_DIE,
 };
 
 #define AI_DEFAULT_COOLDOWN 5000
@@ -622,4 +622,3 @@ inline Creature *CreatureAI::DoSummonFlyer(uint32 uiEntry, WorldObject *obj, flo
 }
 
 #endif
-

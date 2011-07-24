@@ -152,7 +152,6 @@ public:
         uint32 uiDeathBiteTimer;
         uint32 uiMarkedDeathTimer;
 
-
         void Reset()
         {
             RemoveSummons();
@@ -191,7 +190,6 @@ public:
 
         void EnterEvadeMode()
         {
-
             if (!pInstance) return;
 
             if (bEventInBattle)
@@ -223,12 +221,10 @@ public:
         {
             SummonList.push_back(pSummon->GetGUID());
             pSummon->AI()->AttackStart(me->getVictim());
-
         }
 
         void UpdateAI(const uint32 uiDiff)
         {
-
             if (!UpdateVictim())
                 return;
 
@@ -425,7 +421,6 @@ public:
     };
 };
 
-
 class npc_risen_ghoul : public CreatureScript
 {
 public:
@@ -467,7 +462,6 @@ public:
     };
 };
 
-
 class npc_black_knight_skeletal_gryphon : public CreatureScript
 {
 public:
@@ -483,7 +477,7 @@ public:
         npc_black_knight_skeletal_gryphonAI(Creature* pCreature) : npc_escortAI(pCreature), vehicle(pCreature->GetVehicleKit())
         {
             Start(false,true,0,NULL);
-            pInstance = pCreature->GetInstanceScript();    
+            pInstance = pCreature->GetInstanceScript();
         }
 
         InstanceScript* pInstance;
@@ -494,7 +488,7 @@ public:
             ASSERT(vehicle);
             vehicle->Reset();
         }
-        
+
         void WaypointReached(uint32 uiPointId)
         {
             switch(uiPointId)
@@ -557,12 +551,6 @@ public:
     };
 };
 
-
-
-
-
-
-
 class npc_gr : public CreatureScript
 {
 public:
@@ -572,14 +560,13 @@ public:
     {
         return new npc_grAI(pCreature);
     }
-    
+
     struct npc_grAI : public npc_escortAI
     {
-    
         npc_grAI(Creature* pCreature) : npc_escortAI(pCreature)
         {
             Start(false,true,0,NULL);
-            pInstance = pCreature->GetInstanceScript();    
+            pInstance = pCreature->GetInstanceScript();
         }
 
         InstanceScript* pInstance;
@@ -637,7 +624,6 @@ public:
             }
         }
 
-
         void UpdateAI(const uint32 uiDiff)
         {
             npc_escortAI::UpdateAI(uiDiff);
@@ -645,10 +631,8 @@ public:
             if (!UpdateVictim())
                 return;
         }
-
     };
 };
-
 
 void AddSC_boss_black_knight()
 {

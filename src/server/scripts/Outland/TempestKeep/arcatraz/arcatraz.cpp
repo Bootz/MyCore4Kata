@@ -567,4 +567,3 @@ void AddSC_arcatraz()
     new npc_warden_mellichar();
     new mob_zerekethvoidzone();
 }
-

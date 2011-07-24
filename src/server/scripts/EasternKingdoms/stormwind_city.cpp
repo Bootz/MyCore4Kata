@@ -72,9 +72,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_bartleby
@@ -145,10 +143,7 @@ public:
             }
         }
     };
-
 };
-
-
 
 /*######
 ## npc_dashel_stonefist
@@ -219,10 +214,7 @@ public:
             }
         }
     };
-
 };
-
-
 
 /*######
 ## npc_lady_katrana_prestor
@@ -275,9 +267,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_lord_gregor_lescovar
@@ -449,9 +439,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 /*######
 ## npc_marzon_silent_blade
@@ -531,9 +519,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 /*######
 ## npc_tyrion_spybot
@@ -681,9 +667,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 /*######
 ## npc_tyrion
@@ -712,7 +696,6 @@ public:
         }
         return false;
     }
-
 };
 
 void AddSC_stormwind_city()

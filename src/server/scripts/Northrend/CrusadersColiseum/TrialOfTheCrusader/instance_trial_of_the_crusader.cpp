@@ -626,9 +626,7 @@ public:
             return false;
         }
     };
-
 };
-
 
 void AddSC_instance_trial_of_the_crusader()
 {

@@ -168,7 +168,6 @@ public:
                 }
             }
 
-
             if (uiSparkTimer <= diff)
             {
                 if (Unit *pTarget = SelectUnit(SELECT_TARGET_RANDOM, 0))
@@ -179,9 +178,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 enum RiftSpells
 {
@@ -260,9 +257,7 @@ public:
             } else uiSummonCrazedManaWraithTimer -= diff;
         }
     };
-
 };
-
 
 void AddSC_boss_anomalus()
 {

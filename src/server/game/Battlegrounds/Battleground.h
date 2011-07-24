@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -39,44 +39,44 @@ struct WorldSafeLocsEntry;
 
 enum BattlegroundSounds
 {
-    SOUND_HORDE_WINS                = 8454, 
-    SOUND_ALLIANCE_WINS             = 8455, 
-    SOUND_BG_START                  = 3439, 
-    SOUND_BG_START_L70ETC           = 11803, 
+    SOUND_HORDE_WINS                = 8454,
+    SOUND_ALLIANCE_WINS             = 8455,
+    SOUND_BG_START                  = 3439,
+    SOUND_BG_START_L70ETC           = 11803,
 };
 
 enum BattlegroundQuests
 {
-    SPELL_WS_QUEST_REWARD           = 43483, 
-    SPELL_AB_QUEST_REWARD           = 43484, 
-    SPELL_AV_QUEST_REWARD           = 43475, 
-    SPELL_AV_QUEST_KILLED_BOSS      = 23658, 
-    SPELL_EY_QUEST_REWARD           = 43477, 
-    SPELL_SA_QUEST_REWARD           = 61213, 
-    SPELL_AB_QUEST_REWARD_4_BASES   = 24061, 
+    SPELL_WS_QUEST_REWARD           = 43483,
+    SPELL_AB_QUEST_REWARD           = 43484,
+    SPELL_AV_QUEST_REWARD           = 43475,
+    SPELL_AV_QUEST_KILLED_BOSS      = 23658,
+    SPELL_EY_QUEST_REWARD           = 43477,
+    SPELL_SA_QUEST_REWARD           = 61213,
+    SPELL_AB_QUEST_REWARD_4_BASES   = 24061,
     SPELL_AB_QUEST_REWARD_5_BASES   = 24064
 };
 
 enum BattlegroundMarks
 {
-    SPELL_WS_MARK_LOSER             = 24950, 
-    SPELL_WS_MARK_WINNER            = 24951, 
-    SPELL_AB_MARK_LOSER             = 24952, 
-    SPELL_AB_MARK_WINNER            = 24953, 
-    SPELL_AV_MARK_LOSER             = 24954, 
-    SPELL_AV_MARK_WINNER            = 24955, 
-    SPELL_SA_MARK_WINNER            = 61160, 
-    SPELL_SA_MARK_LOSER             = 61159, 
-    ITEM_AV_MARK_OF_HONOR           = 20560, 
-    ITEM_WS_MARK_OF_HONOR           = 20558, 
-    ITEM_AB_MARK_OF_HONOR           = 20559, 
-    ITEM_EY_MARK_OF_HONOR           = 29024, 
+    SPELL_WS_MARK_LOSER             = 24950,
+    SPELL_WS_MARK_WINNER            = 24951,
+    SPELL_AB_MARK_LOSER             = 24952,
+    SPELL_AB_MARK_WINNER            = 24953,
+    SPELL_AV_MARK_LOSER             = 24954,
+    SPELL_AV_MARK_WINNER            = 24955,
+    SPELL_SA_MARK_WINNER            = 61160,
+    SPELL_SA_MARK_LOSER             = 61159,
+    ITEM_AV_MARK_OF_HONOR           = 20560,
+    ITEM_WS_MARK_OF_HONOR           = 20558,
+    ITEM_AB_MARK_OF_HONOR           = 20559,
+    ITEM_EY_MARK_OF_HONOR           = 29024,
     ITEM_SA_MARK_OF_HONOR           = 42425
 };
 
 enum BattlegroundMarksCount
 {
-    ITEM_WINNER_COUNT               = 3, 
+    ITEM_WINNER_COUNT               = 3,
     ITEM_LOSER_COUNT                = 1
 };
 
@@ -93,10 +93,10 @@ enum BattlegroundSpells
     SPELL_SPIRIT_HEAL               = 22012,                // Spirit Heal
     SPELL_RESURRECTION_VISUAL       = 24171,                // Resurrection Impact Visual
     SPELL_ARENA_PREPARATION         = 32727,                // use this one, 32728 not correct
-    SPELL_ALLIANCE_GOLD_FLAG        = 32724, 
-    SPELL_ALLIANCE_GREEN_FLAG       = 32725, 
-    SPELL_HORDE_GOLD_FLAG           = 35774, 
-    SPELL_HORDE_GREEN_FLAG          = 35775, 
+    SPELL_ALLIANCE_GOLD_FLAG        = 32724,
+    SPELL_ALLIANCE_GREEN_FLAG       = 32725,
+    SPELL_HORDE_GOLD_FLAG           = 35774,
+    SPELL_HORDE_GREEN_FLAG          = 35775,
     SPELL_PREPARATION               = 44521,                // Preparation
     SPELL_SPIRIT_HEAL_MANA          = 44535,                // Spirit Heal
     SPELL_RECENTLY_DROPPED_FLAG     = 42792,                // Recently Dropped Flag
@@ -129,18 +129,18 @@ enum BattlegroundStartTimeIntervals
 
 enum BattlegroundBuffObjects
 {
-    BG_OBJECTID_SPEEDBUFF_ENTRY     = 179871, 
-    BG_OBJECTID_REGENBUFF_ENTRY     = 179904, 
+    BG_OBJECTID_SPEEDBUFF_ENTRY     = 179871,
+    BG_OBJECTID_REGENBUFF_ENTRY     = 179904,
     BG_OBJECTID_BERSERKERBUFF_ENTRY = 179905
 };
 
 enum BattlegroundRandomRewards
 {
-    BG_REWARD_WINNER_HONOR_FIRST    = 30, 
-    BG_REWARD_WINNER_ARENA_FIRST    = 25, 
-    BG_REWARD_WINNER_HONOR_LAST     = 15, 
-    BG_REWARD_WINNER_ARENA_LAST     = 0, 
-    BG_REWARD_LOSER_HONOR_FIRST    = 5, 
+    BG_REWARD_WINNER_HONOR_FIRST    = 30,
+    BG_REWARD_WINNER_ARENA_FIRST    = 25,
+    BG_REWARD_WINNER_HONOR_LAST     = 15,
+    BG_REWARD_WINNER_ARENA_LAST     = 0,
+    BG_REWARD_LOSER_HONOR_FIRST    = 5,
     BG_REWARD_LOSER_HONOR_LAST     = 5
 };
 
@@ -173,101 +173,101 @@ struct BattlegroundObjectInfo
 // handle the queue types and bg types separately to enable joining queue for different sized arenas at the same time
 enum BattlegroundQueueTypeId
 {
-    BATTLEGROUND_QUEUE_NONE     = 0, 
-    BATTLEGROUND_QUEUE_AV       = 1, 
-    BATTLEGROUND_QUEUE_WS       = 2, 
-    BATTLEGROUND_QUEUE_AB       = 3, 
-    BATTLEGROUND_QUEUE_EY       = 4, 
-    BATTLEGROUND_QUEUE_SA       = 5, 
-    BATTLEGROUND_QUEUE_IC       = 6, 
-    BATTLEGROUND_QUEUE_TP       = 7, 
-    BATTLEGROUND_QUEUE_BG       = 8, 
-    BATTLEGROUND_QUEUE_RB       = 9, 
-    BATTLEGROUND_QUEUE_2v2      = 10, 
-    BATTLEGROUND_QUEUE_3v3      = 11, 
-    BATTLEGROUND_QUEUE_5v5      = 12, 
+    BATTLEGROUND_QUEUE_NONE     = 0,
+    BATTLEGROUND_QUEUE_AV       = 1,
+    BATTLEGROUND_QUEUE_WS       = 2,
+    BATTLEGROUND_QUEUE_AB       = 3,
+    BATTLEGROUND_QUEUE_EY       = 4,
+    BATTLEGROUND_QUEUE_SA       = 5,
+    BATTLEGROUND_QUEUE_IC       = 6,
+    BATTLEGROUND_QUEUE_TP       = 7,
+    BATTLEGROUND_QUEUE_BG       = 8,
+    BATTLEGROUND_QUEUE_RB       = 9,
+    BATTLEGROUND_QUEUE_2v2      = 10,
+    BATTLEGROUND_QUEUE_3v3      = 11,
+    BATTLEGROUND_QUEUE_5v5      = 12,
     MAX_BATTLEGROUND_QUEUE_TYPES
 };
 
 enum ScoreType
 {
-    SCORE_KILLING_BLOWS         = 1, 
-    SCORE_DEATHS                = 2, 
-    SCORE_HONORABLE_KILLS       = 3, 
-    SCORE_BONUS_HONOR           = 4, 
+    SCORE_KILLING_BLOWS         = 1,
+    SCORE_DEATHS                = 2,
+    SCORE_HONORABLE_KILLS       = 3,
+    SCORE_BONUS_HONOR           = 4,
     //EY, but in MSG_PVP_LOG_DATA opcode!
-    SCORE_DAMAGE_DONE           = 5, 
-    SCORE_HEALING_DONE          = 6, 
+    SCORE_DAMAGE_DONE           = 5,
+    SCORE_HEALING_DONE          = 6,
     //WS
-    SCORE_FLAG_CAPTURES         = 7, 
-    SCORE_FLAG_RETURNS          = 8, 
+    SCORE_FLAG_CAPTURES         = 7,
+    SCORE_FLAG_RETURNS          = 8,
     //AB and IC
-    SCORE_BASES_ASSAULTED       = 9, 
-    SCORE_BASES_DEFENDED        = 10, 
+    SCORE_BASES_ASSAULTED       = 9,
+    SCORE_BASES_DEFENDED        = 10,
     //AV
-    SCORE_GRAVEYARDS_ASSAULTED  = 11, 
-    SCORE_GRAVEYARDS_DEFENDED   = 12, 
-    SCORE_TOWERS_ASSAULTED      = 13, 
-    SCORE_TOWERS_DEFENDED       = 14, 
-    SCORE_MINES_CAPTURED        = 15, 
-    SCORE_LEADERS_KILLED        = 16, 
-    SCORE_SECONDARY_OBJECTIVES  = 17, 
+    SCORE_GRAVEYARDS_ASSAULTED  = 11,
+    SCORE_GRAVEYARDS_DEFENDED   = 12,
+    SCORE_TOWERS_ASSAULTED      = 13,
+    SCORE_TOWERS_DEFENDED       = 14,
+    SCORE_MINES_CAPTURED        = 15,
+    SCORE_LEADERS_KILLED        = 16,
+    SCORE_SECONDARY_OBJECTIVES  = 17,
     //SOTA
-    SCORE_DESTROYED_DEMOLISHER  = 18, 
-    SCORE_DESTROYED_WALL        = 19, 
+    SCORE_DESTROYED_DEMOLISHER  = 18,
+    SCORE_DESTROYED_WALL        = 19,
 };
 
 enum ArenaType
 {
-    ARENA_TYPE_2v2          = 2, 
-    ARENA_TYPE_3v3          = 3, 
+    ARENA_TYPE_2v2          = 2,
+    ARENA_TYPE_3v3          = 3,
     ARENA_TYPE_5v5          = 5
 };
 
 enum BattlegroundType
 {
-    TYPE_BATTLEGROUND     = 3, 
+    TYPE_BATTLEGROUND     = 3,
     TYPE_ARENA            = 4
 };
 
 enum BattlegroundWinner
 {
-    WINNER_HORDE            = 0, 
-    WINNER_ALLIANCE         = 1, 
+    WINNER_HORDE            = 0,
+    WINNER_ALLIANCE         = 1,
     WINNER_NONE             = 2
 };
 
 enum BattlegroundTeamId
 {
-    BG_TEAM_ALLIANCE        = 0, 
+    BG_TEAM_ALLIANCE        = 0,
     BG_TEAM_HORDE           = 1
 };
 #define BG_TEAMS_COUNT  2
 
 enum BattlegroundStartingEvents
 {
-    BG_STARTING_EVENT_NONE  = 0x00, 
-    BG_STARTING_EVENT_1     = 0x01, 
-    BG_STARTING_EVENT_2     = 0x02, 
-    BG_STARTING_EVENT_3     = 0x04, 
+    BG_STARTING_EVENT_NONE  = 0x00,
+    BG_STARTING_EVENT_1     = 0x01,
+    BG_STARTING_EVENT_2     = 0x02,
+    BG_STARTING_EVENT_3     = 0x04,
     BG_STARTING_EVENT_4     = 0x08
 };
 
 enum BattlegroundStartingEventsIds
 {
-    BG_STARTING_EVENT_FIRST     = 0, 
-    BG_STARTING_EVENT_SECOND    = 1, 
-    BG_STARTING_EVENT_THIRD     = 2, 
+    BG_STARTING_EVENT_FIRST     = 0,
+    BG_STARTING_EVENT_SECOND    = 1,
+    BG_STARTING_EVENT_THIRD     = 2,
     BG_STARTING_EVENT_FOURTH    = 3
 };
 #define BG_STARTING_EVENT_COUNT 4
 
 enum BG_OBJECT_DMG_HIT_TYPE
 {
-    BG_OBJECT_DMG_HIT_TYPE_JUST_DAMAGED         = 0, 
-    BG_OBJECT_DMG_HIT_TYPE_DAMAGED              = 1, 
-    BG_OBJECT_DMG_HIT_TYPE_JUST_HIGH_DAMAGED    = 2, 
-    BG_OBJECT_DMG_HIT_TYPE_HIGH_DAMAGED         = 3, 
+    BG_OBJECT_DMG_HIT_TYPE_JUST_DAMAGED         = 0,
+    BG_OBJECT_DMG_HIT_TYPE_DAMAGED              = 1,
+    BG_OBJECT_DMG_HIT_TYPE_JUST_HIGH_DAMAGED    = 2,
+    BG_OBJECT_DMG_HIT_TYPE_HIGH_DAMAGED         = 3,
     BG_OBJECT_DMG_HIT_TYPE_JUST_DESTROYED       = 4
 };
 
@@ -286,21 +286,21 @@ enum GroupJoinBattlegroundResult
     ERR_BATTLEGROUND_JOIN_RANGE_INDEX       = 10,          // Cannot join the queue unless all members of your party are in the same battleground level range.
     ERR_BATTLEGROUND_JOIN_TIMED_OUT         = 11,          // %s was unavailable to join the queue. (uint64 guid exist in client cache)
     ERR_BATTLEGROUND_JOIN_FAILED            = 12,          // Join as a group failed (uint64 guid doesn't exist in client cache)
-    ERR_BATTLEGROUND_TEAM_LEFT_QUEUE2       = 13, 
+    ERR_BATTLEGROUND_TEAM_LEFT_QUEUE2       = 13,
     ERR_LFG_CANT_USE_BATTLEGROUND           = 14,          // You cannot queue for a battleground or arena while using the dungeon system.
     ERR_IN_RANDOM_BG                        = 15,          // Can't do that while in a Random Battleground queue.
     ERR_IN_NON_RANDOM_BG                    = 16,          // Can't queue for Random Battleground while in another Battleground queue.
-    ERR_BG_DEVELOPER_ONLY                   = 17, 
-    ERR_BATTLEGROUND_INVITATION_DECLINED    = 18, 
-    ERR_MEETING_STONE_NOT_FOUND             = 19, 
-    ERR_WARGAME_REQUEST_FAILURE             = 20, 
-    ERR_BATTLEFIELD_TEAM_PARTY_SIZE         = 22, 
+    ERR_BG_DEVELOPER_ONLY                   = 17,
+    ERR_BATTLEGROUND_INVITATION_DECLINED    = 18,
+    ERR_MEETING_STONE_NOT_FOUND             = 19,
+    ERR_WARGAME_REQUEST_FAILURE             = 20,
+    ERR_BATTLEFIELD_TEAM_PARTY_SIZE         = 22,
 };
 
 class BattlegroundScore
 {
     public:
-        BattlegroundScore() : KillingBlows(0), Deaths(0), HonorableKills(0), 
+        BattlegroundScore() : KillingBlows(0), Deaths(0), HonorableKills(0),
             BonusHonor(0), DamageDone(0), HealingDone(0)
         {}
         virtual ~BattlegroundScore() {}                     //virtual destructor is used when deleting score from scores map
@@ -315,8 +315,8 @@ class BattlegroundScore
 
 enum BGHonorMode
 {
-    BG_NORMAL = 0, 
-    BG_HOLIDAY, 
+    BG_NORMAL = 0,
+    BG_HOLIDAY,
     BG_HONOR_MODE_NUM
 };
 
@@ -691,4 +691,3 @@ class Battleground
         uint32 ScriptId;
 };
 #endif
-

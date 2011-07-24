@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -31,32 +31,32 @@ class WorldSession;
 
 enum ArenaTeamCommandTypes
 {
-    ERR_ARENA_TEAM_CREATE_S                 = 0x00, 
-    ERR_ARENA_TEAM_INVITE_SS                = 0x01, 
-    ERR_ARENA_TEAM_QUIT_S                   = 0x03, 
+    ERR_ARENA_TEAM_CREATE_S                 = 0x00,
+    ERR_ARENA_TEAM_INVITE_SS                = 0x01,
+    ERR_ARENA_TEAM_QUIT_S                   = 0x03,
     ERR_ARENA_TEAM_FOUNDER_S                = 0x0E
 };
 
 enum ArenaTeamCommandErrors
 {
-    ERR_ARENA_TEAM_INTERNAL                 = 0x01, 
-    ERR_ALREADY_IN_ARENA_TEAM               = 0x02, 
-    ERR_ALREADY_IN_ARENA_TEAM_S             = 0x03, 
-    ERR_INVITED_TO_ARENA_TEAM               = 0x04, 
-    ERR_ALREADY_INVITED_TO_ARENA_TEAM_S     = 0x05, 
-    ERR_ARENA_TEAM_NAME_INVALID             = 0x06, 
-    ERR_ARENA_TEAM_NAME_EXISTS_S            = 0x07, 
-    ERR_ARENA_TEAM_LEADER_LEAVE_S           = 0x08, 
-    ERR_ARENA_TEAM_PERMISSIONS              = 0x08, 
-    ERR_ARENA_TEAM_PLAYER_NOT_IN_TEAM       = 0x09, 
-    ERR_ARENA_TEAM_PLAYER_NOT_IN_TEAM_SS    = 0x0A, 
-    ERR_ARENA_TEAM_PLAYER_NOT_FOUND_S       = 0x0B, 
-    ERR_ARENA_TEAM_NOT_ALLIED               = 0x0C, 
-    ERR_ARENA_TEAM_IGNORING_YOU_S           = 0x13, 
-    ERR_ARENA_TEAM_TARGET_TOO_LOW_S         = 0x15, 
-    ERR_ARENA_TEAM_TARGET_TOO_HIGH_S        = 0x16, 
-    ERR_ARENA_TEAM_TOO_MANY_MEMBERS_S       = 0x17, 
-    ERR_ARENA_TEAM_NOT_FOUND                = 0x1B, 
+    ERR_ARENA_TEAM_INTERNAL                 = 0x01,
+    ERR_ALREADY_IN_ARENA_TEAM               = 0x02,
+    ERR_ALREADY_IN_ARENA_TEAM_S             = 0x03,
+    ERR_INVITED_TO_ARENA_TEAM               = 0x04,
+    ERR_ALREADY_INVITED_TO_ARENA_TEAM_S     = 0x05,
+    ERR_ARENA_TEAM_NAME_INVALID             = 0x06,
+    ERR_ARENA_TEAM_NAME_EXISTS_S            = 0x07,
+    ERR_ARENA_TEAM_LEADER_LEAVE_S           = 0x08,
+    ERR_ARENA_TEAM_PERMISSIONS              = 0x08,
+    ERR_ARENA_TEAM_PLAYER_NOT_IN_TEAM       = 0x09,
+    ERR_ARENA_TEAM_PLAYER_NOT_IN_TEAM_SS    = 0x0A,
+    ERR_ARENA_TEAM_PLAYER_NOT_FOUND_S       = 0x0B,
+    ERR_ARENA_TEAM_NOT_ALLIED               = 0x0C,
+    ERR_ARENA_TEAM_IGNORING_YOU_S           = 0x13,
+    ERR_ARENA_TEAM_TARGET_TOO_LOW_S         = 0x15,
+    ERR_ARENA_TEAM_TARGET_TOO_HIGH_S        = 0x16,
+    ERR_ARENA_TEAM_TOO_MANY_MEMBERS_S       = 0x17,
+    ERR_ARENA_TEAM_NOT_FOUND                = 0x1B,
     ERR_ARENA_TEAMS_LOCKED                  = 0x1E
 };
 
@@ -80,8 +80,8 @@ ERR_ARENA_TEAM_LEVEL_TOO_LOW_I
 
 enum ArenaTeamTypes
 {
-    ARENA_TEAM_2v2      = 2, 
-    ARENA_TEAM_3v3      = 3, 
+    ARENA_TEAM_2v2      = 2,
+    ARENA_TEAM_3v3      = 3,
     ARENA_TEAM_5v5      = 5
 };
 

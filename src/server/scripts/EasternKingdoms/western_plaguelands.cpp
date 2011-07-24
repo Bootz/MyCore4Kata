@@ -100,9 +100,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_myranda_the_hag
@@ -150,9 +148,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_the_scourge_cauldron
@@ -231,7 +227,6 @@ public:
             }
         }
     };
-
 };
 
 /*######
@@ -266,9 +261,7 @@ public:
                 CAST_PLR(pWho)->KilledMonsterCredit(me->GetEntry(), me->GetGUID());
         }
     };
-
 };
-
 
 /*######
 ##  npc_anchorite_truuen
@@ -398,10 +391,7 @@ public:
                 m_uiChatTimer = 6000;
         }
     };
-
 };
-
-
 
 /*######
 ##

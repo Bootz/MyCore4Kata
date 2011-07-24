@@ -445,7 +445,6 @@ public:
 
                         if (SummonSporebat_Timer < 5000)
                             SummonSporebat_Timer = 5000;
-
                     } else SummonSporebat_Timer -= diff;
                 }
 
@@ -576,7 +575,6 @@ public:
             }
         }
     };
-
 };
 
 //Enchanted Elemental
@@ -678,7 +676,6 @@ public:
             } else move -= diff;
         }
     };
-
 };
 
 //Tainted Elemental
@@ -753,7 +750,6 @@ public:
             } else Despawn_Timer -= diff;
         }
     };
-
 };
 
 //Toxic Sporebat
@@ -795,12 +791,10 @@ public:
 
         void EnterCombat(Unit * /*who*/)
         {
-
         }
 
         void MoveInLineOfSight(Unit * /*who*/)
         {
-
         }
 
         void MovementInform(uint32 type, uint32 id)
@@ -861,7 +855,6 @@ public:
             } else Check_Timer -= diff;
         }
     };
-
 };
 
 //Coilfang Elite
@@ -886,7 +879,6 @@ public:
 
         return ai;
     }
-
 };
 
 //Coilfang Strider
@@ -913,7 +905,6 @@ public:
 
         return ai;
     }
-
 };
 
 class mob_shield_generator_channel : public CreatureScript
@@ -972,7 +963,6 @@ public:
             } else Check_Timer -= diff;
         }
     };
-
 };
 
 class item_tainted_core : public ItemScript
@@ -1052,7 +1042,6 @@ public:
         }
         return true;
     }
-
 };
 
 void AddSC_boss_lady_vashj()

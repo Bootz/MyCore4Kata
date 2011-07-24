@@ -99,7 +99,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 #define SPELL_SPORE_CLOUD       34168
@@ -158,7 +157,6 @@ public:
             } else Shrink_Timer -= diff;
         }
     };
-
 };
 
 void AddSC_boss_hungarfen()

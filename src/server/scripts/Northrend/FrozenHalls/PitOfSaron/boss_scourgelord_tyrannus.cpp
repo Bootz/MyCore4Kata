@@ -197,7 +197,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class boss_rimefang : public CreatureScript
@@ -280,7 +279,6 @@ public:
             }
         }
     };
-
 };
 
 class player_overlord_brandAI : public PlayerAI

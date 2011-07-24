@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -188,7 +188,7 @@ struct ScriptedAI : public CreatureAI
     bool EnterEvadeIfOutOfCombatArea(const uint32 uiDiff);
 
     // return true for heroic mode. i.e.
-    //   - for dungeon in mode 10-heroic, 
+    //   - for dungeon in mode 10-heroic,
     //   - for raid in mode 10-Heroic
     //   - for raid in mode 25-heroic
     // DO NOT USE to check raid in mode 25-normal.
@@ -312,4 +312,3 @@ void GetCreatureListWithEntryInGrid(std::list<Creature*>& lList, WorldObject* pS
 void GetGameObjectListWithEntryInGrid(std::list<GameObject*>& lList, WorldObject* pSource, uint32 uiEntry, float fMaxSearchRange);
 
 #endif
-

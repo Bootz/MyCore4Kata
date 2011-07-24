@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -28,7 +28,6 @@
 
 BattlegroundAA::BattlegroundAA()
 {
-
     m_StartDelayTimes[BG_STARTING_EVENT_FIRST]  = BG_START_DELAY_1M;
     m_StartDelayTimes[BG_STARTING_EVENT_SECOND] = BG_START_DELAY_30S;
     m_StartDelayTimes[BG_STARTING_EVENT_THIRD]  = BG_START_DELAY_15S;
@@ -42,7 +41,6 @@ BattlegroundAA::BattlegroundAA()
 
 BattlegroundAA::~BattlegroundAA()
 {
-
 }
 
 void BattlegroundAA::Update(uint32 diff)

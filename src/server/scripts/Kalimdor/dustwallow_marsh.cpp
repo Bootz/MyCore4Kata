@@ -120,9 +120,7 @@ public:
                 }
         }
     };
-
 };
-
 
 /*######
 ## npc_restless_apparition
@@ -154,7 +152,6 @@ public:
             DoScriptText(RAND(SAY_RESTLESS_1,SAY_RESTLESS_2,SAY_RESTLESS_3), me);
         }
     };
-
 };
 
 /*######
@@ -169,7 +166,7 @@ enum eDeserter
 
 const Position DeserterDisappearPos = {-3609.03f, -4332.91f, 9.39354f, 3.73862f};
 
-#define GOSSIP_ITEM_DESERTER "Your propaganda wont`t work on me. Spout your treasonous filth elsewhere traitor!" 
+#define GOSSIP_ITEM_DESERTER "Your propaganda wont`t work on me. Spout your treasonous filth elsewhere traitor!"
 
 class npc_deserter_agitator : public CreatureScript
 {
@@ -180,7 +177,7 @@ public:
     {
         if (pPlayer->GetQuestStatus(QUEST_TRAITORS_AMONG_US) == QUEST_STATUS_INCOMPLETE)
             pPlayer->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, GOSSIP_ITEM_DESERTER, GOSSIP_SENDER_MAIN, GOSSIP_SENDER_INFO);
-            
+
         pPlayer->SEND_GOSSIP_MENU(pPlayer->GetGossipTextId(pCreature), pCreature->GetGUID());
 
         return true;
@@ -189,7 +186,7 @@ public:
     bool OnGossipSelect(Player* pPlayer, Creature* pCreature, uint32 uiSender, uint32 uiAction)
     {
         pPlayer->PlayerTalkClass->ClearMenus();
-        
+
         if (uiAction == GOSSIP_SENDER_INFO)
         {
             pPlayer->CLOSE_GOSSIP_MENU();
@@ -278,7 +275,7 @@ public:
     {
         if (pPlayer->GetQuestStatus(QUEST_DISCREDITING_THE_DESERTERS) == QUEST_STATUS_INCOMPLETE)
             pPlayer->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, GOSSIP_ITEM_THERAMORE_GUARD, GOSSIP_SENDER_MAIN, GOSSIP_SENDER_INFO);
-            
+
         pPlayer->SEND_GOSSIP_MENU(pPlayer->GetGossipTextId(pCreature), pCreature->GetGUID());
 
         return true;
@@ -287,7 +284,7 @@ public:
     bool OnGossipSelect(Player* pPlayer, Creature* pCreature, uint32 uiSender, uint32 uiAction)
     {
         pPlayer->PlayerTalkClass->ClearMenus();
-        
+
         if (uiAction == GOSSIP_SENDER_INFO)
         {
             pPlayer->CLOSE_GOSSIP_MENU();
@@ -389,9 +386,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_nat_pagle
@@ -431,9 +426,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_private_hendel
@@ -509,10 +502,7 @@ public:
             }
         }
     };
-
 };
-
-
 
 /*######
 ## npc_zelfrax
@@ -588,7 +578,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 /////////////////////
@@ -640,7 +629,6 @@ public:
     {
        npc_stinkyAI(Creature* pCreature) : npc_escortAI(pCreature) { }
 
-
         void WaypointReached(uint32 i)
         {
             Player* pPlayer = GetPlayerForEscort();
@@ -683,7 +671,6 @@ public:
             case 39:
                 DoScriptText(EMOTE_DISAPPEAR, me);
                 break;
-
             }
         }
 
@@ -717,7 +704,6 @@ public:
         }
     };
 };
-
 
 void AddSC_dustwallow_marsh()
 {

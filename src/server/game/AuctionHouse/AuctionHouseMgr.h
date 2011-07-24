@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -37,17 +37,17 @@ class WorldPacket;
 
 enum AuctionError
 {
-    AUCTION_OK = 0, 
-    AUCTION_INTERNAL_ERROR = 2, 
-    AUCTION_NOT_ENOUGHT_MONEY = 3, 
-    AUCTION_ITEM_NOT_FOUND = 4, 
+    AUCTION_OK = 0,
+    AUCTION_INTERNAL_ERROR = 2,
+    AUCTION_NOT_ENOUGHT_MONEY = 3,
+    AUCTION_ITEM_NOT_FOUND = 4,
     CANNOT_BID_YOUR_AUCTION_ERROR = 10
 };
 
 enum AuctionAction
 {
-    AUCTION_SELL_ITEM = 0, 
-    AUCTION_CANCEL = 1, 
+    AUCTION_SELL_ITEM = 0,
+    AUCTION_CANCEL = 1,
     AUCTION_PLACE_BID = 2
 };
 
@@ -111,9 +111,9 @@ public:
 
     void BuildListBidderItems(WorldPacket& data, Player* player, uint32& count, uint32& totalcount);
     void BuildListOwnerItems(WorldPacket& data, Player* player, uint32& count, uint32& totalcount);
-    void BuildListAuctionItems(WorldPacket& data, Player* player, 
-        std::wstring const& searchedname, uint32 listfrom, uint8 levelmin, uint8 levelmax, uint8 usable, 
-        uint32 inventoryType, uint32 itemClass, uint32 itemSubClass, uint32 quality, 
+    void BuildListAuctionItems(WorldPacket& data, Player* player,
+        std::wstring const& searchedname, uint32 listfrom, uint8 levelmin, uint8 levelmax, uint8 usable,
+        uint32 inventoryType, uint32 itemClass, uint32 itemSubClass, uint32 quality,
         uint32& count, uint32& totalcount);
 
 private:

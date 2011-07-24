@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -118,7 +118,6 @@ Object::~Object()
 
     delete [] m_uint32Values;
     delete [] m_uint32Values_mirror;
-
 }
 
 void Object::_InitValues()
@@ -235,7 +234,7 @@ void Object::BuildCreateUpdateBlockForPlayer(UpdateData *data, Player *target) c
 
     UpdateMask updateMask;
     updateMask.SetCount(m_valuesCount);
-    
+
     _SetCreateBits(&updateMask, target);
     _BuildValuesUpdate(updatetype, &buf, &updateMask, target);
     data->AddUpdateBlock(buf);
@@ -292,7 +291,7 @@ void Object::_BuildMovementUpdate(ByteBuffer * data, uint16 flags) const
     if (flags & UPDATEFLAG_LIVING)
     {
         assert(dynamic_cast<Unit*>(const_cast<Object*>(this)) != NULL);
-        
+
         ((Unit*)this)->BuildMovementPacket(data);
 
         *data << ((Unit*)this)->GetSpeed(MOVE_WALK);
@@ -450,14 +449,14 @@ void Object::_BuildMovementUpdate(ByteBuffer * data, uint16 flags) const
     {
         *data << uint16(0) << uint16(0) << uint16(0); //unk
     }
-    
+
     // 0x200
     if (flags & UPDATEFLAG_ROTATION)
     {
         assert(dynamic_cast<GameObject*>(const_cast<Object*>(this)) != NULL);
         *data << uint64(((GameObject*)this)->GetRotation());
     }
-    
+
     // 0x1000
     if (flags & UPDATEFLAG_UNK3)
     {
@@ -478,7 +477,7 @@ void Object::_BuildValuesUpdate(uint8 updatetype, ByteBuffer * data, UpdateMask 
     uint32 valuesCount = m_valuesCount;
     if (GetTypeId() == TYPEID_PLAYER && target != this)
         valuesCount = PLAYER_END_NOT_SELF;
-    
+
     bool IsActivateToQuest = false;
     if (updatetype == UPDATETYPE_CREATE_OBJECT || updatetype == UPDATETYPE_CREATE_OBJECT2)
     {
@@ -805,7 +804,7 @@ void Object::_SetUpdateBits(UpdateMask *updateMask, Player* target) const
     uint32 valuesCount = m_valuesCount;
     if (GetTypeId() == TYPEID_PLAYER && target != this)
         valuesCount = PLAYER_END_NOT_SELF;
-    
+
     for (uint16 index = 0; index < valuesCount; ++index, ++value, ++mirror)
     {
         if (*mirror != *value)
@@ -820,7 +819,7 @@ void Object::_SetCreateBits(UpdateMask *updateMask, Player* target) const
     uint32 valuesCount = m_valuesCount;
     if (GetTypeId() == TYPEID_PLAYER && target != this)
         valuesCount = PLAYER_END_NOT_SELF;
-    
+
     for (uint16 index = 0; index < valuesCount; ++index, ++value)
     {
         if (*value)
@@ -1233,9 +1232,9 @@ void MovementInfo::OutDebug()
     }
 }
 
-WorldObject::WorldObject(): WorldLocation(), 
-m_isWorldObject(false), m_name(""), m_isActive(false), m_zoneScript(NULL), 
-m_transport(NULL), m_currMap(NULL), m_InstanceId(0), 
+WorldObject::WorldObject(): WorldLocation(),
+m_isWorldObject(false), m_name(""), m_isActive(false), m_zoneScript(NULL),
+m_transport(NULL), m_currMap(NULL), m_InstanceId(0),
 m_phaseMask(PHASEMASK_NORMAL), m_notifyflags(0), m_executed_notifies(0)
 {
     m_serverSideVisibility.SetValue(SERVERSIDE_VISIBILITY_GHOST, GHOST_VISIBILITY_ALIVE | GHOST_VISIBILITY_GHOST);
@@ -1805,7 +1804,7 @@ bool WorldObject::canDetectInvisibilityOf(WorldObject const* obj) const
 
 bool WorldObject::canDetectStealthOf(WorldObject const* obj) const
 {
-    // Combat reach is the minimal distance (both in front and behind), 
+    // Combat reach is the minimal distance (both in front and behind),
     //   and it is also used in the range calculation.
     // One stealth point increases the visibility range by 0.3 yard.
 

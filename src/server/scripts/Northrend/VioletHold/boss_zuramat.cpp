@@ -190,9 +190,7 @@ public:
             summon->SetPhaseMask(17,true);
         }
     };
-
 };
-
 
 void AddSC_boss_zuramat()
 {

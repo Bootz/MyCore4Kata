@@ -100,9 +100,7 @@ public:
             }
         }
     };
-
 };
-
 
 void AddSC_silvermoon_city()
 {

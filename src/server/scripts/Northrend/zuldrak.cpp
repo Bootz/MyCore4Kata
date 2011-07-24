@@ -102,7 +102,6 @@ public:
         }
     };
 
-
     CreatureAI *GetAI(Creature *creature) const
     {
         return new npc_drakuru_shacklesAI(creature);
@@ -693,7 +692,6 @@ public:
 
             if (pKiller->GetTypeId() == TYPEID_PLAYER)
                 pKiller->GetCharmerOrOwnerPlayerOrPlayerItself()->GroupEventHappens(QUEST_AMPHITHEATER_ANGUISH_TUSKARRMAGEDDON, pKiller);
-
         }
     };
 
@@ -875,7 +873,6 @@ public:
                 std::string sText = (std::string(pKiller->GetName()) + " has defeated Yg.. Yggg-really big worm!");
                 pSummoner->MonsterYell(sText.c_str(),LANG_UNIVERSAL,0);
             }
-
 
             if (Player* pPlayer = pKiller->GetCharmerOrOwnerPlayerOrPlayerItself())
             {
@@ -1082,7 +1079,6 @@ public:
                     SummonList.push_back(pSummon->GetGUID());
                 }
             }
-
         }
 
         void EnterCombat(Unit* pUnit)
@@ -1211,7 +1207,6 @@ public:
         {
             if (uiData == 1)
                 uiSpell = Boss[uiValue].uiAddSpell;
-
         }
 
         void UpdateAI(const uint32 uiDiff)
@@ -1225,7 +1220,6 @@ public:
                 {
                     DoCast(me,uiSpell); // this spell is not supported ... YET!
                     uiMissleTimer = urand(2000,7000);
-
                 } else uiMissleTimer -= uiDiff;
             }
 

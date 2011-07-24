@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -154,7 +154,7 @@ void BattlegroundMgr::Update(uint32 diff)
             for (int qtype = BATTLEGROUND_QUEUE_2v2; qtype <= BATTLEGROUND_QUEUE_5v5; ++qtype)
                 for (int bracket = BG_BRACKET_ID_FIRST; bracket < MAX_BATTLEGROUND_BRACKETS; ++bracket)
                     m_BattlegroundQueues[qtype].Update(
-                        BATTLEGROUND_AA, BattlegroundBracketId(bracket), 
+                        BATTLEGROUND_AA, BattlegroundBracketId(bracket),
                         BattlegroundMgr::BGArenaType(BattlegroundQueueTypeId(qtype)), true, 0);
 
             m_NextRatingDiscardUpdate = sWorld->getIntConfig(CONFIG_ARENA_RATING_DISCARD_TIMER);
@@ -202,7 +202,7 @@ void BattlegroundMgr::BuildBattlegroundStatusPacket(WorldPacket *data, Battlegro
             *data << uint32(QueueSlot); // queueSlot
             *data << uint32(bg->GetClientInstanceID()); // instanceid
             *data << uint8(bg->GetMinLevel()); // lowest level (seems to be set to 0 even though its not 0 sometimes O.O)
-            
+
             // packed uint64 (seems to be BG GUID)
             *data << uint32(bg->GetTypeID()); // BGTypeID
             *data << uint32(arenatype); // On retail 0x101F is sent here, but we need this value to be returned in PORT opcode
@@ -237,9 +237,9 @@ void BattlegroundMgr::BuildBattlegroundStatusPacket(WorldPacket *data, Battlegro
             data->Initialize(SMSG_BATTLEFIELD_STATUS2, 100);
             *data << uint8(bg->isRated() ? 128 : 0);
             *data << uint32(Time2); // Time since started
-            *data << uint32(QueueSlot); // queueslot 
+            *data << uint32(QueueSlot); // queueslot
             *data << uint32(bg->GetMapId()); // MapID
-            
+
             // This is bg guid
             *data << uint32(bg->GetTypeID()); // BGTypeID
             *data << uint16(0);
@@ -251,14 +251,14 @@ void BattlegroundMgr::BuildBattlegroundStatusPacket(WorldPacket *data, Battlegro
             *data << uint8(arenatype); // teamsize (0 if not arena)
             *data << uint8(bg->GetMaxLevel());
             *data << uint32(bg->GetClientInstanceID()); // instanceid
-            *data << uint8(bg->GetMinLevel());        
+            *data << uint8(bg->GetMinLevel());
         }break;
     case STATUS_WAIT_LEAVE:
         {
             // Not used...
             data->Initialize(SMSG_BATTLEFIELD_STATUS4, (1+4+1+1+1+4+1+4+1+4+1+8+1));
             *data << uint8(0); // flag
-            *data << uint32(Time1); // 
+            *data << uint32(Time1); //
             *data << uint8(bg->GetMinLevel()); // lowestLevel
             *data << uint8(0);
             *data << uint8(0);
@@ -267,8 +267,8 @@ void BattlegroundMgr::BuildBattlegroundStatusPacket(WorldPacket *data, Battlegro
             *data << uint32(Time2); //
             *data << uint8(0); // teamsize (0 if not arena)
             *data << uint32(bg->GetClientInstanceID()); // instanceid
-            *data << uint8(0); 
-            
+            *data << uint8(0);
+
             // This is bg guid
             *data << uint32(bg->GetTypeID()); // BGTypeID
             *data << uint16(0);
@@ -386,7 +386,7 @@ void BattlegroundMgr::BuildPvpLogDataPacket(WorldPacket *data, Battleground *bg)
         *data << uint32(itr2->second->HonorableKills);
         *data << uint32(itr2->second->BonusHonor);
         *data << uint32(itr2->second->Deaths);
-        
+
         *data << uint64(itr2->first);
         *data << uint32(itr2->second->KillingBlows);
 

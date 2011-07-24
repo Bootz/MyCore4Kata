@@ -192,11 +192,7 @@ public:
                    crew->setFaction(FACTION_HOSTILE);
         }
     };
-
 };
-
-
-
 
 /*######
 +## go_troll_cage
@@ -233,7 +229,6 @@ public:
         }
         return false;
     }
-
 };
 
 /*######
@@ -393,10 +388,7 @@ public:
             }
         }
     };
-
 };
-
-
 
 /*######
 ## go_shallow_grave
@@ -430,7 +422,6 @@ public:
         pGo->AddUse();
         return false;
     }
-
 };
 
 /*######
@@ -458,7 +449,6 @@ public:
         pZumrah->setFaction(ZUMRAH_HOSTILE_FACTION);
         return true;
     }
-
 };
 
 void AddSC_zulfarrak()

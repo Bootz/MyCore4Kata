@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -77,15 +77,15 @@ typedef UNORDERED_MAP<uint32, GameTele > GameTeleMap;
 
 enum ScriptsType
 {
-    SCRIPTS_FIRST = 1, 
+    SCRIPTS_FIRST = 1,
 
-    SCRIPTS_QUEST_END = SCRIPTS_FIRST, 
-    SCRIPTS_QUEST_START, 
-    SCRIPTS_SPELL, 
-    SCRIPTS_GAMEOBJECT, 
-    SCRIPTS_EVENT, 
-    SCRIPTS_WAYPOINT, 
-    SCRIPTS_GOSSIP, 
+    SCRIPTS_QUEST_END = SCRIPTS_FIRST,
+    SCRIPTS_QUEST_START,
+    SCRIPTS_SPELL,
+    SCRIPTS_GAMEOBJECT,
+    SCRIPTS_EVENT,
+    SCRIPTS_WAYPOINT,
+    SCRIPTS_GOSSIP,
 
     SCRIPTS_LAST
 };
@@ -93,34 +93,34 @@ enum ScriptsType
 enum eScriptFlags
 {
     // Talk Flags
-    SF_TALK_USE_PLAYER          = 0x1, 
+    SF_TALK_USE_PLAYER          = 0x1,
 
     // Emote flags
-    SF_EMOTE_USE_STATE          = 0x1, 
+    SF_EMOTE_USE_STATE          = 0x1,
 
     // TeleportTo flags
-    SF_TELEPORT_USE_CREATURE    = 0x1, 
+    SF_TELEPORT_USE_CREATURE    = 0x1,
 
     // KillCredit flags
-    SF_KILLCREDIT_REWARD_GROUP  = 0x1, 
+    SF_KILLCREDIT_REWARD_GROUP  = 0x1,
 
     // RemoveAura flags
-    SF_REMOVEAURA_REVERSE       = 0x1, 
+    SF_REMOVEAURA_REVERSE       = 0x1,
 
     // CastSpell flags
-    SF_CASTSPELL_SOURCE_TO_TARGET = 0, 
-    SF_CASTSPELL_SOURCE_TO_SOURCE = 1, 
-    SF_CASTSPELL_TARGET_TO_TARGET = 2, 
-    SF_CASTSPELL_TARGET_TO_SOURCE = 3, 
-    SF_CASTSPELL_SEARCH_CREATURE  = 4, 
-    SF_CASTSPELL_TRIGGERED      = 0x1, 
+    SF_CASTSPELL_SOURCE_TO_TARGET = 0,
+    SF_CASTSPELL_SOURCE_TO_SOURCE = 1,
+    SF_CASTSPELL_TARGET_TO_TARGET = 2,
+    SF_CASTSPELL_TARGET_TO_SOURCE = 3,
+    SF_CASTSPELL_SEARCH_CREATURE  = 4,
+    SF_CASTSPELL_TRIGGERED      = 0x1,
 
     // PlaySound flags
-    SF_PLAYSOUND_TARGET_PLAYER  = 0x1, 
-    SF_PLAYSOUND_DISTANCE_SOUND = 0x2, 
+    SF_PLAYSOUND_TARGET_PLAYER  = 0x1,
+    SF_PLAYSOUND_DISTANCE_SOUND = 0x2,
 
     // Orientation flags
-    SF_ORIENTATION_FACE_TARGET  = 0x1, 
+    SF_ORIENTATION_FACE_TARGET  = 0x1,
 };
 
 struct ScriptInfo
@@ -575,8 +575,8 @@ LanguageDesc const* GetLanguageDescByID(uint32 lang);
 
 enum EncounterCreditType
 {
-    ENCOUNTER_CREDIT_KILL_CREATURE  = 0, 
-    ENCOUNTER_CREDIT_CAST_SPELL     = 1, 
+    ENCOUNTER_CREDIT_KILL_CREATURE  = 0,
+    ENCOUNTER_CREDIT_CAST_SPELL     = 1,
 };
 
 struct DungeonEncounter
@@ -736,7 +736,7 @@ class ObjectMgr
                 return itr->second;
             return 0;
         }
-        
+
         uint32 GetQuestStartForAreaTrigger(uint32 Trigger_ID) const
         {
             QuestStartAreaTriggerMap::const_iterator itr = mQuestStartAreaTriggerMap.find(Trigger_ID);
@@ -1433,12 +1433,11 @@ class ObjectMgr
 
         enum CreatureLinkedRespawnType
         {
-            CREATURE_TO_CREATURE, 
+            CREATURE_TO_CREATURE,
             CREATURE_TO_GO,         // Creature is dependant on GO
-            GO_TO_GO, 
+            GO_TO_GO,
             GO_TO_CREATURE,         // GO is dependant on creature
         };
-
 };
 
 #define sObjectMgr ACE_Singleton<ObjectMgr, ACE_Null_Mutex>::instance()

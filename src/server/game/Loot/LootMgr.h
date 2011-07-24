@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -34,21 +34,21 @@
 
 enum RollType
 {
-    ROLL_PASS         = 0, 
-    ROLL_NEED         = 1, 
-    ROLL_GREED        = 2, 
-    ROLL_DISENCHANT   = 3, 
+    ROLL_PASS         = 0,
+    ROLL_NEED         = 1,
+    ROLL_GREED        = 2,
+    ROLL_DISENCHANT   = 3,
     MAX_ROLL_TYPE     = 4
 };
 
 enum RollMask
 {
-    ROLL_FLAG_TYPE_PASS         = 0x01, 
-    ROLL_FLAG_TYPE_NEED         = 0x02, 
-    ROLL_FLAG_TYPE_GREED        = 0x04, 
-    ROLL_FLAG_TYPE_DISENCHANT   = 0x08, 
+    ROLL_FLAG_TYPE_PASS         = 0x01,
+    ROLL_FLAG_TYPE_NEED         = 0x02,
+    ROLL_FLAG_TYPE_GREED        = 0x04,
+    ROLL_FLAG_TYPE_DISENCHANT   = 0x08,
 
-    ROLL_ALL_TYPE_NO_DISENCHANT = 0x07, 
+    ROLL_ALL_TYPE_NO_DISENCHANT = 0x07,
     ROLL_ALL_TYPE_MASK          = 0x0F
 };
 
@@ -59,33 +59,33 @@ enum RollMask
 
 enum LootMethod
 {
-    FREE_FOR_ALL      = 0, 
-    ROUND_ROBIN       = 1, 
-    MASTER_LOOT       = 2, 
-    GROUP_LOOT        = 3, 
+    FREE_FOR_ALL      = 0,
+    ROUND_ROBIN       = 1,
+    MASTER_LOOT       = 2,
+    GROUP_LOOT        = 3,
     NEED_BEFORE_GREED = 4
 };
 
 enum PermissionTypes
 {
-    ALL_PERMISSION              = 0, 
-    GROUP_PERMISSION            = 1, 
-    MASTER_PERMISSION           = 2, 
-    ROUND_ROBIN_PERMISSION      = 3, 
-    OWNER_PERMISSION            = 4, 
-    NONE_PERMISSION             = 5, 
+    ALL_PERMISSION              = 0,
+    GROUP_PERMISSION            = 1,
+    MASTER_PERMISSION           = 2,
+    ROUND_ROBIN_PERMISSION      = 3,
+    OWNER_PERMISSION            = 4,
+    NONE_PERMISSION             = 5,
 };
 
 enum LootType
 {
-    LOOT_CORPSE                 = 1, 
-    LOOT_PICKPOCKETING          = 2, 
-    LOOT_FISHING                = 3, 
-    LOOT_DISENCHANTING          = 4, 
+    LOOT_CORPSE                 = 1,
+    LOOT_PICKPOCKETING          = 2,
+    LOOT_FISHING                = 3,
+    LOOT_DISENCHANTING          = 4,
                                                             // ignored always by client
-    LOOT_SKINNING               = 6, 
-    LOOT_PROSPECTING            = 7, 
-    LOOT_MILLING                = 8, 
+    LOOT_SKINNING               = 6,
+    LOOT_PROSPECTING            = 7,
+    LOOT_MILLING                = 8,
 
     LOOT_FISHINGHOLE            = 20,                       // unsupported by client, sending LOOT_FISHING instead
     LOOT_INSIGNIA               = 21                        // unsupported by client, sending LOOT_CORPSE instead
@@ -119,7 +119,7 @@ struct LootStoreItem
     // Constructor, converting ChanceOrQuestChance -> (chance, needs_quest)
     // displayid is filled in IsValid() which must be called after
     LootStoreItem(uint32 _itemid, float _chanceOrQuestChance, uint16 _lootmode, uint8 _group, int32 _mincountOrRef, uint8 _maxcount)
-        : itemid(_itemid), chance(fabs(_chanceOrQuestChance)), mincountOrRef(_mincountOrRef), lootmode(_lootmode), 
+        : itemid(_itemid), chance(fabs(_chanceOrQuestChance)), mincountOrRef(_mincountOrRef), lootmode(_lootmode),
         group(_group), needs_quest(_chanceOrQuestChance < 0), maxcount(_maxcount)
          {}
 

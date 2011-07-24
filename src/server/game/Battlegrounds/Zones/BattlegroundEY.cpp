@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -746,7 +746,7 @@ void BattlegroundEY::EventTeamCapturedPoint(Player *Source, uint32 Point)
     WorldSafeLocsEntry const *sg = NULL;
     sg = sWorldSafeLocsStore.LookupEntry(m_CapturingPointTypes[Point].GraveYardId);
     if (!sg || !AddSpiritGuide(Point, sg->x, sg->y, sg->z, 3.124139f, Team))
-        sLog->outError("BatteGroundEY: Failed to spawn spirit guide! point: %u, team: %u, graveyard_id: %u", 
+        sLog->outError("BatteGroundEY: Failed to spawn spirit guide! point: %u, team: %u, graveyard_id: %u",
             Point, Team, m_CapturingPointTypes[Point].GraveYardId);
 
 //    SpawnBGCreature(Point, RESPAWN_IMMEDIATELY);

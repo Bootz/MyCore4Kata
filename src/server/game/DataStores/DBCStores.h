@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -50,9 +50,9 @@ float GetGtSpellScalingValue(int8 class_, uint8 level);
 
 enum ContentLevels
 {
-    CONTENT_1_60 = 0, 
-    CONTENT_61_70, 
-    CONTENT_71_80, 
+    CONTENT_1_60 = 0,
+    CONTENT_61_70,
+    CONTENT_71_80,
     CONTENT_81_85
 };
 ContentLevels GetContentLevelsForMapAndZone(uint32 mapid, uint32 zoneId);

@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -127,7 +127,6 @@ void LFGScripts::OnChangeLeader(Group* group, uint64 newLeaderGuid, uint64 oldLe
     LfgUpdateData updateData = LfgUpdateData(LFG_UPDATETYPE_LEADER);
     if (plr)
         plr->GetSession()->SendLfgUpdateParty(updateData);
-
 
     plr = sObjectMgr->GetPlayer(oldLeaderGuid);
     if (plr)

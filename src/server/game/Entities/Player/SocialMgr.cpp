@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -123,7 +123,6 @@ void PlayerSocial::SendSocialList(Player* plr, uint32 mask)
     if (!plr)
         return;
 
-    
     WorldPacket data(SMSG_CONTACT_LIST, (4 + 4));           // just can guess size
     data << uint32(mask);                                   // flag (0x1, 0x2, 0x4)
     size_t countPos = data.wpos();
@@ -134,9 +133,9 @@ void PlayerSocial::SendSocialList(Player* plr, uint32 mask)
     {
         sSocialMgr->GetFriendInfo(plr, itr->first, itr->second);
 
-        if (!(itr->second.Flags & mask))    
+        if (!(itr->second.Flags & mask))
             continue;
-    
+
         ++count;
 
         data << uint64(itr->first);                         // player guid
@@ -329,4 +328,3 @@ PlayerSocial *SocialMgr::LoadFromDB(PreparedQueryResult result, uint32 guid)
 
     return social;
 }
-

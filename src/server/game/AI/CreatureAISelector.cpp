@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -130,7 +130,6 @@ namespace FactorySelector
         }*/
 
         return (mv_factory == NULL ? NULL : mv_factory->Create(creature));
-
     }
 
     GameObjectAI* SelectGameObjectAI(GameObject *go)
@@ -149,4 +148,3 @@ namespace FactorySelector
         return (ai_factory == NULL ? new NullGameObjectAI(go) : ai_factory->Create(go));
     }
 }
-

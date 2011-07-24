@@ -153,9 +153,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 void AddSC_boss_captain_skarloc()
 {

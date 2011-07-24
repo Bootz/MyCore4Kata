@@ -131,7 +131,6 @@ public:
             } else CheckTimer -= diff;
         }
     };
-
 };
 
 /* This script is merely a placeholder for the Doomfire that triggers Doomfire spell. It will
@@ -156,7 +155,6 @@ public:
         void EnterCombat(Unit* /*who*/) {}
         void DamageTaken(Unit * /*done_by*/, uint32 &damage) { damage = 0; }
     };
-
 };
 
 /* This is the script for the Doomfire Spirit Mob. This mob simply follow players or
@@ -216,7 +214,6 @@ public:
             } else ChangeTargetTimer -= diff;
         }
     };
-
 };
 
 /* Finally, Archimonde's script. His script isn't extremely complex, most are simply spells on timers.
@@ -648,12 +645,7 @@ public:
         }
         void WaypointReached(uint32 /*i*/){}
     };
-
 };
-
-
-
-
 
 void AddSC_boss_archimonde()
 {

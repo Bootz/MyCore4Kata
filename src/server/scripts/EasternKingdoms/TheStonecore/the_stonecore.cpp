@@ -28,22 +28,22 @@ enum Spells
 
     // IMP (43014) Health: 4,468 - 7,749, Mana: 16,676 - 17,816
     SPELL_FELL_FIREBALL      = 80344,
-    H_SPELL_FELL_FIREBALL    = 92638, 
+    H_SPELL_FELL_FIREBALL    = 92638,
 
     // Millhouse Manastorm (43391) Health: 386,505 - 513,248, Mana: 186,560 - 197,380
     SPELL_BLUR               = 81216,
     SPELL_MILL_FEAR          = 81442,
-    SPELL_FROSTBOLT_VOLLEY   = 81440,           
+    SPELL_FROSTBOLT_VOLLEY   = 81440,
     H_SPELL_FROSTBOLT_VOLLEY = 92642,
     SPELL_IMPENDING_DOOM     = 86830,
-    SPELL_SHADOW_BOLT        = 81439,           
+    SPELL_SHADOW_BOLT        = 81439,
     H_SPELL_SHADOW_BOLT      = 92641,
     SPELL_SHADOWFURY         = 81441,
     H_SPELL_SHADOWFURY       = 92644,
     SPELL_TIGULE             = 81220,
 
     // Rock Borer (43917,42845) Health: 6,702 - 11,624
-    SPELL_ROCK_BORE          = 80028,                
+    SPELL_ROCK_BORE          = 80028,
     H_SPELL_ROCK_BORE        = 92630,
 
     // Stonecore Berserker (43430) Health: 312,753 - 387,450
@@ -58,10 +58,10 @@ enum Spells
     // Stonecore Earthshaper (43537) Health: 250,201 - 309,960, Mana: 19,394
     SPELL_DUST_STORM         = 81463,
     SPELL_FORCE_OF_EARTH     = 81459,
-    SPELL_GROUND_SHOCK       = 81530,       
+    SPELL_GROUND_SHOCK       = 81530,
     H_SPELL_GROUND_SHOCK     = 92628,
     SPELL_LAVA_BURST         = 81576,
-    H_SPELL_LAVA_BURST       = 92626, 
+    H_SPELL_LAVA_BURST       = 92626,
 
     // Stonecore Flayer (42808) Health: 312,753 - 387,450
     SPELL_FLAY               = 79922,
@@ -73,11 +73,11 @@ enum Spells
 
     // Stonecore Rift Conjurer (42691) Health: 312,753 - 387,450, Mana: 16,676 - 17,816
     SPELL_DEMON_PORTAL       = 80308,
-    SPELL_SHADOWBOLT         = 80279,             
+    SPELL_SHADOWBOLT         = 80279,
     H_SPELL_SHADOWBOLT       = 92637,
 
     //Stonecore Sentry (42695) Health: 6,702 - 11,624
-    
+
     // Stonecore Warbringer (42696) Health: 312,753 - 387,450
     SPELL_CLEAVE             = 15496,
     SPELL_RAGE               = 80158,
@@ -166,7 +166,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 // Imp AI
@@ -223,7 +222,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 // Rock Borer AI
@@ -280,7 +278,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 // Millhouse Manastorm AI
@@ -360,7 +357,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 void AddSC_the_stonecore()

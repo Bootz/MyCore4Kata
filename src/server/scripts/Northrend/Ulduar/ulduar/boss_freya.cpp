@@ -125,7 +125,6 @@ public:
             EnterEvadeIfOutOfCombatArea(diff);
         }
     };
-
 };
 
 enum eSpells

@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -29,57 +29,57 @@
 
 enum ItemModType
 {
-    ITEM_MOD_MANA                     = 0, 
-    ITEM_MOD_HEALTH                   = 1, 
-    ITEM_MOD_AGILITY                  = 3, 
-    ITEM_MOD_STRENGTH                 = 4, 
-    ITEM_MOD_INTELLECT                = 5, 
-    ITEM_MOD_SPIRIT                   = 6, 
-    ITEM_MOD_STAMINA                  = 7, 
-    ITEM_MOD_DEFENSE_SKILL_RATING     = 12, 
-    ITEM_MOD_DODGE_RATING             = 13, 
-    ITEM_MOD_PARRY_RATING             = 14, 
-    ITEM_MOD_BLOCK_RATING             = 15, 
-    ITEM_MOD_HIT_MELEE_RATING         = 16, 
-    ITEM_MOD_HIT_RANGED_RATING        = 17, 
-    ITEM_MOD_HIT_SPELL_RATING         = 18, 
-    ITEM_MOD_CRIT_MELEE_RATING        = 19, 
-    ITEM_MOD_CRIT_RANGED_RATING       = 20, 
-    ITEM_MOD_CRIT_SPELL_RATING        = 21, 
-    ITEM_MOD_HIT_TAKEN_MELEE_RATING   = 22, 
-    ITEM_MOD_HIT_TAKEN_RANGED_RATING  = 23, 
-    ITEM_MOD_HIT_TAKEN_SPELL_RATING   = 24, 
-    ITEM_MOD_CRIT_TAKEN_MELEE_RATING  = 25, 
-    ITEM_MOD_CRIT_TAKEN_RANGED_RATING = 26, 
-    ITEM_MOD_CRIT_TAKEN_SPELL_RATING  = 27, 
-    ITEM_MOD_HASTE_MELEE_RATING       = 28, 
-    ITEM_MOD_HASTE_RANGED_RATING      = 29, 
-    ITEM_MOD_HASTE_SPELL_RATING       = 30, 
-    ITEM_MOD_HIT_RATING               = 31, 
-    ITEM_MOD_CRIT_RATING              = 32, 
-    ITEM_MOD_HIT_TAKEN_RATING         = 33, 
-    ITEM_MOD_CRIT_TAKEN_RATING        = 34, 
-    ITEM_MOD_RESILIENCE_RATING        = 35, 
-    ITEM_MOD_HASTE_RATING             = 36, 
-    ITEM_MOD_EXPERTISE_RATING         = 37, 
-    ITEM_MOD_ATTACK_POWER             = 38, 
-    ITEM_MOD_RANGED_ATTACK_POWER      = 39, 
+    ITEM_MOD_MANA                     = 0,
+    ITEM_MOD_HEALTH                   = 1,
+    ITEM_MOD_AGILITY                  = 3,
+    ITEM_MOD_STRENGTH                 = 4,
+    ITEM_MOD_INTELLECT                = 5,
+    ITEM_MOD_SPIRIT                   = 6,
+    ITEM_MOD_STAMINA                  = 7,
+    ITEM_MOD_DEFENSE_SKILL_RATING     = 12,
+    ITEM_MOD_DODGE_RATING             = 13,
+    ITEM_MOD_PARRY_RATING             = 14,
+    ITEM_MOD_BLOCK_RATING             = 15,
+    ITEM_MOD_HIT_MELEE_RATING         = 16,
+    ITEM_MOD_HIT_RANGED_RATING        = 17,
+    ITEM_MOD_HIT_SPELL_RATING         = 18,
+    ITEM_MOD_CRIT_MELEE_RATING        = 19,
+    ITEM_MOD_CRIT_RANGED_RATING       = 20,
+    ITEM_MOD_CRIT_SPELL_RATING        = 21,
+    ITEM_MOD_HIT_TAKEN_MELEE_RATING   = 22,
+    ITEM_MOD_HIT_TAKEN_RANGED_RATING  = 23,
+    ITEM_MOD_HIT_TAKEN_SPELL_RATING   = 24,
+    ITEM_MOD_CRIT_TAKEN_MELEE_RATING  = 25,
+    ITEM_MOD_CRIT_TAKEN_RANGED_RATING = 26,
+    ITEM_MOD_CRIT_TAKEN_SPELL_RATING  = 27,
+    ITEM_MOD_HASTE_MELEE_RATING       = 28,
+    ITEM_MOD_HASTE_RANGED_RATING      = 29,
+    ITEM_MOD_HASTE_SPELL_RATING       = 30,
+    ITEM_MOD_HIT_RATING               = 31,
+    ITEM_MOD_CRIT_RATING              = 32,
+    ITEM_MOD_HIT_TAKEN_RATING         = 33,
+    ITEM_MOD_CRIT_TAKEN_RATING        = 34,
+    ITEM_MOD_RESILIENCE_RATING        = 35,
+    ITEM_MOD_HASTE_RATING             = 36,
+    ITEM_MOD_EXPERTISE_RATING         = 37,
+    ITEM_MOD_ATTACK_POWER             = 38,
+    ITEM_MOD_RANGED_ATTACK_POWER      = 39,
     //ITEM_MOD_FERAL_ATTACK_POWER       = 40, not in 3.3
     ITEM_MOD_SPELL_HEALING_DONE       = 41,                 // deprecated
     ITEM_MOD_SPELL_DAMAGE_DONE        = 42,                 // deprecated
-    ITEM_MOD_MANA_REGENERATION        = 43, 
-    ITEM_MOD_ARMOR_PENETRATION_RATING = 44, 
-    ITEM_MOD_SPELL_POWER              = 45, 
-    ITEM_MOD_HEALTH_REGEN             = 46, 
-    ITEM_MOD_SPELL_PENETRATION        = 47, 
-    ITEM_MOD_BLOCK_VALUE              = 48, 
-    ITEM_MOD_MASTERY_RATING           = 49, 
-    ITEM_MOD_EXTRA_ARMOR              = 50, 
-    ITEM_MOD_FIRE_RESISTANCE          = 51, 
-    ITEM_MOD_FROST_RESISTANCE         = 52, 
-    ITEM_MOD_HOLY_RESISTANCE          = 53, 
-    ITEM_MOD_SHADOW_RESISTANCE        = 54, 
-    ITEM_MOD_NATURE_RESISTANCE        = 55, 
+    ITEM_MOD_MANA_REGENERATION        = 43,
+    ITEM_MOD_ARMOR_PENETRATION_RATING = 44,
+    ITEM_MOD_SPELL_POWER              = 45,
+    ITEM_MOD_HEALTH_REGEN             = 46,
+    ITEM_MOD_SPELL_PENETRATION        = 47,
+    ITEM_MOD_BLOCK_VALUE              = 48,
+    ITEM_MOD_MASTERY_RATING           = 49,
+    ITEM_MOD_EXTRA_ARMOR              = 50,
+    ITEM_MOD_FIRE_RESISTANCE          = 51,
+    ITEM_MOD_FROST_RESISTANCE         = 52,
+    ITEM_MOD_HOLY_RESISTANCE          = 53,
+    ITEM_MOD_SHADOW_RESISTANCE        = 54,
+    ITEM_MOD_NATURE_RESISTANCE        = 55,
     ITEM_MOD_ARCANE_RESISTANCE        = 56
 };
 
@@ -88,9 +88,9 @@ enum ItemModType
 enum ItemSpelltriggerType
 {
     ITEM_SPELLTRIGGER_ON_USE          = 0,                  // use after equip cooldown
-    ITEM_SPELLTRIGGER_ON_EQUIP        = 1, 
-    ITEM_SPELLTRIGGER_CHANCE_ON_HIT   = 2, 
-    ITEM_SPELLTRIGGER_SOULSTONE       = 4, 
+    ITEM_SPELLTRIGGER_ON_EQUIP        = 1,
+    ITEM_SPELLTRIGGER_CHANCE_ON_HIT   = 2,
+    ITEM_SPELLTRIGGER_SOULSTONE       = 4,
     /*
      * ItemSpelltriggerType 5 might have changed on 2.4.3/3.0.3: Such auras
      * will be applied on item pickup and removed on item loss - maybe on the
@@ -105,11 +105,11 @@ enum ItemSpelltriggerType
 
 enum ItemBondingType
 {
-    NO_BIND                                     = 0, 
-    BIND_WHEN_PICKED_UP                         = 1, 
-    BIND_WHEN_EQUIPED                           = 2, 
-    BIND_WHEN_USE                               = 3, 
-    BIND_QUEST_ITEM                             = 4, 
+    NO_BIND                                     = 0,
+    BIND_WHEN_PICKED_UP                         = 1,
+    BIND_WHEN_EQUIPED                           = 2,
+    BIND_WHEN_USE                               = 3,
+    BIND_QUEST_ITEM                             = 4,
     BIND_QUEST_ITEM1                            = 5         // not used in game
 };
 
@@ -194,81 +194,81 @@ enum ItemFieldFlags
     ITEM_FLAG_UNK25         = 0x40000000, // ?
     ITEM_FLAG_UNK26         = 0x80000000, // ?
 
-    ITEM_FLAG_MAIL_TEXT_MASK = ITEM_FLAG_READABLE | ITEM_FLAG_UNK13 | ITEM_FLAG_UNK14, 
+    ITEM_FLAG_MAIL_TEXT_MASK = ITEM_FLAG_READABLE | ITEM_FLAG_UNK13 | ITEM_FLAG_UNK14,
 };
 
 enum ItemFlagsExtra
 {
-    ITEM_FLAGS_EXTRA_HORDE_ONLY              = 0x00000001, 
-    ITEM_FLAGS_EXTRA_ALLIANCE_ONLY           = 0x00000002, 
+    ITEM_FLAGS_EXTRA_HORDE_ONLY              = 0x00000001,
+    ITEM_FLAGS_EXTRA_ALLIANCE_ONLY           = 0x00000002,
     ITEM_FLAGS_EXTRA_EXT_COST_REQUIRES_GOLD  = 0x00000004, // when item uses extended cost, gold is also required
-    ITEM_FLAGS_EXTRA_NEED_ROLL_DISABLED      = 0x00000100, 
+    ITEM_FLAGS_EXTRA_NEED_ROLL_DISABLED      = 0x00000100,
     ITEM_FLAGS_EXTRA_CASTER_WEAPON           = 0x00000200, // uses caster specific dbc file for DPS calculations
 };
 
 enum BAG_FAMILY_MASK
 {
-    BAG_FAMILY_MASK_NONE                      = 0x00000000, 
-    BAG_FAMILY_MASK_ARROWS                    = 0x00000001, 
-    BAG_FAMILY_MASK_BULLETS                   = 0x00000002, 
-    BAG_FAMILY_MASK_SOUL_SHARDS               = 0x00000004, 
-    BAG_FAMILY_MASK_LEATHERWORKING_SUPP       = 0x00000008, 
-    BAG_FAMILY_MASK_INSCRIPTION_SUPP          = 0x00000010, 
-    BAG_FAMILY_MASK_HERBS                     = 0x00000020, 
-    BAG_FAMILY_MASK_ENCHANTING_SUPP           = 0x00000040, 
-    BAG_FAMILY_MASK_ENGINEERING_SUPP          = 0x00000080, 
-    BAG_FAMILY_MASK_KEYS                      = 0x00000100, 
-    BAG_FAMILY_MASK_GEMS                      = 0x00000200, 
-    BAG_FAMILY_MASK_MINING_SUPP               = 0x00000400, 
-    BAG_FAMILY_MASK_SOULBOUND_EQUIPMENT       = 0x00000800, 
-    BAG_FAMILY_MASK_VANITY_PETS               = 0x00001000, 
-    BAG_FAMILY_MASK_CURRENCY_TOKENS           = 0x00002000, 
-    BAG_FAMILY_MASK_QUEST_ITEMS               = 0x00004000, 
+    BAG_FAMILY_MASK_NONE                      = 0x00000000,
+    BAG_FAMILY_MASK_ARROWS                    = 0x00000001,
+    BAG_FAMILY_MASK_BULLETS                   = 0x00000002,
+    BAG_FAMILY_MASK_SOUL_SHARDS               = 0x00000004,
+    BAG_FAMILY_MASK_LEATHERWORKING_SUPP       = 0x00000008,
+    BAG_FAMILY_MASK_INSCRIPTION_SUPP          = 0x00000010,
+    BAG_FAMILY_MASK_HERBS                     = 0x00000020,
+    BAG_FAMILY_MASK_ENCHANTING_SUPP           = 0x00000040,
+    BAG_FAMILY_MASK_ENGINEERING_SUPP          = 0x00000080,
+    BAG_FAMILY_MASK_KEYS                      = 0x00000100,
+    BAG_FAMILY_MASK_GEMS                      = 0x00000200,
+    BAG_FAMILY_MASK_MINING_SUPP               = 0x00000400,
+    BAG_FAMILY_MASK_SOULBOUND_EQUIPMENT       = 0x00000800,
+    BAG_FAMILY_MASK_VANITY_PETS               = 0x00001000,
+    BAG_FAMILY_MASK_CURRENCY_TOKENS           = 0x00002000,
+    BAG_FAMILY_MASK_QUEST_ITEMS               = 0x00004000,
     BAG_FAMILY_MASK_FISHING                   = 0x00008000
 };
 
 enum SocketColor
 {
-    SOCKET_COLOR_META                           = 1, 
-    SOCKET_COLOR_RED                            = 2, 
-    SOCKET_COLOR_YELLOW                         = 4, 
-    SOCKET_COLOR_BLUE                           = 8, 
-    SOCKET_COLOR_HYDRAULIC                      = 16, 
-    SOCKET_COLOR_COGWHEEL                       = 32, 
+    SOCKET_COLOR_META                           = 1,
+    SOCKET_COLOR_RED                            = 2,
+    SOCKET_COLOR_YELLOW                         = 4,
+    SOCKET_COLOR_BLUE                           = 8,
+    SOCKET_COLOR_HYDRAULIC                      = 16,
+    SOCKET_COLOR_COGWHEEL                       = 32,
 };
 
 #define SOCKET_COLOR_ALL (SOCKET_COLOR_META | SOCKET_COLOR_RED | SOCKET_COLOR_YELLOW | SOCKET_COLOR_BLUE | SOCKET_COLOR_HYDRAULIC | SOCKET_COLOR_COGWHEEL)
 
 enum InventoryType
 {
-    INVTYPE_NON_EQUIP                           = 0, 
-    INVTYPE_HEAD                                = 1, 
-    INVTYPE_NECK                                = 2, 
-    INVTYPE_SHOULDERS                           = 3, 
-    INVTYPE_BODY                                = 4, 
-    INVTYPE_CHEST                               = 5, 
-    INVTYPE_WAIST                               = 6, 
-    INVTYPE_LEGS                                = 7, 
-    INVTYPE_FEET                                = 8, 
-    INVTYPE_WRISTS                              = 9, 
-    INVTYPE_HANDS                               = 10, 
-    INVTYPE_FINGER                              = 11, 
-    INVTYPE_TRINKET                             = 12, 
-    INVTYPE_WEAPON                              = 13, 
-    INVTYPE_SHIELD                              = 14, 
-    INVTYPE_RANGED                              = 15, 
-    INVTYPE_CLOAK                               = 16, 
-    INVTYPE_2HWEAPON                            = 17, 
-    INVTYPE_BAG                                 = 18, 
-    INVTYPE_TABARD                              = 19, 
-    INVTYPE_ROBE                                = 20, 
-    INVTYPE_WEAPONMAINHAND                      = 21, 
-    INVTYPE_WEAPONOFFHAND                       = 22, 
-    INVTYPE_HOLDABLE                            = 23, 
-    INVTYPE_AMMO                                = 24, 
-    INVTYPE_THROWN                              = 25, 
-    INVTYPE_RANGEDRIGHT                         = 26, 
-    INVTYPE_QUIVER                              = 27, 
+    INVTYPE_NON_EQUIP                           = 0,
+    INVTYPE_HEAD                                = 1,
+    INVTYPE_NECK                                = 2,
+    INVTYPE_SHOULDERS                           = 3,
+    INVTYPE_BODY                                = 4,
+    INVTYPE_CHEST                               = 5,
+    INVTYPE_WAIST                               = 6,
+    INVTYPE_LEGS                                = 7,
+    INVTYPE_FEET                                = 8,
+    INVTYPE_WRISTS                              = 9,
+    INVTYPE_HANDS                               = 10,
+    INVTYPE_FINGER                              = 11,
+    INVTYPE_TRINKET                             = 12,
+    INVTYPE_WEAPON                              = 13,
+    INVTYPE_SHIELD                              = 14,
+    INVTYPE_RANGED                              = 15,
+    INVTYPE_CLOAK                               = 16,
+    INVTYPE_2HWEAPON                            = 17,
+    INVTYPE_BAG                                 = 18,
+    INVTYPE_TABARD                              = 19,
+    INVTYPE_ROBE                                = 20,
+    INVTYPE_WEAPONMAINHAND                      = 21,
+    INVTYPE_WEAPONOFFHAND                       = 22,
+    INVTYPE_HOLDABLE                            = 23,
+    INVTYPE_AMMO                                = 24,
+    INVTYPE_THROWN                              = 25,
+    INVTYPE_RANGEDRIGHT                         = 26,
+    INVTYPE_QUIVER                              = 27,
     INVTYPE_RELIC                               = 28
 };
 
@@ -276,22 +276,22 @@ enum InventoryType
 
 enum ItemClass
 {
-    ITEM_CLASS_CONSUMABLE                       = 0, 
-    ITEM_CLASS_CONTAINER                        = 1, 
-    ITEM_CLASS_WEAPON                           = 2, 
-    ITEM_CLASS_GEM                              = 3, 
-    ITEM_CLASS_ARMOR                            = 4, 
-    ITEM_CLASS_REAGENT                          = 5, 
-    ITEM_CLASS_PROJECTILE                       = 6, 
-    ITEM_CLASS_TRADE_GOODS                      = 7, 
-    ITEM_CLASS_GENERIC                          = 8, 
-    ITEM_CLASS_RECIPE                           = 9, 
-    ITEM_CLASS_MONEY                            = 10, 
-    ITEM_CLASS_QUIVER                           = 11, 
-    ITEM_CLASS_QUEST                            = 12, 
-    ITEM_CLASS_KEY                              = 13, 
-    ITEM_CLASS_PERMANENT                        = 14, 
-    ITEM_CLASS_MISC                             = 15, 
+    ITEM_CLASS_CONSUMABLE                       = 0,
+    ITEM_CLASS_CONTAINER                        = 1,
+    ITEM_CLASS_WEAPON                           = 2,
+    ITEM_CLASS_GEM                              = 3,
+    ITEM_CLASS_ARMOR                            = 4,
+    ITEM_CLASS_REAGENT                          = 5,
+    ITEM_CLASS_PROJECTILE                       = 6,
+    ITEM_CLASS_TRADE_GOODS                      = 7,
+    ITEM_CLASS_GENERIC                          = 8,
+    ITEM_CLASS_RECIPE                           = 9,
+    ITEM_CLASS_MONEY                            = 10,
+    ITEM_CLASS_QUIVER                           = 11,
+    ITEM_CLASS_QUEST                            = 12,
+    ITEM_CLASS_KEY                              = 13,
+    ITEM_CLASS_PERMANENT                        = 14,
+    ITEM_CLASS_MISC                             = 15,
     ITEM_CLASS_GLYPH                            = 16
 };
 
@@ -299,14 +299,14 @@ enum ItemClass
 
 enum ItemSubclassConsumable
 {
-    ITEM_SUBCLASS_CONSUMABLE                    = 0, 
-    ITEM_SUBCLASS_POTION                        = 1, 
-    ITEM_SUBCLASS_ELIXIR                        = 2, 
-    ITEM_SUBCLASS_FLASK                         = 3, 
-    ITEM_SUBCLASS_SCROLL                        = 4, 
-    ITEM_SUBCLASS_FOOD                          = 5, 
-    ITEM_SUBCLASS_ITEM_ENHANCEMENT              = 6, 
-    ITEM_SUBCLASS_BANDAGE                       = 7, 
+    ITEM_SUBCLASS_CONSUMABLE                    = 0,
+    ITEM_SUBCLASS_POTION                        = 1,
+    ITEM_SUBCLASS_ELIXIR                        = 2,
+    ITEM_SUBCLASS_FLASK                         = 3,
+    ITEM_SUBCLASS_SCROLL                        = 4,
+    ITEM_SUBCLASS_FOOD                          = 5,
+    ITEM_SUBCLASS_ITEM_ENHANCEMENT              = 6,
+    ITEM_SUBCLASS_BANDAGE                       = 7,
     ITEM_SUBCLASS_CONSUMABLE_OTHER              = 8
 };
 
@@ -314,15 +314,15 @@ enum ItemSubclassConsumable
 
 enum ItemSubclassContainer
 {
-    ITEM_SUBCLASS_CONTAINER                     = 0, 
-    ITEM_SUBCLASS_SOUL_CONTAINER                = 1, 
-    ITEM_SUBCLASS_HERB_CONTAINER                = 2, 
-    ITEM_SUBCLASS_ENCHANTING_CONTAINER          = 3, 
-    ITEM_SUBCLASS_ENGINEERING_CONTAINER         = 4, 
-    ITEM_SUBCLASS_GEM_CONTAINER                 = 5, 
-    ITEM_SUBCLASS_MINING_CONTAINER              = 6, 
-    ITEM_SUBCLASS_LEATHERWORKING_CONTAINER      = 7, 
-    ITEM_SUBCLASS_INSCRIPTION_CONTAINER         = 8, 
+    ITEM_SUBCLASS_CONTAINER                     = 0,
+    ITEM_SUBCLASS_SOUL_CONTAINER                = 1,
+    ITEM_SUBCLASS_HERB_CONTAINER                = 2,
+    ITEM_SUBCLASS_ENCHANTING_CONTAINER          = 3,
+    ITEM_SUBCLASS_ENGINEERING_CONTAINER         = 4,
+    ITEM_SUBCLASS_GEM_CONTAINER                 = 5,
+    ITEM_SUBCLASS_MINING_CONTAINER              = 6,
+    ITEM_SUBCLASS_LEATHERWORKING_CONTAINER      = 7,
+    ITEM_SUBCLASS_INSCRIPTION_CONTAINER         = 8,
     ITEM_SUBCLASS_FISHING_CONTAINER             = 9
 };
 
@@ -330,26 +330,26 @@ enum ItemSubclassContainer
 
 enum ItemSubclassWeapon
 {
-    ITEM_SUBCLASS_WEAPON_AXE                    = 0, 
-    ITEM_SUBCLASS_WEAPON_AXE2                   = 1, 
-    ITEM_SUBCLASS_WEAPON_BOW                    = 2, 
-    ITEM_SUBCLASS_WEAPON_GUN                    = 3, 
-    ITEM_SUBCLASS_WEAPON_MACE                   = 4, 
-    ITEM_SUBCLASS_WEAPON_MACE2                  = 5, 
-    ITEM_SUBCLASS_WEAPON_POLEARM                = 6, 
-    ITEM_SUBCLASS_WEAPON_SWORD                  = 7, 
-    ITEM_SUBCLASS_WEAPON_SWORD2                 = 8, 
-    ITEM_SUBCLASS_WEAPON_obsolete               = 9, 
-    ITEM_SUBCLASS_WEAPON_STAFF                  = 10, 
-    ITEM_SUBCLASS_WEAPON_EXOTIC                 = 11, 
-    ITEM_SUBCLASS_WEAPON_EXOTIC2                = 12, 
-    ITEM_SUBCLASS_WEAPON_FIST                   = 13, 
-    ITEM_SUBCLASS_WEAPON_MISC                   = 14, 
-    ITEM_SUBCLASS_WEAPON_DAGGER                 = 15, 
-    ITEM_SUBCLASS_WEAPON_THROWN                 = 16, 
-    ITEM_SUBCLASS_WEAPON_SPEAR                  = 17, 
-    ITEM_SUBCLASS_WEAPON_CROSSBOW               = 18, 
-    ITEM_SUBCLASS_WEAPON_WAND                   = 19, 
+    ITEM_SUBCLASS_WEAPON_AXE                    = 0,
+    ITEM_SUBCLASS_WEAPON_AXE2                   = 1,
+    ITEM_SUBCLASS_WEAPON_BOW                    = 2,
+    ITEM_SUBCLASS_WEAPON_GUN                    = 3,
+    ITEM_SUBCLASS_WEAPON_MACE                   = 4,
+    ITEM_SUBCLASS_WEAPON_MACE2                  = 5,
+    ITEM_SUBCLASS_WEAPON_POLEARM                = 6,
+    ITEM_SUBCLASS_WEAPON_SWORD                  = 7,
+    ITEM_SUBCLASS_WEAPON_SWORD2                 = 8,
+    ITEM_SUBCLASS_WEAPON_obsolete               = 9,
+    ITEM_SUBCLASS_WEAPON_STAFF                  = 10,
+    ITEM_SUBCLASS_WEAPON_EXOTIC                 = 11,
+    ITEM_SUBCLASS_WEAPON_EXOTIC2                = 12,
+    ITEM_SUBCLASS_WEAPON_FIST                   = 13,
+    ITEM_SUBCLASS_WEAPON_MISC                   = 14,
+    ITEM_SUBCLASS_WEAPON_DAGGER                 = 15,
+    ITEM_SUBCLASS_WEAPON_THROWN                 = 16,
+    ITEM_SUBCLASS_WEAPON_SPEAR                  = 17,
+    ITEM_SUBCLASS_WEAPON_CROSSBOW               = 18,
+    ITEM_SUBCLASS_WEAPON_WAND                   = 19,
     ITEM_SUBCLASS_WEAPON_FISHING_POLE           = 20
 };
 
@@ -361,16 +361,16 @@ enum ItemSubclassWeapon
 
 enum ItemSubclassGem
 {
-    ITEM_SUBCLASS_GEM_RED                       = 0, 
-    ITEM_SUBCLASS_GEM_BLUE                      = 1, 
-    ITEM_SUBCLASS_GEM_YELLOW                    = 2, 
-    ITEM_SUBCLASS_GEM_PURPLE                    = 3, 
-    ITEM_SUBCLASS_GEM_GREEN                     = 4, 
-    ITEM_SUBCLASS_GEM_ORANGE                    = 5, 
-    ITEM_SUBCLASS_GEM_META                      = 6, 
-    ITEM_SUBCLASS_GEM_SIMPLE                    = 7, 
-    ITEM_SUBCLASS_GEM_PRISMATIC                 = 8, 
-    ITEM_SUBCLASS_GEM_HYDRAULIC                 = 9, 
+    ITEM_SUBCLASS_GEM_RED                       = 0,
+    ITEM_SUBCLASS_GEM_BLUE                      = 1,
+    ITEM_SUBCLASS_GEM_YELLOW                    = 2,
+    ITEM_SUBCLASS_GEM_PURPLE                    = 3,
+    ITEM_SUBCLASS_GEM_GREEN                     = 4,
+    ITEM_SUBCLASS_GEM_ORANGE                    = 5,
+    ITEM_SUBCLASS_GEM_META                      = 6,
+    ITEM_SUBCLASS_GEM_SIMPLE                    = 7,
+    ITEM_SUBCLASS_GEM_PRISMATIC                 = 8,
+    ITEM_SUBCLASS_GEM_HYDRAULIC                 = 9,
     ITEM_SUBCLASS_GEM_COGWHEEL                  = 10
 };
 
@@ -378,22 +378,21 @@ enum ItemSubclassGem
 
 enum ItemSubclassArmor
 {
-    ITEM_SUBCLASS_ARMOR_MISC                    = 0, 
-    ITEM_SUBCLASS_ARMOR_CLOTH                   = 1, 
-    ITEM_SUBCLASS_ARMOR_LEATHER                 = 2, 
-    ITEM_SUBCLASS_ARMOR_MAIL                    = 3, 
-    ITEM_SUBCLASS_ARMOR_PLATE                   = 4, 
-    ITEM_SUBCLASS_ARMOR_BUCKLER                 = 5, 
-    ITEM_SUBCLASS_ARMOR_SHIELD                  = 6, 
-    //ITEM_SUBCLASS_ARMOR_LIBRAM                  = 7, 
-    //ITEM_SUBCLASS_ARMOR_IDOL                    = 8, 
-    //ITEM_SUBCLASS_ARMOR_TOTEM                   = 9, 
-    //ITEM_SUBCLASS_ARMOR_SIGIL                   = 10, 
+    ITEM_SUBCLASS_ARMOR_MISC                    = 0,
+    ITEM_SUBCLASS_ARMOR_CLOTH                   = 1,
+    ITEM_SUBCLASS_ARMOR_LEATHER                 = 2,
+    ITEM_SUBCLASS_ARMOR_MAIL                    = 3,
+    ITEM_SUBCLASS_ARMOR_PLATE                   = 4,
+    ITEM_SUBCLASS_ARMOR_BUCKLER                 = 5,
+    ITEM_SUBCLASS_ARMOR_SHIELD                  = 6,
+    //ITEM_SUBCLASS_ARMOR_LIBRAM                  = 7,
+    //ITEM_SUBCLASS_ARMOR_IDOL                    = 8,
+    //ITEM_SUBCLASS_ARMOR_TOTEM                   = 9,
+    //ITEM_SUBCLASS_ARMOR_SIGIL                   = 10,
     ITEM_SUBCLASS_ARMOR_RELIC                   = 11
 };
- 
-#define MAX_ITEM_SUBCLASS_ARMOR                   12
 
+#define MAX_ITEM_SUBCLASS_ARMOR                   12
 
 enum ItemSubclassReagent
 {
@@ -406,8 +405,8 @@ enum ItemSubclassProjectile
 {
     ITEM_SUBCLASS_WAND                          = 0,        // ABS
     ITEM_SUBCLASS_BOLT                          = 1,        // ABS
-    ITEM_SUBCLASS_ARROW                         = 2, 
-    ITEM_SUBCLASS_BULLET                        = 3, 
+    ITEM_SUBCLASS_ARROW                         = 2,
+    ITEM_SUBCLASS_BULLET                        = 3,
     ITEM_SUBCLASS_THROWN                        = 4         // ABS
 };
 
@@ -415,21 +414,21 @@ enum ItemSubclassProjectile
 
 enum ItemSubclassTradeGoods
 {
-    ITEM_SUBCLASS_TRADE_GOODS                   = 0, 
-    ITEM_SUBCLASS_PARTS                         = 1, 
-    ITEM_SUBCLASS_EXPLOSIVES                    = 2, 
-    ITEM_SUBCLASS_DEVICES                       = 3, 
-    ITEM_SUBCLASS_JEWELCRAFTING                 = 4, 
-    ITEM_SUBCLASS_CLOTH                         = 5, 
-    ITEM_SUBCLASS_LEATHER                       = 6, 
-    ITEM_SUBCLASS_METAL_STONE                   = 7, 
-    ITEM_SUBCLASS_MEAT                          = 8, 
-    ITEM_SUBCLASS_HERB                          = 9, 
-    ITEM_SUBCLASS_ELEMENTAL                     = 10, 
-    ITEM_SUBCLASS_TRADE_GOODS_OTHER             = 11, 
-    ITEM_SUBCLASS_ENCHANTING                    = 12, 
-    ITEM_SUBCLASS_MATERIAL                      = 13, 
-    ITEM_SUBCLASS_ARMOR_ENCHANTMENT             = 14, 
+    ITEM_SUBCLASS_TRADE_GOODS                   = 0,
+    ITEM_SUBCLASS_PARTS                         = 1,
+    ITEM_SUBCLASS_EXPLOSIVES                    = 2,
+    ITEM_SUBCLASS_DEVICES                       = 3,
+    ITEM_SUBCLASS_JEWELCRAFTING                 = 4,
+    ITEM_SUBCLASS_CLOTH                         = 5,
+    ITEM_SUBCLASS_LEATHER                       = 6,
+    ITEM_SUBCLASS_METAL_STONE                   = 7,
+    ITEM_SUBCLASS_MEAT                          = 8,
+    ITEM_SUBCLASS_HERB                          = 9,
+    ITEM_SUBCLASS_ELEMENTAL                     = 10,
+    ITEM_SUBCLASS_TRADE_GOODS_OTHER             = 11,
+    ITEM_SUBCLASS_ENCHANTING                    = 12,
+    ITEM_SUBCLASS_MATERIAL                      = 13,
+    ITEM_SUBCLASS_ARMOR_ENCHANTMENT             = 14,
     ITEM_SUBCLASS_WEAPON_ENCHANTMENT            = 15
 };
 
@@ -444,17 +443,17 @@ enum ItemSubclassGeneric
 
 enum ItemSubclassRecipe
 {
-    ITEM_SUBCLASS_BOOK                          = 0, 
-    ITEM_SUBCLASS_LEATHERWORKING_PATTERN        = 1, 
-    ITEM_SUBCLASS_TAILORING_PATTERN             = 2, 
-    ITEM_SUBCLASS_ENGINEERING_SCHEMATIC         = 3, 
-    ITEM_SUBCLASS_BLACKSMITHING                 = 4, 
-    ITEM_SUBCLASS_COOKING_RECIPE                = 5, 
-    ITEM_SUBCLASS_ALCHEMY_RECIPE                = 6, 
-    ITEM_SUBCLASS_FIRST_AID_MANUAL              = 7, 
-    ITEM_SUBCLASS_ENCHANTING_FORMULA            = 8, 
-    ITEM_SUBCLASS_FISHING_MANUAL                = 9, 
-    ITEM_SUBCLASS_JEWELCRAFTING_RECIPE          = 10, 
+    ITEM_SUBCLASS_BOOK                          = 0,
+    ITEM_SUBCLASS_LEATHERWORKING_PATTERN        = 1,
+    ITEM_SUBCLASS_TAILORING_PATTERN             = 2,
+    ITEM_SUBCLASS_ENGINEERING_SCHEMATIC         = 3,
+    ITEM_SUBCLASS_BLACKSMITHING                 = 4,
+    ITEM_SUBCLASS_COOKING_RECIPE                = 5,
+    ITEM_SUBCLASS_ALCHEMY_RECIPE                = 6,
+    ITEM_SUBCLASS_FIRST_AID_MANUAL              = 7,
+    ITEM_SUBCLASS_ENCHANTING_FORMULA            = 8,
+    ITEM_SUBCLASS_FISHING_MANUAL                = 9,
+    ITEM_SUBCLASS_JEWELCRAFTING_RECIPE          = 10,
     ITEM_SUBCLASS_INSCRIPTION_TECHNIQUE         = 11
 };
 
@@ -471,7 +470,7 @@ enum ItemSubclassQuiver
 {
     ITEM_SUBCLASS_QUIVER0                       = 0,        // ABS
     ITEM_SUBCLASS_QUIVER1                       = 1,        // ABS
-    ITEM_SUBCLASS_QUIVER                        = 2, 
+    ITEM_SUBCLASS_QUIVER                        = 2,
     ITEM_SUBCLASS_AMMO_POUCH                    = 3
 };
 
@@ -479,9 +478,9 @@ enum ItemSubclassQuiver
 
 enum ItemSubclassQuest
 {
-    ITEM_SUBCLASS_QUEST                         = 0, 
-    ITEM_SUBCLASS_QUEST_2                       = 1, 
-    ITEM_SUBCLASS_QUEST_3                       = 3, 
+    ITEM_SUBCLASS_QUEST                         = 0,
+    ITEM_SUBCLASS_QUEST_2                       = 1,
+    ITEM_SUBCLASS_QUEST_3                       = 3,
     ITEM_SUBCLASS_QUEST_8                       = 8
 };
 
@@ -489,7 +488,7 @@ enum ItemSubclassQuest
 
 enum ItemSubclassKey
 {
-    ITEM_SUBCLASS_KEY                           = 0, 
+    ITEM_SUBCLASS_KEY                           = 0,
     ITEM_SUBCLASS_LOCKPICK                      = 1
 };
 
@@ -504,12 +503,12 @@ enum ItemSubclassPermanent
 
 enum ItemSubclassJunk
 {
-    ITEM_SUBCLASS_JUNK                          = 0, 
-    ITEM_SUBCLASS_JUNK_REAGENT                  = 1, 
-    ITEM_SUBCLASS_JUNK_PET                      = 2, 
-    ITEM_SUBCLASS_JUNK_HOLIDAY                  = 3, 
-    ITEM_SUBCLASS_JUNK_OTHER                    = 4, 
-    ITEM_SUBCLASS_JUNK_MOUNT                    = 5, 
+    ITEM_SUBCLASS_JUNK                          = 0,
+    ITEM_SUBCLASS_JUNK_REAGENT                  = 1,
+    ITEM_SUBCLASS_JUNK_PET                      = 2,
+    ITEM_SUBCLASS_JUNK_HOLIDAY                  = 3,
+    ITEM_SUBCLASS_JUNK_OTHER                    = 4,
+    ITEM_SUBCLASS_JUNK_MOUNT                    = 5,
     ITEM_SUBCLASS_JUNK_OTHER_2                  = 12  //1 item.
 };
 
@@ -517,15 +516,15 @@ enum ItemSubclassJunk
 
 enum ItemSubclassGlyph
 {
-    ITEM_SUBCLASS_GLYPH_WARRIOR                 = 1, 
-    ITEM_SUBCLASS_GLYPH_PALADIN                 = 2, 
-    ITEM_SUBCLASS_GLYPH_HUNTER                  = 3, 
-    ITEM_SUBCLASS_GLYPH_ROGUE                   = 4, 
-    ITEM_SUBCLASS_GLYPH_PRIEST                  = 5, 
-    ITEM_SUBCLASS_GLYPH_DEATH_KNIGHT            = 6, 
-    ITEM_SUBCLASS_GLYPH_SHAMAN                  = 7, 
-    ITEM_SUBCLASS_GLYPH_MAGE                    = 8, 
-    ITEM_SUBCLASS_GLYPH_WARLOCK                 = 9, 
+    ITEM_SUBCLASS_GLYPH_WARRIOR                 = 1,
+    ITEM_SUBCLASS_GLYPH_PALADIN                 = 2,
+    ITEM_SUBCLASS_GLYPH_HUNTER                  = 3,
+    ITEM_SUBCLASS_GLYPH_ROGUE                   = 4,
+    ITEM_SUBCLASS_GLYPH_PRIEST                  = 5,
+    ITEM_SUBCLASS_GLYPH_DEATH_KNIGHT            = 6,
+    ITEM_SUBCLASS_GLYPH_SHAMAN                  = 7,
+    ITEM_SUBCLASS_GLYPH_MAGE                    = 8,
+    ITEM_SUBCLASS_GLYPH_WARLOCK                 = 9,
     ITEM_SUBCLASS_GLYPH_DRUID                   = 11
 };
 
@@ -533,22 +532,22 @@ enum ItemSubclassGlyph
 
 const uint32 MaxItemSubclassValues[MAX_ITEM_CLASS] =
 {
-    MAX_ITEM_SUBCLASS_CONSUMABLE, 
-    MAX_ITEM_SUBCLASS_CONTAINER, 
-    MAX_ITEM_SUBCLASS_WEAPON, 
-    MAX_ITEM_SUBCLASS_GEM, 
-    MAX_ITEM_SUBCLASS_ARMOR, 
-    MAX_ITEM_SUBCLASS_REAGENT, 
-    MAX_ITEM_SUBCLASS_PROJECTILE, 
-    MAX_ITEM_SUBCLASS_TRADE_GOODS, 
-    MAX_ITEM_SUBCLASS_GENERIC, 
-    MAX_ITEM_SUBCLASS_RECIPE, 
-    MAX_ITEM_SUBCLASS_MONEY, 
-    MAX_ITEM_SUBCLASS_QUIVER, 
-    MAX_ITEM_SUBCLASS_QUEST, 
-    MAX_ITEM_SUBCLASS_KEY, 
-    MAX_ITEM_SUBCLASS_PERMANENT, 
-    MAX_ITEM_SUBCLASS_JUNK, 
+    MAX_ITEM_SUBCLASS_CONSUMABLE,
+    MAX_ITEM_SUBCLASS_CONTAINER,
+    MAX_ITEM_SUBCLASS_WEAPON,
+    MAX_ITEM_SUBCLASS_GEM,
+    MAX_ITEM_SUBCLASS_ARMOR,
+    MAX_ITEM_SUBCLASS_REAGENT,
+    MAX_ITEM_SUBCLASS_PROJECTILE,
+    MAX_ITEM_SUBCLASS_TRADE_GOODS,
+    MAX_ITEM_SUBCLASS_GENERIC,
+    MAX_ITEM_SUBCLASS_RECIPE,
+    MAX_ITEM_SUBCLASS_MONEY,
+    MAX_ITEM_SUBCLASS_QUIVER,
+    MAX_ITEM_SUBCLASS_QUEST,
+    MAX_ITEM_SUBCLASS_KEY,
+    MAX_ITEM_SUBCLASS_PERMANENT,
+    MAX_ITEM_SUBCLASS_JUNK,
     MAX_ITEM_SUBCLASS_GLYPH
 };
 
@@ -734,7 +733,7 @@ struct ItemPrototype
     }
 
     uint32 GetArmor() const;
-    
+
     ItemDamageEntry const* getItemDamageEntry() const;
     float getDPS() const;
     float GetMinDamage() const { return floor(getDPS() * float(Delay) / 1000.0f * 0.7f + 0.5f); }

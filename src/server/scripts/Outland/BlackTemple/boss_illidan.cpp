@@ -457,7 +457,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 /************************************** Illidan's AI ***************************************/
@@ -1145,7 +1144,6 @@ public:
             }
         }
     };
-
 };
 
 /********************************** End of Illidan AI ******************************************/
@@ -1368,7 +1366,6 @@ public:
                     DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class npc_akama_illidan : public CreatureScript
@@ -1829,7 +1826,6 @@ public:
     {
         return new npc_akama_illidanAI(pCreature);
     }
-
 };
 
 void boss_illidan_stormrage::boss_illidan_stormrageAI::Reset()
@@ -2086,7 +2082,6 @@ public:
                 //}
         }
     };
-
 };
 
 class gameobject_cage_trap : public GameObjectScript
@@ -2105,7 +2100,6 @@ public:
         pGo->SetGoState(GO_STATE_ACTIVE);
         return true;
     }
-
 };
 
 class mob_shadow_demon : public CreatureScript
@@ -2156,7 +2150,6 @@ public:
                 DoCast(me->getVictim(), SPELL_CONSUME_SOUL);
         }
     };
-
 };
 
 class mob_blade_of_azzinoth : public CreatureScript
@@ -2179,7 +2172,6 @@ public:
                 me->SetDisplayId(21431);//appear when hit by Illidan's glaive
         }
     };
-
 };
 
 class mob_parasitic_shadowfiend : public CreatureScript
@@ -2261,7 +2253,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 void AddSC_boss_illidan()

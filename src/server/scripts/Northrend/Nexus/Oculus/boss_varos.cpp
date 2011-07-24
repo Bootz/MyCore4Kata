@@ -108,9 +108,7 @@ public:
             DoScriptText(RAND(SAY_KILL_1,SAY_KILL_2), me);
         }
     };
-
 };
-
 
 void AddSC_boss_varos()
 {

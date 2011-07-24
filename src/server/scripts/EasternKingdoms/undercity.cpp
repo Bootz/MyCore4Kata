@@ -139,9 +139,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 /*######
 ## npc_highborne_lamenter
@@ -198,7 +196,6 @@ public:
             }
         }
     };
-
 };
 
 /*######
@@ -249,9 +246,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## AddSC

@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -63,7 +63,7 @@ enum SelectEffect
 
 enum SCEquip
 {
-    EQUIP_NO_CHANGE = -1, 
+    EQUIP_NO_CHANGE = -1,
     EQUIP_UNEQUIP   = 0
 };
 
@@ -184,11 +184,11 @@ class CreatureAI : public UnitAI
 
 enum Permitions
 {
-    PERMIT_BASE_NO                 = -1, 
-    PERMIT_BASE_IDLE               = 1, 
-    PERMIT_BASE_REACTIVE           = 100, 
-    PERMIT_BASE_PROACTIVE          = 200, 
-    PERMIT_BASE_FACTION_SPECIFIC   = 400, 
+    PERMIT_BASE_NO                 = -1,
+    PERMIT_BASE_IDLE               = 1,
+    PERMIT_BASE_REACTIVE           = 100,
+    PERMIT_BASE_PROACTIVE          = 200,
+    PERMIT_BASE_FACTION_SPECIFIC   = 400,
     PERMIT_BASE_SPECIAL            = 800
 };
 

@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -27,125 +27,125 @@
 
 enum BG_TP_TimerOrScore
 {
-    BG_TP_MAX_TEAM_SCORE    = 3, 
-    BG_TP_FLAG_RESPAWN_TIME = 23000, 
-    BG_TP_FLAG_DROP_TIME    = 10000, 
-    BG_TP_SPELL_FORCE_TIME  = 600000, 
+    BG_TP_MAX_TEAM_SCORE    = 3,
+    BG_TP_FLAG_RESPAWN_TIME = 23000,
+    BG_TP_FLAG_DROP_TIME    = 10000,
+    BG_TP_SPELL_FORCE_TIME  = 600000,
     BG_TP_SPELL_BRUTAL_TIME = 900000
 };
 
 enum BG_TP_Sound
 {
-    BG_TP_SOUND_FLAG_CAPTURED_ALLIANCE  = 8173, 
-    BG_TP_SOUND_FLAG_CAPTURED_HORDE     = 8213, 
-    BG_TP_SOUND_FLAG_PLACED             = 8232, 
-    BG_TP_SOUND_FLAG_RETURNED           = 8192, 
-    BG_TP_SOUND_HORDE_FLAG_PICKED_UP    = 8212, 
-    BG_TP_SOUND_ALLIANCE_FLAG_PICKED_UP = 8174, 
+    BG_TP_SOUND_FLAG_CAPTURED_ALLIANCE  = 8173,
+    BG_TP_SOUND_FLAG_CAPTURED_HORDE     = 8213,
+    BG_TP_SOUND_FLAG_PLACED             = 8232,
+    BG_TP_SOUND_FLAG_RETURNED           = 8192,
+    BG_TP_SOUND_HORDE_FLAG_PICKED_UP    = 8212,
+    BG_TP_SOUND_ALLIANCE_FLAG_PICKED_UP = 8174,
     BG_TP_SOUND_FLAGS_RESPAWNED         = 8232
 };
 
 enum BG_TP_SpellId
 {
-    BG_TP_SPELL_HORDE_FLAG            = 23333, 
-    BG_TP_SPELL_HORDE_FLAG_DROPPED    = 23334, 
+    BG_TP_SPELL_HORDE_FLAG            = 23333,
+    BG_TP_SPELL_HORDE_FLAG_DROPPED    = 23334,
     BG_TP_SPELL_HORDE_FLAG_PICKED     = 61266,    // fake spell, does not exist but used as timer start event
-    BG_TP_SPELL_ALLIANCE_FLAG         = 23335, 
-    BG_TP_SPELL_ALLIANCE_FLAG_DROPPED = 23336, 
+    BG_TP_SPELL_ALLIANCE_FLAG         = 23335,
+    BG_TP_SPELL_ALLIANCE_FLAG_DROPPED = 23336,
     BG_TP_SPELL_ALLIANCE_FLAG_PICKED  = 61265,    // fake spell, does not exist but used as timer start event
-    BG_TP_SPELL_FOCUSED_ASSAULT         = 46392, 
+    BG_TP_SPELL_FOCUSED_ASSAULT         = 46392,
     BG_TP_SPELL_BRUTAL_ASSAULT          = 46393
 };
 
 enum BG_TP_WorldStates
 {
-    BG_TP_FLAG_UNK_ALLIANCE       = 1545, 
-    BG_TP_FLAG_UNK_HORDE          = 1546, 
-    BG_TP_FLAG_CAPTURES_ALLIANCE  = 1581, 
-    BG_TP_FLAG_CAPTURES_HORDE     = 1582, 
-    BG_TP_FLAG_CAPTURES_MAX       = 1601, 
-    BG_TP_FLAG_STATE_HORDE        = 2338, 
-    BG_TP_FLAG_STATE_ALLIANCE     = 2339, 
-    BG_TP_STATE_TIMER             = 4248, 
+    BG_TP_FLAG_UNK_ALLIANCE       = 1545,
+    BG_TP_FLAG_UNK_HORDE          = 1546,
+    BG_TP_FLAG_CAPTURES_ALLIANCE  = 1581,
+    BG_TP_FLAG_CAPTURES_HORDE     = 1582,
+    BG_TP_FLAG_CAPTURES_MAX       = 1601,
+    BG_TP_FLAG_STATE_HORDE        = 2338,
+    BG_TP_FLAG_STATE_ALLIANCE     = 2339,
+    BG_TP_STATE_TIMER             = 4248,
     BG_TP_STATE_TIMER_ACTIVE      = 4247
 };
 
 enum BG_TP_ObjectTypes
 {
-    BG_TP_OBJECT_DOOR_A_1       = 0, 
-    BG_TP_OBJECT_DOOR_A_2       = 1, 
-    BG_TP_OBJECT_DOOR_A_3       = 2, 
-    BG_TP_OBJECT_DOOR_A_4       = 3, 
-    BG_TP_OBJECT_DOOR_A_5       = 4, 
-    BG_TP_OBJECT_DOOR_A_6       = 5, 
-    BG_TP_OBJECT_DOOR_H_1       = 6, 
-    BG_TP_OBJECT_DOOR_H_2       = 7, 
-    BG_TP_OBJECT_DOOR_H_3       = 8, 
-    BG_TP_OBJECT_DOOR_H_4       = 9, 
-    BG_TP_OBJECT_A_FLAG         = 10, 
-    BG_TP_OBJECT_H_FLAG         = 11, 
-    BG_TP_OBJECT_SPEEDBUFF_1    = 12, 
-    BG_TP_OBJECT_SPEEDBUFF_2    = 13, 
-    BG_TP_OBJECT_REGENBUFF_1    = 14, 
-    BG_TP_OBJECT_REGENBUFF_2    = 15, 
-    BG_TP_OBJECT_BERSERKBUFF_1  = 16, 
-    BG_TP_OBJECT_BERSERKBUFF_2  = 17, 
+    BG_TP_OBJECT_DOOR_A_1       = 0,
+    BG_TP_OBJECT_DOOR_A_2       = 1,
+    BG_TP_OBJECT_DOOR_A_3       = 2,
+    BG_TP_OBJECT_DOOR_A_4       = 3,
+    BG_TP_OBJECT_DOOR_A_5       = 4,
+    BG_TP_OBJECT_DOOR_A_6       = 5,
+    BG_TP_OBJECT_DOOR_H_1       = 6,
+    BG_TP_OBJECT_DOOR_H_2       = 7,
+    BG_TP_OBJECT_DOOR_H_3       = 8,
+    BG_TP_OBJECT_DOOR_H_4       = 9,
+    BG_TP_OBJECT_A_FLAG         = 10,
+    BG_TP_OBJECT_H_FLAG         = 11,
+    BG_TP_OBJECT_SPEEDBUFF_1    = 12,
+    BG_TP_OBJECT_SPEEDBUFF_2    = 13,
+    BG_TP_OBJECT_REGENBUFF_1    = 14,
+    BG_TP_OBJECT_REGENBUFF_2    = 15,
+    BG_TP_OBJECT_BERSERKBUFF_1  = 16,
+    BG_TP_OBJECT_BERSERKBUFF_2  = 17,
     BG_TP_OBJECT_MAX            = 18
 };
 
 enum BG_TP_ObjectEntry
 {
-    BG_OBJECT_DOOR_A_1_TP_ENTRY          = 179918, 
-    BG_OBJECT_DOOR_A_2_TP_ENTRY          = 179919, 
-    BG_OBJECT_DOOR_A_3_TP_ENTRY          = 179920, 
-    BG_OBJECT_DOOR_A_4_TP_ENTRY          = 179921, 
-    BG_OBJECT_DOOR_A_5_TP_ENTRY          = 180322, 
-    BG_OBJECT_DOOR_A_6_TP_ENTRY          = 180322, 
-    BG_OBJECT_DOOR_H_1_TP_ENTRY          = 179916, 
-    BG_OBJECT_DOOR_H_2_TP_ENTRY          = 179917, 
-    BG_OBJECT_DOOR_H_3_TP_ENTRY          = 180322, 
-    BG_OBJECT_DOOR_H_4_TP_ENTRY          = 180322, 
-    BG_OBJECT_A_FLAG_TP_ENTRY            = 179830, 
-    BG_OBJECT_H_FLAG_TP_ENTRY            = 179831, 
-    BG_OBJECT_A_FLAG_GROUND_TP_ENTRY     = 179785, 
+    BG_OBJECT_DOOR_A_1_TP_ENTRY          = 179918,
+    BG_OBJECT_DOOR_A_2_TP_ENTRY          = 179919,
+    BG_OBJECT_DOOR_A_3_TP_ENTRY          = 179920,
+    BG_OBJECT_DOOR_A_4_TP_ENTRY          = 179921,
+    BG_OBJECT_DOOR_A_5_TP_ENTRY          = 180322,
+    BG_OBJECT_DOOR_A_6_TP_ENTRY          = 180322,
+    BG_OBJECT_DOOR_H_1_TP_ENTRY          = 179916,
+    BG_OBJECT_DOOR_H_2_TP_ENTRY          = 179917,
+    BG_OBJECT_DOOR_H_3_TP_ENTRY          = 180322,
+    BG_OBJECT_DOOR_H_4_TP_ENTRY          = 180322,
+    BG_OBJECT_A_FLAG_TP_ENTRY            = 179830,
+    BG_OBJECT_H_FLAG_TP_ENTRY            = 179831,
+    BG_OBJECT_A_FLAG_GROUND_TP_ENTRY     = 179785,
     BG_OBJECT_H_FLAG_GROUND_TP_ENTRY     = 179786
 };
 
 enum BG_TP_FlagState
 {
-    BG_TP_FLAG_STATE_ON_BASE      = 0, 
-    BG_TP_FLAG_STATE_WAIT_RESPAWN = 1, 
-    BG_TP_FLAG_STATE_ON_PLAYER    = 2, 
+    BG_TP_FLAG_STATE_ON_BASE      = 0,
+    BG_TP_FLAG_STATE_WAIT_RESPAWN = 1,
+    BG_TP_FLAG_STATE_ON_PLAYER    = 2,
     BG_TP_FLAG_STATE_ON_GROUND    = 3
 };
 
 enum BG_TP_Graveyards
 {
-    TP_GRAVEYARD_FLAGROOM_ALLIANCE  = 1726, 
-    TP_GRAVEYARD_FLAGROOM_HORDE     = 1727, 
-    TP_GRAVEYARD_START_ALLIANCE     = 1729, 
-    TP_GRAVEYARD_START_HORDE        = 1728, 
-    TP_GRAVEYARD_MIDDLE_ALLIANCE    = 1749, 
+    TP_GRAVEYARD_FLAGROOM_ALLIANCE  = 1726,
+    TP_GRAVEYARD_FLAGROOM_HORDE     = 1727,
+    TP_GRAVEYARD_START_ALLIANCE     = 1729,
+    TP_GRAVEYARD_START_HORDE        = 1728,
+    TP_GRAVEYARD_MIDDLE_ALLIANCE    = 1749,
     TP_GRAVEYARD_MIDDLE_HORDE       = 1750
 };
 
 enum BG_TP_CreatureTypes
 {
-    TP_SPIRIT_ALLIANCE    = 0, 
-    TP_SPIRIT_HORDE       = 1, 
+    TP_SPIRIT_ALLIANCE    = 0,
+    TP_SPIRIT_HORDE       = 1,
 
     BG_CREATURES_MAX_TP   = 2
 };
 
 enum BG_TP_CarrierDebuffs
 {
-    TP_SPELL_FOCUSED_ASSAULT   = 46392, 
+    TP_SPELL_FOCUSED_ASSAULT   = 46392,
     TP_SPELL_BRUTAL_ASSAULT    = 46393
 };
 
 enum BG_TP_Objectives
 {
-    TP_OBJECTIVE_CAPTURE_FLAG   = 42, 
+    TP_OBJECTIVE_CAPTURE_FLAG   = 42,
     TP_OBJECTIVE_RETURN_FLAG    = 44
 };
 

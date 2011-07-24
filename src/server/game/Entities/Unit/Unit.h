@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -88,40 +88,40 @@ enum SpellAuraInterruptFlags
     AURA_INTERRUPT_FLAG_DIRECT_DAMAGE       = 0x01000000,   // 24   removed by any direct damage
     AURA_INTERRUPT_FLAG_LANDING             = 0x02000000,   // 25   removed by hitting the ground
 
-    AURA_INTERRUPT_FLAG_NOT_VICTIM = (AURA_INTERRUPT_FLAG_HITBYSPELL | AURA_INTERRUPT_FLAG_TAKE_DAMAGE | AURA_INTERRUPT_FLAG_DIRECT_DAMAGE), 
+    AURA_INTERRUPT_FLAG_NOT_VICTIM = (AURA_INTERRUPT_FLAG_HITBYSPELL | AURA_INTERRUPT_FLAG_TAKE_DAMAGE | AURA_INTERRUPT_FLAG_DIRECT_DAMAGE),
 };
 
 enum SpellModOp
 {
-    SPELLMOD_DAMAGE                 = 0, 
-    SPELLMOD_DURATION               = 1, 
-    SPELLMOD_THREAT                 = 2, 
-    SPELLMOD_EFFECT1                = 3, 
-    SPELLMOD_CHARGES                = 4, 
-    SPELLMOD_RANGE                  = 5, 
-    SPELLMOD_RADIUS                 = 6, 
-    SPELLMOD_CRITICAL_CHANCE        = 7, 
-    SPELLMOD_ALL_EFFECTS            = 8, 
-    SPELLMOD_NOT_LOSE_CASTING_TIME  = 9, 
-    SPELLMOD_CASTING_TIME           = 10, 
-    SPELLMOD_COOLDOWN               = 11, 
-    SPELLMOD_EFFECT2                = 12, 
-    SPELLMOD_IGNORE_ARMOR           = 13, 
-    SPELLMOD_COST                   = 14, 
-    SPELLMOD_CRIT_DAMAGE_BONUS      = 15, 
-    SPELLMOD_RESIST_MISS_CHANCE     = 16, 
-    SPELLMOD_JUMP_TARGETS           = 17, 
-    SPELLMOD_CHANCE_OF_SUCCESS      = 18, 
-    SPELLMOD_ACTIVATION_TIME        = 19, 
-    SPELLMOD_DAMAGE_MULTIPLIER      = 20, 
-    SPELLMOD_GLOBAL_COOLDOWN        = 21, 
-    SPELLMOD_DOT                    = 22, 
-    SPELLMOD_EFFECT3                = 23, 
-    SPELLMOD_BONUS_MULTIPLIER       = 24, 
+    SPELLMOD_DAMAGE                 = 0,
+    SPELLMOD_DURATION               = 1,
+    SPELLMOD_THREAT                 = 2,
+    SPELLMOD_EFFECT1                = 3,
+    SPELLMOD_CHARGES                = 4,
+    SPELLMOD_RANGE                  = 5,
+    SPELLMOD_RADIUS                 = 6,
+    SPELLMOD_CRITICAL_CHANCE        = 7,
+    SPELLMOD_ALL_EFFECTS            = 8,
+    SPELLMOD_NOT_LOSE_CASTING_TIME  = 9,
+    SPELLMOD_CASTING_TIME           = 10,
+    SPELLMOD_COOLDOWN               = 11,
+    SPELLMOD_EFFECT2                = 12,
+    SPELLMOD_IGNORE_ARMOR           = 13,
+    SPELLMOD_COST                   = 14,
+    SPELLMOD_CRIT_DAMAGE_BONUS      = 15,
+    SPELLMOD_RESIST_MISS_CHANCE     = 16,
+    SPELLMOD_JUMP_TARGETS           = 17,
+    SPELLMOD_CHANCE_OF_SUCCESS      = 18,
+    SPELLMOD_ACTIVATION_TIME        = 19,
+    SPELLMOD_DAMAGE_MULTIPLIER      = 20,
+    SPELLMOD_GLOBAL_COOLDOWN        = 21,
+    SPELLMOD_DOT                    = 22,
+    SPELLMOD_EFFECT3                = 23,
+    SPELLMOD_BONUS_MULTIPLIER       = 24,
     // spellmod 25
-    SPELLMOD_PROC_PER_MINUTE        = 26, 
-    SPELLMOD_VALUE_MULTIPLIER       = 27, 
-    SPELLMOD_RESIST_DISPEL_CHANCE   = 28, 
+    SPELLMOD_PROC_PER_MINUTE        = 26,
+    SPELLMOD_VALUE_MULTIPLIER       = 27,
+    SPELLMOD_RESIST_DISPEL_CHANCE   = 28,
     SPELLMOD_CRIT_DAMAGE_BONUS_2    = 29, //one not used spell
     SPELLMOD_SPELL_COST_REFUND_ON_FAIL = 30
 };
@@ -130,11 +130,11 @@ enum SpellModOp
 
 enum SpellValueMod
 {
-    SPELLVALUE_BASE_POINT0, 
-    SPELLVALUE_BASE_POINT1, 
-    SPELLVALUE_BASE_POINT2, 
-    SPELLVALUE_RADIUS_MOD, 
-    SPELLVALUE_MAX_TARGETS, 
+    SPELLVALUE_BASE_POINT0,
+    SPELLVALUE_BASE_POINT1,
+    SPELLVALUE_BASE_POINT2,
+    SPELLVALUE_RADIUS_MOD,
+    SPELLVALUE_MAX_TARGETS,
 };
 
 typedef std::pair<SpellValueMod, int32>     CustomSpellValueMod;
@@ -159,71 +159,71 @@ enum SpellFacingFlags
 // byte value (UNIT_FIELD_BYTES_1, 0)
 enum UnitStandStateType
 {
-    UNIT_STAND_STATE_STAND             = 0, 
-    UNIT_STAND_STATE_SIT               = 1, 
-    UNIT_STAND_STATE_SIT_CHAIR         = 2, 
-    UNIT_STAND_STATE_SLEEP             = 3, 
-    UNIT_STAND_STATE_SIT_LOW_CHAIR     = 4, 
-    UNIT_STAND_STATE_SIT_MEDIUM_CHAIR  = 5, 
-    UNIT_STAND_STATE_SIT_HIGH_CHAIR    = 6, 
-    UNIT_STAND_STATE_DEAD              = 7, 
-    UNIT_STAND_STATE_KNEEL             = 8, 
+    UNIT_STAND_STATE_STAND             = 0,
+    UNIT_STAND_STATE_SIT               = 1,
+    UNIT_STAND_STATE_SIT_CHAIR         = 2,
+    UNIT_STAND_STATE_SLEEP             = 3,
+    UNIT_STAND_STATE_SIT_LOW_CHAIR     = 4,
+    UNIT_STAND_STATE_SIT_MEDIUM_CHAIR  = 5,
+    UNIT_STAND_STATE_SIT_HIGH_CHAIR    = 6,
+    UNIT_STAND_STATE_DEAD              = 7,
+    UNIT_STAND_STATE_KNEEL             = 8,
     UNIT_STAND_STATE_SUBMERGED         = 9
 };
 
 // byte flag value (UNIT_FIELD_BYTES_1, 2)
 enum UnitStandFlags
 {
-    UNIT_STAND_FLAGS_UNK1         = 0x01, 
-    UNIT_STAND_FLAGS_CREEP        = 0x02, 
-    UNIT_STAND_FLAGS_UNK3         = 0x04, 
-    UNIT_STAND_FLAGS_UNK4         = 0x08, 
-    UNIT_STAND_FLAGS_UNK5         = 0x10, 
+    UNIT_STAND_FLAGS_UNK1         = 0x01,
+    UNIT_STAND_FLAGS_CREEP        = 0x02,
+    UNIT_STAND_FLAGS_UNK3         = 0x04,
+    UNIT_STAND_FLAGS_UNK4         = 0x08,
+    UNIT_STAND_FLAGS_UNK5         = 0x10,
     UNIT_STAND_FLAGS_ALL          = 0xFF
 };
 
 // byte flags value (UNIT_FIELD_BYTES_1, 3)
 enum UnitBytes1_Flags
 {
-    UNIT_BYTE1_FLAG_ALWAYS_STAND = 0x01, 
-    UNIT_BYTE1_FLAG_UNK_2        = 0x02, 
-    UNIT_BYTE1_FLAG_UNTRACKABLE  = 0x04, 
+    UNIT_BYTE1_FLAG_ALWAYS_STAND = 0x01,
+    UNIT_BYTE1_FLAG_UNK_2        = 0x02,
+    UNIT_BYTE1_FLAG_UNTRACKABLE  = 0x04,
     UNIT_BYTE1_FLAG_ALL          = 0xFF
 };
 
 // high byte (3 from 0..3) of UNIT_FIELD_BYTES_2
 enum ShapeshiftForm
 {
-    FORM_NONE               = 0x00, 
-    FORM_CAT                = 0x01, 
-    FORM_TREE               = 0x02, 
-    FORM_TRAVEL             = 0x03, 
-    FORM_AQUA               = 0x04, 
-    FORM_BEAR               = 0x05, 
-    FORM_AMBIENT            = 0x06, 
-    FORM_GHOUL              = 0x07, 
-    FORM_DIREBEAR           = 0x08, 
-    FORM_STEVES_GHOUL       = 0x09, 
-    FORM_THARONJA_SKELETON  = 0x0A, 
-    FORM_TEST_OF_STRENGTH   = 0x0B, 
-    FORM_BLB_PLAYER         = 0x0C, 
-    FORM_SHADOW_DANCE       = 0x0D, 
-    FORM_CREATUREBEAR       = 0x0E, 
-    FORM_CREATURECAT        = 0x0F, 
-    FORM_GHOSTWOLF          = 0x10, 
-    FORM_BATTLESTANCE       = 0x11, 
-    FORM_DEFENSIVESTANCE    = 0x12, 
-    FORM_BERSERKERSTANCE    = 0x13, 
-    FORM_TEST               = 0x14, 
-    FORM_ZOMBIE             = 0x15, 
-    FORM_METAMORPHOSIS      = 0x16, 
-    FORM_UNDEAD             = 0x19, 
-    FORM_MASTER_ANGLER      = 0x1A, 
-    FORM_FLIGHT_EPIC        = 0x1B, 
-    FORM_SHADOW             = 0x1C, 
-    FORM_FLIGHT             = 0x1D, 
-    FORM_STEALTH            = 0x1E, 
-    FORM_MOONKIN            = 0x1F, 
+    FORM_NONE               = 0x00,
+    FORM_CAT                = 0x01,
+    FORM_TREE               = 0x02,
+    FORM_TRAVEL             = 0x03,
+    FORM_AQUA               = 0x04,
+    FORM_BEAR               = 0x05,
+    FORM_AMBIENT            = 0x06,
+    FORM_GHOUL              = 0x07,
+    FORM_DIREBEAR           = 0x08,
+    FORM_STEVES_GHOUL       = 0x09,
+    FORM_THARONJA_SKELETON  = 0x0A,
+    FORM_TEST_OF_STRENGTH   = 0x0B,
+    FORM_BLB_PLAYER         = 0x0C,
+    FORM_SHADOW_DANCE       = 0x0D,
+    FORM_CREATUREBEAR       = 0x0E,
+    FORM_CREATURECAT        = 0x0F,
+    FORM_GHOSTWOLF          = 0x10,
+    FORM_BATTLESTANCE       = 0x11,
+    FORM_DEFENSIVESTANCE    = 0x12,
+    FORM_BERSERKERSTANCE    = 0x13,
+    FORM_TEST               = 0x14,
+    FORM_ZOMBIE             = 0x15,
+    FORM_METAMORPHOSIS      = 0x16,
+    FORM_UNDEAD             = 0x19,
+    FORM_MASTER_ANGLER      = 0x1A,
+    FORM_FLIGHT_EPIC        = 0x1B,
+    FORM_SHADOW             = 0x1C,
+    FORM_FLIGHT             = 0x1D,
+    FORM_STEALTH            = 0x1E,
+    FORM_MOONKIN            = 0x1F,
     FORM_SPIRITOFREDEMPTION = 0x20
 };
 
@@ -240,21 +240,21 @@ enum SheathState
 // byte (1 from 0..3) of UNIT_FIELD_BYTES_2
 enum UnitPVPStateFlags
 {
-    UNIT_BYTE2_FLAG_PVP         = 0x01, 
-    UNIT_BYTE2_FLAG_UNK1        = 0x02, 
-    UNIT_BYTE2_FLAG_FFA_PVP     = 0x04, 
-    UNIT_BYTE2_FLAG_SANCTUARY   = 0x08, 
-    UNIT_BYTE2_FLAG_UNK4        = 0x10, 
-    UNIT_BYTE2_FLAG_UNK5        = 0x20, 
-    UNIT_BYTE2_FLAG_UNK6        = 0x40, 
+    UNIT_BYTE2_FLAG_PVP         = 0x01,
+    UNIT_BYTE2_FLAG_UNK1        = 0x02,
+    UNIT_BYTE2_FLAG_FFA_PVP     = 0x04,
+    UNIT_BYTE2_FLAG_SANCTUARY   = 0x08,
+    UNIT_BYTE2_FLAG_UNK4        = 0x10,
+    UNIT_BYTE2_FLAG_UNK5        = 0x20,
+    UNIT_BYTE2_FLAG_UNK6        = 0x40,
     UNIT_BYTE2_FLAG_UNK7        = 0x80
 };
 
 // byte (2 from 0..3) of UNIT_FIELD_BYTES_2
 enum UnitRename
 {
-    UNIT_CAN_BE_RENAMED     = 0x01, 
-    UNIT_CAN_BE_ABANDONED   = 0x02, 
+    UNIT_CAN_BE_RENAMED     = 0x01,
+    UNIT_CAN_BE_ABANDONED   = 0x02,
 };
 
 #define CREATURE_MAX_SPELLS     8
@@ -265,8 +265,8 @@ enum UnitRename
 
 enum Swing
 {
-    NOSWING                    = 0, 
-    SINGLEHANDEDSWING          = 1, 
+    NOSWING                    = 0,
+    SINGLEHANDEDSWING          = 1,
     TWOHANDEDSWING             = 2
 };
 
@@ -274,23 +274,23 @@ enum VictimState
 {
     VICTIMSTATE_INTACT         = 0, // set when attacker misses
     VICTIMSTATE_HIT            = 1, // victim got clear/blocked hit
-    VICTIMSTATE_DODGE          = 2, 
-    VICTIMSTATE_PARRY          = 3, 
-    VICTIMSTATE_INTERRUPT      = 4, 
+    VICTIMSTATE_DODGE          = 2,
+    VICTIMSTATE_PARRY          = 3,
+    VICTIMSTATE_INTERRUPT      = 4,
     VICTIMSTATE_BLOCKS         = 5, // unused? not set when blocked, even on full block
-    VICTIMSTATE_EVADES         = 6, 
-    VICTIMSTATE_IS_IMMUNE      = 7, 
+    VICTIMSTATE_EVADES         = 6,
+    VICTIMSTATE_IS_IMMUNE      = 7,
     VICTIMSTATE_DEFLECTS       = 8
 };
 
 enum HitInfo
 {
-    HITINFO_NORMALSWING         = 0x00000000, 
+    HITINFO_NORMALSWING         = 0x00000000,
     HITINFO_UNK1                = 0x00000001,               // req correct packet structure
-    HITINFO_NORMALSWING2        = 0x00000002, 
-    HITINFO_LEFTSWING           = 0x00000004, 
-    HITINFO_UNK2                = 0x00000008, 
-    HITINFO_MISS                = 0x00000010, 
+    HITINFO_NORMALSWING2        = 0x00000002,
+    HITINFO_LEFTSWING           = 0x00000004,
+    HITINFO_UNK2                = 0x00000008,
+    HITINFO_MISS                = 0x00000010,
     HITINFO_ABSORB              = 0x00000020,               // absorbed damage
     HITINFO_ABSORB2             = 0x00000040,               // absorbed damage
     HITINFO_RESIST              = 0x00000080,               // resisted atleast some damage
@@ -302,8 +302,8 @@ enum HitInfo
     HITINFO_BLOCK               = 0x00002000,               // blocked damage
     // 0x00004000
     // 0x00008000
-    HITINFO_GLANCING            = 0x00010000, 
-    HITINFO_CRUSHING            = 0x00020000, 
+    HITINFO_GLANCING            = 0x00010000,
+    HITINFO_CRUSHING            = 0x00020000,
     HITINFO_NOACTION            = 0x00040000,               // guessed
     // 0x00080000
     // 0x00100000
@@ -315,7 +315,7 @@ enum HitInfo
 //i would like to remove this: (it is defined in item.h
 enum InventorySlot
 {
-    NULL_BAG                   = 0, 
+    NULL_BAG                   = 0,
     NULL_SLOT                  = 255
 };
 
@@ -351,32 +351,32 @@ typedef std::list<SpellImmune> SpellImmuneList;
 
 enum UnitModifierType
 {
-    BASE_VALUE = 0, 
-    BASE_PCT = 1, 
-    TOTAL_VALUE = 2, 
-    TOTAL_PCT = 3, 
+    BASE_VALUE = 0,
+    BASE_PCT = 1,
+    TOTAL_VALUE = 2,
+    TOTAL_PCT = 3,
     MODIFIER_TYPE_END = 4
 };
 
 enum WeaponDamageRange
 {
-    MINDAMAGE, 
+    MINDAMAGE,
     MAXDAMAGE
 };
 
 enum DamageTypeToSchool
 {
-    RESISTANCE, 
-    DAMAGE_DEALT, 
+    RESISTANCE,
+    DAMAGE_DEALT,
     DAMAGE_TAKEN
 };
 
 enum AuraRemoveMode
 {
-    AURA_REMOVE_NONE = 0, 
+    AURA_REMOVE_NONE = 0,
     AURA_REMOVE_BY_DEFAULT = 1,       // scripted remove, remove by stack with aura with different ids and sc aura remove
     AURA_REMOVE_BY_STACK,             // replace by aura with same id
-    AURA_REMOVE_BY_CANCEL, 
+    AURA_REMOVE_BY_CANCEL,
     AURA_REMOVE_BY_ENEMY_SPELL,       // dispel and absorb aura destroy
     AURA_REMOVE_BY_EXPIRE,            // aura duration has ended
     AURA_REMOVE_BY_DEATH
@@ -385,54 +385,54 @@ enum AuraRemoveMode
 enum UnitMods
 {
     UNIT_MOD_STAT_STRENGTH,                                 // UNIT_MOD_STAT_STRENGTH..UNIT_MOD_STAT_SPIRIT must be in existed order, it's accessed by index values of Stats enum.
-    UNIT_MOD_STAT_AGILITY, 
-    UNIT_MOD_STAT_STAMINA, 
-    UNIT_MOD_STAT_INTELLECT, 
-    UNIT_MOD_STAT_SPIRIT, 
-    UNIT_MOD_HEALTH, 
+    UNIT_MOD_STAT_AGILITY,
+    UNIT_MOD_STAT_STAMINA,
+    UNIT_MOD_STAT_INTELLECT,
+    UNIT_MOD_STAT_SPIRIT,
+    UNIT_MOD_HEALTH,
     UNIT_MOD_MANA,                                          // UNIT_MOD_MANA..UNIT_MOD_RUNIC_POWER must be in existed order, it's accessed by index values of Powers enum.
-    UNIT_MOD_RAGE, 
-    UNIT_MOD_FOCUS, 
-    UNIT_MOD_ENERGY, 
-    UNIT_MOD_HAPPINESS, 
-    UNIT_MOD_RUNE, 
-    UNIT_MOD_RUNIC_POWER, 
+    UNIT_MOD_RAGE,
+    UNIT_MOD_FOCUS,
+    UNIT_MOD_ENERGY,
+    UNIT_MOD_HAPPINESS,
+    UNIT_MOD_RUNE,
+    UNIT_MOD_RUNIC_POWER,
     UNIT_MOD_ARMOR,                                         // UNIT_MOD_ARMOR..UNIT_MOD_RESISTANCE_ARCANE must be in existed order, it's accessed by index values of SpellSchools enum.
-    UNIT_MOD_RESISTANCE_HOLY, 
-    UNIT_MOD_RESISTANCE_FIRE, 
-    UNIT_MOD_RESISTANCE_NATURE, 
-    UNIT_MOD_RESISTANCE_FROST, 
-    UNIT_MOD_RESISTANCE_SHADOW, 
-    UNIT_MOD_RESISTANCE_ARCANE, 
-    UNIT_MOD_ATTACK_POWER_POS, 
-    UNIT_MOD_ATTACK_POWER_NEG, 
-    UNIT_MOD_ATTACK_POWER_RANGED_POS, 
-    UNIT_MOD_ATTACK_POWER_RANGED_NEG, 
-    UNIT_MOD_DAMAGE_MAINHAND, 
-    UNIT_MOD_DAMAGE_OFFHAND, 
-    UNIT_MOD_DAMAGE_RANGED, 
-    UNIT_MOD_END, 
+    UNIT_MOD_RESISTANCE_HOLY,
+    UNIT_MOD_RESISTANCE_FIRE,
+    UNIT_MOD_RESISTANCE_NATURE,
+    UNIT_MOD_RESISTANCE_FROST,
+    UNIT_MOD_RESISTANCE_SHADOW,
+    UNIT_MOD_RESISTANCE_ARCANE,
+    UNIT_MOD_ATTACK_POWER_POS,
+    UNIT_MOD_ATTACK_POWER_NEG,
+    UNIT_MOD_ATTACK_POWER_RANGED_POS,
+    UNIT_MOD_ATTACK_POWER_RANGED_NEG,
+    UNIT_MOD_DAMAGE_MAINHAND,
+    UNIT_MOD_DAMAGE_OFFHAND,
+    UNIT_MOD_DAMAGE_RANGED,
+    UNIT_MOD_END,
     // synonyms
-    UNIT_MOD_STAT_START = UNIT_MOD_STAT_STRENGTH, 
-    UNIT_MOD_STAT_END = UNIT_MOD_STAT_SPIRIT + 1, 
-    UNIT_MOD_RESISTANCE_START = UNIT_MOD_ARMOR, 
-    UNIT_MOD_RESISTANCE_END = UNIT_MOD_RESISTANCE_ARCANE + 1, 
-    UNIT_MOD_POWER_START = UNIT_MOD_MANA, 
+    UNIT_MOD_STAT_START = UNIT_MOD_STAT_STRENGTH,
+    UNIT_MOD_STAT_END = UNIT_MOD_STAT_SPIRIT + 1,
+    UNIT_MOD_RESISTANCE_START = UNIT_MOD_ARMOR,
+    UNIT_MOD_RESISTANCE_END = UNIT_MOD_RESISTANCE_ARCANE + 1,
+    UNIT_MOD_POWER_START = UNIT_MOD_MANA,
     UNIT_MOD_POWER_END = UNIT_MOD_RUNIC_POWER + 1
 };
 
 enum BaseModGroup
 {
-    CRIT_PERCENTAGE, 
-    RANGED_CRIT_PERCENTAGE, 
-    OFFHAND_CRIT_PERCENTAGE, 
-    SHIELD_BLOCK_VALUE, 
+    CRIT_PERCENTAGE,
+    RANGED_CRIT_PERCENTAGE,
+    OFFHAND_CRIT_PERCENTAGE,
+    SHIELD_BLOCK_VALUE,
     BASEMOD_END
 };
 
 enum BaseModType
 {
-    FLAT_MOD, 
+    FLAT_MOD,
     PCT_MOD
 };
 
@@ -440,59 +440,59 @@ enum BaseModType
 
 enum DeathState
 {
-    ALIVE       = 0, 
-    JUST_DIED   = 1, 
-    CORPSE      = 2, 
-    DEAD        = 3, 
-    JUST_ALIVED = 4, 
+    ALIVE       = 0,
+    JUST_DIED   = 1,
+    CORPSE      = 2,
+    DEAD        = 3,
+    JUST_ALIVED = 4,
     DEAD_FALLING= 5
 };
 
 enum UnitState
 {
-    UNIT_STAT_DIED            = 0x00000001, 
+    UNIT_STAT_DIED            = 0x00000001,
     UNIT_STAT_MELEE_ATTACKING = 0x00000002,                     // player is melee attacking someone
     //UNIT_STAT_MELEE_ATTACK_BY = 0x00000004,                     // player is melee attack by someone
-    UNIT_STAT_STUNNED         = 0x00000008, 
-    UNIT_STAT_ROAMING         = 0x00000010, 
-    UNIT_STAT_CHASE           = 0x00000020, 
-    //UNIT_STAT_SEARCHING       = 0x00000040, 
-    UNIT_STAT_FLEEING         = 0x00000080, 
+    UNIT_STAT_STUNNED         = 0x00000008,
+    UNIT_STAT_ROAMING         = 0x00000010,
+    UNIT_STAT_CHASE           = 0x00000020,
+    //UNIT_STAT_SEARCHING       = 0x00000040,
+    UNIT_STAT_FLEEING         = 0x00000080,
     UNIT_STAT_IN_FLIGHT       = 0x00000100,                     // player is in flight mode
-    UNIT_STAT_FOLLOW          = 0x00000200, 
-    UNIT_STAT_ROOT            = 0x00000400, 
-    UNIT_STAT_CONFUSED        = 0x00000800, 
-    UNIT_STAT_DISTRACTED      = 0x00001000, 
+    UNIT_STAT_FOLLOW          = 0x00000200,
+    UNIT_STAT_ROOT            = 0x00000400,
+    UNIT_STAT_CONFUSED        = 0x00000800,
+    UNIT_STAT_DISTRACTED      = 0x00001000,
     UNIT_STAT_ISOLATED        = 0x00002000,                     // area auras do not affect other players
-    UNIT_STAT_ATTACK_PLAYER   = 0x00004000, 
-    UNIT_STAT_CASTING         = 0x00008000, 
-    UNIT_STAT_POSSESSED       = 0x00010000, 
-    UNIT_STAT_CHARGING        = 0x00020000, 
-    UNIT_STAT_JUMPING         = 0x00040000, 
-    UNIT_STAT_ONVEHICLE       = 0x00080000, 
-    UNIT_STAT_MOVE            = 0x00100000, 
-    UNIT_STAT_ROTATING        = 0x00200000, 
-    UNIT_STAT_EVADE           = 0x00400000, 
-    UNIT_STAT_UNATTACKABLE    = (UNIT_STAT_IN_FLIGHT | UNIT_STAT_ONVEHICLE), 
-    UNIT_STAT_MOVING          = (UNIT_STAT_ROAMING | UNIT_STAT_CHASE), 
-    UNIT_STAT_CONTROLLED      = (UNIT_STAT_CONFUSED | UNIT_STAT_STUNNED | UNIT_STAT_FLEEING), 
-    UNIT_STAT_LOST_CONTROL    = (UNIT_STAT_CONTROLLED | UNIT_STAT_JUMPING | UNIT_STAT_CHARGING), 
-    UNIT_STAT_SIGHTLESS       = (UNIT_STAT_LOST_CONTROL | UNIT_STAT_EVADE), 
-    UNIT_STAT_CANNOT_AUTOATTACK     = (UNIT_STAT_LOST_CONTROL | UNIT_STAT_CASTING), 
-    UNIT_STAT_CANNOT_TURN     = (UNIT_STAT_LOST_CONTROL | UNIT_STAT_ROTATING), 
+    UNIT_STAT_ATTACK_PLAYER   = 0x00004000,
+    UNIT_STAT_CASTING         = 0x00008000,
+    UNIT_STAT_POSSESSED       = 0x00010000,
+    UNIT_STAT_CHARGING        = 0x00020000,
+    UNIT_STAT_JUMPING         = 0x00040000,
+    UNIT_STAT_ONVEHICLE       = 0x00080000,
+    UNIT_STAT_MOVE            = 0x00100000,
+    UNIT_STAT_ROTATING        = 0x00200000,
+    UNIT_STAT_EVADE           = 0x00400000,
+    UNIT_STAT_UNATTACKABLE    = (UNIT_STAT_IN_FLIGHT | UNIT_STAT_ONVEHICLE),
+    UNIT_STAT_MOVING          = (UNIT_STAT_ROAMING | UNIT_STAT_CHASE),
+    UNIT_STAT_CONTROLLED      = (UNIT_STAT_CONFUSED | UNIT_STAT_STUNNED | UNIT_STAT_FLEEING),
+    UNIT_STAT_LOST_CONTROL    = (UNIT_STAT_CONTROLLED | UNIT_STAT_JUMPING | UNIT_STAT_CHARGING),
+    UNIT_STAT_SIGHTLESS       = (UNIT_STAT_LOST_CONTROL | UNIT_STAT_EVADE),
+    UNIT_STAT_CANNOT_AUTOATTACK     = (UNIT_STAT_LOST_CONTROL | UNIT_STAT_CASTING),
+    UNIT_STAT_CANNOT_TURN     = (UNIT_STAT_LOST_CONTROL | UNIT_STAT_ROTATING),
     UNIT_STAT_ALL_STATE       = 0xffffffff                      //(UNIT_STAT_STOPPED | UNIT_STAT_MOVING | UNIT_STAT_IN_COMBAT | UNIT_STAT_IN_FLIGHT)
 };
 
 enum UnitMoveType
 {
-    MOVE_WALK           = 0, 
-    MOVE_RUN            = 1, 
-    MOVE_RUN_BACK       = 2, 
-    MOVE_SWIM           = 3, 
-    MOVE_SWIM_BACK      = 4, 
-    MOVE_TURN_RATE      = 5, 
-    MOVE_FLIGHT         = 6, 
-    MOVE_FLIGHT_BACK    = 7, 
+    MOVE_WALK           = 0,
+    MOVE_RUN            = 1,
+    MOVE_RUN_BACK       = 2,
+    MOVE_SWIM           = 3,
+    MOVE_SWIM_BACK      = 4,
+    MOVE_TURN_RATE      = 5,
+    MOVE_FLIGHT         = 6,
+    MOVE_FLIGHT_BACK    = 7,
     MOVE_PITCH_RATE     = 8
 };
 
@@ -503,39 +503,39 @@ extern float playerBaseMoveSpeed[MAX_MOVE_TYPE];
 
 enum WeaponAttackType
 {
-    BASE_ATTACK   = 0, 
-    OFF_ATTACK    = 1, 
-    RANGED_ATTACK = 2, 
+    BASE_ATTACK   = 0,
+    OFF_ATTACK    = 1,
+    RANGED_ATTACK = 2,
     MAX_ATTACK
 };
 
 enum CombatRating
 {
-    CR_WEAPON_SKILL             = 0, 
-    CR_DEFENSE_SKILL            = 1, 
-    CR_DODGE                    = 2, 
-    CR_PARRY                    = 3, 
-    CR_BLOCK                    = 4, 
-    CR_HIT_MELEE                = 5, 
-    CR_HIT_RANGED               = 6, 
-    CR_HIT_SPELL                = 7, 
-    CR_CRIT_MELEE               = 8, 
-    CR_CRIT_RANGED              = 9, 
-    CR_CRIT_SPELL               = 10, 
-    CR_HIT_TAKEN_MELEE          = 11, 
-    CR_HIT_TAKEN_RANGED         = 12, 
-    CR_HIT_TAKEN_SPELL          = 13, 
-    CR_RESILIENCE_CRIT_TAKEN    = 14, 
-    CR_RESILIENCE_PLAYER_DAMAGE_TAKEN = 15, 
-    CR_CRIT_TAKEN_SPELL         = 16, 
-    CR_HASTE_MELEE              = 17, 
-    CR_HASTE_RANGED             = 18, 
-    CR_HASTE_SPELL              = 19, 
-    CR_WEAPON_SKILL_MAINHAND    = 20, 
-    CR_WEAPON_SKILL_OFFHAND     = 21, 
-    CR_WEAPON_SKILL_RANGED      = 22, 
-    CR_EXPERTISE                = 23, 
-    CR_ARMOR_PENETRATION        = 24, 
+    CR_WEAPON_SKILL             = 0,
+    CR_DEFENSE_SKILL            = 1,
+    CR_DODGE                    = 2,
+    CR_PARRY                    = 3,
+    CR_BLOCK                    = 4,
+    CR_HIT_MELEE                = 5,
+    CR_HIT_RANGED               = 6,
+    CR_HIT_SPELL                = 7,
+    CR_CRIT_MELEE               = 8,
+    CR_CRIT_RANGED              = 9,
+    CR_CRIT_SPELL               = 10,
+    CR_HIT_TAKEN_MELEE          = 11,
+    CR_HIT_TAKEN_RANGED         = 12,
+    CR_HIT_TAKEN_SPELL          = 13,
+    CR_RESILIENCE_CRIT_TAKEN    = 14,
+    CR_RESILIENCE_PLAYER_DAMAGE_TAKEN = 15,
+    CR_CRIT_TAKEN_SPELL         = 16,
+    CR_HASTE_MELEE              = 17,
+    CR_HASTE_RANGED             = 18,
+    CR_HASTE_SPELL              = 19,
+    CR_WEAPON_SKILL_MAINHAND    = 20,
+    CR_WEAPON_SKILL_OFFHAND     = 21,
+    CR_WEAPON_SKILL_RANGED      = 22,
+    CR_EXPERTISE                = 23,
+    CR_ARMOR_PENETRATION        = 24,
     CR_MASTERY                  = 25
 };
 
@@ -545,8 +545,8 @@ enum DamageEffectType
 {
     DIRECT_DAMAGE           = 0,                            // used for normal weapon damage (not for class abilities or spells)
     SPELL_DIRECT_DAMAGE     = 1,                            // spell/class abilities damage
-    DOT                     = 2, 
-    HEAL                    = 3, 
+    DOT                     = 2,
+    HEAL                    = 3,
     NODAMAGE                = 4,                            // used also in case when damage applied to health but not applied to spell channelInterruptFlags/etc
     SELF_DAMAGE             = 5
 };
@@ -554,13 +554,13 @@ enum DamageEffectType
 // Value masks for UNIT_FIELD_FLAGS
 enum UnitFlags
 {
-    UNIT_FLAG_UNK_0                 = 0x00000001, 
+    UNIT_FLAG_UNK_0                 = 0x00000001,
     UNIT_FLAG_NON_ATTACKABLE        = 0x00000002,           // not attackable
-    UNIT_FLAG_DISABLE_MOVE          = 0x00000004, 
+    UNIT_FLAG_DISABLE_MOVE          = 0x00000004,
     UNIT_FLAG_PVP_ATTACKABLE        = 0x00000008,           // allow apply pvp rules to attackable state in addition to faction dependent state
-    UNIT_FLAG_RENAME                = 0x00000010, 
+    UNIT_FLAG_RENAME                = 0x00000010,
     UNIT_FLAG_PREPARATION           = 0x00000020,           // don't take reagents for spells with SPELL_ATTR5_NO_REAGENT_WHILE_PREP
-    UNIT_FLAG_UNK_6                 = 0x00000040, 
+    UNIT_FLAG_UNK_6                 = 0x00000040,
     UNIT_FLAG_NOT_ATTACKABLE_1      = 0x00000080,           // ?? (UNIT_FLAG_PVP_ATTACKABLE | UNIT_FLAG_NOT_ATTACKABLE_1) is NON_PVP_ATTACKABLE
     UNIT_FLAG_OOC_NOT_ATTACKABLE    = 0x00000100,           // 2.0.8 - (OOC Out Of Combat) Can not be attacked when not in combat. Removed if unit for some reason enter combat.
     UNIT_FLAG_PASSIVE               = 0x00000200,           // makes you unable to attack everything. Almost identical to our "civilian"-term. Will ignore it's surroundings and not engage in combat unless "called upon" or engaged by another unit.
@@ -569,36 +569,36 @@ enum UnitFlags
     UNIT_FLAG_PVP                   = 0x00001000,           // changed in 3.0.3
     UNIT_FLAG_SILENCED              = 0x00002000,           // silenced, 2.1.1
     UNIT_FLAG_UNK_14                = 0x00004000,           // 2.0.8
-    UNIT_FLAG_UNK_15                = 0x00008000, 
-    UNIT_FLAG_UNK_16                = 0x00010000, 
+    UNIT_FLAG_UNK_15                = 0x00008000,
+    UNIT_FLAG_UNK_16                = 0x00010000,
     UNIT_FLAG_PACIFIED              = 0x00020000,           // 3.0.3 ok
     UNIT_FLAG_STUNNED               = 0x00040000,           // 3.0.3 ok
-    UNIT_FLAG_IN_COMBAT             = 0x00080000, 
+    UNIT_FLAG_IN_COMBAT             = 0x00080000,
     UNIT_FLAG_TAXI_FLIGHT           = 0x00100000,           // disable casting at client side spell not allowed by taxi flight (mounted?), probably used with 0x4 flag
     UNIT_FLAG_DISARMED              = 0x00200000,           // 3.0.3, disable melee spells casting..., "Required melee weapon" added to melee spells tooltip.
-    UNIT_FLAG_CONFUSED              = 0x00400000, 
-    UNIT_FLAG_FLEEING               = 0x00800000, 
+    UNIT_FLAG_CONFUSED              = 0x00400000,
+    UNIT_FLAG_FLEEING               = 0x00800000,
     UNIT_FLAG_PLAYER_CONTROLLED     = 0x01000000,           // used in spell Eyes of the Beast for pet... let attack by controlled creature
-    UNIT_FLAG_NOT_SELECTABLE        = 0x02000000, 
-    UNIT_FLAG_SKINNABLE             = 0x04000000, 
-    UNIT_FLAG_MOUNT                 = 0x08000000, 
-    UNIT_FLAG_UNK_28                = 0x10000000, 
+    UNIT_FLAG_NOT_SELECTABLE        = 0x02000000,
+    UNIT_FLAG_SKINNABLE             = 0x04000000,
+    UNIT_FLAG_MOUNT                 = 0x08000000,
+    UNIT_FLAG_UNK_28                = 0x10000000,
     UNIT_FLAG_UNK_29                = 0x20000000,           // used in Feing Death spell
-    UNIT_FLAG_SHEATHE               = 0x40000000, 
+    UNIT_FLAG_SHEATHE               = 0x40000000,
     UNIT_FLAG_UNK_31                = 0x80000000
 };
 
 // Value masks for UNIT_FIELD_FLAGS_2
 enum UnitFlags2
 {
-    UNIT_FLAG2_FEIGN_DEATH          = 0x00000001, 
+    UNIT_FLAG2_FEIGN_DEATH          = 0x00000001,
     UNIT_FLAG2_UNK1                 = 0x00000002,               // Hide unit model (show only player equip)
-    UNIT_FLAG2_COMPREHEND_LANG      = 0x00000008, 
-    UNIT_FLAG2_MIRROR_IMAGE         = 0x00000010, 
-    UNIT_FLAG2_FORCE_MOVE           = 0x00000040, 
-    UNIT_FLAG2_DISARM_OFFHAND       = 0x00000080, 
+    UNIT_FLAG2_COMPREHEND_LANG      = 0x00000008,
+    UNIT_FLAG2_MIRROR_IMAGE         = 0x00000010,
+    UNIT_FLAG2_FORCE_MOVE           = 0x00000040,
+    UNIT_FLAG2_DISARM_OFFHAND       = 0x00000080,
     UNIT_FLAG2_DISARM_RANGED        = 0x00000400,               //this does not disable ranged weapon display (maybe additional flag needed?)
-    UNIT_FLAG2_REGENERATE_POWER     = 0x00000800, 
+    UNIT_FLAG2_REGENERATE_POWER     = 0x00000800,
     UNIT_FLAG2_WORGEN_TRANSFORM     = 0x00080000,               // transform to worgen
     UNIT_FLAG2_WORGEN_TRANSFORM2    = 0x00100000,               // transform to worgen, less animation
     UNIT_FLAG2_WORGEN_TRANSFORM3    = 0x00200000                // transform to worgen, less animation(why twice?)
@@ -609,11 +609,11 @@ enum UnitFlags2
 /// Non Player Character flags
 enum NPCFlags
 {
-    UNIT_NPC_FLAG_NONE                  = 0x00000000, 
+    UNIT_NPC_FLAG_NONE                  = 0x00000000,
     UNIT_NPC_FLAG_GOSSIP                = 0x00000001,       // 100%
     UNIT_NPC_FLAG_QUESTGIVER            = 0x00000002,       // guessed, probably ok
-    UNIT_NPC_FLAG_UNK1                  = 0x00000004, 
-    UNIT_NPC_FLAG_UNK2                  = 0x00000008, 
+    UNIT_NPC_FLAG_UNK1                  = 0x00000004,
+    UNIT_NPC_FLAG_UNK2                  = 0x00000008,
     UNIT_NPC_FLAG_TRAINER               = 0x00000010,       // 100%
     UNIT_NPC_FLAG_TRAINER_CLASS         = 0x00000020,       // 100%
     UNIT_NPC_FLAG_TRAINER_PROFESSION    = 0x00000040,       // 100%
@@ -640,31 +640,31 @@ enum NPCFlags
 
 enum MovementFlags
 {
-    MOVEMENTFLAG_NONE                  = 0x00000000, 
-    MOVEMENTFLAG_FORWARD               = 0x00000001, 
-    MOVEMENTFLAG_BACKWARD              = 0x00000002, 
-    MOVEMENTFLAG_STRAFE_LEFT           = 0x00000004, 
-    MOVEMENTFLAG_STRAFE_RIGHT          = 0x00000008, 
-    MOVEMENTFLAG_LEFT                  = 0x00000010, 
-    MOVEMENTFLAG_RIGHT                 = 0x00000020, 
-    MOVEMENTFLAG_PITCH_UP              = 0x00000040, 
-    MOVEMENTFLAG_PITCH_DOWN            = 0x00000080, 
+    MOVEMENTFLAG_NONE                  = 0x00000000,
+    MOVEMENTFLAG_FORWARD               = 0x00000001,
+    MOVEMENTFLAG_BACKWARD              = 0x00000002,
+    MOVEMENTFLAG_STRAFE_LEFT           = 0x00000004,
+    MOVEMENTFLAG_STRAFE_RIGHT          = 0x00000008,
+    MOVEMENTFLAG_LEFT                  = 0x00000010,
+    MOVEMENTFLAG_RIGHT                 = 0x00000020,
+    MOVEMENTFLAG_PITCH_UP              = 0x00000040,
+    MOVEMENTFLAG_PITCH_DOWN            = 0x00000080,
     MOVEMENTFLAG_WALKING               = 0x00000100,               // Walking
     MOVEMENTFLAG_ONTRANSPORT           = 0x00000200,               // Used for flying on some creatures
-    MOVEMENTFLAG_LEVITATING            = 0x00000400, 
-    MOVEMENTFLAG_ROOT                  = 0x00000800, 
-    MOVEMENTFLAG_JUMPING               = 0x00001000, 
+    MOVEMENTFLAG_LEVITATING            = 0x00000400,
+    MOVEMENTFLAG_ROOT                  = 0x00000800,
+    MOVEMENTFLAG_JUMPING               = 0x00001000,
     MOVEMENTFLAG_FALLING               = 0x00002000,               // damage dealt on that type of falling
-    MOVEMENTFLAG_PENDING_STOP          = 0x00004000, 
-    MOVEMENTFLAG_PENDING_STRAFE_STOP   = 0x00008000, 
-    MOVEMENTFLAG_PENDING_FORWARD       = 0x00010000, 
-    MOVEMENTFLAG_PENDING_BACKWARD      = 0x00020000, 
-    MOVEMENTFLAG_PENDING_STRAFE_LEFT   = 0x00040000, 
-    MOVEMENTFLAG_PENDING_STRAFE_RIGHT  = 0x00080000, 
-    MOVEMENTFLAG_PENDING_ROOT          = 0x00100000, 
+    MOVEMENTFLAG_PENDING_STOP          = 0x00004000,
+    MOVEMENTFLAG_PENDING_STRAFE_STOP   = 0x00008000,
+    MOVEMENTFLAG_PENDING_FORWARD       = 0x00010000,
+    MOVEMENTFLAG_PENDING_BACKWARD      = 0x00020000,
+    MOVEMENTFLAG_PENDING_STRAFE_LEFT   = 0x00040000,
+    MOVEMENTFLAG_PENDING_STRAFE_RIGHT  = 0x00080000,
+    MOVEMENTFLAG_PENDING_ROOT          = 0x00100000,
     MOVEMENTFLAG_SWIMMING              = 0x00200000,               // appears with fly flag also
     MOVEMENTFLAG_ASCENDING             = 0x00400000,               // press "space" when flying
-    MOVEMENTFLAG_DESCENDING            = 0x00800000, 
+    MOVEMENTFLAG_DESCENDING            = 0x00800000,
     MOVEMENTFLAG_CAN_FLY               = 0x01000000,               // can fly
     MOVEMENTFLAG_FLYING                = 0x02000000,               // hover
     MOVEMENTFLAG_SPLINE_ELEVATION      = 0x04000000,               // used for flight paths
@@ -676,29 +676,29 @@ enum MovementFlags
     MOVEMENTFLAG_MOVING         =
         MOVEMENTFLAG_FORWARD |MOVEMENTFLAG_BACKWARD  |MOVEMENTFLAG_STRAFE_LEFT|MOVEMENTFLAG_STRAFE_RIGHT|
         MOVEMENTFLAG_PITCH_UP|MOVEMENTFLAG_PITCH_DOWN|MOVEMENTFLAG_JUMPING
-        |MOVEMENTFLAG_FALLING|MOVEMENTFLAG_ASCENDING| MOVEMENTFLAG_SPLINE_ELEVATION, 
+        |MOVEMENTFLAG_FALLING|MOVEMENTFLAG_ASCENDING| MOVEMENTFLAG_SPLINE_ELEVATION,
     MOVEMENTFLAG_TURNING        =
-        MOVEMENTFLAG_LEFT | MOVEMENTFLAG_RIGHT, 
+        MOVEMENTFLAG_LEFT | MOVEMENTFLAG_RIGHT,
 };
 enum MovementFlags2
 {
-    MOVEMENTFLAG2_NONE                     = 0x00000000, 
-    MOVEMENTFLAG2_NO_STRAFE                = 0x00000001, 
-    MOVEMENTFLAG2_NO_JUMPING               = 0x00000002, 
+    MOVEMENTFLAG2_NONE                     = 0x00000000,
+    MOVEMENTFLAG2_NO_STRAFE                = 0x00000001,
+    MOVEMENTFLAG2_NO_JUMPING               = 0x00000002,
     MOVEMENTFLAG2_UNK3                     = 0x00000004,        // Overrides various clientside checks
-    MOVEMENTFLAG2_FULL_SPEED_TURNING       = 0x00000008, 
-    MOVEMENTFLAG2_FULL_SPEED_PITCHING      = 0x00000010, 
-    MOVEMENTFLAG2_ALWAYS_ALLOW_PITCHING    = 0x00000020, 
-    MOVEMENTFLAG2_UNK7                     = 0x00000040, 
-    MOVEMENTFLAG2_UNK8                     = 0x00000080, 
-    MOVEMENTFLAG2_UNK9                     = 0x00000100, 
-    MOVEMENTFLAG2_UNK10                    = 0x00000200, 
-    MOVEMENTFLAG2_INTERPOLATED_MOVEMENT    = 0x00000400, 
-    MOVEMENTFLAG2_INTERPOLATED_TURNING     = 0x00000800, 
-    MOVEMENTFLAG2_INTERPOLATED_PITCHING    = 0x00001000, 
-    MOVEMENTFLAG2_UNK14                    = 0x00002000, 
-    MOVEMENTFLAG2_UNK15                    = 0x00004000, 
-    MOVEMENTFLAG2_UNK16                    = 0x00008000, 
+    MOVEMENTFLAG2_FULL_SPEED_TURNING       = 0x00000008,
+    MOVEMENTFLAG2_FULL_SPEED_PITCHING      = 0x00000010,
+    MOVEMENTFLAG2_ALWAYS_ALLOW_PITCHING    = 0x00000020,
+    MOVEMENTFLAG2_UNK7                     = 0x00000040,
+    MOVEMENTFLAG2_UNK8                     = 0x00000080,
+    MOVEMENTFLAG2_UNK9                     = 0x00000100,
+    MOVEMENTFLAG2_UNK10                    = 0x00000200,
+    MOVEMENTFLAG2_INTERPOLATED_MOVEMENT    = 0x00000400,
+    MOVEMENTFLAG2_INTERPOLATED_TURNING     = 0x00000800,
+    MOVEMENTFLAG2_INTERPOLATED_PITCHING    = 0x00001000,
+    MOVEMENTFLAG2_UNK14                    = 0x00002000,
+    MOVEMENTFLAG2_UNK15                    = 0x00004000,
+    MOVEMENTFLAG2_UNK16                    = 0x00008000,
 
     // player only?
     MOVEMENTFLAG2_INTERPOLATED =
@@ -708,82 +708,82 @@ enum MovementFlags2
 };
 enum SplineFlags
 {
-    SPLINEFLAG_NONE           = 0x00000000, 
-    SPLINEFLAG_FORWARD        = 0x00000001, 
-    SPLINEFLAG_BACKWARD       = 0x00000002, 
-    SPLINEFLAG_STRAFE_LEFT    = 0x00000004, 
-    SPLINEFLAG_STRAFE_RIGHT   = 0x00000008, 
-    SPLINEFLAG_LEFT           = 0x00000010, 
-    SPLINEFLAG_RIGHT          = 0x00000020, 
-    SPLINEFLAG_PITCH_UP       = 0x00000040, 
-    SPLINEFLAG_PITCH_DOWN     = 0x00000080, 
-    SPLINEFLAG_DONE           = 0x00000100, 
-    SPLINEFLAG_FALLING        = 0x00000200, 
-    SPLINEFLAG_NO_SPLINE      = 0x00000400, 
-    SPLINEFLAG_TRAJECTORY     = 0x00000800, 
-    SPLINEFLAG_WALKING        = 0x00001000, 
-    SPLINEFLAG_FLYING         = 0x00002000, 
-    SPLINEFLAG_KNOCKBACK      = 0x00004000, 
-    SPLINEFLAG_FINAL_POINT    = 0x00008000, 
-    SPLINEFLAG_FINAL_TARGET   = 0x00010000, 
-    SPLINEFLAG_FINAL_FACING   = 0x00020000, 
-    SPLINEFLAG_CATMULL_ROM    = 0x00040000, 
-    SPLINEFLAG_UNKNOWN20      = 0x00080000, 
-    SPLINEFLAG_UNKNOWN21      = 0x00100000, 
-    SPLINEFLAG_UNKNOWN22      = 0x00200000, 
-    SPLINEFLAG_UNKNOWN23      = 0x00400000, 
-    SPLINEFLAG_TRANSPORT      = 0x00800000, 
-    SPLINEFLAG_UNKNOWN25      = 0x01000000, 
-    SPLINEFLAG_UNKNOWN26      = 0x02000000, 
-    SPLINEFLAG_UNKNOWN27      = 0x04000000, 
-    SPLINEFLAG_UNKNOWN28      = 0x08000000, 
-    SPLINEFLAG_UNKNOWN29      = 0x10000000, 
-    SPLINEFLAG_ANIMATION      = 0x20000000, 
-    SPLINEFLAG_UNKNOWN31      = 0x40000000, 
-    SPLINEFLAG_UNKNOWN32      = 0x80000000, 
+    SPLINEFLAG_NONE           = 0x00000000,
+    SPLINEFLAG_FORWARD        = 0x00000001,
+    SPLINEFLAG_BACKWARD       = 0x00000002,
+    SPLINEFLAG_STRAFE_LEFT    = 0x00000004,
+    SPLINEFLAG_STRAFE_RIGHT   = 0x00000008,
+    SPLINEFLAG_LEFT           = 0x00000010,
+    SPLINEFLAG_RIGHT          = 0x00000020,
+    SPLINEFLAG_PITCH_UP       = 0x00000040,
+    SPLINEFLAG_PITCH_DOWN     = 0x00000080,
+    SPLINEFLAG_DONE           = 0x00000100,
+    SPLINEFLAG_FALLING        = 0x00000200,
+    SPLINEFLAG_NO_SPLINE      = 0x00000400,
+    SPLINEFLAG_TRAJECTORY     = 0x00000800,
+    SPLINEFLAG_WALKING        = 0x00001000,
+    SPLINEFLAG_FLYING         = 0x00002000,
+    SPLINEFLAG_KNOCKBACK      = 0x00004000,
+    SPLINEFLAG_FINAL_POINT    = 0x00008000,
+    SPLINEFLAG_FINAL_TARGET   = 0x00010000,
+    SPLINEFLAG_FINAL_FACING   = 0x00020000,
+    SPLINEFLAG_CATMULL_ROM    = 0x00040000,
+    SPLINEFLAG_UNKNOWN20      = 0x00080000,
+    SPLINEFLAG_UNKNOWN21      = 0x00100000,
+    SPLINEFLAG_UNKNOWN22      = 0x00200000,
+    SPLINEFLAG_UNKNOWN23      = 0x00400000,
+    SPLINEFLAG_TRANSPORT      = 0x00800000,
+    SPLINEFLAG_UNKNOWN25      = 0x01000000,
+    SPLINEFLAG_UNKNOWN26      = 0x02000000,
+    SPLINEFLAG_UNKNOWN27      = 0x04000000,
+    SPLINEFLAG_UNKNOWN28      = 0x08000000,
+    SPLINEFLAG_UNKNOWN29      = 0x10000000,
+    SPLINEFLAG_ANIMATION      = 0x20000000,
+    SPLINEFLAG_UNKNOWN31      = 0x40000000,
+    SPLINEFLAG_UNKNOWN32      = 0x80000000,
 
-    SPLINEFLAG_GLIDE = SPLINEFLAG_WALKING | SPLINEFLAG_FLYING, 
+    SPLINEFLAG_GLIDE = SPLINEFLAG_WALKING | SPLINEFLAG_FLYING,
 };
 
 enum SplineMode
 {
-    SPLINEMODE_LINEAR       = 0, 
-    SPLINEMODE_CATMULL_ROM  = 1, 
+    SPLINEMODE_LINEAR       = 0,
+    SPLINEMODE_CATMULL_ROM  = 1,
     SPLINEMODE_BEZIER3      = 2
 };
 
 enum SplineType
 {
-    SPLINETYPE_NORMAL        = 0, 
-    SPLINETYPE_STOP          = 1, 
-    SPLINETYPE_FACING_SPOT   = 2, 
-    SPLINETYPE_FACING_TARGET = 3, 
+    SPLINETYPE_NORMAL        = 0,
+    SPLINETYPE_STOP          = 1,
+    SPLINETYPE_FACING_SPOT   = 2,
+    SPLINETYPE_FACING_TARGET = 3,
     SPLINETYPE_FACING_ANGLE  = 4
 };
 
 enum UnitTypeMask
 {
-    UNIT_MASK_NONE                  = 0x00000000, 
-    UNIT_MASK_SUMMON                = 0x00000001, 
-    UNIT_MASK_MINION                = 0x00000002, 
-    UNIT_MASK_GUARDIAN              = 0x00000004, 
-    UNIT_MASK_TOTEM                 = 0x00000008, 
-    UNIT_MASK_PET                   = 0x00000010, 
-    UNIT_MASK_VEHICLE               = 0x00000020, 
-    UNIT_MASK_PUPPET                = 0x00000040, 
-    UNIT_MASK_HUNTER_PET            = 0x00000080, 
-    UNIT_MASK_CONTROLABLE_GUARDIAN  = 0x00000100, 
-    UNIT_MASK_ACCESSORY             = 0x00000200, 
+    UNIT_MASK_NONE                  = 0x00000000,
+    UNIT_MASK_SUMMON                = 0x00000001,
+    UNIT_MASK_MINION                = 0x00000002,
+    UNIT_MASK_GUARDIAN              = 0x00000004,
+    UNIT_MASK_TOTEM                 = 0x00000008,
+    UNIT_MASK_PET                   = 0x00000010,
+    UNIT_MASK_VEHICLE               = 0x00000020,
+    UNIT_MASK_PUPPET                = 0x00000040,
+    UNIT_MASK_HUNTER_PET            = 0x00000080,
+    UNIT_MASK_CONTROLABLE_GUARDIAN  = 0x00000100,
+    UNIT_MASK_ACCESSORY             = 0x00000200,
 };
 
 enum DiminishingLevels
 {
-    DIMINISHING_LEVEL_1             = 0, 
-    DIMINISHING_LEVEL_2             = 1, 
-    DIMINISHING_LEVEL_3             = 2, 
-    DIMINISHING_LEVEL_IMMUNE        = 3, 
-    DIMINISHING_LEVEL_4             = 3, 
-    DIMINISHING_LEVEL_TAUNT_IMMUNE  = 4, 
+    DIMINISHING_LEVEL_1             = 0,
+    DIMINISHING_LEVEL_2             = 1,
+    DIMINISHING_LEVEL_3             = 2,
+    DIMINISHING_LEVEL_IMMUNE        = 3,
+    DIMINISHING_LEVEL_4             = 3,
+    DIMINISHING_LEVEL_TAUNT_IMMUNE  = 4,
 };
 
 struct DiminishingReturn
@@ -800,7 +800,7 @@ struct DiminishingReturn
 
 enum MeleeHitOutcome
 {
-    MELEE_HIT_EVADE, MELEE_HIT_MISS, MELEE_HIT_DODGE, MELEE_HIT_BLOCK, MELEE_HIT_PARRY, 
+    MELEE_HIT_EVADE, MELEE_HIT_MISS, MELEE_HIT_DODGE, MELEE_HIT_BLOCK, MELEE_HIT_PARRY,
     MELEE_HIT_GLANCING, MELEE_HIT_CRIT, MELEE_HIT_CRUSHING, MELEE_HIT_NORMAL
 };
 
@@ -895,7 +895,7 @@ struct CalcDamageInfo
 // Spell damage info structure based on structure sending in SMSG_SPELLNONMELEEDAMAGELOG opcode
 struct SpellNonMeleeDamage{
     SpellNonMeleeDamage(Unit *_attacker, Unit *_target, uint32 _SpellID, uint32 _schoolMask)
-        : target(_target), attacker(_attacker), SpellID(_SpellID), damage(0), overkill(0), schoolMask(_schoolMask), 
+        : target(_target), attacker(_attacker), SpellID(_SpellID), damage(0), overkill(0), schoolMask(_schoolMask),
         absorb(0), resist(0), physicalLog(false), unused(false), blocked(0), HitInfo(0), cleanDamage(0)
     {}
 
@@ -940,9 +940,9 @@ struct DeclinedName
 
 enum CurrentSpellTypes
 {
-    CURRENT_MELEE_SPELL             = 0, 
-    CURRENT_GENERIC_SPELL           = 1, 
-    CURRENT_AUTOREPEAT_SPELL        = 2, 
+    CURRENT_MELEE_SPELL             = 0,
+    CURRENT_GENERIC_SPELL           = 1,
+    CURRENT_AUTOREPEAT_SPELL        = 2,
     CURRENT_CHANNELED_SPELL         = 3
 };
 
@@ -985,16 +985,16 @@ enum ActiveStates
 
 enum ReactStates
 {
-    REACT_PASSIVE    = 0, 
-    REACT_DEFENSIVE  = 1, 
+    REACT_PASSIVE    = 0,
+    REACT_DEFENSIVE  = 1,
     REACT_AGGRESSIVE = 2
 };
 
 enum CommandStates
 {
-    COMMAND_STAY    = 0, 
-    COMMAND_FOLLOW  = 1, 
-    COMMAND_ATTACK  = 2, 
+    COMMAND_STAY    = 0,
+    COMMAND_FOLLOW  = 1,
+    COMMAND_ATTACK  = 2,
     COMMAND_ABANDON = 3
 };
 
@@ -1038,20 +1038,20 @@ typedef std::list<Player*> SharedVisionList;
 
 enum CharmType
 {
-    CHARM_TYPE_CHARM, 
-    CHARM_TYPE_POSSESS, 
-    CHARM_TYPE_VEHICLE, 
-    CHARM_TYPE_CONVERT, 
+    CHARM_TYPE_CHARM,
+    CHARM_TYPE_POSSESS,
+    CHARM_TYPE_VEHICLE,
+    CHARM_TYPE_CONVERT,
 };
 
 typedef UnitActionBarEntry CharmSpellEntry;
 
 enum ActionBarIndex
 {
-    ACTION_BAR_INDEX_START = 0, 
-    ACTION_BAR_INDEX_PET_SPELL_START = 3, 
-    ACTION_BAR_INDEX_PET_SPELL_END = 7, 
-    ACTION_BAR_INDEX_END = 10, 
+    ACTION_BAR_INDEX_START = 0,
+    ACTION_BAR_INDEX_PET_SPELL_START = 3,
+    ACTION_BAR_INDEX_PET_SPELL_END = 7,
+    ACTION_BAR_INDEX_END = 10,
 };
 
 #define MAX_UNIT_ACTION_BAR_INDEX (ACTION_BAR_INDEX_END-ACTION_BAR_INDEX_START)
@@ -1130,8 +1130,8 @@ struct CharmInfo
 
 enum ReactiveType
 {
-    REACTIVE_DEFENSE      = 0, 
-    REACTIVE_HUNTER_PARRY = 1, 
+    REACTIVE_DEFENSE      = 0,
+    REACTIVE_HUNTER_PARRY = 1,
     REACTIVE_OVERPOWER    = 2
 };
 
@@ -1145,10 +1145,10 @@ enum ReactiveType
 
 enum PlayerTotemType
 {
-    SUMMON_TYPE_TOTEM_FIRE  = 63, 
-    SUMMON_TYPE_TOTEM_EARTH = 81, 
-    SUMMON_TYPE_TOTEM_WATER = 82, 
-    SUMMON_TYPE_TOTEM_AIR   = 83, 
+    SUMMON_TYPE_TOTEM_FIRE  = 63,
+    SUMMON_TYPE_TOTEM_EARTH = 81,
+    SUMMON_TYPE_TOTEM_WATER = 82,
+    SUMMON_TYPE_TOTEM_AIR   = 83,
 };
 
 // delay time next attack to prevent client attack animation problems
@@ -1440,7 +1440,7 @@ class Unit : public WorldObject
         bool isArmorer()      const { return HasFlag(UNIT_NPC_FLAGS, UNIT_NPC_FLAG_REPAIR); }
         bool isServiceProvider() const
         {
-            return HasFlag(UNIT_NPC_FLAGS, 
+            return HasFlag(UNIT_NPC_FLAGS,
                 UNIT_NPC_FLAG_VENDOR | UNIT_NPC_FLAG_TRAINER | UNIT_NPC_FLAG_FLIGHTMASTER |
                 UNIT_NPC_FLAG_PETITIONER | UNIT_NPC_FLAG_BATTLEMASTER | UNIT_NPC_FLAG_BANKER |
                 UNIT_NPC_FLAG_INNKEEPER | UNIT_NPC_FLAG_SPIRITHEALER |

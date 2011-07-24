@@ -136,7 +136,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 /*######
@@ -232,9 +231,7 @@ public:
             npc_escortAI::UpdateAI(diff);
         }
     };
-
 };
-
 
 /*######
 ## npc_marin_noggenfogger
@@ -266,9 +263,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_steward_of_time
@@ -313,10 +308,7 @@ public:
 
         return true;
     }
-
 };
-
-
 
 /*######
 ## npc_stone_watcher_of_norgannon
@@ -379,9 +371,7 @@ public:
 
         return true;
     }
-
 };
-
 
 /*######
 ## npc_OOX17
@@ -479,10 +469,7 @@ public:
             summoned->AI()->AttackStart(me);
         }
     };
-
 };
-
-
 
 /*####
 # npc_tooga
@@ -646,10 +633,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
-
 
 void AddSC_tanaris()
 {

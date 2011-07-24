@@ -407,7 +407,6 @@ class mob_halazzi_lynx : public CreatureScript
 
                 DoMeleeAttackIfReady();
             }
-
         };
 
         CreatureAI* GetAI(Creature* creature) const
@@ -421,4 +420,3 @@ void AddSC_boss_halazzi()
     new boss_halazzi();
     new mob_halazzi_lynx();
 }
-

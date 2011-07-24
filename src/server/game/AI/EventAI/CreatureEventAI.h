@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -64,7 +64,7 @@ enum EventAI_Type
     EVENT_T_TARGET_BUFFED           = 24,                   // Param1 = SpellID, Param2 = Number of Time STacked, Param3/4 Repeat Min/Max
     EVENT_T_RESET                   = 35,                   // Is it called after combat, when the creature respawn and spawn. -- TRINITY ONLY
 
-    EVENT_T_END, 
+    EVENT_T_END,
 };
 
 enum EventAI_ActionType
@@ -114,16 +114,16 @@ enum EventAI_ActionType
     ACTION_T_SET_INVINCIBILITY_HP_LEVEL = 42,               // MinHpValue, format(0-flat, 1-percent from max health)
     ACTION_T_MOUNT_TO_ENTRY_OR_MODEL    = 43,               // Creature_template entry(param1) OR ModelId (param2) (or 0 for both to unmount)
 
-    ACTION_T_SET_PHASE_MASK             = 97, 
-    ACTION_T_SET_STAND_STATE            = 98, 
-    ACTION_T_MOVE_RANDOM_POINT          = 99, 
-    ACTION_T_SET_VISIBILITY             = 100, 
+    ACTION_T_SET_PHASE_MASK             = 97,
+    ACTION_T_SET_STAND_STATE            = 98,
+    ACTION_T_MOVE_RANDOM_POINT          = 99,
+    ACTION_T_SET_VISIBILITY             = 100,
     ACTION_T_SET_ACTIVE                 = 101,  //Apply
     ACTION_T_SET_AGGRESSIVE             = 102,  //Apply
     ACTION_T_ATTACK_START_PULSE         = 103,  //Distance
     ACTION_T_SUMMON_GO                  = 104,  //GameObjectID, DespawnTime in ms
 
-    ACTION_T_END                        = 105, 
+    ACTION_T_END                        = 105,
 };
 
 enum Target
@@ -148,7 +148,7 @@ enum Target
     TARGET_T_HOSTILE_WPET_RANDOM,                           //Just any random target on our threat list
     TARGET_T_HOSTILE_WPET_RANDOM_NOT_TOP,                   //Any random target except top threat
 
-    TARGET_T_ACTION_INVOKER_WPET, 
+    TARGET_T_ACTION_INVOKER_WPET,
 
     TARGET_T_END
 };
@@ -170,8 +170,8 @@ enum EventFlags
     EFLAG_DIFFICULTY_1          = 0x04,                     //Event only occurs in instance difficulty 1
     EFLAG_DIFFICULTY_2          = 0x08,                     //Event only occurs in instance difficulty 2
     EFLAG_DIFFICULTY_3          = 0x10,                     //Event only occurs in instance difficulty 3
-    EFLAG_RESERVED_5            = 0x20, 
-    EFLAG_RESERVED_6            = 0x40, 
+    EFLAG_RESERVED_5            = 0x20,
+    EFLAG_RESERVED_6            = 0x40,
     EFLAG_DEBUG_ONLY            = 0x80,                     //Event only occurs in debug build
 
     EFLAG_DIFFICULTY_ALL        = (EFLAG_DIFFICULTY_0|EFLAG_DIFFICULTY_1|EFLAG_DIFFICULTY_2|EFLAG_DIFFICULTY_3)
@@ -179,8 +179,8 @@ enum EventFlags
 
 enum SpawnedEventMode
 {
-    SPAWNED_EVENT_ALWAY = 0, 
-    SPAWNED_EVENT_MAP   = 1, 
+    SPAWNED_EVENT_ALWAY = 0,
+    SPAWNED_EVENT_MAP   = 1,
     SPAWNED_EVENT_ZONE  = 2
 };
 
@@ -593,7 +593,6 @@ struct CreatureEventAIHolder
 
 class CreatureEventAI : public CreatureAI
 {
-
     public:
         explicit CreatureEventAI(Creature *c);
         ~CreatureEventAI()

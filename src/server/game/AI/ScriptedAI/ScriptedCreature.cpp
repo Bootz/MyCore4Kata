@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -121,10 +121,10 @@ void SummonList::DespawnAll()
     }
 }
 
-ScriptedAI::ScriptedAI(Creature* pCreature) : CreatureAI(pCreature), 
-    me(pCreature), 
-    IsFleeing(false), 
-    m_bCombatMovement(true), 
+ScriptedAI::ScriptedAI(Creature* pCreature) : CreatureAI(pCreature),
+    me(pCreature),
+    IsFleeing(false),
+    m_bCombatMovement(true),
     m_uiEvadeCheckCooldown(2500)
 {
     m_heroicMode = me->GetMap()->IsHeroic();
@@ -489,9 +489,9 @@ void ScriptedAI::SetCombatMovement(bool bCombatMove)
 
 enum eNPCs
 {
-    NPC_BROODLORD   = 12017, 
-    NPC_VOID_REAVER = 19516, 
-    NPC_JAN_ALAI    = 23578, 
+    NPC_BROODLORD   = 12017,
+    NPC_VOID_REAVER = 19516,
+    NPC_JAN_ALAI    = 23578,
     NPC_SARTHARION  = 28860
 };
 

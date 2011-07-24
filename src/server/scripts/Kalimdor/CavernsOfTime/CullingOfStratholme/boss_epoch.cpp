@@ -22,7 +22,6 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
 
-
 /* Script Data Start
 SDName: Boss epoch
 SDAuthor: Tartalo
@@ -155,9 +154,7 @@ public:
             DoScriptText(RAND(SAY_SLAY_1,SAY_SLAY_2,SAY_SLAY_3), me);
         }
     };
-
 };
-
 
 void AddSC_boss_epoch()
 {

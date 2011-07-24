@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -86,7 +86,7 @@ bool Corpse::Create(uint32 guidlow, Player *owner)
 
     if (!IsPositionValid())
     {
-        sLog->outError("Corpse (guidlow %d, owner %s) not created. Suggested coordinates isn't valid (X: %f Y: %f)", 
+        sLog->outError("Corpse (guidlow %d, owner %s) not created. Suggested coordinates isn't valid (X: %f Y: %f)",
             guidlow, owner->GetName(), owner->GetPositionX(), owner->GetPositionY());
         return false;
     }
@@ -209,7 +209,7 @@ bool Corpse::LoadFromDB(uint32 guid, Field *fields)
 
     if (!IsPositionValid())
     {
-        sLog->outError("Corpse (guid: %u, owner: %u) is not created, given coordinates are not valid (X: %f, Y: %f, Z: %f)", 
+        sLog->outError("Corpse (guid: %u, owner: %u) is not created, given coordinates are not valid (X: %f, Y: %f, Z: %f)",
             GetGUIDLow(), GUID_LOPART(GetOwnerGUID()), posX, posY, posZ);
         return false;
     }

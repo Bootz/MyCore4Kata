@@ -220,7 +220,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_tito : public CreatureScript
@@ -275,7 +274,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 void boss_dorothee::boss_dorotheeAI::SummonTito()
@@ -402,7 +400,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class boss_tinhead : public CreatureScript
@@ -512,7 +509,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class boss_roar : public CreatureScript
@@ -621,7 +617,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class boss_crone : public CreatureScript
@@ -703,7 +698,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_cyclone : public CreatureScript
@@ -747,15 +741,7 @@ public:
             } else MoveTimer -= diff;
         }
     };
-
 };
-
-
-
-
-
-
-
 
 /**************************************/
 /**** Opera Red Riding Hood Event ****/
@@ -803,9 +789,7 @@ public:
 
         return true;
     }
-
 };
-
 
 class boss_bigbadwolf : public CreatureScript
 {
@@ -927,12 +911,9 @@ public:
                 DoCast(me->getVictim(), SPELL_WIDE_SWIPE);
                 SwipeTimer = urand(25000,30000);
             } else SwipeTimer -= diff;
-
         }
     };
-
 };
-
 
 /**********************************************/
 /******** Opera Romeo and Juliet Event *******/
@@ -1127,7 +1108,6 @@ public:
 
         void UpdateAI(const uint32 diff);
     };
-
 };
 
 class boss_romulo : public CreatureScript
@@ -1334,7 +1314,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 void boss_julianne::boss_julianneAI::UpdateAI(const uint32 diff)
@@ -1518,7 +1497,6 @@ void boss_julianne::boss_julianneAI::DamageTaken(Unit* /*done_by*/, uint32 &dama
     }
     sLog->outError("TSCR: boss_julianneAI: DamageTaken reach end of code, that should not happen.");
 }
-
 
 void AddSC_bosses_opera()
 {

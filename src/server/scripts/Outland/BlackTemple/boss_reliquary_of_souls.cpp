@@ -133,7 +133,6 @@ public:
 
         void JustDied(Unit * /*killer*/);
     };
-
 };
 
 class boss_reliquary_of_souls : public CreatureScript
@@ -361,7 +360,6 @@ public:
             } else Timer -= diff;
         }
     };
-
 };
 
 void npc_enslaved_soul::npc_enslaved_soulAI::JustDied(Unit * /*killer*/)
@@ -495,7 +493,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class boss_essence_of_desire : public CreatureScript
@@ -598,7 +595,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class boss_essence_of_anger : public CreatureScript
@@ -699,15 +695,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
-
-
-
-
-
-
 
 void AddSC_boss_reliquary_of_souls()
 {

@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -46,7 +46,6 @@ BattlegroundRV::BattlegroundRV()
 
 BattlegroundRV::~BattlegroundRV()
 {
-
 }
 
 void BattlegroundRV::Update(uint32 diff)
@@ -60,7 +59,7 @@ void BattlegroundRV::Update(uint32 diff)
             UpdateArenaWorldState();
             CheckArenaAfterTimerConditions();
         }
-    } 
+    }
 
     if (getTimer() < diff)
     {
@@ -171,7 +170,6 @@ bool BattlegroundRV::HandlePlayerUnderMap(Player *player)
     player->TeleportTo(GetMapId(), 763.5f, -284, 28.276f, 2.422f, false);
     return true;
 }
-
 
 void BattlegroundRV::HandleAreaTrigger(Player *Source, uint32 Trigger)
 {

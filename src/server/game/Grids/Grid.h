@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -27,7 +27,7 @@
   @class Grid
   Grid is a logical segment of the game world represented inside TrinIty.
   Grid is bind at compile time to a particular type of object which
-  we call it the object of interested.  There are many types of loader, 
+  we call it the object of interested.  There are many types of loader,
   specially, dynamic loader, static loader, or on-demand loader.  There's
   a subtle difference between dynamic loader and on-demand loader but
   this is implementation specific to the loader class.  From the
@@ -43,8 +43,8 @@ template<class A, class T, class O> class GridLoader;
 
 template
 <
-class ACTIVE_OBJECT, 
-class WORLD_OBJECT_TYPES, 
+class ACTIVE_OBJECT,
+class WORLD_OBJECT_TYPES,
 class GRID_OBJECT_TYPES
 >
 class Grid
@@ -137,4 +137,3 @@ class Grid
         //ActiveGridObjects m_activeGridObjects;
 };
 #endif
-

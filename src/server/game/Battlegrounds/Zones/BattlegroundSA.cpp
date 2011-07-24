@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -29,13 +29,13 @@
 #include "ObjectMgr.h"
 #include "WorldPacket.h"
 
-// Need to check this data before we but in database these achievements may be outdated for 4.0.6 . 
+// Need to check this data before we but in database these achievements may be outdated for 4.0.6 .
 //DELETE FROM `disables` WHERE `sourceType` = 4 AND `entry` in (7625, 6446, 7628);
 //DELETE FROM `achievement_criteria_data` WHERE `criteria_id` in(6446, 7625) AND `type`=11;
-//INSERT INTO `achievement_criteria_data` (`criteria_id`, `type`, `value1`, `value2`, `ScriptName`) VALUES 
-//(6446, 11, 0, 0, 'achievement_bg_sa_drop_it'), 
-//(7625, 11, 0, 0, 'achievement_bg_sa_artillery_veteran'), 
-//(7628, 11, 0, 0, 'achievement_bg_sa_artillery_expert'), 
+//INSERT INTO `achievement_criteria_data` (`criteria_id`, `type`, `value1`, `value2`, `ScriptName`) VALUES
+//(6446, 11, 0, 0, 'achievement_bg_sa_drop_it'),
+//(7625, 11, 0, 0, 'achievement_bg_sa_artillery_veteran'),
+//(7628, 11, 0, 0, 'achievement_bg_sa_artillery_expert'),
 //(7628, 3, 607, 0, '');
 
 BattlegroundSA::BattlegroundSA()
@@ -74,7 +74,6 @@ bool BattlegroundSA::SetupBattleground()
 
 bool BattlegroundSA::ResetObjs()
 {
-
     for (int i = BG_SA_BOAT_ONE; i <= BG_SA_BOAT_TWO; i++)
         for (BattlegroundPlayerMap::const_iterator itr = GetPlayers().begin(); itr != GetPlayers().end(); ++itr)
             if (Player *plr = sObjectMgr->GetPlayer(itr->first))
@@ -113,17 +112,17 @@ bool BattlegroundSA::ResetObjs()
                 boatid= Attackers ? BG_SA_BOAT_TWO_H : BG_SA_BOAT_TWO_A;
                 break;
         }
-        if (!AddObject(i, boatid, BG_SA_ObjSpawnlocs[i][0], 
-          BG_SA_ObjSpawnlocs[i][1], 
-          BG_SA_ObjSpawnlocs[i][2]+(Attackers ? -3.750f: 0), 
+        if (!AddObject(i, boatid, BG_SA_ObjSpawnlocs[i][0],
+          BG_SA_ObjSpawnlocs[i][1],
+          BG_SA_ObjSpawnlocs[i][2]+(Attackers ? -3.750f: 0),
           BG_SA_ObjSpawnlocs[i][3], 0, 0, 0, 0, RESPAWN_ONE_DAY))
             return false;
     }
     for (uint8 i = BG_SA_SIGIL_1; i < BG_SA_CENTRAL_FLAG; i++)
     {
-        if (!AddObject(i, BG_SA_ObjEntries[i], 
-            BG_SA_ObjSpawnlocs[i][0], BG_SA_ObjSpawnlocs[i][1], 
-            BG_SA_ObjSpawnlocs[i][2], BG_SA_ObjSpawnlocs[i][3], 
+        if (!AddObject(i, BG_SA_ObjEntries[i],
+            BG_SA_ObjSpawnlocs[i][0], BG_SA_ObjSpawnlocs[i][1],
+            BG_SA_ObjSpawnlocs[i][2], BG_SA_ObjSpawnlocs[i][3],
             0, 0, 0, 0, RESPAWN_ONE_DAY))
         return false;
     }
@@ -138,8 +137,8 @@ bool BattlegroundSA::ResetObjs()
     //By capturing GYs.
     for (uint8 i = 0; i < BG_SA_NPC_SPARKLIGHT; i++)
     {
-        if (!AddCreature(BG_SA_NpcEntries[i], i, (Attackers == TEAM_ALLIANCE ? TEAM_HORDE : TEAM_ALLIANCE), 
-              BG_SA_NpcSpawnlocs[i][0], BG_SA_NpcSpawnlocs[i][1], 
+        if (!AddCreature(BG_SA_NpcEntries[i], i, (Attackers == TEAM_ALLIANCE ? TEAM_HORDE : TEAM_ALLIANCE),
+              BG_SA_NpcSpawnlocs[i][0], BG_SA_NpcSpawnlocs[i][1],
               BG_SA_NpcSpawnlocs[i][2], BG_SA_NpcSpawnlocs[i][3], 600))
         return false;
     }
@@ -190,27 +189,27 @@ bool BattlegroundSA::ResetObjs()
     //GY capture points
     for (uint8 i = BG_SA_CENTRAL_FLAG; i < BG_SA_PORTAL_DEFFENDER_BLUE; i++)
     {
-        AddObject(i, (BG_SA_ObjEntries[i] - (Attackers == TEAM_ALLIANCE ? 1:0)), 
-            BG_SA_ObjSpawnlocs[i][0], BG_SA_ObjSpawnlocs[i][1], 
-            BG_SA_ObjSpawnlocs[i][2], BG_SA_ObjSpawnlocs[i][3], 
+        AddObject(i, (BG_SA_ObjEntries[i] - (Attackers == TEAM_ALLIANCE ? 1:0)),
+            BG_SA_ObjSpawnlocs[i][0], BG_SA_ObjSpawnlocs[i][1],
+            BG_SA_ObjSpawnlocs[i][2], BG_SA_ObjSpawnlocs[i][3],
             0, 0, 0, 0, RESPAWN_ONE_DAY);
         GetBGObject(i)->SetUInt32Value(GAMEOBJECT_FACTION, atF);
     }
 
     for (uint8 i = BG_SA_PORTAL_DEFFENDER_BLUE; i < BG_SA_BOMB; i++)
     {
-        AddObject(i, BG_SA_ObjEntries[i], 
-            BG_SA_ObjSpawnlocs[i][0], BG_SA_ObjSpawnlocs[i][1], 
-            BG_SA_ObjSpawnlocs[i][2], BG_SA_ObjSpawnlocs[i][3], 
+        AddObject(i, BG_SA_ObjEntries[i],
+            BG_SA_ObjSpawnlocs[i][0], BG_SA_ObjSpawnlocs[i][1],
+            BG_SA_ObjSpawnlocs[i][2], BG_SA_ObjSpawnlocs[i][3],
             0, 0, 0, 0, RESPAWN_ONE_DAY);
         GetBGObject(i)->SetUInt32Value(GAMEOBJECT_FACTION, defF);
     }
 
     for (uint8 i = BG_SA_BOMB; i < BG_SA_MAXOBJ; i++)
     {
-        AddObject(i, BG_SA_ObjEntries[BG_SA_BOMB], 
-            BG_SA_ObjSpawnlocs[i][0], BG_SA_ObjSpawnlocs[i][1], 
-            BG_SA_ObjSpawnlocs[i][2], BG_SA_ObjSpawnlocs[i][3], 
+        AddObject(i, BG_SA_ObjEntries[BG_SA_BOMB],
+            BG_SA_ObjSpawnlocs[i][0], BG_SA_ObjSpawnlocs[i][1],
+            BG_SA_ObjSpawnlocs[i][2], BG_SA_ObjSpawnlocs[i][3],
             0, 0, 0, 0, RESPAWN_ONE_DAY);
         GetBGObject(i)->SetUInt32Value(GAMEOBJECT_FACTION, atF);
     }
@@ -463,7 +462,6 @@ void BattlegroundSA::AddPlayer(Player *plr)
                 plr->TeleportTo(607, 2682.936f, -830.368f, 50.0f, 2.895f, 0);
             else
                 plr->TeleportTo(607, 2577.003f, 980.261f, 50.0f, 0.807f, 0);
-
         }
         else
             plr->TeleportTo(607, 1209.7f, -65.16f, 70.1f, 0.0f, 0);
@@ -757,13 +755,13 @@ void BattlegroundSA::CaptureGraveyard(BG_SA_Graveyards i, Player *Source)
         case BG_SA_LEFT_CAPTURABLE_GY:
             flag = BG_SA_LEFT_FLAG;
             DelObject(flag);
-            AddObject(flag, (BG_SA_ObjEntries[flag] - (Source->GetTeamId() == TEAM_ALLIANCE ? 0:1)), 
-            BG_SA_ObjSpawnlocs[flag][0], BG_SA_ObjSpawnlocs[flag][1], 
+            AddObject(flag, (BG_SA_ObjEntries[flag] - (Source->GetTeamId() == TEAM_ALLIANCE ? 0:1)),
+            BG_SA_ObjSpawnlocs[flag][0], BG_SA_ObjSpawnlocs[flag][1],
             BG_SA_ObjSpawnlocs[flag][2], BG_SA_ObjSpawnlocs[flag][3], 0, 0, 0, 0, RESPAWN_ONE_DAY);
 
             npc = BG_SA_NPC_RIGSPARK;
-            AddCreature(BG_SA_NpcEntries[npc], npc, Attackers, 
-              BG_SA_NpcSpawnlocs[npc][0], BG_SA_NpcSpawnlocs[npc][1], 
+            AddCreature(BG_SA_NpcEntries[npc], npc, Attackers,
+              BG_SA_NpcSpawnlocs[npc][0], BG_SA_NpcSpawnlocs[npc][1],
               BG_SA_NpcSpawnlocs[npc][2], BG_SA_NpcSpawnlocs[npc][3]);
 
             UpdateWorldState(BG_SA_LEFT_GY_ALLIANCE, (GraveyardStatus[i] == TEAM_ALLIANCE? 1:0));
@@ -776,13 +774,13 @@ void BattlegroundSA::CaptureGraveyard(BG_SA_Graveyards i, Player *Source)
         case BG_SA_RIGHT_CAPTURABLE_GY:
             flag = BG_SA_RIGHT_FLAG;
             DelObject(flag);
-            AddObject(flag, (BG_SA_ObjEntries[flag] - (Source->GetTeamId() == TEAM_ALLIANCE ? 0:1)), 
-              BG_SA_ObjSpawnlocs[flag][0], BG_SA_ObjSpawnlocs[flag][1], 
+            AddObject(flag, (BG_SA_ObjEntries[flag] - (Source->GetTeamId() == TEAM_ALLIANCE ? 0:1)),
+              BG_SA_ObjSpawnlocs[flag][0], BG_SA_ObjSpawnlocs[flag][1],
               BG_SA_ObjSpawnlocs[flag][2], BG_SA_ObjSpawnlocs[flag][3], 0, 0, 0, 0, RESPAWN_ONE_DAY);
 
             npc = BG_SA_NPC_SPARKLIGHT;
-            AddCreature(BG_SA_NpcEntries[npc], npc, Attackers, 
-              BG_SA_NpcSpawnlocs[npc][0], BG_SA_NpcSpawnlocs[npc][1], 
+            AddCreature(BG_SA_NpcEntries[npc], npc, Attackers,
+              BG_SA_NpcSpawnlocs[npc][0], BG_SA_NpcSpawnlocs[npc][1],
               BG_SA_NpcSpawnlocs[npc][2], BG_SA_NpcSpawnlocs[npc][3]);
 
             UpdateWorldState(BG_SA_RIGHT_GY_ALLIANCE, (GraveyardStatus[i] == TEAM_ALLIANCE? 1:0));
@@ -795,8 +793,8 @@ void BattlegroundSA::CaptureGraveyard(BG_SA_Graveyards i, Player *Source)
         case BG_SA_CENTRAL_CAPTURABLE_GY:
             flag = BG_SA_CENTRAL_FLAG;
             DelObject(flag);
-            AddObject(flag, (BG_SA_ObjEntries[flag] - (Source->GetTeamId() == TEAM_ALLIANCE ? 0:1)), 
-              BG_SA_ObjSpawnlocs[flag][0], BG_SA_ObjSpawnlocs[flag][1], 
+            AddObject(flag, (BG_SA_ObjEntries[flag] - (Source->GetTeamId() == TEAM_ALLIANCE ? 0:1)),
+              BG_SA_ObjSpawnlocs[flag][0], BG_SA_ObjSpawnlocs[flag][1],
               BG_SA_ObjSpawnlocs[flag][2], BG_SA_ObjSpawnlocs[flag][3], 0, 0, 0, 0, RESPAWN_ONE_DAY);
 
             UpdateWorldState(BG_SA_CENTER_GY_ALLIANCE, (GraveyardStatus[i] == TEAM_ALLIANCE? 1:0));
@@ -911,10 +909,10 @@ void BattlegroundSA::UpdateDemolisherSpawns()
                         {
                             uint8 gy = (i >= BG_SA_DEMOLISHER_3 ? 3 : 2);
                             if (GraveyardStatus[gy] == Attackers)
-                                Demolisher->Relocate(BG_SA_NpcSpawnlocs[i + 11][0], BG_SA_NpcSpawnlocs[i + 11][1], 
+                                Demolisher->Relocate(BG_SA_NpcSpawnlocs[i + 11][0], BG_SA_NpcSpawnlocs[i + 11][1],
                                   BG_SA_NpcSpawnlocs[i + 11][2], BG_SA_NpcSpawnlocs[i + 11][3]);
                             else
-                                Demolisher->Relocate(BG_SA_NpcSpawnlocs[i][0], BG_SA_NpcSpawnlocs[i][1], 
+                                Demolisher->Relocate(BG_SA_NpcSpawnlocs[i][0], BG_SA_NpcSpawnlocs[i][1],
                                   BG_SA_NpcSpawnlocs[i][2], BG_SA_NpcSpawnlocs[i][3]);
 
                             Demolisher->Respawn();
@@ -956,4 +954,3 @@ void BattlegroundSA::SendTransportsRemove(Player * player)
         player->GetSession()->SendPacket(&packet);
     }
 }
-

@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -111,7 +111,7 @@ uint32 LootStore::LoadLootTable()
         return 0;
     }
 
-    uint32 count = 0;       
+    uint32 count = 0;
 
     do
     {
@@ -154,7 +154,6 @@ uint32 LootStore::LoadLootTable()
         // Adds current row to the template
         tab->second->AddEntry(storeitem);
         ++count;
-    
     }
     while (result->NextRow());
 
@@ -293,7 +292,7 @@ bool LootStoreItem::IsValid(LootStore const& store, uint32 entry) const
 
         if (chance != 0 && chance < 0.000001f)             // loot with low chance
         {
-            sLog->outErrorDb("Table '%s' entry %d item %d: low chance (%f) - skipped", 
+            sLog->outErrorDb("Table '%s' entry %d item %d: low chance (%f) - skipped",
                 store.GetName(), entry, itemid, chance);
             return false;
         }
@@ -303,7 +302,6 @@ bool LootStoreItem::IsValid(LootStore const& store, uint32 entry) const
             sLog->outErrorDb("Table '%s' entry %d item %d: max count (%u) less that min count (%i) - skipped", store.GetName(), entry, itemid, int32(maxcount), mincountOrRef);
             return false;
         }
-
     }
     else                                                    // mincountOrRef < 0
     {
@@ -401,8 +399,8 @@ void Loot::AddItem(LootStoreItem const & item)
     {
         items.push_back(LootItem(item));
 
-        // non-conditional one-player only items are counted here, 
-        // free for all items are counted in FillFFALoot(), 
+        // non-conditional one-player only items are counted here,
+        // free for all items are counted in FillFFALoot(),
         // non-ffa conditionals are counted in FillNonQuestNonFFAConditionalLoot()
         if (item.conditions.empty())
         {
@@ -1463,7 +1461,7 @@ void LoadLootTemplates_Disenchant()
     sLog->outString("Loading disenchanting loot templates...");
 
     uint32 oldMSTime = getMSTime();
-   
+
     LootIdSet ids_set, ids_setUsed;
     uint32 count = LootTemplates_Disenchant.LoadAndCollectLootIds(ids_set);
 
@@ -1578,7 +1576,7 @@ void LoadLootTemplates_Item()
         sLog->outString(">> Loaded %u prospecting loot templates in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
     else
         sLog->outErrorDb(">> Loaded 0 prospecting loot templates. DB table `item_loot_template` is empty");
-    
+
     sLog->outString();
 }
 
@@ -1716,7 +1714,7 @@ void LoadLootTemplates_Mail()
 void LoadLootTemplates_Skinning()
 {
     sLog->outString("Loading skinning loot templates...");
-    
+
     uint32 oldMSTime = getMSTime();
 
     LootIdSet ids_set, ids_setUsed;

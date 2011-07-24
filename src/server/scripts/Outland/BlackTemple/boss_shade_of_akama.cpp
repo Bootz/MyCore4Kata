@@ -138,7 +138,6 @@ public:
         void MoveInLineOfSight(Unit* /*who*/) {}
         void UpdateAI(const uint32 /*diff*/) {}
     };
-
 };
 
 class mob_ashtongue_sorcerer : public CreatureScript
@@ -193,7 +192,6 @@ public:
             } else CheckTimer -= diff;
         }
     };
-
 };
 
 class boss_shade_of_akama : public CreatureScript
@@ -523,7 +521,6 @@ public:
             }
         }
     };
-
 };
 
 void mob_ashtongue_channeler::mob_ashtongue_channelerAI::JustDied(Unit* /*killer*/)
@@ -884,10 +881,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
-
 
 void AddSC_boss_shade_of_akama()
 {

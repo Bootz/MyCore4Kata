@@ -530,11 +530,11 @@ public:
 
         if (pPlayer->FindNearestCreature(42704,15))
             {
-                pPlayer->CastSpell(pPlayer, 79513, true, NULL); 
+                pPlayer->CastSpell(pPlayer, 79513, true, NULL);
                 pPlayer->KilledMonsterCredit(42704, 0);
                 return true;
             }
-        return false;   
+        return false;
     }
 };
 

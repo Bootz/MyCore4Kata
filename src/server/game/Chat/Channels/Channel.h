@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -77,14 +77,14 @@ enum ChatNotify
 
 enum ChannelFlags
 {
-    CHANNEL_FLAG_NONE       = 0x00, 
-    CHANNEL_FLAG_CUSTOM     = 0x01, 
+    CHANNEL_FLAG_NONE       = 0x00,
+    CHANNEL_FLAG_CUSTOM     = 0x01,
     // 0x02
-    CHANNEL_FLAG_TRADE      = 0x04, 
-    CHANNEL_FLAG_NOT_LFG    = 0x08, 
-    CHANNEL_FLAG_GENERAL    = 0x10, 
-    CHANNEL_FLAG_CITY       = 0x20, 
-    CHANNEL_FLAG_LFG        = 0x40, 
+    CHANNEL_FLAG_TRADE      = 0x04,
+    CHANNEL_FLAG_NOT_LFG    = 0x08,
+    CHANNEL_FLAG_GENERAL    = 0x10,
+    CHANNEL_FLAG_CITY       = 0x20,
+    CHANNEL_FLAG_LFG        = 0x40,
     CHANNEL_FLAG_VOICE      = 0x80
     // General                  0x18 = 0x10 | 0x08
     // Trade                    0x3C = 0x20 | 0x10 | 0x08 | 0x04
@@ -95,7 +95,7 @@ enum ChannelFlags
 
 enum ChannelDBCFlags
 {
-    CHANNEL_DBC_FLAG_NONE       = 0x00000, 
+    CHANNEL_DBC_FLAG_NONE       = 0x00000,
     CHANNEL_DBC_FLAG_INITIAL    = 0x00001,              // General, Trade, LocalDefense, LFG
     CHANNEL_DBC_FLAG_ZONE_DEP   = 0x00002,              // General, Trade, LocalDefense, GuildRecruitment
     CHANNEL_DBC_FLAG_GLOBAL     = 0x00004,              // WorldDefense
@@ -109,13 +109,13 @@ enum ChannelDBCFlags
 
 enum ChannelMemberFlags
 {
-    MEMBER_FLAG_NONE        = 0x00, 
-    MEMBER_FLAG_OWNER       = 0x01, 
-    MEMBER_FLAG_MODERATOR   = 0x02, 
-    MEMBER_FLAG_VOICED      = 0x04, 
-    MEMBER_FLAG_MUTED       = 0x08, 
-    MEMBER_FLAG_CUSTOM      = 0x10, 
-    MEMBER_FLAG_MIC_MUTED   = 0x20, 
+    MEMBER_FLAG_NONE        = 0x00,
+    MEMBER_FLAG_OWNER       = 0x01,
+    MEMBER_FLAG_MODERATOR   = 0x02,
+    MEMBER_FLAG_VOICED      = 0x04,
+    MEMBER_FLAG_MUTED       = 0x08,
+    MEMBER_FLAG_CUSTOM      = 0x10,
+    MEMBER_FLAG_MIC_MUTED   = 0x20,
     // 0x40
     // 0x80
 };
@@ -288,4 +288,3 @@ class Channel
         static void CleanOldChannelsInDB();
 };
 #endif
-

@@ -336,7 +336,6 @@ public:
 
                     if (Unit* pDevice = (pSeat->GetPassenger(SEAT_DEVICE)))
                         pDevice->RemoveFromWorld();
-
                 }
             }
         }
@@ -347,7 +346,6 @@ public:
             if (pSpell->Id == SPELL_PURSUED)
                 AttackStart(pTarget);
         }
-
 
         void JustDied(Unit* /*victim*/)
         {
@@ -587,7 +585,6 @@ public:
             }
         }
     };
-
 };
 
 //#define BOSS_DEBUG
@@ -660,7 +657,6 @@ public:
             //    }
         }
     };
-
 };
 
 class boss_flame_leviathan_defense_cannon : public CreatureScript
@@ -738,7 +734,6 @@ public:
             return true;
         }
     };
-
 };
 
 class boss_flame_leviathan_overload_device : public CreatureScript
@@ -778,7 +773,6 @@ public:
             }
         }
     };
-
 };
 
 class boss_flame_leviathan_safety_container : public CreatureScript
@@ -848,7 +842,6 @@ public:
                 pLiquid->CastSpell(pLiquid, SPELL_LIQUID_PYRITE, true);
                 pLiquid->GetMotionMaster()->MoveFall(pKiller->GetPositionZ());
             }
-
         }
 
         void MovementInform(uint32 /*type*/, uint32 id)
@@ -877,9 +870,7 @@ public:
                 MoveTimer-=diff;
         }
     };
-
 };
-
 
 class spell_pool_of_tar : public CreatureScript
 {
@@ -910,7 +901,6 @@ public:
                 me->CastSpell(me, SPELL_BLAZE, true);
         }
     };
-
 };
 
 class npc_colossus : public CreatureScript
@@ -945,7 +935,6 @@ public:
             DoMeleeAttackIfReady() ;
         }
     };
-
 };
 
 class npc_thorims_hammer : public CreatureScript
@@ -988,7 +977,6 @@ public:
                 return;
         }
     };
-
 };
 
 class npc_mimirons_inferno : public CreatureScript
@@ -1047,9 +1035,7 @@ public:
             }
         }
     };
-
 };
-
 
 class npc_hodirs_fury : public CreatureScript
 {
@@ -1091,7 +1077,6 @@ public:
                 return;
         }
     };
-
 };
 
 class npc_freyas_ward : public CreatureScript
@@ -1136,7 +1121,6 @@ public:
                 return;
         }
     };
-
 };
 
 class npc_freya_ward_summon : public CreatureScript
@@ -1179,7 +1163,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 //npc lore keeper
@@ -1201,7 +1184,6 @@ public:
             {
                 pPlayer->PrepareGossipMenu(pCreature);
                 instance->instance->LoadGrid(364,-16); //make sure leviathan is loaded
-
 
                 pPlayer->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT,GOSSIP_ITEM_2,GOSSIP_SENDER_MAIN,GOSSIP_ACTION_INFO_DEF+2);
                 pPlayer->SEND_GOSSIP_MENU(pPlayer->GetGossipTextId(pCreature), pCreature->GetGUID());
@@ -1272,7 +1254,6 @@ public:
             }
         }
     };
-
 };
 
 //enable hardmode
@@ -1372,7 +1353,6 @@ public:
         }
         return true;
     }
-
 };
 
 void AddSC_boss_flame_leviathan()

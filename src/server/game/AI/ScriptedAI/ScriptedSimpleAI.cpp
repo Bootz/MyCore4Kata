@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -268,18 +268,14 @@ void SimpleAI::UpdateAI(const uint32 diff)
                     if (Spell[i].Text_Sound[random_text])
                         DoPlaySoundToSet(me, Spell[i].Text_Sound[random_text]);
                 }
-
             }
 
             //Spell will cast agian when the cooldown is up
             if (Spell[i].CooldownRandomAddition)
                 Spell_Timer[i] = Spell[i].Cooldown + (rand() % Spell[i].CooldownRandomAddition);
             else Spell_Timer[i] = Spell[i].Cooldown;
-
         } else Spell_Timer[i] -= diff;
-
     }
 
     DoMeleeAttackIfReady();
 }
-

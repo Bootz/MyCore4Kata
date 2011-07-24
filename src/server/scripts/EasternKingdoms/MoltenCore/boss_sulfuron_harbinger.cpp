@@ -135,7 +135,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class mob_flamewaker_priest : public CreatureScript
@@ -207,10 +206,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
-
 
 void AddSC_boss_sulfuron()
 {

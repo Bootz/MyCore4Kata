@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -231,7 +231,6 @@ void GameEventMgr::LoadFromDB()
         ++count;
         Field *fields = result->Fetch();
 
-
         uint16 event_id = fields[0].GetUInt16();
         if (event_id == 0)
         {
@@ -267,7 +266,6 @@ void GameEventMgr::LoadFromDB()
         }
 
         pGameEvent.description  = fields[6].GetString();
-
     } while (result->NextRow());
 
     sLog->outString(">> Loaded %u game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -293,7 +291,6 @@ void GameEventMgr::LoadFromDB()
         {
             Field *fields = result->Fetch();
 
-
             uint16 event_id = fields[0].GetUInt16();
 
             if (event_id >= mGameEvent.size())
@@ -314,7 +311,6 @@ void GameEventMgr::LoadFromDB()
             }
 
             ++count;
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u game event saves in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -338,7 +334,6 @@ void GameEventMgr::LoadFromDB()
         do
         {
             Field *fields = result->Fetch();
-
 
             uint16 event_id = fields[0].GetUInt16();
 
@@ -365,7 +360,6 @@ void GameEventMgr::LoadFromDB()
             }
 
             ++count;
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u game event prerequisites in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -394,7 +388,6 @@ void GameEventMgr::LoadFromDB()
         {
             Field *fields = result->Fetch();
 
-
             uint32 guid    = fields[0].GetUInt32();
             int16 event_id = fields[1].GetInt16();
 
@@ -409,7 +402,6 @@ void GameEventMgr::LoadFromDB()
             ++count;
             GuidList& crelist = mGameEventCreatureGuids[internal_event_id];
             crelist.push_back(guid);
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u creatures in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -438,7 +430,6 @@ void GameEventMgr::LoadFromDB()
         {
             Field *fields = result->Fetch();
 
-
             uint32 guid    = fields[0].GetUInt32();
             int16 event_id = fields[1].GetInt16();
 
@@ -453,7 +444,6 @@ void GameEventMgr::LoadFromDB()
             ++count;
             GuidList& golist = mGameEventGameobjectGuids[internal_event_id];
             golist.push_back(guid);
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u gameobjects in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -511,7 +501,6 @@ void GameEventMgr::LoadFromDB()
             }
 
             equiplist.push_back(std::pair<uint32, ModelEquip>(guid, newModelEquipSet));
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u model/equipment changes in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -552,7 +541,6 @@ void GameEventMgr::LoadFromDB()
             ++count;
             QuestRelList& questlist = mGameEventCreatureQuests[event_id];
             questlist.push_back(QuestRelation(id, quest));
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u quests additions in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -593,7 +581,6 @@ void GameEventMgr::LoadFromDB()
             ++count;
             QuestRelList& questlist = mGameEventGameObjectQuests[event_id];
             questlist.push_back(QuestRelation(id, quest));
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u quests additions in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -635,7 +622,6 @@ void GameEventMgr::LoadFromDB()
             mQuestToEventConditions[quest].event_id = event_id;
             mQuestToEventConditions[quest].condition = condition;
             mQuestToEventConditions[quest].num = num;
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u quest event conditions in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -677,7 +663,6 @@ void GameEventMgr::LoadFromDB()
             mGameEvent[event_id].conditions[condition].done_world_state = fields[4].GetUInt32();
 
             ++count;
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u conditions in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -725,7 +710,6 @@ void GameEventMgr::LoadFromDB()
             }
 
             ++count;
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u condition saves in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -767,7 +751,6 @@ void GameEventMgr::LoadFromDB()
             mGameEventNPCFlags[event_id].push_back(GuidNPCFlagPair(guid, npcflag));
 
             ++count;
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u npcflags in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -833,7 +816,6 @@ void GameEventMgr::LoadFromDB()
                 continue;
             ++count;
             vendors.push_back(newEntry);
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u vendor additions in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -863,7 +845,6 @@ void GameEventMgr::LoadFromDB()
         {
             Field *fields = result->Fetch();
 
-
             uint16 event_id = fields[0].GetUInt16();
 
             if (event_id >= mGameEvent.size())
@@ -875,7 +856,6 @@ void GameEventMgr::LoadFromDB()
             ++count;
 
             mGameEventBattlegroundHolidays[event_id] = fields[1].GetUInt32();
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u battleground holidays in game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -907,7 +887,6 @@ void GameEventMgr::LoadFromDB()
         {
             Field *fields = result->Fetch();
 
-
             uint32 entry   = fields[0].GetUInt32();
             int16 event_id = fields[1].GetInt16();
 
@@ -928,7 +907,6 @@ void GameEventMgr::LoadFromDB()
             ++count;
             IdList& poollist = mGameEventPoolIds[internal_event_id];
             poollist.push_back(entry);
-
         } while (result->NextRow());
 
         sLog->outString(">> Loaded %u pools for game events in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
@@ -1151,7 +1129,7 @@ void GameEventMgr::GameEventSpawn(int16 event_id)
 
     if (internal_event_id < 0 || internal_event_id >= int32(mGameEventCreatureGuids.size()))
     {
-        sLog->outError("GameEventMgr::GameEventSpawn attempt access to out of range mGameEventCreatureGuids element %i (size: " SIZEFMTD ")", 
+        sLog->outError("GameEventMgr::GameEventSpawn attempt access to out of range mGameEventCreatureGuids element %i (size: " SIZEFMTD ")",
             internal_event_id, mGameEventCreatureGuids.size());
         return;
     }
@@ -1171,13 +1149,13 @@ void GameEventMgr::GameEventSpawn(int16 event_id)
                 CreatureInfo const *ci = ObjectMgr::GetCreatureTemplate(data->id);
                 if (!ci)
                     continue;
-                
+
                 Creature* pCreature = NULL;
                 if (ci->ScriptID)
                     pCreature = sScriptMgr->GetCreatureScriptedClass(ci->ScriptID);
                 if (pCreature == NULL)
                     pCreature = new Creature();
-                
+
                 //sLog->outDebug("Spawning creature %u", *itr);
                 if (!pCreature->LoadFromDB(*itr, map))
                     delete pCreature;
@@ -1189,7 +1167,7 @@ void GameEventMgr::GameEventSpawn(int16 event_id)
 
     if (internal_event_id < 0 || internal_event_id >= int32(mGameEventGameobjectGuids.size()))
     {
-        sLog->outError("GameEventMgr::GameEventSpawn attempt access to out of range mGameEventGameobjectGuids element %i (size: " SIZEFMTD ")", 
+        sLog->outError("GameEventMgr::GameEventSpawn attempt access to out of range mGameEventGameobjectGuids element %i (size: " SIZEFMTD ")",
             internal_event_id, mGameEventGameobjectGuids.size());
         return;
     }
@@ -1221,7 +1199,7 @@ void GameEventMgr::GameEventSpawn(int16 event_id)
 
     if (internal_event_id < 0 || internal_event_id >= int32(mGameEventPoolIds.size()))
     {
-        sLog->outError("GameEventMgr::GameEventSpawn attempt access to out of range mGameEventPoolIds element %u (size: " SIZEFMTD ")", 
+        sLog->outError("GameEventMgr::GameEventSpawn attempt access to out of range mGameEventPoolIds element %u (size: " SIZEFMTD ")",
             internal_event_id, mGameEventPoolIds.size());
         return;
     }
@@ -1236,7 +1214,7 @@ void GameEventMgr::GameEventUnspawn(int16 event_id)
 
     if (internal_event_id < 0 || internal_event_id >= int32(mGameEventCreatureGuids.size()))
     {
-        sLog->outError("GameEventMgr::GameEventUnspawn attempt access to out of range mGameEventCreatureGuids element %i (size: " SIZEFMTD ")", 
+        sLog->outError("GameEventMgr::GameEventUnspawn attempt access to out of range mGameEventCreatureGuids element %i (size: " SIZEFMTD ")",
             internal_event_id, mGameEventCreatureGuids.size());
         return;
     }
@@ -1258,7 +1236,7 @@ void GameEventMgr::GameEventUnspawn(int16 event_id)
 
     if (internal_event_id < 0 || internal_event_id >= int32(mGameEventGameobjectGuids.size()))
     {
-        sLog->outError("GameEventMgr::GameEventUnspawn attempt access to out of range mGameEventGameobjectGuids element %i (size: " SIZEFMTD ")", 
+        sLog->outError("GameEventMgr::GameEventUnspawn attempt access to out of range mGameEventGameobjectGuids element %i (size: " SIZEFMTD ")",
             internal_event_id, mGameEventGameobjectGuids.size());
         return;
     }

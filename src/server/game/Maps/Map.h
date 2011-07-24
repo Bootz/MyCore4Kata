@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -124,10 +124,10 @@ struct map_liquidHeader
 
 enum ZLiquidStatus
 {
-    LIQUID_MAP_NO_WATER     = 0x00000000, 
-    LIQUID_MAP_ABOVE_WATER  = 0x00000001, 
-    LIQUID_MAP_WATER_WALK   = 0x00000002, 
-    LIQUID_MAP_IN_WATER     = 0x00000004, 
+    LIQUID_MAP_NO_WATER     = 0x00000000,
+    LIQUID_MAP_ABOVE_WATER  = 0x00000001,
+    LIQUID_MAP_WATER_WALK   = 0x00000002,
+    LIQUID_MAP_IN_WATER     = 0x00000004,
     LIQUID_MAP_UNDER_WATER  = 0x00000008
 };
 
@@ -575,11 +575,11 @@ class Map : public GridRefManager<NGridType>
 
 enum InstanceResetMethod
 {
-    INSTANCE_RESET_ALL, 
-    INSTANCE_RESET_CHANGE_DIFFICULTY, 
-    INSTANCE_RESET_GLOBAL, 
-    INSTANCE_RESET_GROUP_DISBAND, 
-    INSTANCE_RESET_GROUP_JOIN, 
+    INSTANCE_RESET_ALL,
+    INSTANCE_RESET_CHANGE_DIFFICULTY,
+    INSTANCE_RESET_GLOBAL,
+    INSTANCE_RESET_GROUP_DISBAND,
+    INSTANCE_RESET_GROUP_JOIN,
     INSTANCE_RESET_RESPAWN_DELAY
 };
 

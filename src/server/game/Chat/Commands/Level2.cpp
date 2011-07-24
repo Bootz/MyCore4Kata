@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -407,7 +407,7 @@ bool ChatHandler::HandleGameObjectTargetCommand(const char* args)
         uint32 id = atol(cId);
 
         if (id)
-            result = WorldDatabase.PQuery("SELECT guid, id, position_x, position_y, position_z, orientation, map, phaseMask, (POW(position_x - '%f', 2) + POW(position_y - '%f', 2) + POW(position_z - '%f', 2)) AS order_ FROM gameobject WHERE map = '%i' AND id = '%u' ORDER BY order_ ASC LIMIT 1", 
+            result = WorldDatabase.PQuery("SELECT guid, id, position_x, position_y, position_z, orientation, map, phaseMask, (POW(position_x - '%f', 2) + POW(position_y - '%f', 2) + POW(position_z - '%f', 2)) AS order_ FROM gameobject WHERE map = '%i' AND id = '%u' ORDER BY order_ ASC LIMIT 1",
                 pl->GetPositionX(), pl->GetPositionY(), pl->GetPositionZ(), pl->GetMapId(), id);
         else
         {
@@ -415,7 +415,7 @@ bool ChatHandler::HandleGameObjectTargetCommand(const char* args)
             WorldDatabase.EscapeString(name);
             result = WorldDatabase.PQuery(
                 "SELECT guid, id, position_x, position_y, position_z, orientation, map, phaseMask, (POW(position_x - %f, 2) + POW(position_y - %f, 2) + POW(position_z - %f, 2)) AS order_ "
-                "FROM gameobject, gameobject_template WHERE gameobject_template.entry = gameobject.id AND map = %i AND name "_LIKE_" "_CONCAT3_("'%%'", "'%s'", "'%%'")" ORDER BY order_ ASC LIMIT 1", 
+                "FROM gameobject, gameobject_template WHERE gameobject_template.entry = gameobject.id AND map = %i AND name "_LIKE_" "_CONCAT3_("'%%'", "'%s'", "'%%'")" ORDER BY order_ ASC LIMIT 1",
                 pl->GetPositionX(), pl->GetPositionY(), pl->GetPositionZ(), pl->GetMapId(), name.c_str());
         }
     }
@@ -443,7 +443,7 @@ bool ChatHandler::HandleGameObjectTargetCommand(const char* args)
 
         result = WorldDatabase.PQuery("SELECT gameobject.guid, id, position_x, position_y, position_z, orientation, map, phaseMask, "
             "(POW(position_x - %f, 2) + POW(position_y - %f, 2) + POW(position_z - %f, 2)) AS order_ FROM gameobject "
-            "LEFT OUTER JOIN game_event_gameobject on gameobject.guid=game_event_gameobject.guid WHERE map = '%i' %s ORDER BY order_ ASC LIMIT 10", 
+            "LEFT OUTER JOIN game_event_gameobject on gameobject.guid=game_event_gameobject.guid WHERE map = '%i' %s ORDER BY order_ ASC LIMIT 10",
             m_session->GetPlayer()->GetPositionX(), m_session->GetPlayer()->GetPositionY(), m_session->GetPlayer()->GetPositionZ(), m_session->GetPlayer()->GetMapId(), eventFilter.str().c_str());
     }
 
@@ -797,8 +797,8 @@ bool ChatHandler::HandleGameObjectNearCommand(const char* args)
     Player* pl = m_session->GetPlayer();
     QueryResult result = WorldDatabase.PQuery("SELECT guid, id, position_x, position_y, position_z, map, "
         "(POW(position_x - '%f', 2) + POW(position_y - '%f', 2) + POW(position_z - '%f', 2)) AS order_ "
-        "FROM gameobject WHERE map='%u' AND (POW(position_x - '%f', 2) + POW(position_y - '%f', 2) + POW(position_z - '%f', 2)) <= '%f' ORDER BY order_", 
-        pl->GetPositionX(), pl->GetPositionY(), pl->GetPositionZ(), 
+        "FROM gameobject WHERE map='%u' AND (POW(position_x - '%f', 2) + POW(position_y - '%f', 2) + POW(position_z - '%f', 2)) <= '%f' ORDER BY order_",
+        pl->GetPositionX(), pl->GetPositionY(), pl->GetPositionZ(),
         pl->GetMapId(), pl->GetPositionX(), pl->GetPositionY(), pl->GetPositionZ(), distance*distance);
 
     if (result)
@@ -938,7 +938,7 @@ bool ChatHandler::HandleModifyRepCommand(const char * args)
     }
 
     target->GetReputationMgr().SetReputation(factionEntry, amount);
-    PSendSysMessage(LANG_COMMAND_MODIFY_REP, factionEntry->name, factionId, 
+    PSendSysMessage(LANG_COMMAND_MODIFY_REP, factionEntry->name, factionId,
         GetNameLink(target).c_str(), target->GetReputationMgr().GetReputation(factionEntry));
     return true;
 }
@@ -1324,7 +1324,7 @@ bool ChatHandler::HandleWpAddCommand(const char* args)
     Player* player = m_session->GetPlayer();
     //Map *map = player->GetMap();
 
-    WorldDatabase.PExecute("INSERT INTO waypoint_data (id, point, position_x, position_y, position_z) VALUES ('%u', '%u', '%f', '%f', '%f')", 
+    WorldDatabase.PExecute("INSERT INTO waypoint_data (id, point, position_x, position_y, position_z) VALUES ('%u', '%u', '%f', '%f', '%f')",
         pathid, point+1, player->GetPositionX(), player->GetPositionY(), player->GetPositionZ());
 
     PSendSysMessage("%s%s%u%s%u%s|r", "|cff00ff00", "PathID: |r|cff00ffff", pathid, "|r|cff00ff00: Waypoint |r|cff00ffff", point+1, "|r|cff00ff00 created. ");
@@ -1587,7 +1587,7 @@ bool ChatHandler::HandleWpEventCommand(const char* args)
         {
             uint32 newid = atoi(arg_3);
             PSendSysMessage("%s%s|r|cff00ffff%u|r|cff00ff00%s|r|cff00ffff%u|r", "|cff00ff00", "Wp Event: Wypoint scipt guid: ", newid, " id changed: ", id);
-            WorldDatabase.PExecute("UPDATE waypoint_scripts SET id='%u' WHERE guid='%u'", 
+            WorldDatabase.PExecute("UPDATE waypoint_scripts SET id='%u' WHERE guid='%u'",
             newid, id); return true;
         }
         else
@@ -1603,7 +1603,7 @@ bool ChatHandler::HandleWpEventCommand(const char* args)
             if (arg_str_2 == "posx")
             {
                 coord = (float)(atof(arg_3));
-                WorldDatabase.PExecute("UPDATE waypoint_scripts SET x='%f' WHERE guid='%u'", 
+                WorldDatabase.PExecute("UPDATE waypoint_scripts SET x='%f' WHERE guid='%u'",
                     coord, id);
                 PSendSysMessage("|cff00ff00Waypoint script:|r|cff00ffff %u|r|cff00ff00 position_x updated.|r", id);
                 return true;
@@ -1611,7 +1611,7 @@ bool ChatHandler::HandleWpEventCommand(const char* args)
             else if (arg_str_2 == "posy")
             {
                 coord = (float)(atof(arg_3));
-                WorldDatabase.PExecute("UPDATE waypoint_scripts SET y='%f' WHERE guid='%u'", 
+                WorldDatabase.PExecute("UPDATE waypoint_scripts SET y='%f' WHERE guid='%u'",
                     coord, id);
                 PSendSysMessage("|cff00ff00Waypoint script: %u position_y updated.|r", id);
                 return true;
@@ -1619,7 +1619,7 @@ bool ChatHandler::HandleWpEventCommand(const char* args)
             else if (arg_str_2 == "posz")
             {
                 coord = (float)(atof(arg_3));
-                WorldDatabase.PExecute("UPDATE waypoint_scripts SET z='%f' WHERE guid='%u'", 
+                WorldDatabase.PExecute("UPDATE waypoint_scripts SET z='%f' WHERE guid='%u'",
                     coord, id);
                 PSendSysMessage("|cff00ff00Waypoint script: |r|cff00ffff%u|r|cff00ff00 position_z updated.|r", id);
                 return true;
@@ -1627,14 +1627,14 @@ bool ChatHandler::HandleWpEventCommand(const char* args)
             else if (arg_str_2 == "orientation")
             {
                 coord = (float)(atof(arg_3));
-                WorldDatabase.PExecute("UPDATE waypoint_scripts SET o='%f' WHERE guid='%u'", 
+                WorldDatabase.PExecute("UPDATE waypoint_scripts SET o='%f' WHERE guid='%u'",
                     coord, id);
                 PSendSysMessage("|cff00ff00Waypoint script: |r|cff00ffff%u|r|cff00ff00 orientation updated.|r", id);
                 return true;
             }
             else if (arg_str_2 == "dataint")
             {
-                    WorldDatabase.PExecute("UPDATE waypoint_scripts SET %s='%u' WHERE guid='%u'", 
+                    WorldDatabase.PExecute("UPDATE waypoint_scripts SET %s='%u' WHERE guid='%u'",
                     arg_2, atoi(arg_3), id);
                     PSendSysMessage("|cff00ff00Waypoint script: |r|cff00ffff%u|r|cff00ff00 dataint updated.|r", id);
                     return true;
@@ -1643,7 +1643,7 @@ bool ChatHandler::HandleWpEventCommand(const char* args)
             {
                     std::string arg_str_3 = arg_3;
                     WorldDatabase.EscapeString(arg_str_3);
-                    WorldDatabase.PExecute("UPDATE waypoint_scripts SET %s='%s' WHERE guid='%u'", 
+                    WorldDatabase.PExecute("UPDATE waypoint_scripts SET %s='%s' WHERE guid='%u'",
                     arg_2, arg_str_3.c_str(), id);
             }
         }
@@ -1725,7 +1725,7 @@ bool ChatHandler::HandleWpModifyCommand(const char* args)
             // (0.001) - There is no other way to compare C++ floats with mySQL floats
             // See also: http://dev.mysql.com/doc/refman/5.0/en/problems-with-float.html
             const char* maxDIFF = "0.01";
-            result = WorldDatabase.PQuery("SELECT id, point FROM waypoint_data WHERE (abs(position_x - %f) <= %s) and (abs(position_y - %f) <= %s) and (abs(position_z - %f) <= %s)", 
+            result = WorldDatabase.PQuery("SELECT id, point FROM waypoint_data WHERE (abs(position_x - %f) <= %s) and (abs(position_y - %f) <= %s) and (abs(position_z - %f) <= %s)",
             wpCreature->GetPositionX(), maxDIFF, wpCreature->GetPositionY(), maxDIFF, wpCreature->GetPositionZ(), maxDIFF);
             if (!result)
             {
@@ -1772,9 +1772,9 @@ bool ChatHandler::HandleWpModifyCommand(const char* args)
             wpCreature->AddObjectToRemoveList();
         }
 
-        WorldDatabase.PExecute("DELETE FROM waypoint_data WHERE id='%u' AND point='%u'", 
+        WorldDatabase.PExecute("DELETE FROM waypoint_data WHERE id='%u' AND point='%u'",
             pathid, point);
-        WorldDatabase.PExecute("UPDATE waypoint_data SET point=point-1 WHERE id='%u' AND point>'%u'", 
+        WorldDatabase.PExecute("UPDATE waypoint_data SET point=point-1 WHERE id='%u' AND point>'%u'",
             pathid, point);
 
         PSendSysMessage(LANG_WAYPOINT_REMOVED);
@@ -1803,13 +1803,13 @@ bool ChatHandler::HandleWpModifyCommand(const char* args)
                 CreatureInfo const *ci = ObjectMgr::GetCreatureTemplate(VISUAL_WAYPOINT);
                 if (!ci)
                     return false;
-                
+
                 Creature* wpCreature2 = NULL;
                 if (ci->ScriptID)
                     wpCreature2 = sScriptMgr->GetCreatureScriptedClass(ci->ScriptID);
                 if (wpCreature2 == NULL)
                     wpCreature2 = new Creature();
-        
+
                 if (!wpCreature2->Create(sObjectMgr->GenerateLowGuid(HIGHGUID_UNIT), map, chr->GetPhaseMaskForSpawn(), VISUAL_WAYPOINT, 0, 0, chr->GetPositionX(), chr->GetPositionY(), chr->GetPositionZ(), chr->GetOrientation()))
                 {
                     PSendSysMessage(LANG_WAYPOINT_VP_NOTCREATED, VISUAL_WAYPOINT);
@@ -1824,7 +1824,7 @@ bool ChatHandler::HandleWpModifyCommand(const char* args)
                 //sMapMgr->GetMap(npcCreature->GetMapId())->Add(wpCreature2);
             }
 
-            WorldDatabase.PExecute("UPDATE waypoint_data SET position_x = '%f', position_y = '%f', position_z = '%f' where id = '%u' AND point='%u'", 
+            WorldDatabase.PExecute("UPDATE waypoint_data SET position_x = '%f', position_y = '%f', position_z = '%f' where id = '%u' AND point='%u'",
                 chr->GetPositionX(), chr->GetPositionY(), chr->GetPositionZ(), pathid, point);
 
             PSendSysMessage(LANG_WAYPOINT_CHANGED);
@@ -1837,7 +1837,7 @@ bool ChatHandler::HandleWpModifyCommand(const char* args)
     if (text == 0)
     {
         // show_str check for present in list of correct values, no sql injection possible
-        WorldDatabase.PExecute("UPDATE waypoint_data SET %s=NULL WHERE id='%u' AND point='%u'", 
+        WorldDatabase.PExecute("UPDATE waypoint_data SET %s=NULL WHERE id='%u' AND point='%u'",
             show_str, pathid, point);
     }
     else
@@ -1845,7 +1845,7 @@ bool ChatHandler::HandleWpModifyCommand(const char* args)
         // show_str check for present in list of correct values, no sql injection possible
         std::string text2 = text;
         WorldDatabase.EscapeString(text2);
-        WorldDatabase.PExecute("UPDATE waypoint_data SET %s='%s' WHERE id='%u' AND point='%u'", 
+        WorldDatabase.PExecute("UPDATE waypoint_data SET %s='%s' WHERE id='%u' AND point='%u'",
             show_str, text2.c_str(), pathid, point);
     }
 
@@ -1988,7 +1988,6 @@ bool ChatHandler::HandleWpShowCommand(const char* args)
                     pCreature->DeleteFromDB();
                     pCreature->AddObjectToRemoveList();
                 }
-
             }
             while (result2->NextRow());
 
@@ -2017,13 +2016,13 @@ bool ChatHandler::HandleWpShowCommand(const char* args)
             CreatureInfo const *ci = ObjectMgr::GetCreatureTemplate(id);
             if (!ci)
                 return false;
-            
+
             Creature* wpCreature = NULL;
             if (ci->ScriptID)
                 wpCreature = sScriptMgr->GetCreatureScriptedClass(ci->ScriptID);
             if (wpCreature == NULL)
                 wpCreature = new Creature();
-            
+
             if (!wpCreature->Create(sObjectMgr->GenerateLowGuid(HIGHGUID_UNIT), map, chr->GetPhaseMaskForSpawn(), id, 0, 0, x, y, z, o))
             {
                 PSendSysMessage(LANG_WAYPOINT_VP_NOTCREATED, id);
@@ -2078,13 +2077,13 @@ bool ChatHandler::HandleWpShowCommand(const char* args)
         CreatureInfo const *ci = ObjectMgr::GetCreatureTemplate(id);
         if (!ci)
             return false;
-        
+
         Creature* pCreature = NULL;
         if (ci->ScriptID)
             pCreature = sScriptMgr->GetCreatureScriptedClass(ci->ScriptID);
         if (pCreature == NULL)
             pCreature = new Creature();
-        
+
         if (!pCreature->Create(sObjectMgr->GenerateLowGuid(HIGHGUID_UNIT), map, chr->GetPhaseMaskForSpawn(), id, 0, 0, x, y, z, o))
         {
             PSendSysMessage(LANG_WAYPOINT_VP_NOTCREATED, id);
@@ -2135,13 +2134,13 @@ bool ChatHandler::HandleWpShowCommand(const char* args)
         CreatureInfo const *ci = ObjectMgr::GetCreatureTemplate(id);
         if (!ci)
             return false;
-        
+
         Creature* pCreature = NULL;
         if (ci->ScriptID)
             pCreature = sScriptMgr->GetCreatureScriptedClass(ci->ScriptID);
         if (pCreature == NULL)
             pCreature = new Creature();
-        
+
         if (!pCreature->Create(sObjectMgr->GenerateLowGuid(HIGHGUID_UNIT), map, chr->GetPhaseMaskForSpawn(), id, 0, 0, x, y, z, o))
         {
             PSendSysMessage(LANG_WAYPOINT_NOTCREATED, id);
@@ -2563,8 +2562,8 @@ bool ChatHandler::HandleEventInfoCommand(const char* args)
     std::string occurenceStr = secsToTimeString(eventData.occurence * MINUTE);
     std::string lengthStr = secsToTimeString(eventData.length * MINUTE);
 
-    PSendSysMessage(LANG_EVENT_INFO, event_id, eventData.description.c_str(), activeStr, 
-        startTimeStr.c_str(), endTimeStr.c_str(), occurenceStr.c_str(), lengthStr.c_str(), 
+    PSendSysMessage(LANG_EVENT_INFO, event_id, eventData.description.c_str(), activeStr,
+        startTimeStr.c_str(), endTimeStr.c_str(), occurenceStr.c_str(), lengthStr.c_str(),
         nextStr.c_str());
     return true;
 }
@@ -2703,7 +2702,6 @@ void ChatHandler::HandleLearnSkillRecipesHelper(Player* player, uint32 skill_id)
 
 bool ChatHandler::HandleLearnAllCraftsCommand(const char* /*args*/)
 {
-
     for (uint32 i = 0; i < sSkillLineStore.GetNumRows(); ++i)
     {
         SkillLineEntry const *skillInfo = sSkillLineStore.LookupEntry(i);
@@ -2800,7 +2798,6 @@ bool ChatHandler::HandleLearnAllRecipesCommand(const char* args)
 
 bool ChatHandler::HandleLookupPlayerIpCommand(const char* args)
 {
-
     if (!*args)
         return false;
 
@@ -2836,7 +2833,6 @@ bool ChatHandler::HandleLookupPlayerAccountCommand(const char* args)
 
 bool ChatHandler::HandleLookupPlayerEmailCommand(const char* args)
 {
-
     if (!*args)
         return false;
 
@@ -2891,7 +2887,6 @@ bool ChatHandler::LookupPlayerSearchCommand(QueryResult result, int32 limit)
 
                 PSendSysMessage(LANG_LOOKUP_PLAYER_CHARACTER, name.c_str(), guid);
                 ++i;
-
             } while (chars->NextRow() && (limit == -1 || i < limit));
         }
     } while (result->NextRow());

@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -219,46 +219,46 @@ bool ChatHandler::HandleLearnAllCommand(const char* /*args*/)
 {
     static const char *allSpellList[] =
     {
-        "6603", 
-        "5019", 
-        "227", 
-        "5009", 
-        "203", 
-        "81", 
-        "768", 
-        "15590", 
-        "1066", 
-        "783", 
-        "3127", 
-        "107", 
-        "9116", 
-        "331", 
-        "4933", 
-        "4934", 
-        "4935", 
-        "4936", 
-        "23452", 
-        "1180", 
-        "201", 
-        "5487", 
-        "3018", 
-        "2764", 
-        "674", 
-        "200", 
-        "198", 
-        "202", 
-        "199", 
-        "197", 
-        "2567", 
-        "264", 
-        "5011", 
-        "266", 
-        "8737", 
-        "196", 
-        "9077", 
-        "49152", 
-        "46917", 
-        "750", 
+        "6603",
+        "5019",
+        "227",
+        "5009",
+        "203",
+        "81",
+        "768",
+        "15590",
+        "1066",
+        "783",
+        "3127",
+        "107",
+        "9116",
+        "331",
+        "4933",
+        "4934",
+        "4935",
+        "4936",
+        "23452",
+        "1180",
+        "201",
+        "5487",
+        "3018",
+        "2764",
+        "674",
+        "200",
+        "198",
+        "202",
+        "199",
+        "197",
+        "2567",
+        "264",
+        "5011",
+        "266",
+        "8737",
+        "196",
+        "9077",
+        "49152",
+        "46917",
+        "750",
         "0"
     };
 
@@ -790,7 +790,7 @@ bool ChatHandler::HandleListItemCommand(const char *args)
         "INNER JOIN character_inventory ci ON ci.guid = c.guid "
         "INNER JOIN item_instance ii ON ii.guid = ci.item "
         "LEFT JOIN character_inventory cb ON cb.item = ci.bag "
-        "WHERE ii.itemEntry = '%u' LIMIT %u ", 
+        "WHERE ii.itemEntry = '%u' LIMIT %u ",
         item_id, count);
 
     if (result)
@@ -842,7 +842,7 @@ bool ChatHandler::HandleListItemCommand(const char *args)
             "INNER JOIN item_instance ii ON ii.guid = mi.item_guid "
             "INNER JOIN characters cs ON cs.guid = m.sender "
             "INNER JOIN characters cr ON cr.guid = m.receiver "
-            "WHERE ii.itemEntry = '%u' LIMIT %u", 
+            "WHERE ii.itemEntry = '%u' LIMIT %u",
             item_id, count);
     }
     else
@@ -921,7 +921,7 @@ bool ChatHandler::HandleListItemCommand(const char *args)
         "SELECT gi.item_guid, gi.guildid, g.name FROM guild_bank_item gi "
         "INNER JOIN guild g ON g.guildid = gi.guildid "
         "INNER JOIN item_instance ii ON ii.guid = gi.item_guid "
-        "WHERE ii.itemEntry = '%u' LIMIT %u ", 
+        "WHERE ii.itemEntry = '%u' LIMIT %u ",
         item_id, count);
 
     if (result)
@@ -1000,11 +1000,11 @@ bool ChatHandler::HandleListObjectCommand(const char *args)
     if (m_session)
     {
         Player* pl = m_session->GetPlayer();
-        result = WorldDatabase.PQuery("SELECT guid, position_x, position_y, position_z, map, (POW(position_x - '%f', 2) + POW(position_y - '%f', 2) + POW(position_z - '%f', 2)) AS order_ FROM gameobject WHERE id = '%u' ORDER BY order_ ASC LIMIT %u", 
+        result = WorldDatabase.PQuery("SELECT guid, position_x, position_y, position_z, map, (POW(position_x - '%f', 2) + POW(position_y - '%f', 2) + POW(position_z - '%f', 2)) AS order_ FROM gameobject WHERE id = '%u' ORDER BY order_ ASC LIMIT %u",
             pl->GetPositionX(), pl->GetPositionY(), pl->GetPositionZ(), go_id, uint32(count));
     }
     else
-        result = WorldDatabase.PQuery("SELECT guid, position_x, position_y, position_z, map FROM gameobject WHERE id = '%u' LIMIT %u", 
+        result = WorldDatabase.PQuery("SELECT guid, position_x, position_y, position_z, map FROM gameobject WHERE id = '%u' LIMIT %u",
             go_id, uint32(count));
 
     if (result)
@@ -1130,11 +1130,11 @@ bool ChatHandler::HandleListCreatureCommand(const char *args)
     if (m_session)
     {
         Player* pl = m_session->GetPlayer();
-        result = WorldDatabase.PQuery("SELECT guid, position_x, position_y, position_z, map, (POW(position_x - '%f', 2) + POW(position_y - '%f', 2) + POW(position_z - '%f', 2)) AS order_ FROM creature WHERE id = '%u' ORDER BY order_ ASC LIMIT %u", 
+        result = WorldDatabase.PQuery("SELECT guid, position_x, position_y, position_z, map, (POW(position_x - '%f', 2) + POW(position_y - '%f', 2) + POW(position_z - '%f', 2)) AS order_ FROM creature WHERE id = '%u' ORDER BY order_ ASC LIMIT %u",
             pl->GetPositionX(), pl->GetPositionY(), pl->GetPositionZ(), cr_id, uint32(count));
     }
     else
-        result = WorldDatabase.PQuery("SELECT guid, position_x, position_y, position_z, map FROM creature WHERE id = '%u' LIMIT %u", 
+        result = WorldDatabase.PQuery("SELECT guid, position_x, position_y, position_z, map FROM creature WHERE id = '%u' LIMIT %u",
             cr_id, uint32(count));
 
     if (result)
@@ -1873,10 +1873,10 @@ bool ChatHandler::HandleLookupTaxiNodeCommand(const char * args)
 
                 // send taxinode in "id - [name] (Map:m X:x Y:y Z:z)" format
                 if (m_session)
-                    PSendSysMessage (LANG_TAXINODE_ENTRY_LIST_CHAT, id, id, name.c_str(), localeNames, 
+                    PSendSysMessage (LANG_TAXINODE_ENTRY_LIST_CHAT, id, id, name.c_str(), localeNames,
                         nodeEntry->map_id, nodeEntry->x, nodeEntry->y, nodeEntry->z);
                 else
-                    PSendSysMessage (LANG_TAXINODE_ENTRY_LIST_CONSOLE, id, name.c_str(), localeNames, 
+                    PSendSysMessage (LANG_TAXINODE_ENTRY_LIST_CONSOLE, id, name.c_str(), localeNames,
                         nodeEntry->map_id, nodeEntry->x, nodeEntry->y, nodeEntry->z);
 
                 if (!found)
@@ -2825,20 +2825,20 @@ bool ChatHandler::HandleListAurasCommand (const char * /*args*/)
             std::ostringstream ss_name;
             ss_name << "|cffffffff|Hspell:" << aura->GetId() << "|h[" << name << "]|h|r";
 
-            PSendSysMessage(LANG_COMMAND_TARGET_AURADETAIL, aura->GetId(), aurApp->GetEffectMask(), 
-                aura->GetCharges(), aura->GetStackAmount(), aurApp->GetSlot(), 
-                aura->GetDuration(), aura->GetMaxDuration(), 
-                ss_name.str().c_str(), 
-                (aura->IsPassive() ? passiveStr : ""), (talent ? talentStr : ""), 
+            PSendSysMessage(LANG_COMMAND_TARGET_AURADETAIL, aura->GetId(), aurApp->GetEffectMask(),
+                aura->GetCharges(), aura->GetStackAmount(), aurApp->GetSlot(),
+                aura->GetDuration(), aura->GetMaxDuration(),
+                ss_name.str().c_str(),
+                (aura->IsPassive() ? passiveStr : ""), (talent ? talentStr : ""),
                 IS_PLAYER_GUID(aura->GetCasterGUID()) ? "player" : "creature", GUID_LOPART(aura->GetCasterGUID()));
         }
         else
         {
-            PSendSysMessage(LANG_COMMAND_TARGET_AURADETAIL, aura->GetId(), aurApp->GetEffectMask(), 
-                aura->GetCharges(), aura->GetStackAmount(), aurApp->GetSlot(), 
-                aura->GetDuration(), aura->GetMaxDuration(), 
-                name, 
-                (aura->IsPassive() ? passiveStr : ""), (talent ? talentStr : ""), 
+            PSendSysMessage(LANG_COMMAND_TARGET_AURADETAIL, aura->GetId(), aurApp->GetEffectMask(),
+                aura->GetCharges(), aura->GetStackAmount(), aurApp->GetSlot(),
+                aura->GetDuration(), aura->GetMaxDuration(),
+                name,
+                (aura->IsPassive() ? passiveStr : ""), (talent ? talentStr : ""),
                 IS_PLAYER_GUID(aura->GetCasterGUID()) ? "player" : "creature", GUID_LOPART(aura->GetCasterGUID()));
         }
     }
@@ -2856,7 +2856,7 @@ bool ChatHandler::HandleListAurasCommand (const char * /*args*/)
             std::ostringstream ss_name;
             ss_name << "|cffffffff|Hspell:" << (*itr)->GetId() << "|h[" << name << "]|h|r";
 
-            PSendSysMessage(LANG_COMMAND_TARGET_AURASIMPLE, (*itr)->GetId(), (*itr)->GetEffIndex(), 
+            PSendSysMessage(LANG_COMMAND_TARGET_AURASIMPLE, (*itr)->GetId(), (*itr)->GetEffIndex(),
                 (*itr)->GetAmount());
         }
     }
@@ -3742,9 +3742,9 @@ bool ChatHandler::HandleBanInfoCharacterCommand(const char *args)
             active = true;
         bool permanent = (fields[1].GetUInt32() == uint32(0));
         std::string bantime = permanent ? GetSkyFireString(LANG_BANINFO_INFINITE) : secsToTimeString(fields[1].GetUInt32(), true);
-        PSendSysMessage(LANG_BANINFO_HISTORYENTRY, 
+        PSendSysMessage(LANG_BANINFO_HISTORYENTRY,
             fields[0].GetCString(), bantime.c_str(), active ? GetSkyFireString(LANG_BANINFO_YES) : GetSkyFireString(LANG_BANINFO_NO), fields[4].GetCString(), fields[5].GetCString());
-    } 
+    }
     while (result->NextRow());
 
     return true;
@@ -3770,7 +3770,7 @@ bool ChatHandler::HandleBanInfoHelper(uint32 accountid, char const* accountname)
             active = true;
         bool permanent = (fields[1].GetUInt64() == (uint64)0);
         std::string bantime = permanent ? GetSkyFireString(LANG_BANINFO_INFINITE) : secsToTimeString(fields[1].GetUInt64(), true);
-        PSendSysMessage(LANG_BANINFO_HISTORYENTRY, 
+        PSendSysMessage(LANG_BANINFO_HISTORYENTRY,
             fields[0].GetCString(), bantime.c_str(), active ? GetSkyFireString(LANG_BANINFO_YES) : GetSkyFireString(LANG_BANINFO_NO), fields[4].GetCString(), fields[5].GetCString());
     } while (result->NextRow());
 
@@ -3801,8 +3801,8 @@ bool ChatHandler::HandleBanInfoIPCommand(const char *args)
 
     Field *fields = result->Fetch();
     bool permanent = !fields[6].GetUInt64();
-    PSendSysMessage(LANG_BANINFO_IPENTRY, 
-        fields[0].GetCString(), fields[1].GetCString(), permanent ? GetSkyFireString(LANG_BANINFO_NEVER) : fields[2].GetCString(), 
+    PSendSysMessage(LANG_BANINFO_IPENTRY,
+        fields[0].GetCString(), fields[1].GetCString(), permanent ? GetSkyFireString(LANG_BANINFO_NEVER) : fields[2].GetCString(),
         permanent ? GetSkyFireString(LANG_BANINFO_INFINITE) : secsToTimeString(fields[3].GetUInt64(), true).c_str(), fields[4].GetCString(), fields[5].GetCString());
 
     return true;
@@ -3870,17 +3870,17 @@ bool ChatHandler::HandleBanListCharacterCommand(const char *args)
 
                     if (banFields[0].GetUInt32() == banFields[1].GetUInt32())
                     {
-                        PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|   permanent  |%-15.15s|%-15.15s|", 
-                            char_name.c_str(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min, 
+                        PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|   permanent  |%-15.15s|%-15.15s|",
+                            char_name.c_str(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min,
                             banFields[2].GetCString(), banFields[3].GetCString());
                     }
                     else
                     {
                         time_t t_unban = time_t(banFields[1].GetUInt32());
                         tm* aTm_unban = localtime(&t_unban);
-                        PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|%02d-%02d-%02d %02d:%02d|%-15.15s|%-15.15s|", 
-                            char_name.c_str(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min, 
-                            aTm_unban->tm_year%100, aTm_unban->tm_mon+1, aTm_unban->tm_mday, aTm_unban->tm_hour, aTm_unban->tm_min, 
+                        PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|%02d-%02d-%02d %02d:%02d|%-15.15s|%-15.15s|",
+                            char_name.c_str(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min,
+                            aTm_unban->tm_year%100, aTm_unban->tm_mon+1, aTm_unban->tm_mday, aTm_unban->tm_hour, aTm_unban->tm_min,
                             banFields[2].GetCString(), banFields[3].GetCString());
                     }
                 }
@@ -3912,7 +3912,7 @@ bool ChatHandler::HandleBanListAccountCommand(const char *args)
     else
     {
         result = LoginDatabase.PQuery("SELECT account.id, username FROM account, account_banned"
-            " WHERE account.id = account_banned.id AND active = 1 AND username "_LIKE_" "_CONCAT3_("'%%'", "'%s'", "'%%'")" GROUP BY account.id", 
+            " WHERE account.id = account_banned.id AND active = 1 AND username "_LIKE_" "_CONCAT3_("'%%'", "'%s'", "'%%'")" GROUP BY account.id",
             filter.c_str());
     }
 
@@ -3978,17 +3978,17 @@ bool ChatHandler::HandleBanListHelper(QueryResult result)
 
                     if (fields2[0].GetUInt64() == fields2[1].GetUInt64())
                     {
-                        PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|   permanent  |%-15.15s|%-15.15s|", 
-                            account_name.c_str(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min, 
+                        PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|   permanent  |%-15.15s|%-15.15s|",
+                            account_name.c_str(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min,
                             fields2[2].GetCString(), fields2[3].GetCString());
                     }
                     else
                     {
                         time_t t_unban = fields2[1].GetUInt64();
                         tm* aTm_unban = localtime(&t_unban);
-                        PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|%02d-%02d-%02d %02d:%02d|%-15.15s|%-15.15s|", 
-                            account_name.c_str(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min, 
-                            aTm_unban->tm_year%100, aTm_unban->tm_mon+1, aTm_unban->tm_mday, aTm_unban->tm_hour, aTm_unban->tm_min, 
+                        PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|%02d-%02d-%02d %02d:%02d|%-15.15s|%-15.15s|",
+                            account_name.c_str(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min,
+                            aTm_unban->tm_year%100, aTm_unban->tm_mon+1, aTm_unban->tm_mday, aTm_unban->tm_hour, aTm_unban->tm_min,
                             fields2[2].GetCString(), fields2[3].GetCString());
                     }
                 } while (banInfo->NextRow());
@@ -4052,17 +4052,17 @@ bool ChatHandler::HandleBanListIPCommand(const char *args)
             tm* aTm_ban = localtime(&t_ban);
             if (fields[1].GetUInt64() == fields[2].GetUInt64())
             {
-                PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|   permanent  |%-15.15s|%-15.15s|", 
-                    fields[0].GetCString(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min, 
+                PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|   permanent  |%-15.15s|%-15.15s|",
+                    fields[0].GetCString(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min,
                     fields[3].GetCString(), fields[4].GetCString());
             }
             else
             {
                 time_t t_unban = fields[2].GetUInt64();
                 tm* aTm_unban = localtime(&t_unban);
-                PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|%02d-%02d-%02d %02d:%02d|%-15.15s|%-15.15s|", 
-                    fields[0].GetCString(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min, 
-                    aTm_unban->tm_year%100, aTm_unban->tm_mon+1, aTm_unban->tm_mday, aTm_unban->tm_hour, aTm_unban->tm_min, 
+                PSendSysMessage("|%-15.15s|%02d-%02d-%02d %02d:%02d|%02d-%02d-%02d %02d:%02d|%-15.15s|%-15.15s|",
+                    fields[0].GetCString(), aTm_ban->tm_year%100, aTm_ban->tm_mon+1, aTm_ban->tm_mday, aTm_ban->tm_hour, aTm_ban->tm_min,
+                    aTm_unban->tm_year%100, aTm_unban->tm_mon+1, aTm_unban->tm_mday, aTm_unban->tm_hour, aTm_unban->tm_min,
                     fields[3].GetCString(), fields[4].GetCString());
             }
         }while (result->NextRow());
@@ -5154,7 +5154,6 @@ bool ChatHandler::HandleChannelSetOwnership(const char *args)
 
     return true;
 }
-
 
 /*------------------------------------------
  *-------------TRINITY----------------------

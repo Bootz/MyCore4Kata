@@ -284,7 +284,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 //Water Globule AI
@@ -352,9 +351,7 @@ public:
             //do NOT deal any melee damage to the target.
         }
     };
-
 };
-
 
 void AddSC_boss_morogrim_tidewalker()
 {

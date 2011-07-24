@@ -82,7 +82,6 @@ public:
             me->CastSpell(me,SPELL_MOLTEN_FLAME,true);
         }
     };
-
 };
 
 class boss_supremus : public CreatureScript
@@ -254,7 +253,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class npc_volcano : public CreatureScript
@@ -299,13 +297,8 @@ public:
             }
             else wait -= diff;
         }
-
     };
-
 };
-
-
-
 
 void AddSC_boss_supremus()
 {

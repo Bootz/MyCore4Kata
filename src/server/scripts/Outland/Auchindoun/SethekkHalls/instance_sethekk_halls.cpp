@@ -99,9 +99,7 @@ public:
             }
         }
     };
-
 };
-
 
 void AddSC_instance_sethekk_halls()
 {

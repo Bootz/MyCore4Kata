@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -72,7 +72,7 @@ enum SpellModType
 // 2^n values, Player::m_isunderwater is a bitmask. These are Trinity internal values, they are never send to any client
 enum PlayerUnderwaterState
 {
-    UNDERWATER_NONE                     = 0x00, 
+    UNDERWATER_NONE                     = 0x00,
     UNDERWATER_INWATER                  = 0x01,             // terrain type is water and player is afflicted by it
     UNDERWATER_INLAVA                   = 0x02,             // terrain type is lava and player is afflicted by it
     UNDERWATER_INSLIME                  = 0x04,             // terrain type is lava and player is afflicted by it
@@ -83,25 +83,25 @@ enum PlayerUnderwaterState
 
 enum BuyBankSlotResult
 {
-    ERR_BANKSLOT_FAILED_TOO_MANY    = 0, 
-    ERR_BANKSLOT_INSUFFICIENT_FUNDS = 1, 
-    ERR_BANKSLOT_NOTBANKER          = 2, 
+    ERR_BANKSLOT_FAILED_TOO_MANY    = 0,
+    ERR_BANKSLOT_INSUFFICIENT_FUNDS = 1,
+    ERR_BANKSLOT_NOTBANKER          = 2,
     ERR_BANKSLOT_OK                 = 3
 };
 
 enum TrainerBuySpellResult
 {
-    ERR_TRAINER_UNAVAILABLE = 0, 
-    ERR_TRAINER_NOT_ENOUGH_MONEY = 1, 
-    ERR_TRAINER_OK = 2, 
+    ERR_TRAINER_UNAVAILABLE = 0,
+    ERR_TRAINER_NOT_ENOUGH_MONEY = 1,
+    ERR_TRAINER_OK = 2,
 };
 
 enum PlayerSpellState
 {
-    PLAYERSPELL_UNCHANGED = 0, 
-    PLAYERSPELL_CHANGED   = 1, 
-    PLAYERSPELL_NEW       = 2, 
-    PLAYERSPELL_REMOVED   = 3, 
+    PLAYERSPELL_UNCHANGED = 0,
+    PLAYERSPELL_CHANGED   = 1,
+    PLAYERSPELL_NEW       = 2,
+    PLAYERSPELL_REMOVED   = 3,
     PLAYERSPELL_TEMPORARY = 4
 };
 
@@ -121,9 +121,9 @@ struct PlayerTalent
 
 enum PlayerCurrencyState
 {
-    PLAYERCURRENCY_UNCHANGED = 0, 
-    PLAYERCURRENCY_CHANGED   = 1, 
-    PLAYERCURRENCY_NEW       = 2, 
+    PLAYERCURRENCY_UNCHANGED = 0,
+    PLAYERCURRENCY_CHANGED   = 1,
+    PLAYERCURRENCY_NEW       = 2,
     PLAYERCURRENCY_REMOVED   = 3
 };
 
@@ -166,61 +166,61 @@ typedef UNORDERED_MAP<uint32 /*instanceId*/, time_t/*releaseTime*/> InstanceTime
 
 enum TrainerSpellState
 {
-	TRAINER_SPELL_GREEN = 01, 
-	TRAINER_SPELL_RED   = 02, 
-	TRAINER_SPELL_GRAY  = 00, 
+	TRAINER_SPELL_GREEN = 01,
+	TRAINER_SPELL_RED   = 02,
+	TRAINER_SPELL_GRAY  = 00,
 	TRAINER_SPELL_GREEN_DISABLED = 10               // custom value, not send to client: formally green but learn not allowed
 };
 
 enum TalentBranchSpec
 {
-    BS_WARRIOR_ARMS         = 746, 
-    BS_WARRIOR_FURY         = 815, 
-    BS_WARRIOR_PROTECTION   = 845, 
-    BS_PALADIN_HOLY         = 831, 
-    BS_PALADIN_PROTECTION   = 839, 
-    BS_PALADIN_RETRIBUTION  = 855, 
-    BS_HUNTER_BEAST_MASTERY = 811, 
-    BS_HUNTER_MARKMANSHIP   = 807, 
-    BS_HUNTER_SURVIVAL      = 809, 
-    BG_ROGUE_ASSASINATION   = 182, 
-    BS_ROGUE_COMBAT         = 181, 
-    BS_ROGUE_SUBTLETY       = 183, 
-    BS_PRIEST_DISCIPLINE    = 760, 
-    BS_PRIEST_HOLY          = 813, 
-    BS_PRIEST_SHADOW        = 759, 
-    BS_DEATH_KNIGHT_BLOOD   = 398, 
-    BS_DEATH_KNIGHT_FROST   = 399, 
-    BS_DEATH_KNIGHT_UNHOLY  = 400, 
-    BS_SHAMAN_ELEMENTAL     = 261, 
-    BS_SHAMAN_ENCHANCEMENT  = 263, 
-    BS_SHAMAN_RESTORATION   = 262, 
-    BS_MAGE_ARCANE          = 799, 
-    BS_MAGE_FIRE            = 851, 
-    BS_MAGE_FROST           = 823, 
-    BS_WARLOCK_AFFLICTION   = 871, 
-    BS_WARLOCK_DEMONOLOGY   = 867, 
-    BS_WARLOCK_DESTRUCTION  = 865, 
-    BS_DRUID_BALANCE        = 752, 
-    BS_DRUID_FERAL_COMBAT   = 750, 
+    BS_WARRIOR_ARMS         = 746,
+    BS_WARRIOR_FURY         = 815,
+    BS_WARRIOR_PROTECTION   = 845,
+    BS_PALADIN_HOLY         = 831,
+    BS_PALADIN_PROTECTION   = 839,
+    BS_PALADIN_RETRIBUTION  = 855,
+    BS_HUNTER_BEAST_MASTERY = 811,
+    BS_HUNTER_MARKMANSHIP   = 807,
+    BS_HUNTER_SURVIVAL      = 809,
+    BG_ROGUE_ASSASINATION   = 182,
+    BS_ROGUE_COMBAT         = 181,
+    BS_ROGUE_SUBTLETY       = 183,
+    BS_PRIEST_DISCIPLINE    = 760,
+    BS_PRIEST_HOLY          = 813,
+    BS_PRIEST_SHADOW        = 759,
+    BS_DEATH_KNIGHT_BLOOD   = 398,
+    BS_DEATH_KNIGHT_FROST   = 399,
+    BS_DEATH_KNIGHT_UNHOLY  = 400,
+    BS_SHAMAN_ELEMENTAL     = 261,
+    BS_SHAMAN_ENCHANCEMENT  = 263,
+    BS_SHAMAN_RESTORATION   = 262,
+    BS_MAGE_ARCANE          = 799,
+    BS_MAGE_FIRE            = 851,
+    BS_MAGE_FROST           = 823,
+    BS_WARLOCK_AFFLICTION   = 871,
+    BS_WARLOCK_DEMONOLOGY   = 867,
+    BS_WARLOCK_DESTRUCTION  = 865,
+    BS_DRUID_BALANCE        = 752,
+    BS_DRUID_FERAL_COMBAT   = 750,
     BS_DRUID_RESTORATION    = 748
 };
 
 enum ActionButtonUpdateState
 {
-    ACTIONBUTTON_UNCHANGED = 0, 
-    ACTIONBUTTON_CHANGED   = 1, 
-    ACTIONBUTTON_NEW       = 2, 
+    ACTIONBUTTON_UNCHANGED = 0,
+    ACTIONBUTTON_CHANGED   = 1,
+    ACTIONBUTTON_NEW       = 2,
     ACTIONBUTTON_DELETED   = 3
 };
 
 enum ActionButtonType
 {
-    ACTION_BUTTON_SPELL     = 0x00, 
+    ACTION_BUTTON_SPELL     = 0x00,
     ACTION_BUTTON_C         = 0x01,                         // click?
-    ACTION_BUTTON_EQSET     = 0x20, 
-    ACTION_BUTTON_MACRO     = 0x40, 
-    ACTION_BUTTON_CMACRO    = ACTION_BUTTON_C | ACTION_BUTTON_MACRO, 
+    ACTION_BUTTON_EQSET     = 0x20,
+    ACTION_BUTTON_MACRO     = 0x40,
+    ACTION_BUTTON_CMACRO    = ACTION_BUTTON_C | ACTION_BUTTON_MACRO,
     ACTION_BUTTON_ITEM      = 0x80
 };
 
@@ -357,16 +357,16 @@ struct Areas
 enum RuneCooldowns
 
 {
-    RUNE_BASE_COOLDOWN  = 10000, 
+    RUNE_BASE_COOLDOWN  = 10000,
     RUNE_MISS_COOLDOWN  = 1500,     // cooldown applied on runes when the spell misses
 };
 
 enum RuneType
 {
-    RUNE_BLOOD      = 0, 
-    RUNE_UNHOLY     = 1, 
-    RUNE_FROST      = 2, 
-    RUNE_DEATH      = 3, 
+    RUNE_BLOOD      = 0,
+    RUNE_UNHOLY     = 1,
+    RUNE_FROST      = 2,
+    RUNE_DEATH      = 3,
     NUM_RUNE_TYPES  = 4
 };
 
@@ -396,7 +396,7 @@ struct Runes
 struct EnchantDuration
 {
     EnchantDuration() : item(NULL), slot(MAX_ENCHANTMENT_SLOT), leftduration(0) {};
-    EnchantDuration(Item * _item, EnchantmentSlot _slot, uint32 _leftduration) : item(_item), slot(_slot), 
+    EnchantDuration(Item * _item, EnchantmentSlot _slot, uint32 _leftduration) : item(_item), slot(_slot),
         leftduration(_leftduration){ ASSERT(item); };
 
     Item * item;
@@ -409,17 +409,17 @@ typedef std::list<Item*> ItemDurationList;
 
 enum PlayerMovementType
 {
-    MOVE_ROOT       = 1, 
-    MOVE_UNROOT     = 2, 
-    MOVE_WATER_WALK = 3, 
+    MOVE_ROOT       = 1,
+    MOVE_UNROOT     = 2,
+    MOVE_WATER_WALK = 3,
     MOVE_LAND_WALK  = 4
 };
 
 enum DrunkenState
 {
-    DRUNKEN_SOBER   = 0, 
-    DRUNKEN_TIPSY   = 1, 
-    DRUNKEN_DRUNK   = 2, 
+    DRUNKEN_SOBER   = 0,
+    DRUNKEN_TIPSY   = 1,
+    DRUNKEN_DRUNK   = 2,
     DRUNKEN_SMASHED = 3
 };
 
@@ -427,35 +427,35 @@ enum DrunkenState
 
 enum PlayerFlags
 {
-    PLAYER_FLAGS_GROUP_LEADER   = 0x00000001, 
-    PLAYER_FLAGS_AFK            = 0x00000002, 
-    PLAYER_FLAGS_DND            = 0x00000004, 
-    PLAYER_FLAGS_GM             = 0x00000008, 
-    PLAYER_FLAGS_GHOST          = 0x00000010, 
-    PLAYER_FLAGS_RESTING        = 0x00000020, 
-    PLAYER_FLAGS_UNK7           = 0x00000040, 
+    PLAYER_FLAGS_GROUP_LEADER   = 0x00000001,
+    PLAYER_FLAGS_AFK            = 0x00000002,
+    PLAYER_FLAGS_DND            = 0x00000004,
+    PLAYER_FLAGS_GM             = 0x00000008,
+    PLAYER_FLAGS_GHOST          = 0x00000010,
+    PLAYER_FLAGS_RESTING        = 0x00000020,
+    PLAYER_FLAGS_UNK7           = 0x00000040,
     PLAYER_FLAGS_UNK8           = 0x00000080,               // pre-3.0.3 PLAYER_FLAGS_FFA_PVP flag for FFA PVP state
     PLAYER_FLAGS_CONTESTED_PVP  = 0x00000100,               // Player has been involved in a PvP combat and will be attacked by contested guards
-    PLAYER_FLAGS_IN_PVP         = 0x00000200, 
-    PLAYER_FLAGS_HIDE_HELM      = 0x00000400, 
-    PLAYER_FLAGS_HIDE_CLOAK     = 0x00000800, 
+    PLAYER_FLAGS_IN_PVP         = 0x00000200,
+    PLAYER_FLAGS_HIDE_HELM      = 0x00000400,
+    PLAYER_FLAGS_HIDE_CLOAK     = 0x00000800,
     PLAYER_FLAGS_UNK13          = 0x00001000,               // played long time
     PLAYER_FLAGS_UNK14          = 0x00002000,               // played too long time
-    PLAYER_FLAGS_UNK15          = 0x00004000, 
+    PLAYER_FLAGS_UNK15          = 0x00004000,
     PLAYER_FLAGS_DEVELOPER      = 0x00008000,               // <Dev> prefix for something?
     PLAYER_FLAGS_UNK17          = 0x00010000,               // pre-3.0.3 PLAYER_FLAGS_SANCTUARY flag for player entered sanctuary
     PLAYER_FLAGS_UNK18          = 0x00020000,               // taxi benchmark mode (on/off) (2.0.1)
     PLAYER_FLAGS_PVP_TIMER      = 0x00040000,               // 3.0.2, pvp timer active (after you disable pvp manually)
-    PLAYER_FLAGS_UNK20          = 0x00080000, 
-    PLAYER_FLAGS_UNK21          = 0x00100000, 
-    PLAYER_FLAGS_UNK22          = 0x00200000, 
-    PLAYER_FLAGS_UNK23          = 0x00400000, 
+    PLAYER_FLAGS_UNK20          = 0x00080000,
+    PLAYER_FLAGS_UNK21          = 0x00100000,
+    PLAYER_FLAGS_UNK22          = 0x00200000,
+    PLAYER_FLAGS_UNK23          = 0x00400000,
     PLAYER_ALLOW_ONLY_ABILITY   = 0x00800000,                // used by bladestorm and killing spree
     PLAYER_FLAGS_UNK25          = 0x01000000,                // disabled all melee ability on tab include autoattack
-    PLAYER_FLAGS_NO_XP_GAIN     = 0x02000000, 
-    PLAYER_FLAGS_UNK26          = 0x04000000, 
-    PLAYER_FLAGS_UNK27          = 0x08000000, 
-    PLAYER_FLAGS_GLEVEL_ENABLED = 0x10000000, 
+    PLAYER_FLAGS_NO_XP_GAIN     = 0x02000000,
+    PLAYER_FLAGS_UNK26          = 0x04000000,
+    PLAYER_FLAGS_UNK27          = 0x08000000,
+    PLAYER_FLAGS_GLEVEL_ENABLED = 0x10000000,
 };
 
 // used for PLAYER__FIELD_KNOWN_TITLES field (uint64), (1<<bit_index) without (-1)
@@ -509,7 +509,7 @@ enum PlayerFlags
 // used in PLAYER_FIELD_BYTES values
 enum PlayerFieldByteFlags
 {
-    PLAYER_FIELD_BYTE_TRACK_STEALTHED   = 0x00000002, 
+    PLAYER_FIELD_BYTE_TRACK_STEALTHED   = 0x00000002,
     PLAYER_FIELD_BYTE_RELEASE_TIMER     = 0x00000008,       // Display time till auto release spirit
     PLAYER_FIELD_BYTE_NO_RELEASE_WINDOW = 0x00000010        // Display no "release spirit" window at all
 };
@@ -517,32 +517,32 @@ enum PlayerFieldByteFlags
 // used in PLAYER_FIELD_BYTES2 values
 enum PlayerFieldByte2Flags
 {
-    PLAYER_FIELD_BYTE2_NONE                 = 0x00, 
-    PLAYER_FIELD_BYTE2_STEALTH              = 0x20, 
+    PLAYER_FIELD_BYTE2_NONE                 = 0x00,
+    PLAYER_FIELD_BYTE2_STEALTH              = 0x20,
     PLAYER_FIELD_BYTE2_INVISIBILITY_GLOW    = 0x40
 };
 
 enum ActivateTaxiReplies
 {
-    ERR_TAXIOK                      = 0, 
-    ERR_TAXIUNSPECIFIEDSERVERERROR  = 1, 
-    ERR_TAXINOSUCHPATH              = 2, 
-    ERR_TAXINOTENOUGHMONEY          = 3, 
-    ERR_TAXITOOFARAWAY              = 4, 
-    ERR_TAXINOVENDORNEARBY          = 5, 
-    ERR_TAXINOTVISITED              = 6, 
-    ERR_TAXIPLAYERBUSY              = 7, 
-    ERR_TAXIPLAYERALREADYMOUNTED    = 8, 
-    ERR_TAXIPLAYERSHAPESHIFTED      = 9, 
-    ERR_TAXIPLAYERMOVING            = 10, 
-    ERR_TAXISAMENODE                = 11, 
+    ERR_TAXIOK                      = 0,
+    ERR_TAXIUNSPECIFIEDSERVERERROR  = 1,
+    ERR_TAXINOSUCHPATH              = 2,
+    ERR_TAXINOTENOUGHMONEY          = 3,
+    ERR_TAXITOOFARAWAY              = 4,
+    ERR_TAXINOVENDORNEARBY          = 5,
+    ERR_TAXINOTVISITED              = 6,
+    ERR_TAXIPLAYERBUSY              = 7,
+    ERR_TAXIPLAYERALREADYMOUNTED    = 8,
+    ERR_TAXIPLAYERSHAPESHIFTED      = 9,
+    ERR_TAXIPLAYERMOVING            = 10,
+    ERR_TAXISAMENODE                = 11,
     ERR_TAXINOTSTANDING             = 12
 };
 
 enum MirrorTimerType
 {
-    FATIGUE_TIMER      = 0, 
-    BREATH_TIMER       = 1, 
+    FATIGUE_TIMER      = 0,
+    BREATH_TIMER       = 1,
     FIRE_TIMER         = 2
 };
 #define MAX_TIMERS      3
@@ -552,13 +552,13 @@ enum MirrorTimerType
 enum PlayerExtraFlags
 {
     // gm abilities
-    PLAYER_EXTRA_GM_ON              = 0x0001, 
-    PLAYER_EXTRA_ACCEPT_WHISPERS    = 0x0004, 
-    PLAYER_EXTRA_TAXICHEAT          = 0x0008, 
-    PLAYER_EXTRA_GM_INVISIBLE       = 0x0010, 
+    PLAYER_EXTRA_GM_ON              = 0x0001,
+    PLAYER_EXTRA_ACCEPT_WHISPERS    = 0x0004,
+    PLAYER_EXTRA_TAXICHEAT          = 0x0008,
+    PLAYER_EXTRA_GM_INVISIBLE       = 0x0010,
     PLAYER_EXTRA_GM_CHAT            = 0x0020,               // Show GM badge in chat messages
     PLAYER_EXTRA_HAS_310_FLYER      = 0x0040,               // Marks if player already has 310% speed flying mount
-    
+
     // other states
     PLAYER_EXTRA_PVP_DEATH          = 0x0100,               // store PvP death status until corpse creating.
     PLAYER_EXTRA_WORGEN_FORM        = 0x0200                // Player is in worgen form.
@@ -567,14 +567,14 @@ enum PlayerExtraFlags
 // 2^n values
 enum AtLoginFlags
 {
-    AT_LOGIN_NONE              = 0x00, 
-    AT_LOGIN_RENAME            = 0x01, 
-    AT_LOGIN_RESET_SPELLS      = 0x02, 
-    AT_LOGIN_RESET_TALENTS     = 0x04, 
-    AT_LOGIN_CUSTOMIZE         = 0x08, 
-    AT_LOGIN_RESET_PET_TALENTS = 0x10, 
-    AT_LOGIN_FIRST             = 0x20, 
-    AT_LOGIN_CHANGE_FACTION    = 0x40, 
+    AT_LOGIN_NONE              = 0x00,
+    AT_LOGIN_RENAME            = 0x01,
+    AT_LOGIN_RESET_SPELLS      = 0x02,
+    AT_LOGIN_RESET_TALENTS     = 0x04,
+    AT_LOGIN_CUSTOMIZE         = 0x08,
+    AT_LOGIN_RESET_PET_TALENTS = 0x10,
+    AT_LOGIN_FIRST             = 0x20,
+    AT_LOGIN_CHANGE_FACTION    = 0x40,
     AT_LOGIN_CHANGE_RACE       = 0x80
 };
 
@@ -586,9 +586,9 @@ typedef std::map<uint32, bool> QuestStatusSaveMap;
 
 enum QuestSlotOffsets
 {
-    QUEST_ID_OFFSET     = 0, 
-    QUEST_STATE_OFFSET  = 1, 
-    QUEST_COUNTS_OFFSET = 2, 
+    QUEST_ID_OFFSET     = 0,
+    QUEST_STATE_OFFSET  = 1,
+    QUEST_COUNTS_OFFSET = 2,
     QUEST_TIME_OFFSET   = 4
 };
 
@@ -596,16 +596,16 @@ enum QuestSlotOffsets
 
 enum QuestSlotStateMask
 {
-    QUEST_STATE_NONE     = 0x0000, 
-    QUEST_STATE_COMPLETE = 0x0001, 
+    QUEST_STATE_NONE     = 0x0000,
+    QUEST_STATE_COMPLETE = 0x0001,
     QUEST_STATE_FAIL     = 0x0002
 };
 
 enum SkillUpdateState
 {
-    SKILL_UNCHANGED     = 0, 
-    SKILL_CHANGED       = 1, 
-    SKILL_NEW           = 2, 
+    SKILL_UNCHANGED     = 0,
+    SKILL_CHANGED       = 1,
+    SKILL_NEW           = 2,
     SKILL_DELETED       = 3
 };
 
@@ -628,9 +628,9 @@ class WorldSession;
 enum PlayerSlots
 {
     // first slot for item stored (in any way in player m_items data)
-    PLAYER_SLOT_START           = 0, 
+    PLAYER_SLOT_START           = 0,
     // last+1 slot for item stored (in any way in player m_items data)
-    PLAYER_SLOT_END             = 150, 
+    PLAYER_SLOT_END             = 150,
     PLAYER_SLOTS_COUNT          = (PLAYER_SLOT_END - PLAYER_SLOT_START)
 };
 
@@ -638,77 +638,77 @@ enum PlayerSlots
 
 enum EquipmentSlots                                         // 19 slots
 {
-    EQUIPMENT_SLOT_START        = 0, 
-    EQUIPMENT_SLOT_HEAD         = 0, 
-    EQUIPMENT_SLOT_NECK         = 1, 
-    EQUIPMENT_SLOT_SHOULDERS    = 2, 
-    EQUIPMENT_SLOT_BODY         = 3, 
-    EQUIPMENT_SLOT_CHEST        = 4, 
-    EQUIPMENT_SLOT_WAIST        = 5, 
-    EQUIPMENT_SLOT_LEGS         = 6, 
-    EQUIPMENT_SLOT_FEET         = 7, 
-    EQUIPMENT_SLOT_WRISTS       = 8, 
-    EQUIPMENT_SLOT_HANDS        = 9, 
-    EQUIPMENT_SLOT_FINGER1      = 10, 
-    EQUIPMENT_SLOT_FINGER2      = 11, 
-    EQUIPMENT_SLOT_TRINKET1     = 12, 
-    EQUIPMENT_SLOT_TRINKET2     = 13, 
-    EQUIPMENT_SLOT_BACK         = 14, 
-    EQUIPMENT_SLOT_MAINHAND     = 15, 
-    EQUIPMENT_SLOT_OFFHAND      = 16, 
-    EQUIPMENT_SLOT_RANGED       = 17, 
-    EQUIPMENT_SLOT_TABARD       = 18, 
+    EQUIPMENT_SLOT_START        = 0,
+    EQUIPMENT_SLOT_HEAD         = 0,
+    EQUIPMENT_SLOT_NECK         = 1,
+    EQUIPMENT_SLOT_SHOULDERS    = 2,
+    EQUIPMENT_SLOT_BODY         = 3,
+    EQUIPMENT_SLOT_CHEST        = 4,
+    EQUIPMENT_SLOT_WAIST        = 5,
+    EQUIPMENT_SLOT_LEGS         = 6,
+    EQUIPMENT_SLOT_FEET         = 7,
+    EQUIPMENT_SLOT_WRISTS       = 8,
+    EQUIPMENT_SLOT_HANDS        = 9,
+    EQUIPMENT_SLOT_FINGER1      = 10,
+    EQUIPMENT_SLOT_FINGER2      = 11,
+    EQUIPMENT_SLOT_TRINKET1     = 12,
+    EQUIPMENT_SLOT_TRINKET2     = 13,
+    EQUIPMENT_SLOT_BACK         = 14,
+    EQUIPMENT_SLOT_MAINHAND     = 15,
+    EQUIPMENT_SLOT_OFFHAND      = 16,
+    EQUIPMENT_SLOT_RANGED       = 17,
+    EQUIPMENT_SLOT_TABARD       = 18,
     EQUIPMENT_SLOT_END          = 19
 };
 
 enum InventorySlots                                         // 4 slots
 {
-    INVENTORY_SLOT_BAG_START    = 19, 
+    INVENTORY_SLOT_BAG_START    = 19,
     INVENTORY_SLOT_BAG_END      = 23
 };
 
 enum InventoryPackSlots                                     // 16 slots
 {
-    INVENTORY_SLOT_ITEM_START   = 23, 
+    INVENTORY_SLOT_ITEM_START   = 23,
     INVENTORY_SLOT_ITEM_END     = 39
 };
 
 enum BankItemSlots                                          // 28 slots
 {
-    BANK_SLOT_ITEM_START        = 39, 
+    BANK_SLOT_ITEM_START        = 39,
     BANK_SLOT_ITEM_END          = 67
 };
 
 enum BankBagSlots                                           // 7 slots
 {
-    BANK_SLOT_BAG_START         = 67, 
+    BANK_SLOT_BAG_START         = 67,
     BANK_SLOT_BAG_END           = 74
 };
 
 enum BuyBackSlots                                           // 12 slots
 {
     // stored in m_buybackitems
-    BUYBACK_SLOT_START          = 74, 
+    BUYBACK_SLOT_START          = 74,
     BUYBACK_SLOT_END            = 86
 };
 
 enum KeyRingSlots                                           // 32 slots
 {
-    KEYRING_SLOT_START          = 86, 
+    KEYRING_SLOT_START          = 86,
     KEYRING_SLOT_END            = 118
 };
 
 enum CurrencyTokenSlots                                     // 32 slots
 {
-    CURRENCYTOKEN_SLOT_START    = 118, 
+    CURRENCYTOKEN_SLOT_START    = 118,
     CURRENCYTOKEN_SLOT_END      = 150
 };
 
 enum EquipmentSetUpdateState
 {
-    EQUIPMENT_SET_UNCHANGED = 0, 
-    EQUIPMENT_SET_CHANGED   = 1, 
-    EQUIPMENT_SET_NEW       = 2, 
+    EQUIPMENT_SET_UNCHANGED = 0,
+    EQUIPMENT_SET_CHANGED   = 1,
+    EQUIPMENT_SET_NEW       = 2,
     EQUIPMENT_SET_DELETED   = 3
 };
 
@@ -742,15 +742,15 @@ typedef std::vector<ItemPosCount> ItemPosCountVec;
 
 enum TradeSlots
 {
-    TRADE_SLOT_COUNT            = 7, 
-    TRADE_SLOT_TRADED_COUNT     = 6, 
+    TRADE_SLOT_COUNT            = 7,
+    TRADE_SLOT_TRADED_COUNT     = 6,
     TRADE_SLOT_NONTRADED        = 6
 };
 
 enum TransferAbortReason
 {
-    TRANSFER_ABORT_NONE                     = 0x00, 
-    TRANSFER_ABORT_ERROR                    = 0x01, 
+    TRANSFER_ABORT_NONE                     = 0x00,
+    TRANSFER_ABORT_ERROR                    = 0x01,
     TRANSFER_ABORT_MAX_PLAYERS              = 0x02,         // Transfer Aborted: instance is full
     TRANSFER_ABORT_NOT_FOUND                = 0x03,         // Transfer Aborted: instance not found
     TRANSFER_ABORT_TOO_MANY_INSTANCES       = 0x04,         // You have entered too many instances recently.
@@ -779,13 +779,13 @@ enum InstanceResetWarningType
 // PLAYER_FIELD_ARENA_TEAM_INFO_1_1 offsets
 enum ArenaTeamInfoType
 {
-    ARENA_TEAM_ID                = 0, 
+    ARENA_TEAM_ID                = 0,
     ARENA_TEAM_TYPE              = 1,                       // new in 3.2 - team type?
     ARENA_TEAM_MEMBER            = 2,                       // 0 - captain, 1 - member
-    ARENA_TEAM_GAMES_WEEK        = 3, 
-    ARENA_TEAM_GAMES_SEASON      = 4, 
-    ARENA_TEAM_WINS_SEASON       = 5, 
-    ARENA_TEAM_PERSONAL_RATING   = 6, 
+    ARENA_TEAM_GAMES_WEEK        = 3,
+    ARENA_TEAM_GAMES_SEASON      = 4,
+    ARENA_TEAM_WINS_SEASON       = 5,
+    ARENA_TEAM_PERSONAL_RATING   = 6,
     ARENA_TEAM_END               = 7
 };
 
@@ -793,42 +793,42 @@ class InstanceSave;
 
 enum RestType
 {
-    REST_TYPE_NO        = 0, 
-    REST_TYPE_IN_TAVERN = 1, 
+    REST_TYPE_NO        = 0,
+    REST_TYPE_IN_TAVERN = 1,
     REST_TYPE_IN_CITY   = 2
 };
 
 enum DuelCompleteType
 {
-    DUEL_INTERRUPTED = 0, 
-    DUEL_WON         = 1, 
+    DUEL_INTERRUPTED = 0,
+    DUEL_WON         = 1,
     DUEL_FLED        = 2
 };
 
 enum TeleportToOptions
 {
-    TELE_TO_GM_MODE             = 0x01, 
-    TELE_TO_NOT_LEAVE_TRANSPORT = 0x02, 
-    TELE_TO_NOT_LEAVE_COMBAT    = 0x04, 
-    TELE_TO_NOT_UNSUMMON_PET    = 0x08, 
-    TELE_TO_SPELL               = 0x10, 
+    TELE_TO_GM_MODE             = 0x01,
+    TELE_TO_NOT_LEAVE_TRANSPORT = 0x02,
+    TELE_TO_NOT_LEAVE_COMBAT    = 0x04,
+    TELE_TO_NOT_UNSUMMON_PET    = 0x08,
+    TELE_TO_SPELL               = 0x10,
 };
 
 /// Type of environmental damages
 enum EnviromentalDamage
 {
-    DAMAGE_EXHAUSTED = 0, 
-    DAMAGE_DROWNING  = 1, 
-    DAMAGE_FALL      = 2, 
-    DAMAGE_LAVA      = 3, 
-    DAMAGE_SLIME     = 4, 
-    DAMAGE_FIRE      = 5, 
+    DAMAGE_EXHAUSTED = 0,
+    DAMAGE_DROWNING  = 1,
+    DAMAGE_FALL      = 2,
+    DAMAGE_LAVA      = 3,
+    DAMAGE_SLIME     = 4,
+    DAMAGE_FIRE      = 5,
     DAMAGE_FALL_TO_VOID = 6                                 // custom case for fall without durability loss
 };
 
 enum PlayedTimeIndex
 {
-    PLAYED_TIME_TOTAL = 0, 
+    PLAYED_TIME_TOTAL = 0,
     PLAYED_TIME_LEVEL = 1
 };
 
@@ -837,49 +837,49 @@ enum PlayedTimeIndex
 // used at player loading query list preparing, and later result selection
 enum PlayerLoginQueryIndex
 {
-    PLAYER_LOGIN_QUERY_LOADFROM                 = 0, 
-    PLAYER_LOGIN_QUERY_LOADGROUP                = 1, 
-    PLAYER_LOGIN_QUERY_LOADBOUNDINSTANCES       = 2, 
-    PLAYER_LOGIN_QUERY_LOADAURAS                = 3, 
-    PLAYER_LOGIN_QUERY_LOADSPELLS               = 4, 
-    PLAYER_LOGIN_QUERY_LOADQUESTSTATUS          = 5, 
-    PLAYER_LOGIN_QUERY_LOADDAILYQUESTSTATUS     = 6, 
-    PLAYER_LOGIN_QUERY_LOADREPUTATION           = 7, 
-    PLAYER_LOGIN_QUERY_LOADINVENTORY            = 8, 
-    PLAYER_LOGIN_QUERY_LOADACTIONS              = 9, 
-    PLAYER_LOGIN_QUERY_LOADMAILCOUNT            = 10, 
-    PLAYER_LOGIN_QUERY_LOADMAILDATE             = 11, 
-    PLAYER_LOGIN_QUERY_LOADSOCIALLIST           = 12, 
-    PLAYER_LOGIN_QUERY_LOADHOMEBIND             = 13, 
-    PLAYER_LOGIN_QUERY_LOADSPELLCOOLDOWNS       = 14, 
-    PLAYER_LOGIN_QUERY_LOADDECLINEDNAMES        = 15, 
-    PLAYER_LOGIN_QUERY_LOADGUILD                = 16, 
-    PLAYER_LOGIN_QUERY_LOADARENAINFO            = 17, 
-    PLAYER_LOGIN_QUERY_LOADACHIEVEMENTS         = 18, 
-    PLAYER_LOGIN_QUERY_LOADCRITERIAPROGRESS     = 19, 
-    PLAYER_LOGIN_QUERY_LOADEQUIPMENTSETS        = 20, 
-    PLAYER_LOGIN_QUERY_LOADBGDATA               = 21, 
-    PLAYER_LOGIN_QUERY_LOADGLYPHS               = 22, 
-    PLAYER_LOGIN_QUERY_LOADTALENTS              = 23, 
-    PLAYER_LOGIN_QUERY_LOADACCOUNTDATA          = 24, 
-    PLAYER_LOGIN_QUERY_LOADSKILLS               = 25, 
-    PLAYER_LOGIN_QUERY_LOADWEKLYQUESTSTATUS     = 26, 
-    PLAYER_LOGIN_QUERY_LOADRANDOMBG             = 27, 
-    PLAYER_LOGIN_QUERY_LOADARENASTATS           = 28, 
-    PLAYER_LOGIN_QUERY_LOADBANNED               = 29, 
-    PLAYER_LOGIN_QUERY_LOADQUESTSTATUSREW       = 30, 
-    PLAYER_LOGIN_QUERY_LOADINSTANCELOCKTIMES    = 31, 
-    PLAYER_LOGIN_QUERY_LOADTALENTBRANCHSPECS    = 32, 
-    PLAYER_LOGIN_QUERY_LOADPETSLOT              = 33, 
-    PLAYER_LOGIN_QUERY_LOAD_CURRENCY            = 34, 
+    PLAYER_LOGIN_QUERY_LOADFROM                 = 0,
+    PLAYER_LOGIN_QUERY_LOADGROUP                = 1,
+    PLAYER_LOGIN_QUERY_LOADBOUNDINSTANCES       = 2,
+    PLAYER_LOGIN_QUERY_LOADAURAS                = 3,
+    PLAYER_LOGIN_QUERY_LOADSPELLS               = 4,
+    PLAYER_LOGIN_QUERY_LOADQUESTSTATUS          = 5,
+    PLAYER_LOGIN_QUERY_LOADDAILYQUESTSTATUS     = 6,
+    PLAYER_LOGIN_QUERY_LOADREPUTATION           = 7,
+    PLAYER_LOGIN_QUERY_LOADINVENTORY            = 8,
+    PLAYER_LOGIN_QUERY_LOADACTIONS              = 9,
+    PLAYER_LOGIN_QUERY_LOADMAILCOUNT            = 10,
+    PLAYER_LOGIN_QUERY_LOADMAILDATE             = 11,
+    PLAYER_LOGIN_QUERY_LOADSOCIALLIST           = 12,
+    PLAYER_LOGIN_QUERY_LOADHOMEBIND             = 13,
+    PLAYER_LOGIN_QUERY_LOADSPELLCOOLDOWNS       = 14,
+    PLAYER_LOGIN_QUERY_LOADDECLINEDNAMES        = 15,
+    PLAYER_LOGIN_QUERY_LOADGUILD                = 16,
+    PLAYER_LOGIN_QUERY_LOADARENAINFO            = 17,
+    PLAYER_LOGIN_QUERY_LOADACHIEVEMENTS         = 18,
+    PLAYER_LOGIN_QUERY_LOADCRITERIAPROGRESS     = 19,
+    PLAYER_LOGIN_QUERY_LOADEQUIPMENTSETS        = 20,
+    PLAYER_LOGIN_QUERY_LOADBGDATA               = 21,
+    PLAYER_LOGIN_QUERY_LOADGLYPHS               = 22,
+    PLAYER_LOGIN_QUERY_LOADTALENTS              = 23,
+    PLAYER_LOGIN_QUERY_LOADACCOUNTDATA          = 24,
+    PLAYER_LOGIN_QUERY_LOADSKILLS               = 25,
+    PLAYER_LOGIN_QUERY_LOADWEKLYQUESTSTATUS     = 26,
+    PLAYER_LOGIN_QUERY_LOADRANDOMBG             = 27,
+    PLAYER_LOGIN_QUERY_LOADARENASTATS           = 28,
+    PLAYER_LOGIN_QUERY_LOADBANNED               = 29,
+    PLAYER_LOGIN_QUERY_LOADQUESTSTATUSREW       = 30,
+    PLAYER_LOGIN_QUERY_LOADINSTANCELOCKTIMES    = 31,
+    PLAYER_LOGIN_QUERY_LOADTALENTBRANCHSPECS    = 32,
+    PLAYER_LOGIN_QUERY_LOADPETSLOT              = 33,
+    PLAYER_LOGIN_QUERY_LOAD_CURRENCY            = 34,
     MAX_PLAYER_LOGIN_QUERY                      = 35
 };
 
 enum PlayerDelayedOperations
 {
-    DELAYED_SAVE_PLAYER         = 0x01, 
-    DELAYED_RESURRECT_PLAYER    = 0x02, 
-    DELAYED_SPELL_CAST_DESERTER = 0x04, 
+    DELAYED_SAVE_PLAYER         = 0x01,
+    DELAYED_RESURRECT_PLAYER    = 0x02,
+    DELAYED_SPELL_CAST_DESERTER = 0x04,
     DELAYED_BG_MOUNT_RESTORE    = 0x08,                     ///< Flag to restore mount state after teleport from BG
     DELAYED_BG_TAXI_RESTORE     = 0x10,                     ///< Flag to restore taxi state after teleport from BG
     DELAYED_END
@@ -901,12 +901,12 @@ struct InstancePlayerBind
 
 enum DungeonStatusFlag
 {
-    DUNGEON_STATUSFLAG_NORMAL = 0x01, 
-    DUNGEON_STATUSFLAG_HEROIC = 0x02, 
+    DUNGEON_STATUSFLAG_NORMAL = 0x01,
+    DUNGEON_STATUSFLAG_HEROIC = 0x02,
 
-    RAID_STATUSFLAG_10MAN_NORMAL = 0x01, 
-    RAID_STATUSFLAG_25MAN_NORMAL = 0x02, 
-    RAID_STATUSFLAG_10MAN_HEROIC = 0x04, 
+    RAID_STATUSFLAG_10MAN_NORMAL = 0x01,
+    RAID_STATUSFLAG_25MAN_NORMAL = 0x02,
+    RAID_STATUSFLAG_10MAN_HEROIC = 0x04,
     RAID_STATUSFLAG_25MAN_HEROIC = 0x08
 };
 
@@ -925,13 +925,13 @@ struct AccessRequirement
 enum CharDeleteMethod
 {
     CHAR_DELETE_REMOVE = 0,                      // Completely remove from the database
-    CHAR_DELETE_UNLINK = 1                       // The character gets unlinked from the account, 
+    CHAR_DELETE_UNLINK = 1                       // The character gets unlinked from the account,
                                                  // the name gets freed up and appears as deleted ingame
 };
 
 enum CurrencyItems
 {
-    ITEM_HONOR_POINTS_ID    = 43308, 
+    ITEM_HONOR_POINTS_ID    = 43308,
     ITEM_ARENA_POINTS_ID    = 43307
 };
 
@@ -993,10 +993,10 @@ class Player;
 /// Holder for Battleground data
 struct BGData
 {
-    BGData() : bgInstanceID(0), bgTypeID(BATTLEGROUND_TYPE_NONE), bgAfkReportedCount(0), bgAfkReportedTimer(0), 
+    BGData() : bgInstanceID(0), bgTypeID(BATTLEGROUND_TYPE_NONE), bgAfkReportedCount(0), bgAfkReportedTimer(0),
         bgTeam(0), mountSpell(0) { ClearTaxiPath(); }
 
-    uint32 bgInstanceID;                    ///< This variable is set to bg->m_InstanceID, 
+    uint32 bgInstanceID;                    ///< This variable is set to bg->m_InstanceID,
                                             ///  when player is teleported to BG - (it is battleground's GUID)
     BattlegroundTypeId bgTypeID;
 
@@ -1019,7 +1019,7 @@ class TradeData
 {
     public:                                                 // constructors
         TradeData(Player* player, Player* trader) :
-            m_player(player),  m_trader(trader), m_accepted(false), m_acceptProccess(false), 
+            m_player(player),  m_trader(trader), m_accepted(false), m_acceptProccess(false),
             m_money(0), m_spell(0) {}
 
         Player* GetTrader() const { return m_trader; }
@@ -1035,7 +1035,7 @@ class TradeData
         Item*  GetSpellCastItem() const;
         bool HasSpellCastItem() const { return m_spellCastItem != 0; }
 
-        uint32 GetMoney() const { return m_money; } 
+        uint32 GetMoney() const { return m_money; }
         void SetMoney(uint32 money);
 
         bool IsAccepted() const { return m_accepted; }
@@ -1108,7 +1108,7 @@ class Player : public Unit, public GridObject<Player>
         static bool BuildEnumData(QueryResult result,  WorldPacket * p_data);
 
         virtual uint8 getClass() const = 0;
-    
+
         void SetInWater(bool apply);
 
         bool IsInWater() const { return m_isInWater; }
@@ -1259,7 +1259,6 @@ class Player : public Unit, public GridObject<Player>
                 return EQUIP_ERR_ITEM_NOT_FOUND;
             uint32 count = pItem->GetCount();
             return _CanStoreItem(bag, slot, dest, pItem->GetEntry(), count, pItem, swap, NULL);
-
         }
         uint8 CanStoreItems(Item **pItem, int count) const;
         uint8 CanEquipNewItem(uint8 slot, uint16 &dest, uint32 item, bool swap) const;
@@ -1434,6 +1433,8 @@ class Player : public Unit, public GridObject<Player>
         void SetWeeklyQuestStatus(uint32 quest_id);
         void ResetDailyQuestStatus();
         void ResetWeeklyQuestStatus();
+
+        void ResetCurrencyWeekCap();
 
         uint16 FindQuestSlot(uint32 quest_id) const;
         uint32 GetQuestSlotQuestId(uint16 slot) const { return GetUInt32Value(PLAYER_QUEST_LOG_1_1 + slot * MAX_QUEST_OFFSET + QUEST_ID_OFFSET); }
@@ -1673,7 +1674,7 @@ class Player : public Unit, public GridObject<Player>
 
         void SetTalentBranchSpec(uint32 branchSpec, uint8 spec) { m_branchSpec[spec] = branchSpec; }
         uint32 GetTalentBranchSpec(uint8 spec) const { return m_branchSpec[spec]; }
-    
+
         uint32 CalculateTalentsPoints() const;
 
         // Dual Spec
@@ -1686,7 +1687,7 @@ class Player : public Unit, public GridObject<Player>
 
         void InitGlyphsForLevel();
         void SetGlyphSlot(uint8 slot, uint32 slottype)
-        { 
+        {
             ASSERT(slot < MAX_GLYPH_SLOT_INDEX); // prevent updatefields corruption
             SetUInt32Value(PLAYER_FIELD_GLYPH_SLOTS_1 + slot, slottype);
         }
@@ -2061,7 +2062,7 @@ class Player : public Unit, public GridObject<Player>
         void UpdateHonorFields();
         bool RewardHonor(Unit *pVictim, uint32 groupsize, int32 honor = -1, bool pvptoken = false);
         uint32 GetMaxPersonalArenaRatingRequirement(uint32 minarenaslot);
-        
+
         //End of PvP System
 
         inline SpellCooldowns GetSpellCooldowns() const { return m_spellCooldowns; }
@@ -2336,7 +2337,7 @@ class Player : public Unit, public GridObject<Player>
         // current pet slot
         PetSlot m_currentPetSlot;
         uint32 m_petSlotUsed;
-    
+
         void setPetSlotUsed(PetSlot slot, bool used)
         {
             if (used)
@@ -2344,7 +2345,7 @@ class Player : public Unit, public GridObject<Player>
             else
                 m_petSlotUsed &= ~(1 << uint32(slot));
         }
-    
+
         PetSlot getSlotForNewPet()
         {
             // Some changes here.
@@ -2372,11 +2373,11 @@ class Player : public Unit, public GridObject<Player>
             {
                 last_known = 1;
             }
-           
+
             for(uint32 i = uint32(PET_SLOT_HUNTER_FIRST); i < last_known; i++)
-            {   
+            {
                 if ((m_petSlotUsed & (1 << i)) == 0)
- 
+
                     return PetSlot(i);
             }
 
@@ -2432,7 +2433,7 @@ class Player : public Unit, public GridObject<Player>
         void setInHumanForm();
         void setInWorgenForm(uint32 form = UNIT_FLAG2_WORGEN_TRANSFORM);
         bool toggleWorgenForm(uint32 form = UNIT_FLAG2_WORGEN_TRANSFORM);
-    
+
         /*********************************************************/
         /***                 INSTANCE SYSTEM                   ***/
         /*********************************************************/
@@ -2676,7 +2677,7 @@ class Player : public Unit, public GridObject<Player>
         /***                  HONOR SYSTEM                     ***/
         /*********************************************************/
         time_t m_lastHonorUpdateTime;
-        
+
         void outDebugValues() const;
         uint64 m_lootGuid;
 
@@ -2694,8 +2695,9 @@ class Player : public Unit, public GridObject<Player>
         uint32 m_currentBuybackSlot;
         PlayerCurrenciesMap m_currencies;
         uint32 _GetCurrencyWeekCap(const CurrencyTypesEntry* currency) const;
+        uint32 _GetCurrencyTotalCap(const CurrencyTypesEntry* currency) const;
 
-        std::vector<Item*> m_itemUpdateQueue;
+		std::vector<Item*> m_itemUpdateQueue;
         bool m_itemUpdateQueueBlocked;
 
         uint32 m_ExtraFlags;
@@ -2742,7 +2744,7 @@ class Player : public Unit, public GridObject<Player>
         int32 m_spellPenetrationItemMod;
 
         uint32 m_spellPowerFromIntellect;
-    
+
         SpellModList m_spellMods[MAX_SPELLMOD];
         //uint32 m_pad;
 //        Spell * m_spellModTakingSpell;  // Spell for which charges are dropped in spell::finish
@@ -2835,7 +2837,7 @@ class Player : public Unit, public GridObject<Player>
 
         bool canSeeAlways(WorldObject const* obj) const;
 
-        bool isAlwaysDetectableFor(WorldObject const* seer) const;  
+        bool isAlwaysDetectableFor(WorldObject const* seer) const;
     private:
         // internal common parts for CanStore/StoreItem functions
         uint8 _CanStoreItem_InSpecificSlot(uint8 bag, uint8 slot, ItemPosCountVec& dest, ItemPrototype const *pProto, uint32& count, bool swap, Item *pSrcItem) const;

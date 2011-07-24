@@ -155,9 +155,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 void AddSC_boss_chrono_lord_deja()
 {

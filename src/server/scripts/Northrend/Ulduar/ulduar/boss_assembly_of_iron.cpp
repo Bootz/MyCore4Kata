@@ -170,7 +170,7 @@ void StartEncounter(InstanceScript* pInstance, Creature* me, Unit* /*target*/)
 {
     if (pInstance->GetBossState(TYPE_ASSEMBLY) == IN_PROGRESS)
         return;     // Prevent recursive calls
-    
+
     pInstance->SetBossState(TYPE_ASSEMBLY, IN_PROGRESS);
 
     for (uint8 i = 0; i < 3; ++i)
@@ -180,7 +180,7 @@ void StartEncounter(InstanceScript* pInstance, Creature* me, Unit* /*target*/)
             continue;
 
         if (Creature *boss = Unit::GetCreature(*me, guid))
-                boss->SetInCombatWithZone();          
+                boss->SetInCombatWithZone();
     }
 }
 
@@ -342,7 +342,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 class boss_runemaster_molgeim : public CreatureScript
@@ -561,7 +560,7 @@ public:
         {
             me->AddAura(SPELL_RUNE_OF_SUMMONING_VIS, me);
             summonCount = 0;
-            summonTimer = 2000;                         
+            summonTimer = 2000;
         }
 
         uint32 summonCount;
@@ -645,7 +644,6 @@ public:
                         events.RescheduleEvent(EVENT_LIGHTNING_TENDRILS, urand(40000,80000));
                     }
                 break;
-
             }
         }
 
@@ -735,7 +733,6 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
 
 void AddSC_boss_assembly_of_iron()

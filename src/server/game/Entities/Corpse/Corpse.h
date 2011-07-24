@@ -10,7 +10,7 @@
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
@@ -30,8 +30,8 @@
 
 enum CorpseType
 {
-    CORPSE_BONES             = 0, 
-    CORPSE_RESURRECTABLE_PVE = 1, 
+    CORPSE_BONES             = 0,
+    CORPSE_RESURRECTABLE_PVE = 1,
     CORPSE_RESURRECTABLE_PVP = 2
 };
 #define MAX_CORPSE_TYPE        3
@@ -41,12 +41,12 @@ enum CorpseType
 
 enum CorpseFlags
 {
-    CORPSE_FLAG_NONE        = 0x00, 
-    CORPSE_FLAG_BONES       = 0x01, 
-    CORPSE_FLAG_UNK1        = 0x02, 
-    CORPSE_FLAG_UNK2        = 0x04, 
-    CORPSE_FLAG_HIDE_HELM   = 0x08, 
-    CORPSE_FLAG_HIDE_CLOAK  = 0x10, 
+    CORPSE_FLAG_NONE        = 0x00,
+    CORPSE_FLAG_BONES       = 0x01,
+    CORPSE_FLAG_UNK1        = 0x02,
+    CORPSE_FLAG_UNK2        = 0x04,
+    CORPSE_FLAG_HIDE_HELM   = 0x08,
+    CORPSE_FLAG_HIDE_CLOAK  = 0x10,
     CORPSE_FLAG_LOOTABLE    = 0x20
 };
 
@@ -95,4 +95,3 @@ class Corpse : public WorldObject, public GridObject<Corpse>
         GridPair m_grid;                                    // gride for corpse position for fast search
 };
 #endif
-

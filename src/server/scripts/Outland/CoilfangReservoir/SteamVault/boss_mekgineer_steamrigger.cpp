@@ -188,9 +188,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 #define SPELL_DISPEL_MAGIC          17201
 #define SPELL_REPAIR                31532
@@ -267,9 +265,7 @@ public:
             DoMeleeAttackIfReady();
         }
     };
-
 };
-
 
 void AddSC_boss_mekgineer_steamrigger()
 {
