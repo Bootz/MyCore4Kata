@@ -645,10 +645,9 @@ void AchievementMgr::SendAchievementEarned(AchievementEntry const* achievement)
     if (achievement->flags & ACHIEVEMENT_FLAG_HIDDEN)
         return;
 
-    #ifdef TRINITY_DEBUG
-    if ((sLog->GetLogFilter() & LOG_FILTER_ACHIEVEMENT_UPDATES) == 0)
-        sLog->outDebug("AchievementMgr::SendAchievementEarned(%u)", achievement->ID);
-    #endif
+#ifdef TRINITY_DEBUG
+	sLog->outDebug(LOG_FILTER_ACHIEVEMENTSYS, "AchievementMgr::SendAchievementEarned(%u)", achievement->ID);
+#endif
 
     if (Guild* guild = sObjectMgr->GetGuildById(GetPlayer()->GetGuildId()))
     {
